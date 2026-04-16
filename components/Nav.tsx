@@ -29,8 +29,8 @@ export default function Nav() {
           ))}
         </nav>
 
-        <a href="#contact" className="btn-primary text-sm py-2 px-4 hidden sm:inline-flex">
-          Book a call
+        <a href="https://calendly.com/chandraalladi07/30min" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2 px-4 hidden sm:inline-flex">
+          Book a demo
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>

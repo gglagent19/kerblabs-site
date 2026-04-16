@@ -6,7 +6,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Kerblabs Ltd. &middot; London, UK
         </div>
         <div className="flex items-center gap-5 text-xs text-[color:var(--color-text-dim)]">
-          <a href="mailto:hello@kerblabs.com" className="hover:text-[color:var(--color-lime)] transition">Email</a>
+          <a href="https://calendly.com/chandraalladi07/30min" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-lime)] transition">Book a Demo</a>
           <a href="#" className="hover:text-[color:var(--color-lime)] transition">LinkedIn</a>
           <a href="#top" className="text-[color:var(--color-lime)]">↑ Top</a>
         </div>
