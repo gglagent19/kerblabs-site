@@ -65,7 +65,7 @@ export default function Hero() {
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </a>
-          <a href="#contact" className="btn-ghost">Request an audit</a>
+          <a href="https://calendly.com/chandraalladi07/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">Request an audit</a>
         </motion.div>
       </motion.div>
 

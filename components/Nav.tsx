@@ -5,7 +5,7 @@ const links = [
   { href: "#store", label: "Services" },
   { href: "#work", label: "Work" },
   { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "https://calendly.com/chandraalladi07/30min", label: "Book a Demo" },
 ];
 
 export default function Nav() {

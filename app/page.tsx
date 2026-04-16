@@ -8,7 +8,6 @@ import HowItWorks from "@/components/HowItWorks";
 import CaseStudy from "@/components/CaseStudy";
 import WhyKerblabs from "@/components/WhyKerblabs";
 import Pricing from "@/components/Pricing";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Page() {
@@ -24,7 +23,6 @@ export default function Page() {
       <CaseStudy />
       <WhyKerblabs />
       <Pricing />
-      <Contact />
       <Footer />
     </main>
   );

@@ -129,7 +129,9 @@ function PricingCard3D({
           </ul>
 
           <a
-            href="#contact"
+            href="https://calendly.com/chandraalladi07/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className={t.highlight ? "btn-primary w-full justify-center" : "btn-ghost w-full justify-center"}
           >
             Get started

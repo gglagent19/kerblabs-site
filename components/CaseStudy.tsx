@@ -212,7 +212,7 @@ export default function CaseStudy() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <a href="#contact" className="btn-primary">
+          <a href="https://calendly.com/chandraalladi07/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Model my numbers
             <svg
               width="14"
