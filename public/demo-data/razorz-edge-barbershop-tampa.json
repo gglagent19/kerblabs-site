@@ -1,0 +1,23 @@
+{
+  "slug": "razorz-edge-barbershop-tampa",
+  "businessName": "Razorz Edge Barbershop",
+  "category": "Barber shop",
+  "address": "3695 W Waters Ave, Tampa, FL 33614",
+  "phone": "(813) 605-3231",
+  "rating": 4.9,
+  "reviewCount": 146,
+  "hours": "{\"thursday\":\"10 AM–6 PM\",\"friday\":\"10 AM–6 PM\",\"saturday\":\"9 AM–4 PM\",\"sunday\":\"Closed\",\"monday\":\"Closed\",\"tuesday\":\"10 AM–5 PM\",\"wednesday\":\"10 AM–6 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmqWRf_afusC3Io3cuTdv2WsOiFzH5FhA21QcSeVoGx5vbMLz5Fm5hpv6Utmb23LfJ4rQ7PFdFMmeNINV3U2gPfMVIFXf-06i45ThnzdWHn2tm5hpuMMseKNyzozmJC53QNFlBwg=w80-h106-k-no"
+  ],
+  "description": "Razorz Edge Barbershop is a trusted barber shop serving Tampa and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T15:53:43.392Z"
+}

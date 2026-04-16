@@ -1,0 +1,23 @@
+{
+  "slug": "swift-cuts-barbershop-tampa",
+  "businessName": "Swift Cuts Barbershop",
+  "category": "Barber shop",
+  "address": "2223 N Westshore Blvd #254B, Tampa, FL 33607",
+  "phone": "(656) 233-8622",
+  "rating": 5,
+  "reviewCount": 80,
+  "hours": "{\"thursday\":\"10 AM–9 PM\",\"friday\":\"10 AM–9 PM\",\"saturday\":\"10 AM–9 PM\",\"sunday\":\"11 AM–6 PM\",\"monday\":\"10 AM–9 PM\",\"tuesday\":\"10 AM–9 PM\",\"wednesday\":\"10 AM–9 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnJRbCJOcCp4sJbvem3Sdsskgppy7lonGhWAOxygsYXfDO1PceA0GEt81GEleYysuRhDu1gJ9AIgfwtktGPn269isSVmSGSSg3o6ZE9SdvkNeLHBC8_UaHi1iLihMziyR_YRcEerrx0M6w=w80-h94-k-no"
+  ],
+  "description": "Swift Cuts Barbershop is a trusted barber shop serving Tampa and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T15:53:43.400Z"
+}

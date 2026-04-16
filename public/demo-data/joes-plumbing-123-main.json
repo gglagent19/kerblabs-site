@@ -1,0 +1,21 @@
+{
+  "slug": "joes-plumbing-123-main",
+  "businessName": "Joe's Plumbing",
+  "category": "Plumber",
+  "address": "123 Main St, Austin TX",
+  "phone": "+15125551234",
+  "rating": 3.2,
+  "reviewCount": 4,
+  "hours": null,
+  "photos": [],
+  "description": "Joe's Plumbing is a trusted plumber serving 123 Main and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Emergency Repairs",
+    "Drain Cleaning",
+    "Water Heater Installation",
+    "Pipe Repair",
+    "Bathroom Remodeling",
+    "Leak Detection"
+  ],
+  "generatedAt": "2026-04-16T15:16:02.598Z"
+}

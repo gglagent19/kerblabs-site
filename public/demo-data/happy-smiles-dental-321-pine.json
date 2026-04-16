@@ -1,0 +1,21 @@
+{
+  "slug": "happy-smiles-dental-321-pine",
+  "businessName": "Happy Smiles Dental",
+  "category": "Dentist",
+  "address": "321 Pine Rd, Austin TX",
+  "phone": "+15125553456",
+  "rating": 4,
+  "reviewCount": 8,
+  "hours": null,
+  "photos": [],
+  "description": "Happy Smiles Dental is a trusted dentist serving 321 Pine and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "General Dentistry",
+    "Teeth Cleaning",
+    "Whitening",
+    "Fillings & Crowns",
+    "Emergency Dental Care",
+    "Cosmetic Dentistry"
+  ],
+  "generatedAt": "2026-04-16T15:16:02.601Z"
+}

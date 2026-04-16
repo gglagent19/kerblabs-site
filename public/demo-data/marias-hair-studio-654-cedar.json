@@ -1,0 +1,21 @@
+{
+  "slug": "marias-hair-studio-654-cedar",
+  "businessName": "Maria's Hair Studio",
+  "category": "Hair salon",
+  "address": "654 Cedar Ln, Austin TX",
+  "phone": "+15125557890",
+  "rating": 0,
+  "reviewCount": 1,
+  "hours": null,
+  "photos": [],
+  "description": "Maria's Hair Studio is a trusted hair salon serving 654 Cedar and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T15:16:02.594Z"
+}
