@@ -1,0 +1,23 @@
+{
+  "slug": "caffe-in-w1j",
+  "businessName": "Caffe In",
+  "category": "Cafe",
+  "address": "3 Shepherd St, London, W1J 7HL, United Kingdom",
+  "phone": "+44 20 7493 6400",
+  "rating": 4.5,
+  "reviewCount": 689,
+  "hours": "{\"thursday\":\"8 AM–8 PM\",\"friday\":\"8 AM–8 PM\",\"saturday\":\"8 AM–8 PM\",\"sunday\":\"8 AM–8 PM\",\"monday\":\"8 AM–8 PM\",\"tuesday\":\"8 AM–8 PM\",\"wednesday\":\"8 AM–8 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjvUgEcKvsQYvZIyEnpkRG-Z9GiTj0TQX-z2QdrDjVpWrqDKdJUmzVCvZ4WuiQTLVVrvpl5Xya6inLhZ-_eNUz1JzGxDyKhWgrLtCuDSVoTb_-xXIxuA9EiH5iUbglehH0hnwzsQ=w141-h92-k-no"
+  ],
+  "description": "Caffe In is a trusted cafe serving W1J and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.224Z"
+}

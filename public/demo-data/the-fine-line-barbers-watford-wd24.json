@@ -1,0 +1,23 @@
+{
+  "slug": "the-fine-line-barbers-watford-wd24",
+  "businessName": "THE FİNE LİNE BARBERS watford",
+  "category": "Barber shop",
+  "address": "145 Bushey Mill Ln, Watford, WD24 7PD, United Kingdom",
+  "phone": "+44 1923 903874",
+  "rating": 4.8,
+  "reviewCount": 63,
+  "hours": "{\"thursday\":\"9:30 am–7 pm\",\"friday\":\"9:30 am–7 pm\",\"saturday\":\"8:30 am–6 pm\",\"sunday\":\"10 am–4 pm\",\"monday\":\"9:30 am–7 pm\",\"tuesday\":\"9:30 am–7 pm\",\"wednesday\":\"9:30 am–7 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDZBV8ATJzbzXlcKAYnyMl7aUFhO3Gha1Uk-lh5DpHbbtxF5W1jKEQNohD2yywbRVaOEXBiby2OVaP8JG4k-bJPSbN0Wk9LZ6TLz9UYnYwCki4WLlDgGZP-mRNYX15GJBGDL42mw=w122-h92-k-no"
+  ],
+  "description": "THE FİNE LİNE BARBERS watford is a trusted barber shop serving WD24 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.106Z"
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "hair-studio-7x12-wd17",
+  "businessName": "HAIR STUDIO 7x12",
+  "category": "Barber shop",
+  "address": "14 Woodford Rd, Watford, WD17 1PA, United Kingdom",
+  "phone": "+44 7587 737067",
+  "rating": 5,
+  "reviewCount": 180,
+  "hours": "{\"thursday\":\"9 am–8:30 pm\",\"friday\":\"9 am–8:30 pm\",\"saturday\":\"9 am–8:30 pm\",\"sunday\":\"9 am–8:30 pm\",\"monday\":\"9 am–8:30 pm\",\"tuesday\":\"9 am–8:30 pm\",\"wednesday\":\"9 am–8:30 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAhT52DL9xc8PPd0oDVOnJ6ATiDI5_mhCoE3DNvpQgnHqD7v31jExlccN7UDXgLfNs-xI4cyYFUqVERAUo0EO0jh2SUGYrNXfEyuDD9TAA2_fHLpnPzbnJYhe9CPtcrxXmuiRf=w122-h92-k-no"
+  ],
+  "description": "HAIR STUDIO 7x12 is a trusted barber shop serving WD17 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.097Z"
+}

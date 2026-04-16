@@ -1,0 +1,23 @@
+{
+  "slug": "art-cafe-london-se1",
+  "businessName": "Art Cafe London",
+  "category": "Cafe",
+  "address": "17 London Rd, Elephant and Castle, London, SE1 6JX, United Kingdom",
+  "phone": "",
+  "rating": 4.8,
+  "reviewCount": 689,
+  "hours": "{\"thursday\":\"7 AM–6 PM\",\"friday\":\"7 AM–6 PM\",\"saturday\":\"8 AM–5 PM\",\"sunday\":\"9 AM–4 PM\",\"monday\":\"7 AM–6 PM\",\"tuesday\":\"7 AM–6 PM\",\"wednesday\":\"7 AM–6 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEyCMO7q5F6b7ozBgsMLtthuP7WrIZAY3_muc4-Tv6RxVEcGmh_i8GKAoPckyTF-qip_XcBQ8W2cyTw0RYoXqcqs_CBW-6yFfgovHJy1J9xKCNOvYuHT-jzihUY7afDuzZ6PAvmg=w80-h106-k-no"
+  ],
+  "description": "Art Cafe London is a trusted cafe serving SE1 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.226Z"
+}

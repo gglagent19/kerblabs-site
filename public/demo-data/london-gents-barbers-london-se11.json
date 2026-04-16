@@ -1,0 +1,23 @@
+{
+  "slug": "london-gents-barbers-london-se11",
+  "businessName": "London Gents Barbers",
+  "category": "Barber shop",
+  "address": "4 Wincott St, Kennington Rd, London SE11 6SR, United Kingdom",
+  "phone": "+44 7404 090700",
+  "rating": 4.9,
+  "reviewCount": 536,
+  "hours": "{\"thursday\":\"9:30 AM–7 PM\",\"friday\":\"9:30 AM–7 PM\",\"saturday\":\"9:30 AM–7 PM\",\"sunday\":\"10 AM–5 PM\",\"monday\":\"9:30 AM–7 PM\",\"tuesday\":\"9:30 AM–7 PM\",\"wednesday\":\"9:30 AM–7 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkb6_60UA9bl-tAhHMcMNIylU5Ia8hAmAh6yftobJm85zec6V7HtNunfJTj1MD1HQ28dy5EYxra6089tZjZiVjI7S5XC0otnLUQR0dUGzqtAqaaCV2xK9RZGsDeIUaXYFAnWgb_w=w80-h106-k-no"
+  ],
+  "description": "London Gents Barbers is a trusted barber shop serving London SE11 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.214Z"
+}

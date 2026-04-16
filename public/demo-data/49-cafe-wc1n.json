@@ -1,0 +1,23 @@
+{
+  "slug": "49-cafe-wc1n",
+  "businessName": "49 Cafe",
+  "category": "Cafe",
+  "address": "49 Marchmont St, London, WC1N 1AP, United Kingdom",
+  "phone": "+44 20 3538 3474",
+  "rating": 4.7,
+  "reviewCount": 1018,
+  "hours": "{\"thursday\":\"7 AM–4 PM\",\"friday\":\"7 AM–4 PM\",\"saturday\":\"Closed\",\"sunday\":\"Closed\",\"monday\":\"7 AM–4 PM\",\"tuesday\":\"7 AM–4 PM\",\"wednesday\":\"7 AM–4 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFtSA6QN2WQhK7SNLJVJ8LuIic5hbGmQtjAVpwjqsZlTLj7XEuSYxdq6bdxsSWWDAA0hIdl0aZmA0hrnmnY7TTLIAqBwO5zL1pMqDwv0_ZUyJ4Ty5iIh7DjIJcCQcYsbcWJFPOY=w122-h92-k-no"
+  ],
+  "description": "49 Cafe is a trusted cafe serving WC1N and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.237Z"
+}

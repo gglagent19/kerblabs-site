@@ -1,0 +1,23 @@
+{
+  "slug": "elite-barbers-wc1n",
+  "businessName": "Elite Barbers",
+  "category": "Barber shop",
+  "address": "69 Marchmont St, London, WC1N 1AP, United Kingdom",
+  "phone": "+44 20 7916 9285",
+  "rating": 4.9,
+  "reviewCount": 763,
+  "hours": "{\"thursday\":\"9 AM–7 PM\",\"friday\":\"9 AM–7 PM\",\"saturday\":\"9 AM–7 PM\",\"sunday\":\"Closed\",\"monday\":\"9 AM–7 PM\",\"tuesday\":\"9 AM–7 PM\",\"wednesday\":\"9 AM–7 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHPxRQTc2BccKuP3BaALWeSymu8pag5MJAfFjGYIQIeDbEHQ8JIvSGSbQES_WjdeWyDqe52IAvit-vQs0fZp5RBjaMXZ6QwFozNspl9-cQO4_uqNeLmlD6QleSULxEw7Q-JE7D=w122-h92-k-no"
+  ],
+  "description": "Elite Barbers is a trusted barber shop serving WC1N and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.211Z"
+}

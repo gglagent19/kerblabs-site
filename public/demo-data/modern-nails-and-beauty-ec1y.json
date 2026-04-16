@@ -1,0 +1,23 @@
+{
+  "slug": "modern-nails-and-beauty-ec1y",
+  "businessName": "Modern Nails and Beauty",
+  "category": "Nail salon",
+  "address": "191 Whitecross St, London, EC1Y 8QP, United Kingdom",
+  "phone": "+44 20 3538 2280",
+  "rating": 4.6,
+  "reviewCount": 296,
+  "hours": "{\"thursday\":\"10 AM–7 PM\",\"friday\":\"10 AM–7 PM\",\"saturday\":\"10 AM–7 PM\",\"sunday\":\"11 AM–5 PM\",\"monday\":\"10 AM–7 PM\",\"tuesday\":\"10 AM–7 PM\",\"wednesday\":\"10 AM–7 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTe4kGoKeiGoLPu4-AJvrWGLk1QQjFDPcEkhFsXaHY8czXMvSBtP2GjVN29P6DidNnivXrC3nki3Sjy4lwjHh5i7rpFAAZfLNIzkGPdicSkfWl46viomLK8odmUSdf-QdnktY3yA=w163-h92-k-no"
+  ],
+  "description": "Modern Nails and Beauty is a trusted nail salon serving EC1Y and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.130Z"
+}

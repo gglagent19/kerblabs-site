@@ -1,0 +1,23 @@
+{
+  "slug": "junction-barbers-wd17",
+  "businessName": "Junction Barbers",
+  "category": "Barber shop",
+  "address": "105 St Albans Rd, Watford, WD17 1RD, United Kingdom",
+  "phone": "+44 7915 518810",
+  "rating": 4.9,
+  "reviewCount": 62,
+  "hours": "{\"thursday\":\"9 am–8 pm\",\"friday\":\"9 am–8 pm\",\"saturday\":\"8:30 am–7 pm\",\"sunday\":\"9 am–6 pm\",\"monday\":\"9 am–8 pm\",\"tuesday\":\"9 am–8 pm\",\"wednesday\":\"9 am–8 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsmxmeIBy4DSFNK4UikLf18MDW6UeQ-cM_eqzRpT1wkPq_ujr3aEPBUdcIzEeJgM3zzNfr4ba8SMdoK-Sa6Woe-hcbXsI6pqp_muyXGeIgPJ8TYdderK2FySebtGZmPIscg56x=w80-h142-k-no"
+  ],
+  "description": "Junction Barbers is a trusted barber shop serving WD17 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.258Z"
+}

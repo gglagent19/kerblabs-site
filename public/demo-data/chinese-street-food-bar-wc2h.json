@@ -1,0 +1,23 @@
+{
+  "slug": "chinese-street-food-bar-wc2h",
+  "businessName": "Chinese Street Food Bar",
+  "category": "Chinese restaurant",
+  "address": "12 Little Newport St, London, WC2H 7JJ, United Kingdom",
+  "phone": "",
+  "rating": 4.7,
+  "reviewCount": 10,
+  "hours": null,
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEakt-vLCBhl8DzKWajzsKIJmEPEBL4KqhNmSYXp4WbnaeX4lgkL7ccIBcTq5dbWCwzSoRf9Hrwk4QLBKQiDN0oe6XQfv76JN3_zmAj-jZNajWB-lPrhfnaTHhGE786A1DIquPkqA=w122-h92-k-no"
+  ],
+  "description": "Chinese Street Food Bar is a trusted chinese restaurant serving WC2H and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.201Z"
+}

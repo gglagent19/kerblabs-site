@@ -1,0 +1,23 @@
+{
+  "slug": "crunchy-falafel-london-w1d",
+  "businessName": "Crunchy falafel",
+  "category": "Falafel restaurant",
+  "address": "London Trocadero, Piccadilly Circus, London W1D 7DH, United Kingdom",
+  "phone": "",
+  "rating": 4.7,
+  "reviewCount": 263,
+  "hours": "{\"thursday\":\"10 AM–11 PM\",\"friday\":\"10 AM–12 AM\",\"saturday\":\"10 AM–12 AM\",\"sunday\":\"10 AM–11 PM\",\"monday\":\"10 AM–11 PM\",\"tuesday\":\"10 AM–11 PM\",\"wednesday\":\"10 AM–11 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH7Kp-OaeaN2rF8Zkk0EauQpHmTdSbkKeDI4LuoZ38gWIvBiNLk5S0WpBJc4-msswdvwQ7MeV4dDtOr6ysJjnGHi9hPjYPDzdZVxuq5XKJzi5lEokIJyKlYNYIGbCDjAbo1OU52aQ=w122-h92-k-no"
+  ],
+  "description": "Crunchy falafel is a trusted falafel restaurant serving London W1D and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.245Z"
+}

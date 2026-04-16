@@ -1,0 +1,23 @@
+{
+  "slug": "shiraz-barbers-watford-wd17",
+  "businessName": "Shiraz barbers Watford",
+  "category": "Barber shop",
+  "address": "83 Queen's Rd, Watford, WD17 2QN, United Kingdom",
+  "phone": "+44 7507 515203",
+  "rating": 5,
+  "reviewCount": 163,
+  "hours": "{\"thursday\":\"9 am–7 pm\",\"friday\":\"9 am–7 pm\",\"saturday\":\"9 am–7 pm\",\"sunday\":\"10 am–5 pm\",\"monday\":\"9 am–7 pm\",\"tuesday\":\"9 am–7 pm\",\"wednesday\":\"9 am–7 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9_S86ixeFaXGKl-Md6lQ_PjGUGucO6LuzqpkqCqX3Jhn8Nk-qW98WG97cZKfxN5HDmuM6nFxEbzg1BNtVc-PfEv1ivOS3miojQWda7mpuXgpeeMmCmbpR6cMl0ogzoEW6C-St=w163-h92-k-no"
+  ],
+  "description": "Shiraz barbers Watford is a trusted barber shop serving WD17 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.257Z"
+}

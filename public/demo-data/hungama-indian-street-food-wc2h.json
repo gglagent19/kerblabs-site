@@ -1,0 +1,23 @@
+{
+  "slug": "hungama-indian-street-food-wc2h",
+  "businessName": "Hungama Indian Street Food",
+  "category": "Modern Indian restaurant",
+  "address": "21 Charing Cross Rd, London, WC2H 0ET, United Kingdom",
+  "phone": "+44 20 4619 1671",
+  "rating": 4.8,
+  "reviewCount": 3706,
+  "hours": "{\"thursday\":\"12–11 PM\",\"friday\":\"12–11 PM\",\"saturday\":\"12–11 PM\",\"sunday\":\"12–11 PM\",\"monday\":\"12–11 PM\",\"tuesday\":\"12–11 PM\",\"wednesday\":\"12–11 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdBB0Rx2ZuYyS6RZTdVqBcec4WRWwTY0JBXCcEt9QbP-GqFzDSRcNbi2Ht2kUoQqJl8Rex_Jjmip3-lRNYAe_LWPXqngzkQWE4F5Nb68OyDsXmrDSnOcdr7Vd_L1f5yRrzpgE6vCYPkCqt=w122-h92-k-no"
+  ],
+  "description": "Hungama Indian Street Food is a trusted modern indian restaurant serving WC2H and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.247Z"
+}

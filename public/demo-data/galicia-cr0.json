@@ -1,0 +1,23 @@
+{
+  "slug": "galicia-cr0",
+  "businessName": "Galicia",
+  "category": "Galician restaurant",
+  "address": "269-275 High St, Croydon, CR0 1QH, United Kingdom",
+  "phone": "+44 20 8686 0043",
+  "rating": 4.5,
+  "reviewCount": 1130,
+  "hours": "{\"thursday\":\"12–3 PM, 6–11 PM\",\"friday\":\"12–3 PM, 6–11:30 PM\",\"saturday\":\"12–3 PM, 6–11:30 PM\",\"sunday\":\"12:30–10 PM\",\"monday\":\"Closed\",\"tuesday\":\"12–3 PM, 6–10 PM\",\"wednesday\":\"12–3 PM, 6–11 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpPvZRdt2I-o0kRPNx9M7aPWPaqfq05FfLTsAEsispv0mVzBS3UUt_DwZUq22ScUsOt6L9oBVm4pKeJ0XBrkOS4OmOYOEN5a9TGQjrqcc6Rr-jkJdLt1aPU1AKKf_qgfDnne2Nlw=w163-h92-k-no"
+  ],
+  "description": "Galicia is a trusted galician restaurant serving CR0 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.125Z"
+}

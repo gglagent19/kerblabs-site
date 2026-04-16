@@ -1,0 +1,23 @@
+{
+  "slug": "dinos-barber-shop-watford-wd18",
+  "businessName": "Dino’s Barber Shop Watford",
+  "category": "Barber shop",
+  "address": "36 Vicarage Rd, Watford, WD18 0EN, United Kingdom",
+  "phone": "+44 7399 300130",
+  "rating": 4.6,
+  "reviewCount": 107,
+  "hours": "{\"thursday\":\"9 am–8 pm\",\"friday\":\"9 am–8 pm\",\"saturday\":\"9 am–7 pm\",\"sunday\":\"9 am–7 pm\",\"monday\":\"9 am–8 pm\",\"tuesday\":\"9 am–8 pm\",\"wednesday\":\"9 am–8 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFDXk7uQSkb3DB-UmAIs5UxAQxY17MsJ-Z-gOftQZhnxvvLp90Z4a9YxDhSchrH4YOAa4ZqsricGXobRMj8MT6ZWoQQ6uH5dAgcQBb8eHBsK0JtowdLXZifSfeDvQoA_x0IxZSbug=w122-h92-k-no"
+  ],
+  "description": "Dino’s Barber Shop Watford is a trusted barber shop serving WD18 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.259Z"
+}

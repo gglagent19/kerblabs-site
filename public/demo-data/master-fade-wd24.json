@@ -1,0 +1,23 @@
+{
+  "slug": "master-fade-wd24",
+  "businessName": "Master Fade",
+  "category": "Barber shop",
+  "address": "179A St Albans Rd, Watford, WD24 5BS, United Kingdom",
+  "phone": "+44 1923 914512",
+  "rating": 4.9,
+  "reviewCount": 116,
+  "hours": "{\"thursday\":\"9 am–7 pm\",\"friday\":\"8:30 am–7:30 pm\",\"saturday\":\"8 am–6 pm\",\"sunday\":\"10 am–5 pm\",\"monday\":\"9 am–7 pm\",\"tuesday\":\"9 am–7 pm\",\"wednesday\":\"9 am–7 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHq3MM-ekNBADfThqN-75PiBjufzg-RY_a_mZpbSywAJEo_oTmXuH8SCULhAdm49_WbXKqVi0bUHnWA_vI8nHQQILhAZ6Y03bi0IVEqqzufbl4V_V9MWptDD4Isu7GYax1m_yo=w197-h92-k-no"
+  ],
+  "description": "Master Fade is a trusted barber shop serving WD24 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.111Z"
+}

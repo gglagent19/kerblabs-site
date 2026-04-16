@@ -1,0 +1,23 @@
+{
+  "slug": "siam-town-cr0",
+  "businessName": "Siam Town",
+  "category": "Thai restaurant",
+  "address": "299 High St, Croydon, CR0 1QL, United Kingdom",
+  "phone": "+44 20 8688 4499",
+  "rating": 4.8,
+  "reviewCount": 464,
+  "hours": "{\"thursday\":\"12–3:30 PM, 5–10 PM\",\"friday\":\"12–3:30 PM, 5–10 PM\",\"saturday\":\"12–3:30 PM, 5–10 PM\",\"sunday\":\"Closed\",\"monday\":\"Closed\",\"tuesday\":\"12–3:30 PM, 5–10 PM\",\"wednesday\":\"12–3:30 PM, 5–10 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFf4Dxa1QtGVt8eR21GXHllg8mZ4SnHqpg0IKCq6F2op56fLWdHLgKrTfFk6T42vWrBcQwf1pkQ68N0VLMka6hi17ikkTveTFG59Ch4khz5kexs5Pfjw21khxo-waK8o55myTXr=w80-h106-k-no"
+  ],
+  "description": "Siam Town is a trusted thai restaurant serving CR0 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.122Z"
+}

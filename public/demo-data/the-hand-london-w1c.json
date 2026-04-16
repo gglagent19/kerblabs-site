@@ -1,0 +1,23 @@
+{
+  "slug": "the-hand-london-w1c",
+  "businessName": "The Hand London",
+  "category": "Fast food restaurant",
+  "address": "Balderton St, London, W1C 2PH, United Kingdom",
+  "phone": "",
+  "rating": 4.7,
+  "reviewCount": 26,
+  "hours": "{\"thursday\":\"11 AM–10 PM\",\"friday\":\"11 AM–10 PM\",\"saturday\":\"11 AM–10 PM\",\"sunday\":\"11 AM–10 PM\",\"monday\":\"11 AM–10 PM\",\"tuesday\":\"11 AM–10 PM\",\"wednesday\":\"11 AM–10 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdsul7Tw_DaTzZ-ZII8_VTSoh8jCO6pbRmNyIqsgsvzre4Cbh9vn0Oydlj4ESfoF7cy03CrkadiwCpVBmi8SyW7jdnhaz3tE56KJr942hOeiEmmwzHm7-MLoK-vPTe3uwHCAde6HGfV7-A=w122-h92-k-no"
+  ],
+  "description": "The Hand London is a trusted fast food restaurant serving W1C and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.251Z"
+}

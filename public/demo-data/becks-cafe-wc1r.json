@@ -1,0 +1,23 @@
+{
+  "slug": "becks-cafe-wc1r",
+  "businessName": "Becks Cafe",
+  "category": "Cafe",
+  "address": "28 Red Lion St, London, WC1R 4PS, United Kingdom",
+  "phone": "+44 20 7405 8565",
+  "rating": 4.6,
+  "reviewCount": 948,
+  "hours": "{\"thursday\":\"7 AM–10 PM\",\"friday\":\"7 AM–10 PM\",\"saturday\":\"7 AM–3 PM\",\"sunday\":\"7 AM–3 PM\",\"monday\":\"7 AM–10 PM\",\"tuesday\":\"7 AM–10 PM\",\"wednesday\":\"7 AM–10 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAER4-d1i8hn_bgUjhFtWyOIKsjVsovFS8UOO_oBr2YSfGscTGeKWYINO0NxhotUY7cu4K6UNCTgYydLC77ugzO5-pUyK0FJw5uUHG6g5jVYN_ALIF9X7PtF8fTZ0o6FzM_GBTk=w122-h92-k-no"
+  ],
+  "description": "Becks Cafe is a trusted cafe serving WC1R and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.220Z"
+}

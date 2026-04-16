@@ -1,0 +1,23 @@
+{
+  "slug": "so-cafe-london-london-w9",
+  "businessName": "SO Café London",
+  "category": "Cafe",
+  "address": "Forecourt, Maida Vale Station, Randolph Ave., London W9 1JS, United Kingdom",
+  "phone": "",
+  "rating": 4.9,
+  "reviewCount": 582,
+  "hours": "{\"thursday\":\"6:30 AM–7 PM\",\"friday\":\"6:30 AM–7 PM\",\"saturday\":\"8 AM–7 PM\",\"sunday\":\"9 AM–7 PM\",\"monday\":\"6:30 AM–7 PM\",\"tuesday\":\"6:30 AM–7 PM\",\"wednesday\":\"6:30 AM–7 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEoB-JmOqpquFwOVoJ8kuyJYC3ACTBgq-y1LGSbD3rENeCpiuaKNiRYbmAB8U4qvNjeCtCKhTyenZcuBdB6h0n7JfliIFbSlkCYccrVjY8ZOd6djJKOgjV1kFApLdwnrxJe0k2bA=w80-h142-k-no"
+  ],
+  "description": "SO Café London is a trusted cafe serving London W9 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.217Z"
+}

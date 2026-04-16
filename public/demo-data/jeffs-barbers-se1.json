@@ -1,0 +1,23 @@
+{
+  "slug": "jeffs-barbers-se1",
+  "businessName": "Jeff's Barbers",
+  "category": "Barber shop",
+  "address": "160 Great Suffolk St, London, SE1 1PE, United Kingdom",
+  "phone": "+44 20 3620 2612",
+  "rating": 4.8,
+  "reviewCount": 996,
+  "hours": "{\"thursday\":\"8 AM–7 PM\",\"friday\":\"8 AM–7:30 PM\",\"saturday\":\"9 AM–6:30 PM\",\"sunday\":\"10 AM–6 PM\",\"monday\":\"8 AM–7 PM\",\"tuesday\":\"8 AM–7 PM\",\"wednesday\":\"8 AM–7 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTdotZVNS92ooPD8xWjBIdVLiEqkBhJU9GSgJf6XOI1gPqtLG55Pow-iTQw0w4Hh74qGeSpX2MjYkaKWCOZOq9ifif0JjaeDNDlw6W1imbllzGursExqG-wjRUuUV8eCK5W9V8=w122-h92-k-no"
+  ],
+  "description": "Jeff's Barbers is a trusted barber shop serving SE1 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.210Z"
+}

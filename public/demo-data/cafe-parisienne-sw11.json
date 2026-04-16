@@ -1,0 +1,23 @@
+{
+  "slug": "cafe-parisienne-sw11",
+  "businessName": "Cafe Parisienne",
+  "category": "Cafe",
+  "address": "225 Lavender Hill, London, SW11 1JR, United Kingdom",
+  "phone": "+44 20 7924 5523",
+  "rating": 4.8,
+  "reviewCount": 1127,
+  "hours": "{\"thursday\":\"6:30 AM–3:30 PM\",\"friday\":\"6:30 AM–3:30 PM\",\"saturday\":\"6:30 AM–3:30 PM\",\"sunday\":\"7 AM–3:30 PM\",\"monday\":\"6:30 AM–3:30 PM\",\"tuesday\":\"6:30 AM–3:30 PM\",\"wednesday\":\"6:30 AM–3:30 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQ-Wm8DVU94-FN3rRcNPrF59k_cDTRXfOBVzgpNuXf6b3K9TSg9K62BaCvmfdg-lqnyir0w58pmTjSfU09qYRiOt-ytjWr-UkS9zr2BVmMOv_VrJFrhzncDf7IcMUgNFvC75cynA=w137-h92-k-no"
+  ],
+  "description": "Cafe Parisienne is a trusted cafe serving SW11 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.241Z"
+}

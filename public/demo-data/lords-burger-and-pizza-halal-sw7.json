@@ -1,0 +1,23 @@
+{
+  "slug": "lords-burger-and-pizza-halal-sw7",
+  "businessName": "Lords Burger and Pizza (Halal)",
+  "category": "Pizza restaurant",
+  "address": "2 Montpelier St, London, SW7 1EZ, United Kingdom",
+  "phone": "+44 20 7581 8414",
+  "rating": 4.5,
+  "reviewCount": 315,
+  "hours": "{\"thursday\":\"11 AM–11 PM\",\"friday\":\"11 AM–11 PM\",\"saturday\":\"11 AM–11 PM\",\"sunday\":\"11 AM–11 PM\",\"monday\":\"11 AM–11 PM\",\"tuesday\":\"11 AM–11 PM\",\"wednesday\":\"11 AM–11 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8G_M359OtvSIzyIvCOBqhbb9QClwjgKIjczDnMxaiHxys9Iz9ahyUIQZ7YOoWdlrqcPwg2sSwvRP927Erd5Gmbx7eOgr0PTgUuk27ZUWJG3BHMe_kdRtJnrPLrOpZmukB_jeN=w137-h92-k-no"
+  ],
+  "description": "Lords Burger and Pizza (Halal) is a trusted pizza restaurant serving SW7 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.254Z"
+}

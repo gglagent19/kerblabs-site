@@ -1,0 +1,23 @@
+{
+  "slug": "01-barbers-wd18",
+  "businessName": "01 Barbers",
+  "category": "Barber shop",
+  "address": "5 Euston Ave, Watford, WD18 7SZ, United Kingdom",
+  "phone": "+44 7827 704503",
+  "rating": 4.6,
+  "reviewCount": 171,
+  "hours": "{\"thursday\":\"9:30 am–7 pm\",\"friday\":\"9:45 am–7 pm\",\"saturday\":\"9:30 am–7 pm\",\"sunday\":\"10 am–5 pm\",\"monday\":\"Closed\",\"tuesday\":\"9:30 am–7 pm\",\"wednesday\":\"9:30 am–7 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHwDSPsOtFxvOFcqmVIchek-bBdJ9aF60TaA-rkNsgdoOeHP6TobifhVgeEHdswUnREGUfw9BGSLX0gxXub6Fstw9aoqclurQ36Xh3l8jkV2rq01KdX04cWyGo8cbHxf9xQFcpK=w80-h106-k-no"
+  ],
+  "description": "01 Barbers is a trusted barber shop serving WD18 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.255Z"
+}

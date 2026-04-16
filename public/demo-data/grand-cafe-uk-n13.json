@@ -1,0 +1,23 @@
+{
+  "slug": "grand-cafe-uk-n13",
+  "businessName": "Grand Cafe UK",
+  "category": "Cafe",
+  "address": "London, N13 6BE, United Kingdom",
+  "phone": "+44 20 8888 7721",
+  "rating": 4.8,
+  "reviewCount": 322,
+  "hours": "{\"thursday\":\"7 AM–6 PM\",\"friday\":\"7 AM–6 PM\",\"saturday\":\"7 AM–6 PM\",\"sunday\":\"8 AM–4 PM\",\"monday\":\"7 AM–6 PM\",\"tuesday\":\"7 AM–6 PM\",\"wednesday\":\"Closed\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEFcvn22OtiFJ0ME5RGfOkmVScSeBD03XfxNCywbRP0HGFMY6A040dLYb99cSfqRUkD2K5Mtm39nmhtfLFMpj3tEFPDvyjCLN22tjVdY5D_6CNz-1G3XR1-StZui1wnJ9GcSZaQ-g=w163-h92-k-no"
+  ],
+  "description": "Grand Cafe UK is a trusted cafe serving N13 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Dine In",
+    "Takeaway",
+    "Delivery",
+    "Catering",
+    "Private Events",
+    "Online Ordering"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.228Z"
+}

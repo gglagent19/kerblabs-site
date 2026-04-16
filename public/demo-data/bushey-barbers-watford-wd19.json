@@ -1,0 +1,23 @@
+{
+  "slug": "bushey-barbers-watford-wd19",
+  "businessName": "BUSHEY BARBERS",
+  "category": "Barber shop",
+  "address": "8, Ye Corner Chalk Hill, Watford WD19 4BS, United Kingdom",
+  "phone": "+44 7481 470799",
+  "rating": 4.9,
+  "reviewCount": 119,
+  "hours": "{\"thursday\":\"9 am–7 pm\",\"friday\":\"9 am–7 pm\",\"saturday\":\"9 am–7 pm\",\"sunday\":\"10 am–5 pm\",\"monday\":\"9 am–7 pm\",\"tuesday\":\"9 am–7 pm\",\"wednesday\":\"9 am–7 pm\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE4KR-sw2KzX6MA6kJoj9ykD1NUcOQvOMlX6Xfj5j40o5wRYCc0wo-hFQ9Q6iUFyTrc5j9pEdaEM7HmD6_jDafFanbNTlRIhXOcymLFdWx_t2elreXU2T_GObz6ZN6-S1_c32Zuag=w109-h92-k-no"
+  ],
+  "description": "BUSHEY BARBERS is a trusted barber shop serving Watford WD19 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts",
+    "Hair Treatments",
+    "Bridal Styling",
+    "Beard Trim"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.093Z"
+}

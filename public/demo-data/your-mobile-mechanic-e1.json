@@ -1,0 +1,23 @@
+{
+  "slug": "your-mobile-mechanic-e1",
+  "businessName": "Your Mobile Mechanic",
+  "category": "Auto repair shop",
+  "address": "Duckett St, London, E1 4RW, United Kingdom",
+  "phone": "+44 7356 026123",
+  "rating": 5,
+  "reviewCount": 1,
+  "hours": "{\"thursday\":\"Open 24 hours\",\"friday\":\"Open 24 hours\",\"saturday\":\"Open 24 hours\",\"sunday\":\"Open 24 hours\",\"monday\":\"Open 24 hours\",\"tuesday\":\"Open 24 hours\",\"wednesday\":\"Open 24 hours\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcj693CWPxmYd_egamBCvLaB3TU-rY0G4iPX4bBFVHHsLEw8AuMDLvgTvroUHIDmqHxXAb7F3yAqnopJ2WKIAw4Bp3xa5MRVvpDuNkay2HK1nUmgKUJ5EVQdMmhSqm9TzLhI_OEnB6ivyV=w80-h142-k-no"
+  ],
+  "description": "Your Mobile Mechanic is a trusted auto repair shop serving E1 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Oil Change",
+    "Brake Service",
+    "Engine Repair",
+    "AC Service",
+    "Tire Service",
+    "Diagnostics"
+  ],
+  "generatedAt": "2026-04-16T16:22:39.208Z"
+}

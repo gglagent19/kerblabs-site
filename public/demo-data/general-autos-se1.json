@@ -1,0 +1,23 @@
+{
+  "slug": "general-autos-se1",
+  "businessName": "General Autos",
+  "category": "Auto repair shop",
+  "address": "171 Abbey St, London, SE1 3GR, United Kingdom",
+  "phone": "+44 20 7237 3444",
+  "rating": 4.9,
+  "reviewCount": 301,
+  "hours": "{\"thursday\":\"8:30 AM–6 PM\",\"friday\":\"8:30 AM–6 PM\",\"saturday\":\"8:30 AM–1 PM\",\"sunday\":\"Closed\",\"monday\":\"8:30 AM–6 PM\",\"tuesday\":\"8:30 AM–6 PM\",\"wednesday\":\"8:30 AM–6 PM\"}",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCLdw_r_1ymPV5xXdy7sKPM_aDTEIb2_yKHP7uREz-SJIlrNjTfTqIxoDvOj-KjWdP4zsCs18bz9Fa2Lxk4T_G9XkHXZ0Yu5VdpYE3VNxzowMsmUtdjjZb2f--DXYjvcadKbf9NQ=w122-h92-k-no"
+  ],
+  "description": "General Autos is a trusted auto repair shop serving SE1 and surrounding areas. Contact us today for professional, reliable service.",
+  "services": [
+    "Oil Change",
+    "Brake Service",
+    "Engine Repair",
+    "AC Service",
+    "Tire Service",
+    "Diagnostics"
+  ],
+  "generatedAt": "2026-04-16T16:22:48.132Z"
+}
