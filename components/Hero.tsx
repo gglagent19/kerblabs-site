@@ -1,5 +1,6 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -21,28 +22,111 @@ function WordsPullUp({ text, className, delay = 0 }: { text: string; className?:
   );
 }
 
+/* ── Live Activity Toasts ── */
+const toasts = [
+  { icon: "📅", text: "New appointment booked", sub: "Sarah M. — Haircut & Beard · 2:30 PM", color: "#B8FF00" },
+  { icon: "⭐", text: "New 5-star review", sub: "\"Best barber in town! Absolutely love it.\"", color: "#FACC15" },
+  { icon: "📈", text: "Customers up 34% this week", sub: "12 more bookings vs last week", color: "#B8FF00" },
+  { icon: "📞", text: "Missed call rescued", sub: "AI texted back in 8 seconds — lead saved", color: "#FF6B35" },
+  { icon: "⭐", text: "New 5-star review", sub: "\"Finally a place that answers the phone!\"", color: "#FACC15" },
+  { icon: "🔍", text: "Found on Google Maps", sub: "+47 profile views today", color: "#B8FF00" },
+  { icon: "📅", text: "New appointment booked", sub: "James K. — Full Service · 11:00 AM", color: "#B8FF00" },
+  { icon: "💬", text: "AI chat converted a lead", sub: "Website visitor → booked appointment in 42s", color: "#FF6B35" },
+  { icon: "⭐", text: "New 5-star review", sub: "\"Brilliant service, will definitely be back\"", color: "#FACC15" },
+  { icon: "📈", text: "Revenue up £1,200 this month", sub: "AI voice + GBP driving new customers", color: "#B8FF00" },
+  { icon: "🛡", text: "Negative review intercepted", sub: "AI called customer — issue resolved in 28 sec", color: "#FF6B35" },
+  { icon: "📅", text: "New appointment booked", sub: "Emma R. — Colour & Style · 4:00 PM", color: "#B8FF00" },
+];
+
+const positions: React.CSSProperties[] = [
+  { top: "12%", left: "3%" },
+  { top: "25%", right: "2%" },
+  { bottom: "30%", left: "4%" },
+  { bottom: "18%", right: "3%" },
+  { top: "40%", left: "2%" },
+  { top: "15%", right: "4%" },
+];
+
+function LiveToast({ toast, position, onDone }: { toast: typeof toasts[0]; position: React.CSSProperties; onDone: () => void }) {
+  useEffect(() => {
+    const t = setTimeout(onDone, 4000);
+    return () => clearTimeout(t);
+  }, [onDone]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -10, scale: 0.95 }}
+      transition={{ duration: 0.5, ease }}
+      className="absolute z-[5] pointer-events-none hidden md:block"
+      style={position}
+    >
+      <div className="flex items-center gap-3 bg-black/70 backdrop-blur-xl border border-white/[0.08] rounded-2xl px-4 py-3 shadow-2xl max-w-[280px]">
+        <span className="text-xl shrink-0">{toast.icon}</span>
+        <div className="min-w-0">
+          <div className="text-[11px] font-bold truncate" style={{ color: toast.color }}>{toast.text}</div>
+          <div className="text-[10px] text-[color:var(--color-text-dim)] truncate leading-tight mt-0.5">{toast.sub}</div>
+        </div>
+        <span className="text-[8px] text-[color:var(--color-text-faint)] shrink-0">now</span>
+      </div>
+    </motion.div>
+  );
+}
+
+function LiveActivityFeed() {
+  const [active, setActive] = useState<{ id: number; toast: typeof toasts[0]; pos: React.CSSProperties }[]>([]);
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setCounter((c) => {
+          const idx = c % toasts.length;
+          const posIdx = c % positions.length;
+          const id = Date.now();
+          setActive((prev) => {
+            const next = [...prev.slice(-2), { id, toast: toasts[idx], pos: positions[posIdx] }];
+            return next;
+          });
+          return c + 1;
+        });
+      }, 3000);
+      return () => clearInterval(interval);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <AnimatePresence>
+      {active.map((item) => (
+        <LiveToast
+          key={item.id}
+          toast={item.toast}
+          position={item.pos}
+          onDone={() => setActive((prev) => prev.filter((a) => a.id !== item.id))}
+        />
+      ))}
+    </AnimatePresence>
+  );
+}
+
 export default function Hero() {
   const { scrollY } = useScroll();
   const textY = useTransform(scrollY, [0, 600], [0, -120]);
   const textOpacity = useTransform(scrollY, [0, 400], [1, 0]);
   const blobScale = useTransform(scrollY, [0, 600], [1, 1.6]);
   const blobOpacity = useTransform(scrollY, [0, 500], [0.07, 0.15]);
-  const insetRadius = useTransform(scrollY, [0, 300], [32, 0]);
 
   return (
     <section id="top" className="relative h-[100svh] p-3 md:p-5">
-      {/* Inset container with rounded corners */}
       <div className="hero-inset h-full flex items-center justify-center bg-[color:var(--color-void)]">
         {/* Gradient blobs */}
-        <motion.div
-          className="hero-blob hero-blob-1"
-          style={{ scale: blobScale, opacity: blobOpacity }}
-          aria-hidden
-        />
+        <motion.div className="hero-blob hero-blob-1" style={{ scale: blobScale, opacity: blobOpacity }} aria-hidden />
         <motion.div className="hero-blob hero-blob-2" style={{ scale: blobScale }} aria-hidden />
         <motion.div className="hero-blob hero-blob-3" aria-hidden />
 
-        {/* Subtle grid lines (Prisma-style) */}
+        {/* Grid lines */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.03]"
           style={{
@@ -51,13 +135,13 @@ export default function Hero() {
           }}
         />
 
-        {/* Noise on hero */}
         <div className="absolute inset-0 bg-noise opacity-[0.12] mix-blend-overlay pointer-events-none" />
-
-        {/* Gradient overlay bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50 pointer-events-none" />
 
-        {/* Content — parallax + fade on scroll */}
+        {/* ── Live Activity Toasts ── */}
+        <LiveActivityFeed />
+
+        {/* Content */}
         <motion.div
           className="relative z-10 max-w-[1000px] mx-auto px-6 text-center"
           style={{ y: textY, opacity: textOpacity }}
