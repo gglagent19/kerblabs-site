@@ -1,5 +1,25 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { useRef } from "react";
+
+function AnimatedChar({ char, progress, index, total }: { char: string; progress: MotionValue<number>; index: number; total: number }) {
+  const charProgress = index / total;
+  const opacity = useTransform(progress, [charProgress - 0.1, charProgress + 0.05], [0.15, 1]);
+  return <motion.span style={{ opacity }}>{char}</motion.span>;
+}
+
+function ScrollRevealText({ text, className }: { text: string; className?: string }) {
+  const ref = useRef<HTMLParagraphElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.8", "end 0.2"] });
+  const chars = text.split("");
+  return (
+    <p ref={ref} className={className}>
+      {chars.map((char, i) => (
+        <AnimatedChar key={i} char={char} progress={scrollYProgress} index={i} total={chars.length} />
+      ))}
+    </p>
+  );
+}
 
 const timeline = [
   { time: "0 sec", label: "Customer walks out", icon: "🚶", desc: "They just finished their appointment." },
@@ -32,10 +52,10 @@ export default function ReviewRescue() {
             Catch the bad review<br />
             <span className="grad-lime">before they reach their car.</span>
           </h2>
-          <p className="text-[color:var(--color-text-dim)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Most businesses find out about unhappy customers when the 1-star review is already public.
-            Our system catches it in <strong className="text-[color:var(--color-text)]">real time</strong> — and fixes it <strong className="text-[color:var(--color-text)]">before it ever hits Google</strong>.
-          </p>
+          <ScrollRevealText
+            text="Most businesses find out about unhappy customers when the 1-star review is already public. Our system catches it in real time — and fixes it before it ever hits Google."
+            className="text-[color:var(--color-cream)] text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
+          />
         </motion.div>
 
         {/* Timeline */}
