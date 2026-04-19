@@ -23,9 +23,9 @@ const solutions = [
   },
   {
     problem: "Silent churn",
-    headline: "5-star reviews on autopilot. Bad ones caught before they land.",
-    body: "After every appointment, your customer gets a friendly SMS asking for a review. Happy? One tap to Google. Unhappy? It routes to you privately first — so you fix it before it goes public. We draft every reply with AI so your profile stays alive and trusted.",
-    result: "Shops go from 12 reviews to 80+ in the first 90 days.",
+    headline: "5 stars captured before they even get home.",
+    body: "The moment a customer walks out your door, our system fires a friendly SMS asking how it went — before they've even reached their car. Happy? One tap posts a glowing Google review. Unhappy? The system instantly triggers an AI call to that customer, apologises, and offers a fix on the spot. No bad review goes public. No unhappy customer goes ignored. It's damage control at the speed of light.",
+    result: "Shops go from 12 reviews to 80+ in 90 days. Negative reviews caught and resolved within 3 minutes — before they ever hit Google.",
     icon: "⭐",
     tag: "Review Engine",
     color: "#B8FF00",

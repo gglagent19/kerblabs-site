@@ -18,8 +18,8 @@ const problems = [
     color: "#B8FF00",
   },
   {
-    headline: "One bad experience. Gone forever.",
-    body: "No follow-up after a visit. No review request. A slow website. An unanswered enquiry. It only takes one friction point and nine out of ten won't give you a second chance.",
+    headline: "A bad review hits Google. You find out three days later.",
+    body: "A customer leaves unhappy. They sit in their car, open Google, and post a 1-star review. By the time you see it, the damage is done — it's public, it's permanent, and 50 potential customers have already read it. What if you could have caught that before they even got home?",
     tag: "Silent churn",
     icon: "⭐",
     color: "#FF6B35",
