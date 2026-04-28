@@ -1,0 +1,84 @@
+import type { RichCityContent } from "../types";
+
+export const content: RichCityContent = {
+  primaryKeywords: [
+    "AI marketing agency Edinburgh",
+    "marketing agency Edinburgh",
+    "local SEO Edinburgh",
+    "AI lead generation Edinburgh",
+    "digital marketing Edinburgh small business",
+  ],
+  secondaryKeywords: [
+    "private dentist marketing Edinburgh New Town",
+    "Stockbridge salon SEO",
+    "Leith independent business marketing",
+    "Bruntsfield estate agent marketing",
+    "Morningside private dental",
+    "AI receptionist Edinburgh tourism business",
+    "Festival season marketing Edinburgh",
+    "Old Town F&B marketing",
+  ],
+  heroEyebrow: "FOR EDINBURGH SMALL BUSINESSES",
+  heroH1: "AI marketing for Edinburgh's capital, financial and tourism economies",
+  heroHighlight: "Edinburgh",
+  heroSubhead:
+    "Edinburgh is Scotland's capital, its financial centre and one of Europe's highest-grossing tourism economies — a triple base of demand that no other Scottish or northern English city replicates. With £800B+ in assets under management, 4.4M annual international visitors and the highest household incomes in Scotland, Edinburgh independents serve a market where private dental fees, salon ticket values and estate agent average instructions all run materially higher than Glasgow or Manchester. Kerblabs gives operators in the New Town, Stockbridge, Leith, Bruntsfield, Morningside and Marchmont AI response infrastructure tuned for a city where Festival-season demand spikes, financial-professional booking patterns and high-spend tourist enquiries all shape SME marketing.",
+  cityProfile: [
+    "Edinburgh is the second-largest city in Scotland by population (~514,000 in the city, ~900,000 across the wider region) but the largest by economic output per capita. The city is the second-largest UK financial centre after London, with major bases for Royal Bank of Scotland (NatWest Group), Standard Life Aberdeen, Baillie Gifford, Aegon and Scottish Widows — supporting around £800 billion in assets under management, per TheCityUK industry data. That financial-services base creates an unusually high-income, time-poor professional demographic concentrated through the New Town, Stockbridge, Bruntsfield and Morningside corridors.",
+    "On top of that, Edinburgh is one of Europe's top urban tourism destinations, with VisitScotland reporting roughly 4.4 million international overnight visitors annually pre-pandemic and a strong recovery through 2023–2024. The Edinburgh Festival Fringe alone generates around £200M+ in direct economic impact each August, and the broader festival calendar (Hogmanay, the Royal Edinburgh Military Tattoo, Christmas Markets, Edinburgh International Book Festival) means SME demand patterns are heavily seasonally peaked rather than flat across the year.",
+    "The city's small-business economy reflects all three forces. Premium independents in the New Town, Stockbridge and Bruntsfield serve a high-income professional client base where average ticket values for private dental, premium salon services and home improvement run 25–40% above Glasgow benchmarks and broadly match the affluent Cheshire-edge belt around Manchester. Tourism-facing independents in the Old Town, Royal Mile, Grassmarket, Cowgate and Leith handle massive seasonal swings in volume — August Fringe demand can run 3–5x the November baseline.",
+    "On housing, Edinburgh's estate agent market is the most competitive in Scotland, with the city consistently ranked among the UK's strongest year-on-year price growth cities through 2023–2024 (ONS HPI data) and a structural shortage of supply across the prime central belt. Solicitor estate agents (ESPC member firms — Lindsays, Murray Beith Murray, Coulters, Warners, Simpson & Marwick) compete with Rettie & Co, Savills and Knight Frank in a market where the Home Report system makes response speed decisive.",
+  ],
+  stats: [
+    { value: "514k", label: "Edinburgh city population", source: "NRS 2023 estimate" },
+    { value: "£800B+", label: "assets under management in Edinburgh financial sector", source: "TheCityUK / Scottish Financial Enterprise" },
+    { value: "4.4M", label: "international overnight visitors per year (pre-pandemic, recovering)", source: "VisitScotland / VisitBritain" },
+    { value: "£200M+", label: "annual economic impact of Edinburgh Festival Fringe alone", source: "Edinburgh Festivals Impact Study" },
+    { value: "78%", label: "of UK consumers read Google reviews before booking", source: "BrightLocal 2024" },
+    { value: "25–40%", label: "premium on private dental + salon fees vs Glasgow benchmarks" },
+  ],
+  namedAreas: [
+    { name: "New Town (George Street, Princes Street, Charlotte Square)", character: "Edinburgh's premium professional and retail core. Financial services HQs, premium private dental, designer salons (Charlie Miller, Cheynes), high-end estate agents. Average ticket values among the highest in Scotland; clients expect personalised, considered communication and reviews carry exceptional weight." },
+    { name: "Old Town (Royal Mile, Grassmarket, Cowgate)", character: "World Heritage tourism core with massive August Fringe demand spikes. F&B, tour operators, independent retail and tourism-facing services. Multilingual review profiles and TripAdvisor cross-pollination matter; bookings happen across multiple platforms simultaneously." },
+    { name: "Stockbridge & Comely Bank", character: "Affluent professional-foodie village within the city. Independent F&B, premium grooming, boutique health and wellness, and a tight estate agent referral economy. Reviews and storytelling drive instructions; mass-message campaigns underperform." },
+    { name: "Leith & The Shore", character: "Regenerated former docks district, now Edinburgh's most rapidly growing young-professional and creative neighbourhood (Time Out 'coolest neighbourhood' 2022). Indie F&B, design studios, modern dental and wellness. Instagram-led discovery layered on Google review confirmation; sub-5-minute response is standard." },
+    { name: "Bruntsfield, Morningside & Merchiston", character: "Premium suburban professional belt with Edinburgh's highest concentration of private orthodontics, aesthetic medicine, premium estate agents and high-spec contractors. Households are time-poor, digital-first and referral-led; AI phone answering for after-hours bookings converts at exceptional rates." },
+    { name: "Marchmont & Newington", character: "University of Edinburgh catchment with high student density alongside young-professional inflow. Late-night bookings, deposit-required no-show recovery, SMS/WhatsApp confirmation flows convert better than email." },
+    { name: "Tollcross, Lothian Road & Haymarket", character: "Mixed financial/professional/tourism corridor. Strong evening and weekend demand from West End office workers and visitors to the EICC; voice search and after-hours capture matter." },
+    { name: "Portobello & Joppa", character: "Coastal residential village, fast-becoming a young-family destination. Independent salons, family dental, sustainable contractors. Story-led GBP and review depth outperform paid search." },
+  ],
+  industries: {
+    dental:
+      "Edinburgh hosts the most premium private dental market in Scotland and one of the highest-fee markets outside central London. Practices in the New Town, Stockbridge, Bruntsfield, Morningside and along Queensferry Road compete on Invisalign, implants, composite bonding and full-mouth aesthetic work, with average treatment plans frequently running into five figures. NHS Scotland access pressures (Audit Scotland 2024) have pushed additional volume into private and mixed practices, but the Edinburgh market is fundamentally fee-led rather than volume-led — patients expect concierge-style booking, considered email follow-up and personalised treatment planning. Kerblabs configures AI receptionists with a tone calibrated to this market (formal, considered, no aggressive upsell), automated review requests at the moment of treatment completion, and CRM follow-up for high-value treatment plans that often span 6–18 months from consultation to completion.",
+    salon:
+      "Edinburgh's salon market is sharply segmented. Premium independents in the New Town, Stockbridge and Morningside (Charlie Miller, Cheynes Hairdressing, Medusa) operate at average ticket values 30–50% above Glasgow comparables and compete on stylist reputation, magazine editorial coverage and long-tenure client relationships. Tourism-facing salons in the Old Town and Leith handle Fringe and festival-season demand spikes. Marchmont and Newington run student-heavy weekend volumes with corresponding no-show risk. Across all segments, the Edinburgh consumer expects faster response, more polished communication and more personalised review prompts than mass-market UK salon clients. Kerblabs combines deposit-link confirmations, automated SMS reminders, and review-request flows triggered immediately post-service, with tone profiles tuned to the segment and neighbourhood.",
+    contractor:
+      "Edinburgh contractors operate in one of the most regulation- and heritage-sensitive build markets in the UK. Much of the central city falls within UNESCO World Heritage zones (Old Town and New Town), Conservation Areas and Listed Building consent requirements, which means refurb, extension and conversion work is a specialist field rewarding contractors who can demonstrate compliance experience in their GBP profiles. The premium suburban belt (Murrayfield, Cramond, Barnton, Colinton) generates sustained high-spec build demand. Sash window restoration, traditional sandstone repair and slate roofing are recognised specialisms with their own search demand. Lead aggregators take £25–£60 per shared lead. Kerblabs missed-call text-back, GBP photo-post automation (heritage before/afters convert exceptionally well) and AI voice answering for survey enquiries handle the operational gap most independent trades face.",
+    estateAgent:
+      "Edinburgh's residential market operates under the Scottish offers-over and Home Report system, with the additional layer that many of the largest agents are solicitor-estate-agent firms (ESPC members — Lindsays, Coulters, Warners, Simpson & Marwick, Murray Beith Murray) competing alongside Rettie & Co, Savills, Knight Frank and a long tail of independents. Response speed is decisive: the agent who delivers the Home Report fastest after registration of interest frequently wins the offer, especially in the central prime markets where supply is structurally short. Closing-date sealed-bid offers are routine. Kerblabs handles instant Home Report fulfilment via automated email/SMS, AI receptionist for after-hours valuation requests, automated Google review collection from completed sales, and closing-date reminder automation that ensures no bidder is forgotten — the operational stack that separates a 90-day instruction win-rate from a 30-day one.",
+  },
+  faqs: [
+    {
+      q: "How does the Edinburgh Festival season affect SME marketing strategy?",
+      a: "August's Festival Fringe and Royal Edinburgh Military Tattoo together generate roughly £200M+ in direct economic impact and push tourism volumes 3–5x above the November baseline across the Old Town, Royal Mile, Grassmarket, Leith and the New Town. For F&B, tour operators, salons and independent retail in those zones, marketing strategy needs to flex: review velocity programmes ramped from June, multilingual response capability (German, French, Italian, US English search behaviours all surge), pre-Festival Google Business Profile photo refreshes, and capacity-aware booking automation that prevents overbookings during peak weekends. Kerblabs builds Festival-season campaign overlays onto the year-round response stack — including Tattoo and Hogmanay micro-peaks — so Edinburgh independents capture the seasonal demand without burning out staff or losing year-round local-pack rankings to thin out-of-season profiles.",
+    },
+    {
+      q: "Why is Edinburgh's private dental market more premium than Glasgow's?",
+      a: "Edinburgh has the highest household incomes in Scotland (ONS regional income data), driven by the financial-services concentration around the New Town, Charlotte Square and Lothian Road — RBS/NatWest Group, Standard Life Aberdeen, Baillie Gifford, Aegon, Scottish Widows. That client base supports private dental fees 25–40% above Glasgow benchmarks for the same procedures, and average treatment plan values for full-mouth aesthetic, implants and Invisalign that match or approach London Harley Street levels. Practices in Bruntsfield, Morningside, the New Town and Queensferry Road compete on stylist-style reputation, multi-stage treatment planning and concierge-grade booking experience rather than on price or volume. Kerblabs configures AI response tone for this market specifically — formal, considered, no aggressive upsell — and automates the multi-touchpoint follow-up that long-cycle premium dental treatment requires.",
+    },
+    {
+      q: "Does the Scottish offers-over / Home Report system change estate agent marketing in Edinburgh?",
+      a: "Yes, decisively. Scottish residential sales operate on the offers-over and Home Report system: buyers register interest and request the Home Report before viewing, and the agent who delivers the Home Report fastest frequently secures the offer — particularly in Edinburgh's structurally supply-constrained central prime market. Closing-date sealed-bid offers are routine, with multiple bidders submitting by a published deadline. Kerblabs configures instant Home Report fulfilment via automated email/SMS within minutes of registration of interest, AI receptionist for after-hours valuation requests, closing-date reminder automation, and automated review collection from completed sales. The Edinburgh agents who win on response speed reliably outperform those who win on portal spend, and our automation stack is built specifically for ESPC member firm and independent agent workflows.",
+    },
+    {
+      q: "How do Edinburgh's heritage and conservation rules affect contractor marketing?",
+      a: "Much of central Edinburgh sits within UNESCO World Heritage zones (Old Town and New Town), Conservation Areas and Listed Building consent regimes, which means refurb, extension and replacement work requires specialist compliance knowledge. Sash window restoration, sandstone repair, slate roofing, lime mortar pointing and traditional joinery are recognised specialisms with their own search demand and exceptionally high GBP photo conversion rates — homeowners commissioning this work rely on before/after evidence and detailed Google reviews. Kerblabs configures GBP photo-post automation (one professional before/after per completed job with proper geotagging), review request flows that prompt customers to mention compliance and heritage knowledge in their reviews, and AI voice answering tuned for the survey-call enquiries that dominate this niche. Heritage-trade independents typically rank for specialist queries within 60 days of starting the programme.",
+    },
+    {
+      q: "What's the biggest difference between marketing in Edinburgh and Glasgow for independents?",
+      a: "Edinburgh is fee-led and considered; Glasgow is volume-led and direct. The same independent practice operating in both cities would charge 25–40% higher fees in Edinburgh, see more multi-stage treatment or service planning, and would lose clients quickly to abrupt or impersonal communication. Edinburgh clients expect formal, considered, error-free written follow-up; Glasgow clients value warmth, directness and speed above formality. Tourism seasonality is a major factor in Edinburgh and barely a factor in Glasgow. Kerblabs configures the same underlying AI stack with materially different tone profiles, response timing, review prompts and seasonal overlays depending on which city you operate in — and clients running across both cities (some salon groups, dental groups and contractors do) get city-specific configurations rather than a shared profile.",
+    },
+  ],
+  localContext:
+    "Kerblabs works with independent businesses across Edinburgh's distinct neighbourhoods — from New Town financial-services-facing premium independents and Stockbridge village operators to Leith's regenerated young-professional belt, Bruntsfield/Morningside premium suburban practices, Old Town tourism-facing F&B, and heritage-trade contractors across the World Heritage zones. Our team understands the Scottish offers-over / Home Report property system, the Festival-season seasonality overlay, and the specific tone and response expectations that distinguish Edinburgh's premium market from Glasgow or northern English cities.",
+};
