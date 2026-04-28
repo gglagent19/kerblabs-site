@@ -40,6 +40,27 @@ export default function RootLayout({
             gtag('config', '${GA4_ID}', { anonymize_ip: true });
           `}
         </Script>
+        <Script id="ga4-calendly-tracking" strategy="afterInteractive">
+          {`
+            document.addEventListener('click', function(e) {
+              var a = e.target.closest && e.target.closest('a[href*="calendly.com"]');
+              if (!a) return;
+              var label = (a.innerText || a.getAttribute('aria-label') || '').trim().slice(0, 100);
+              if (typeof gtag === 'function') {
+                gtag('event', 'book_call_click', {
+                  link_url: a.href,
+                  link_text: label,
+                  page_path: location.pathname,
+                });
+                gtag('event', 'generate_lead', {
+                  link_url: a.href,
+                  link_text: label,
+                  page_path: location.pathname,
+                });
+              }
+            }, { capture: true });
+          `}
+        </Script>
       </head>
       <body>
         <div className="noise" aria-hidden />
