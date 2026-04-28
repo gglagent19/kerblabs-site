@@ -31,6 +31,11 @@ const industryToCombo: Record<string, ComboIndustrySlug> = {
   "hair-salons": "salon-marketing",
   contractors: "contractor-marketing",
   "estate-agents": "estate-agent-marketing",
+  "aesthetic-clinics": "aesthetic-clinic-marketing",
+  "private-gps": "gp-marketing",
+  "junk-removal": "junk-removal-marketing",
+  roofers: "roofer-marketing",
+  "veterinary-practices": "vet-marketing",
 };
 
 export async function generateStaticParams() {

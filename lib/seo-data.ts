@@ -2,6 +2,12 @@
 // Drives all dynamic routes: /services/[slug], /industries/[slug], /locations/[slug],
 // /[industry-slug]/[location-slug]
 
+import { industry as aestheticClinicsHub } from "./rich-content/industries/aesthetic-clinics";
+import { industry as junkRemovalHub } from "./rich-content/industries/junk-removal";
+import { industry as privateGpsHub } from "./rich-content/industries/private-gps";
+import { industry as roofersHub } from "./rich-content/industries/roofers";
+import { industry as veterinaryPracticesHub } from "./rich-content/industries/veterinary-practices";
+
 export type Tier = "tier1" | "tier2" | "tier3";
 
 export interface Location {
@@ -489,6 +495,11 @@ export const industries: Industry[] = [
     comboIntroTemplate:
       "The estate agency market in {city} is fiercely competitive. {city} is {character}, and that local market dynamic shapes everything: vendor instructions are won by whoever responds first, the typical vendor calls multiple agents within an hour, and decisions are increasingly driven by Google reviews and online reputation rather than high street presence. Each missed valuation enquiry costs an agent £2,000-£8,000+ in potential commission. After-hours enquiries are particularly valuable — vendors often browse Rightmove and Zoopla in the evening and call agents off-hours, only to find no one answers. The agent who has an AI voice receptionist handling those calls wins instructions night after night while competitors lose them. Kerblabs gives {city} estate and letting agents the full system — AI voice, review engine, CRM, and local SEO — in one bundled platform.",
   },
+  aestheticClinicsHub,
+  junkRemovalHub,
+  privateGpsHub,
+  roofersHub,
+  veterinaryPracticesHub,
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -982,6 +993,11 @@ export const comboIndustrySlugs = [
   "salon-marketing",
   "contractor-marketing",
   "estate-agent-marketing",
+  "aesthetic-clinic-marketing",
+  "gp-marketing",
+  "junk-removal-marketing",
+  "roofer-marketing",
+  "vet-marketing",
 ] as const;
 
 export type ComboIndustrySlug = (typeof comboIndustrySlugs)[number];
@@ -992,6 +1008,11 @@ export function getIndustryByComboSlug(comboSlug: ComboIndustrySlug): Industry {
     "salon-marketing": "hair-salons",
     "contractor-marketing": "contractors",
     "estate-agent-marketing": "estate-agents",
+    "aesthetic-clinic-marketing": "aesthetic-clinics",
+    "gp-marketing": "private-gps",
+    "junk-removal-marketing": "junk-removal",
+    "roofer-marketing": "roofers",
+    "vet-marketing": "veterinary-practices",
   };
   const slug = map[comboSlug];
   const industry = getIndustryBySlug(slug);
