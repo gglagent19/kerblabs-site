@@ -288,6 +288,131 @@ import { content as vet_marketing_sunderland } from "./combos/vet-marketing-sund
 import { content as vet_marketing_swansea } from "./combos/vet-marketing-swansea";
 import { content as vet_marketing_wolverhampton } from "./combos/vet-marketing-wolverhampton";
 
+import { content as optician_marketing_aberdeen } from "./combos/optician-marketing-aberdeen";
+import { content as optician_marketing_belfast } from "./combos/optician-marketing-belfast";
+import { content as optician_marketing_birmingham } from "./combos/optician-marketing-birmingham";
+import { content as optician_marketing_bradford } from "./combos/optician-marketing-bradford";
+import { content as optician_marketing_bristol } from "./combos/optician-marketing-bristol";
+import { content as optician_marketing_cardiff } from "./combos/optician-marketing-cardiff";
+import { content as optician_marketing_coventry } from "./combos/optician-marketing-coventry";
+import { content as optician_marketing_derby } from "./combos/optician-marketing-derby";
+import { content as optician_marketing_edinburgh } from "./combos/optician-marketing-edinburgh";
+import { content as optician_marketing_glasgow } from "./combos/optician-marketing-glasgow";
+import { content as optician_marketing_leeds } from "./combos/optician-marketing-leeds";
+import { content as optician_marketing_leicester } from "./combos/optician-marketing-leicester";
+import { content as optician_marketing_liverpool } from "./combos/optician-marketing-liverpool";
+import { content as optician_marketing_london } from "./combos/optician-marketing-london";
+import { content as optician_marketing_manchester } from "./combos/optician-marketing-manchester";
+import { content as optician_marketing_newcastle } from "./combos/optician-marketing-newcastle";
+import { content as optician_marketing_nottingham } from "./combos/optician-marketing-nottingham";
+import { content as optician_marketing_plymouth } from "./combos/optician-marketing-plymouth";
+import { content as optician_marketing_reading } from "./combos/optician-marketing-reading";
+import { content as optician_marketing_sheffield } from "./combos/optician-marketing-sheffield";
+import { content as optician_marketing_southampton } from "./combos/optician-marketing-southampton";
+import { content as optician_marketing_stoke_on_trent } from "./combos/optician-marketing-stoke-on-trent";
+import { content as optician_marketing_sunderland } from "./combos/optician-marketing-sunderland";
+import { content as optician_marketing_swansea } from "./combos/optician-marketing-swansea";
+import { content as optician_marketing_wolverhampton } from "./combos/optician-marketing-wolverhampton";
+import { content as physio_marketing_aberdeen } from "./combos/physio-marketing-aberdeen";
+import { content as physio_marketing_belfast } from "./combos/physio-marketing-belfast";
+import { content as physio_marketing_birmingham } from "./combos/physio-marketing-birmingham";
+import { content as physio_marketing_bradford } from "./combos/physio-marketing-bradford";
+import { content as physio_marketing_bristol } from "./combos/physio-marketing-bristol";
+import { content as physio_marketing_cardiff } from "./combos/physio-marketing-cardiff";
+import { content as physio_marketing_coventry } from "./combos/physio-marketing-coventry";
+import { content as physio_marketing_derby } from "./combos/physio-marketing-derby";
+import { content as physio_marketing_edinburgh } from "./combos/physio-marketing-edinburgh";
+import { content as physio_marketing_glasgow } from "./combos/physio-marketing-glasgow";
+import { content as physio_marketing_leeds } from "./combos/physio-marketing-leeds";
+import { content as physio_marketing_leicester } from "./combos/physio-marketing-leicester";
+import { content as physio_marketing_liverpool } from "./combos/physio-marketing-liverpool";
+import { content as physio_marketing_london } from "./combos/physio-marketing-london";
+import { content as physio_marketing_manchester } from "./combos/physio-marketing-manchester";
+import { content as physio_marketing_newcastle } from "./combos/physio-marketing-newcastle";
+import { content as physio_marketing_nottingham } from "./combos/physio-marketing-nottingham";
+import { content as physio_marketing_plymouth } from "./combos/physio-marketing-plymouth";
+import { content as physio_marketing_reading } from "./combos/physio-marketing-reading";
+import { content as physio_marketing_sheffield } from "./combos/physio-marketing-sheffield";
+import { content as physio_marketing_southampton } from "./combos/physio-marketing-southampton";
+import { content as physio_marketing_stoke_on_trent } from "./combos/physio-marketing-stoke-on-trent";
+import { content as physio_marketing_sunderland } from "./combos/physio-marketing-sunderland";
+import { content as physio_marketing_swansea } from "./combos/physio-marketing-swansea";
+import { content as physio_marketing_wolverhampton } from "./combos/physio-marketing-wolverhampton";
+import { content as funeral_marketing_aberdeen } from "./combos/funeral-marketing-aberdeen";
+import { content as funeral_marketing_belfast } from "./combos/funeral-marketing-belfast";
+import { content as funeral_marketing_birmingham } from "./combos/funeral-marketing-birmingham";
+import { content as funeral_marketing_bradford } from "./combos/funeral-marketing-bradford";
+import { content as funeral_marketing_bristol } from "./combos/funeral-marketing-bristol";
+import { content as funeral_marketing_cardiff } from "./combos/funeral-marketing-cardiff";
+import { content as funeral_marketing_coventry } from "./combos/funeral-marketing-coventry";
+import { content as funeral_marketing_derby } from "./combos/funeral-marketing-derby";
+import { content as funeral_marketing_edinburgh } from "./combos/funeral-marketing-edinburgh";
+import { content as funeral_marketing_glasgow } from "./combos/funeral-marketing-glasgow";
+import { content as funeral_marketing_leeds } from "./combos/funeral-marketing-leeds";
+import { content as funeral_marketing_leicester } from "./combos/funeral-marketing-leicester";
+import { content as funeral_marketing_liverpool } from "./combos/funeral-marketing-liverpool";
+import { content as funeral_marketing_london } from "./combos/funeral-marketing-london";
+import { content as funeral_marketing_manchester } from "./combos/funeral-marketing-manchester";
+import { content as funeral_marketing_newcastle } from "./combos/funeral-marketing-newcastle";
+import { content as funeral_marketing_nottingham } from "./combos/funeral-marketing-nottingham";
+import { content as funeral_marketing_plymouth } from "./combos/funeral-marketing-plymouth";
+import { content as funeral_marketing_reading } from "./combos/funeral-marketing-reading";
+import { content as funeral_marketing_sheffield } from "./combos/funeral-marketing-sheffield";
+import { content as funeral_marketing_southampton } from "./combos/funeral-marketing-southampton";
+import { content as funeral_marketing_stoke_on_trent } from "./combos/funeral-marketing-stoke-on-trent";
+import { content as funeral_marketing_sunderland } from "./combos/funeral-marketing-sunderland";
+import { content as funeral_marketing_swansea } from "./combos/funeral-marketing-swansea";
+import { content as funeral_marketing_wolverhampton } from "./combos/funeral-marketing-wolverhampton";
+import { content as solicitor_marketing_aberdeen } from "./combos/solicitor-marketing-aberdeen";
+import { content as solicitor_marketing_belfast } from "./combos/solicitor-marketing-belfast";
+import { content as solicitor_marketing_birmingham } from "./combos/solicitor-marketing-birmingham";
+import { content as solicitor_marketing_bradford } from "./combos/solicitor-marketing-bradford";
+import { content as solicitor_marketing_bristol } from "./combos/solicitor-marketing-bristol";
+import { content as solicitor_marketing_cardiff } from "./combos/solicitor-marketing-cardiff";
+import { content as solicitor_marketing_coventry } from "./combos/solicitor-marketing-coventry";
+import { content as solicitor_marketing_derby } from "./combos/solicitor-marketing-derby";
+import { content as solicitor_marketing_edinburgh } from "./combos/solicitor-marketing-edinburgh";
+import { content as solicitor_marketing_glasgow } from "./combos/solicitor-marketing-glasgow";
+import { content as solicitor_marketing_leeds } from "./combos/solicitor-marketing-leeds";
+import { content as solicitor_marketing_leicester } from "./combos/solicitor-marketing-leicester";
+import { content as solicitor_marketing_liverpool } from "./combos/solicitor-marketing-liverpool";
+import { content as solicitor_marketing_london } from "./combos/solicitor-marketing-london";
+import { content as solicitor_marketing_manchester } from "./combos/solicitor-marketing-manchester";
+import { content as solicitor_marketing_newcastle } from "./combos/solicitor-marketing-newcastle";
+import { content as solicitor_marketing_nottingham } from "./combos/solicitor-marketing-nottingham";
+import { content as solicitor_marketing_plymouth } from "./combos/solicitor-marketing-plymouth";
+import { content as solicitor_marketing_reading } from "./combos/solicitor-marketing-reading";
+import { content as solicitor_marketing_sheffield } from "./combos/solicitor-marketing-sheffield";
+import { content as solicitor_marketing_southampton } from "./combos/solicitor-marketing-southampton";
+import { content as solicitor_marketing_stoke_on_trent } from "./combos/solicitor-marketing-stoke-on-trent";
+import { content as solicitor_marketing_sunderland } from "./combos/solicitor-marketing-sunderland";
+import { content as solicitor_marketing_swansea } from "./combos/solicitor-marketing-swansea";
+import { content as solicitor_marketing_wolverhampton } from "./combos/solicitor-marketing-wolverhampton";
+import { content as accountant_marketing_aberdeen } from "./combos/accountant-marketing-aberdeen";
+import { content as accountant_marketing_belfast } from "./combos/accountant-marketing-belfast";
+import { content as accountant_marketing_birmingham } from "./combos/accountant-marketing-birmingham";
+import { content as accountant_marketing_bradford } from "./combos/accountant-marketing-bradford";
+import { content as accountant_marketing_bristol } from "./combos/accountant-marketing-bristol";
+import { content as accountant_marketing_cardiff } from "./combos/accountant-marketing-cardiff";
+import { content as accountant_marketing_coventry } from "./combos/accountant-marketing-coventry";
+import { content as accountant_marketing_derby } from "./combos/accountant-marketing-derby";
+import { content as accountant_marketing_edinburgh } from "./combos/accountant-marketing-edinburgh";
+import { content as accountant_marketing_glasgow } from "./combos/accountant-marketing-glasgow";
+import { content as accountant_marketing_leeds } from "./combos/accountant-marketing-leeds";
+import { content as accountant_marketing_leicester } from "./combos/accountant-marketing-leicester";
+import { content as accountant_marketing_liverpool } from "./combos/accountant-marketing-liverpool";
+import { content as accountant_marketing_london } from "./combos/accountant-marketing-london";
+import { content as accountant_marketing_manchester } from "./combos/accountant-marketing-manchester";
+import { content as accountant_marketing_newcastle } from "./combos/accountant-marketing-newcastle";
+import { content as accountant_marketing_nottingham } from "./combos/accountant-marketing-nottingham";
+import { content as accountant_marketing_plymouth } from "./combos/accountant-marketing-plymouth";
+import { content as accountant_marketing_reading } from "./combos/accountant-marketing-reading";
+import { content as accountant_marketing_sheffield } from "./combos/accountant-marketing-sheffield";
+import { content as accountant_marketing_southampton } from "./combos/accountant-marketing-southampton";
+import { content as accountant_marketing_stoke_on_trent } from "./combos/accountant-marketing-stoke-on-trent";
+import { content as accountant_marketing_sunderland } from "./combos/accountant-marketing-sunderland";
+import { content as accountant_marketing_swansea } from "./combos/accountant-marketing-swansea";
+import { content as accountant_marketing_wolverhampton } from "./combos/accountant-marketing-wolverhampton";
 const COMBO_CONTENT: Record<string, RichComboContent> = {
   "contractor-marketing:aberdeen": contractor_marketing_aberdeen,
   "contractor-marketing:belfast": contractor_marketing_belfast,
@@ -514,6 +639,131 @@ const COMBO_CONTENT: Record<string, RichComboContent> = {
   "vet-marketing:sunderland": vet_marketing_sunderland,
   "vet-marketing:swansea": vet_marketing_swansea,
   "vet-marketing:wolverhampton": vet_marketing_wolverhampton,
+  "optician-marketing:aberdeen": optician_marketing_aberdeen,
+  "optician-marketing:belfast": optician_marketing_belfast,
+  "optician-marketing:birmingham": optician_marketing_birmingham,
+  "optician-marketing:bradford": optician_marketing_bradford,
+  "optician-marketing:bristol": optician_marketing_bristol,
+  "optician-marketing:cardiff": optician_marketing_cardiff,
+  "optician-marketing:coventry": optician_marketing_coventry,
+  "optician-marketing:derby": optician_marketing_derby,
+  "optician-marketing:edinburgh": optician_marketing_edinburgh,
+  "optician-marketing:glasgow": optician_marketing_glasgow,
+  "optician-marketing:leeds": optician_marketing_leeds,
+  "optician-marketing:leicester": optician_marketing_leicester,
+  "optician-marketing:liverpool": optician_marketing_liverpool,
+  "optician-marketing:london": optician_marketing_london,
+  "optician-marketing:manchester": optician_marketing_manchester,
+  "optician-marketing:newcastle": optician_marketing_newcastle,
+  "optician-marketing:nottingham": optician_marketing_nottingham,
+  "optician-marketing:plymouth": optician_marketing_plymouth,
+  "optician-marketing:reading": optician_marketing_reading,
+  "optician-marketing:sheffield": optician_marketing_sheffield,
+  "optician-marketing:southampton": optician_marketing_southampton,
+  "optician-marketing:stoke-on-trent": optician_marketing_stoke_on_trent,
+  "optician-marketing:sunderland": optician_marketing_sunderland,
+  "optician-marketing:swansea": optician_marketing_swansea,
+  "optician-marketing:wolverhampton": optician_marketing_wolverhampton,
+  "physio-marketing:aberdeen": physio_marketing_aberdeen,
+  "physio-marketing:belfast": physio_marketing_belfast,
+  "physio-marketing:birmingham": physio_marketing_birmingham,
+  "physio-marketing:bradford": physio_marketing_bradford,
+  "physio-marketing:bristol": physio_marketing_bristol,
+  "physio-marketing:cardiff": physio_marketing_cardiff,
+  "physio-marketing:coventry": physio_marketing_coventry,
+  "physio-marketing:derby": physio_marketing_derby,
+  "physio-marketing:edinburgh": physio_marketing_edinburgh,
+  "physio-marketing:glasgow": physio_marketing_glasgow,
+  "physio-marketing:leeds": physio_marketing_leeds,
+  "physio-marketing:leicester": physio_marketing_leicester,
+  "physio-marketing:liverpool": physio_marketing_liverpool,
+  "physio-marketing:london": physio_marketing_london,
+  "physio-marketing:manchester": physio_marketing_manchester,
+  "physio-marketing:newcastle": physio_marketing_newcastle,
+  "physio-marketing:nottingham": physio_marketing_nottingham,
+  "physio-marketing:plymouth": physio_marketing_plymouth,
+  "physio-marketing:reading": physio_marketing_reading,
+  "physio-marketing:sheffield": physio_marketing_sheffield,
+  "physio-marketing:southampton": physio_marketing_southampton,
+  "physio-marketing:stoke-on-trent": physio_marketing_stoke_on_trent,
+  "physio-marketing:sunderland": physio_marketing_sunderland,
+  "physio-marketing:swansea": physio_marketing_swansea,
+  "physio-marketing:wolverhampton": physio_marketing_wolverhampton,
+  "funeral-marketing:aberdeen": funeral_marketing_aberdeen,
+  "funeral-marketing:belfast": funeral_marketing_belfast,
+  "funeral-marketing:birmingham": funeral_marketing_birmingham,
+  "funeral-marketing:bradford": funeral_marketing_bradford,
+  "funeral-marketing:bristol": funeral_marketing_bristol,
+  "funeral-marketing:cardiff": funeral_marketing_cardiff,
+  "funeral-marketing:coventry": funeral_marketing_coventry,
+  "funeral-marketing:derby": funeral_marketing_derby,
+  "funeral-marketing:edinburgh": funeral_marketing_edinburgh,
+  "funeral-marketing:glasgow": funeral_marketing_glasgow,
+  "funeral-marketing:leeds": funeral_marketing_leeds,
+  "funeral-marketing:leicester": funeral_marketing_leicester,
+  "funeral-marketing:liverpool": funeral_marketing_liverpool,
+  "funeral-marketing:london": funeral_marketing_london,
+  "funeral-marketing:manchester": funeral_marketing_manchester,
+  "funeral-marketing:newcastle": funeral_marketing_newcastle,
+  "funeral-marketing:nottingham": funeral_marketing_nottingham,
+  "funeral-marketing:plymouth": funeral_marketing_plymouth,
+  "funeral-marketing:reading": funeral_marketing_reading,
+  "funeral-marketing:sheffield": funeral_marketing_sheffield,
+  "funeral-marketing:southampton": funeral_marketing_southampton,
+  "funeral-marketing:stoke-on-trent": funeral_marketing_stoke_on_trent,
+  "funeral-marketing:sunderland": funeral_marketing_sunderland,
+  "funeral-marketing:swansea": funeral_marketing_swansea,
+  "funeral-marketing:wolverhampton": funeral_marketing_wolverhampton,
+  "solicitor-marketing:aberdeen": solicitor_marketing_aberdeen,
+  "solicitor-marketing:belfast": solicitor_marketing_belfast,
+  "solicitor-marketing:birmingham": solicitor_marketing_birmingham,
+  "solicitor-marketing:bradford": solicitor_marketing_bradford,
+  "solicitor-marketing:bristol": solicitor_marketing_bristol,
+  "solicitor-marketing:cardiff": solicitor_marketing_cardiff,
+  "solicitor-marketing:coventry": solicitor_marketing_coventry,
+  "solicitor-marketing:derby": solicitor_marketing_derby,
+  "solicitor-marketing:edinburgh": solicitor_marketing_edinburgh,
+  "solicitor-marketing:glasgow": solicitor_marketing_glasgow,
+  "solicitor-marketing:leeds": solicitor_marketing_leeds,
+  "solicitor-marketing:leicester": solicitor_marketing_leicester,
+  "solicitor-marketing:liverpool": solicitor_marketing_liverpool,
+  "solicitor-marketing:london": solicitor_marketing_london,
+  "solicitor-marketing:manchester": solicitor_marketing_manchester,
+  "solicitor-marketing:newcastle": solicitor_marketing_newcastle,
+  "solicitor-marketing:nottingham": solicitor_marketing_nottingham,
+  "solicitor-marketing:plymouth": solicitor_marketing_plymouth,
+  "solicitor-marketing:reading": solicitor_marketing_reading,
+  "solicitor-marketing:sheffield": solicitor_marketing_sheffield,
+  "solicitor-marketing:southampton": solicitor_marketing_southampton,
+  "solicitor-marketing:stoke-on-trent": solicitor_marketing_stoke_on_trent,
+  "solicitor-marketing:sunderland": solicitor_marketing_sunderland,
+  "solicitor-marketing:swansea": solicitor_marketing_swansea,
+  "solicitor-marketing:wolverhampton": solicitor_marketing_wolverhampton,
+  "accountant-marketing:aberdeen": accountant_marketing_aberdeen,
+  "accountant-marketing:belfast": accountant_marketing_belfast,
+  "accountant-marketing:birmingham": accountant_marketing_birmingham,
+  "accountant-marketing:bradford": accountant_marketing_bradford,
+  "accountant-marketing:bristol": accountant_marketing_bristol,
+  "accountant-marketing:cardiff": accountant_marketing_cardiff,
+  "accountant-marketing:coventry": accountant_marketing_coventry,
+  "accountant-marketing:derby": accountant_marketing_derby,
+  "accountant-marketing:edinburgh": accountant_marketing_edinburgh,
+  "accountant-marketing:glasgow": accountant_marketing_glasgow,
+  "accountant-marketing:leeds": accountant_marketing_leeds,
+  "accountant-marketing:leicester": accountant_marketing_leicester,
+  "accountant-marketing:liverpool": accountant_marketing_liverpool,
+  "accountant-marketing:london": accountant_marketing_london,
+  "accountant-marketing:manchester": accountant_marketing_manchester,
+  "accountant-marketing:newcastle": accountant_marketing_newcastle,
+  "accountant-marketing:nottingham": accountant_marketing_nottingham,
+  "accountant-marketing:plymouth": accountant_marketing_plymouth,
+  "accountant-marketing:reading": accountant_marketing_reading,
+  "accountant-marketing:sheffield": accountant_marketing_sheffield,
+  "accountant-marketing:southampton": accountant_marketing_southampton,
+  "accountant-marketing:stoke-on-trent": accountant_marketing_stoke_on_trent,
+  "accountant-marketing:sunderland": accountant_marketing_sunderland,
+  "accountant-marketing:swansea": accountant_marketing_swansea,
+  "accountant-marketing:wolverhampton": accountant_marketing_wolverhampton,
 };
 
 export function getRichComboContent(

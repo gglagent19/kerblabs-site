@@ -1,0 +1,74 @@
+import type { RichComboContent } from "../types";
+
+export const content: RichComboContent = {
+  primaryKeywords: [
+    "physio marketing Bradford",
+    "Bradford physiotherapy SEO",
+    "private physio marketing Bradford",
+    "women's health physio Bradford marketing",
+    "Bradford South Asian women's physio",
+  ],
+  secondaryKeywords: [
+    "Heaton physiotherapist marketing",
+    "Manningham physio Google Ads",
+    "Saltaire physio near me",
+    "Shipley sports physio SEO",
+    "Bradford post-textile MSK rehab",
+    "Urdu Punjabi physio Bradford",
+    "BD9 physiotherapy marketing",
+    "POGP Bradford post-natal physio",
+  ],
+  heroSubhead:
+    "Bradford's private physiotherapy market is built on two demand drivers no other UK city combines: a post-textile-industry MSK legacy that produces sustained working-age shoulder, lumbar and cervical demand among older Pakistani and Indian heritage residents, and a uniquely concentrated South Asian women's health demand for POGP-trained physios that English-only marketing entirely misses. NHS West Yorkshire ICB MSK waiting lists exceed 18 weeks across the BD postcodes. Independent practices across Heaton, Manningham, Shipley and Saltaire compete in a market where Urdu, Punjabi and Bengali language capability is genuinely commercial — not nice-to-have. Kerblabs builds Bradford-specific physio funnels that win the multilingual women's health niche, capture post-industrial occupational MSK self-pay, and grow PMI panel volume from a base most chains haven't built.",
+  marketContext: [
+    "Bradford's physiotherapy demand is shaped by an industrial legacy distinct from any other UK core city. Through the late 19th and 20th centuries Bradford was the world's wool textile capital, with mills employing hundreds of thousands across the surrounding Aire and Wharfedale valleys. The industrial decline through the 1970s-1990s left a generational MSK legacy: chronic shoulder, cervical and lumbar conditions among working-age and now-older residents who spent decades in mill, weaving and finishing roles, plus second-generation occupational MSK from the warehousing, distribution and care-sector roles that replaced textiles. The city is now home to roughly 540,000 people, with one of the largest South Asian heritage populations in the UK (Pakistani heritage particularly concentrated in Manningham, Girlington, Bradford Moor, Toller and parts of Bowling and Barkerend; Indian and Bangladeshi heritage smaller but established). Average household incomes sit below the West Yorkshire benchmark, which compresses self-pay rates: typical Bradford physio fees run £35-£60 per 30-minute follow-up and £45-£80 per 45-minute initial assessment, materially below Leeds and well below London.",
+    "The competitive landscape in Bradford is dominated by long-established independent practices. Ascenti operates limited Bradford presence; the chain operators concentrate on Leeds, Wakefield and the South Yorkshire markets. Spinal Physio Leeds and the Leeds-based premium operators occasionally pick off BD postcode patients who travel for specialism, but the Bradford physio book stays local for most patients — both because of cost and because of language and cultural preference. The Yorkshire Clinic at Cottingley provides the main private-hospital physio referral pipeline alongside Spire Leeds. Sports physio demand is shaped by Bradford City AFC, Bradford Bulls (rugby league), and the cricket scene at Bradford & Bingley — none of which generate the premium sports physio demand that football Premier League cities support. Where Bradford differs sharply from Leeds is on women's health and post-natal POGP demand: the South Asian heritage neighbourhoods drive sustained, high-volume post-natal pelvic-health demand because of larger family sizes, earlier post-natal care expectations and shorter inter-pregnancy intervals than the UK mainstream. Most of this demand is currently invisible to mainstream physio marketing because patients search via WhatsApp community groups, mosque women's health awareness sessions, and Urdu/Punjabi word-of-mouth rather than 'pelvic floor physio Bradford'.",
+    "Bradford's CPC environment reflects the lighter chain advertiser presence and lower self-pay ceiling. 'Physiotherapist Bradford' runs £2-£6 CPC, 'sports physio Bradford' £3-£7, 'women's health physio Bradford' under £5 with high commercial intent. The most under-bid niches in Bradford right now: 'urdu speaking physiotherapist Bradford', 'female physio post natal Bradford', 'physio for shoulder mill worker Bradford', 'pelvic floor physio after baby Manningham' — all CPC under £4 with very little credible competition. PMI panel demand exists but is structurally lower than southern English cities: BUPA, AXA, Vitality and Aviva penetration through the Bradford professional and corporate base sits below Leeds, but the Yorkshire Building Society, Bradford & Bingley legacy financial services, plus the larger NHS Bradford Teaching Hospitals corporate workforce produce a meaningful PMI book that independents can target. Kerblabs builds the multilingual landing pages, post-industrial MSK pages, women's health POGP funnels and sports physio specialism pages that capture Bradford's specific demand structure.",
+  ],
+  stats: [
+    { value: "540,000", label: "Bradford district population", source: "ONS Census 2021" },
+    { value: "30%+", label: "of Bradford residents identify as Asian / Asian British heritage", source: "ONS Census 2021" },
+    { value: "£35-£80", label: "self-pay physio rates per session in Bradford" },
+    { value: "£2-£7", label: "Google Ads CPC range for Bradford physio queries" },
+    { value: "18+ weeks", label: "NHS West Yorkshire ICB MSK community waiting list", source: "NHS England 2024" },
+    { value: "£4 or under", label: "CPC for 'urdu speaking physio Bradford' / 'pelvic floor physio Manningham' — under-bid niches" },
+  ],
+  painPoints: [
+    {
+      title: "South Asian women's health demand is enormous and almost entirely invisible to your marketing",
+      body: "Bradford's Pakistani and Indian heritage neighbourhoods drive significant post-natal pelvic-health demand because of family size and post-natal care patterns, but search behaviour is community-WhatsApp-led, not Google-first. English-only websites and English-speaking front desks miss this completely. Urdu, Punjabi or Bengali-speaking front desk capability plus community-aware landing pages convert this segment at 3-6x mainstream rates and the niche is essentially uncompeted on Google.",
+    },
+    {
+      title: "Post-textile-industry occupational MSK is a niche nobody markets to",
+      body: "Bradford has tens of thousands of working-age and older residents with chronic shoulder, cervical and lumbar conditions from textile, warehousing and care-sector roles. Most generic 'back pain physio' and 'shoulder physio' marketing doesn't speak to this population's specific concerns (long-term repetitive strain, decades-old injuries, current care/manual roles). A dedicated 'occupational MSK / post-textile' landing page with named-clinician credentials and Urdu/Punjabi capability captures a segment chains never address.",
+    },
+    {
+      title: "Self-pay course completion is poor because price ceiling is real",
+      body: "Bradford household incomes compress self-pay courses to 3-4 sessions average versus the clinically-recommended 6-8, hurting outcomes and onward referral. PMI panel approval is the single biggest fix — once a patient has BUPA or AXA cover, they complete the full course. Most Bradford independents have never systematically pursued the panels. The panel programme combined with self-pay package pricing (4-session pre-paid bundle at modest discount) materially improves outcomes and revenue.",
+    },
+    {
+      title: "Bradford City, Bradford Bulls and cricket sports physio is fragmented and under-served",
+      body: "Senior club medical at Bradford City AFC and Bradford Bulls is locked. The wider Bradford rugby league grass-roots scene, junior football, Bradford & Bingley cricket and the schools sports tier generate steady MSK demand that isn't well served by named-clinician sports physio specialism pages. ACPSEM-credentialled marketing plus targeted long-tail Google Ads at sub-£5 CPC captures this tier with little competition.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How do you market POGP and post-natal physio to South Asian heritage families in Manningham, Girlington and Bradford Moor?",
+      a: "Bradford has the highest concentrated demand for culturally-aware POGP physio in the UK, and almost none of it currently flows through Google search because patients search via WhatsApp community groups and mosque women's health sessions rather than 'pelvic floor physio Bradford'. We build a community-aware funnel: hyperlocal landing pages naming Manningham, Girlington, Bradford Moor, Toller, Bowling and Heaton and explicitly addressing post-natal pelvic-health concerns relevant to larger family sizes and shorter inter-pregnancy intervals; Urdu and Punjabi landing-page versions where the practice has front-desk language capability; female-clinician profile pages that explicitly address modesty, female-only consultation rooms, and culturally-competent assessment language; carefully-targeted Facebook and WhatsApp community group outreach (within ASA and HCPC compliance — no clinical claims or diagnosis implication); and Google reviews encouraged from clients across multiple language communities mentioning the language and cultural awareness of the consultation. We also build relationships with local mosques' women's health awareness sessions, the Bradford Teaching Hospitals maternity outreach team, and community midwives. Critically, the named clinician must hold POGP membership or recognised post-grad pelvic-health qualification — we never market 'specialist' without verified qualification, which is HCPC and CSP non-negotiable.",
+    },
+    {
+      q: "How does the AI receptionist handle calls in Urdu, Punjabi or Bengali?",
+      a: "The AI receptionist supports multiple language modes. For Bradford practices we typically configure it to greet in English by default, then offer language choice ('would you like to continue in Urdu, Punjabi, Bengali or English?') if the caller hesitates or switches language. The booking flow, red-flag escalation script and basic intake questions are available in Urdu, Punjabi and Bengali, with the AI generating a clean English transcript dropped into your PMS (Cliniko, TM3, Pabau or WriteUpp) so the assessing clinician has full context regardless of the call language. Where the call is genuinely complex or the patient prefers human contact, the AI takes a structured message and notifies a named multilingual front-desk clinician for callback within an agreed window. Red-flag escalation works identically in any language: cauda equina symptoms, post-trauma, suspected fracture, post-op concerns, suspected DVT, progressive neurological deficit all trigger immediate signposting to A&E or 999. This combination typically captures a 30-50% lift in book size for practices with Bradford's specific multilingual catchment, because most competitors run English-only voicemail.",
+    },
+    {
+      q: "Can independent Bradford practices realistically grow PMI panel volume given lower local PMI penetration?",
+      a: "Yes — Bradford PMI is structurally lower than London or Manchester, but it isn't zero. The Yorkshire Building Society, Bradford & Bingley legacy financial services workforce, NHS Bradford Teaching Hospitals corporate staff (large workforce on Vitality and BUPA), Morrisons HQ workforce, plus the professional residents of Heaton, Saltaire, Bingley, Ilkley and Baildon support meaningful BUPA, AXA, Vitality and Aviva volume. The chain operators (Ascenti) and Leeds-based premium practices currently absorb most of this book by default because Bradford independents rarely apply systematically. We run the panel programme: BUPA and AXA first (largest volume), Vitality second (premium-tier driven referral preference), then Aviva, WPA, Cigna, Healix. Bradford-specific factors: BUPA Recognised Panel reopens by specialty geography and Bradford is less crowded than Leeds, which can favour timing of application; AXA and Vitality run quarterly and continuous reviews respectively. Independents running this typically secure 2-3 panel approvals inside 9-12 months and grow PMI book to 20-35% of total within 18 months — a meaningful uplift given the self-pay price ceiling.",
+    },
+    {
+      q: "Is post-textile-industry occupational MSK actually marketable as a niche?",
+      a: "Yes, and it's one of Bradford's most distinctive under-marketed segments. Tens of thousands of working-age and older Bradford residents have chronic MSK conditions originating from decades of mill, weaving, finishing, warehousing or care-sector roles. Most have lived with shoulder, neck and lumbar problems for years and are sceptical of generic 'back pain physio' marketing. A dedicated landing page acknowledging the post-textile and post-industrial Bradford MSK story, with named-clinician credentials, plain-English (and Urdu/Punjabi) explanations of the assessment process, and pricing transparency for self-pay, converts this segment well because it speaks directly to lived experience that London-centric chain marketing entirely ignores. We also build referral relationships with local occupational health providers, GP practices in the relevant catchment, and the Bradford carers' organisations whose members have current manual-handling MSK from the care sector. CPC for the relevant long-tail queries is below £4 with very little competition, and the demographic is older and self-pay-loyal once they trust the practice.",
+    },
+  ],
+  approach:
+    "For Bradford independent physios our 90-day playbook is: (1) launch the multilingual women's health POGP funnel — Urdu, Punjabi, Bengali landing pages, named female POGP-trained clinician profiles, community group outreach (mosques, midwifery teams, Bradford Teaching Hospitals maternity); (2) build a post-textile / post-industrial occupational MSK landing page targeting Bradford's distinctive older working-age catchment with named-clinician credentials and Urdu/Punjabi capability; (3) launch the PMI panel programme (BUPA, AXA, Vitality first, then Aviva, WPA, Cigna, Healix) — typically 2-3 approvals in 9-12 months, materially shifting course-completion economics; (4) build named-clinician sports physio pages for the rugby league, junior football, Bradford & Bingley cricket and schools tiers below the senior contracts; (5) drive Google review velocity to 8-15 monthly reviews mentioning Heaton, Manningham, Shipley, Saltaire, Bingley, Baildon and named clinicians, including reviews in multiple languages.",
+};

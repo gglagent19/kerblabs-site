@@ -7,6 +7,11 @@ import { industry as junkRemovalHub } from "./rich-content/industries/junk-remov
 import { industry as privateGpsHub } from "./rich-content/industries/private-gps";
 import { industry as roofersHub } from "./rich-content/industries/roofers";
 import { industry as veterinaryPracticesHub } from "./rich-content/industries/veterinary-practices";
+import { industry as opticiansHub } from "./rich-content/industries/opticians";
+import { industry as physiotherapistsHub } from "./rich-content/industries/physiotherapists";
+import { industry as funeral_directorsHub } from "./rich-content/industries/funeral-directors";
+import { industry as solicitorsHub } from "./rich-content/industries/solicitors";
+import { industry as accountantsHub } from "./rich-content/industries/accountants";
 
 export type Tier = "tier1" | "tier2" | "tier3";
 
@@ -500,6 +505,11 @@ export const industries: Industry[] = [
   privateGpsHub,
   roofersHub,
   veterinaryPracticesHub,
+  opticiansHub,
+  physiotherapistsHub,
+  funeral_directorsHub,
+  solicitorsHub,
+  accountantsHub,
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -998,6 +1008,11 @@ export const comboIndustrySlugs = [
   "junk-removal-marketing",
   "roofer-marketing",
   "vet-marketing",
+  "optician-marketing",
+  "physio-marketing",
+  "funeral-marketing",
+  "solicitor-marketing",
+  "accountant-marketing",
 ] as const;
 
 export type ComboIndustrySlug = (typeof comboIndustrySlugs)[number];
@@ -1013,6 +1028,11 @@ export function getIndustryByComboSlug(comboSlug: ComboIndustrySlug): Industry {
     "junk-removal-marketing": "junk-removal",
     "roofer-marketing": "roofers",
     "vet-marketing": "veterinary-practices",
+    "optician-marketing": "opticians",
+    "physio-marketing": "physiotherapists",
+    "funeral-marketing": "funeral-directors",
+    "solicitor-marketing": "solicitors",
+    "accountant-marketing": "accountants",
   };
   const slug = map[comboSlug];
   const industry = getIndustryBySlug(slug);

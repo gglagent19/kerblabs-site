@@ -1,0 +1,74 @@
+import type { RichComboContent } from "../types";
+
+export const content: RichComboContent = {
+  primaryKeywords: [
+    "physio marketing Stoke-on-Trent",
+    "Stoke-on-Trent physiotherapy SEO",
+    "private physio marketing Stoke",
+    "Stoke City football physio",
+    "pottery industry occupational physio Stoke",
+  ],
+  secondaryKeywords: [
+    "Newcastle-under-Lyme private physio",
+    "Trentham Stafford physiotherapist near me",
+    "ST1 ST4 physio Google Ads",
+    "Britannia Stadium Stoke City physio",
+    "Port Vale football physio",
+    "POGP Stoke post-natal physio",
+    "silicosis legacy MSK Stoke",
+    "JCB World HQ ergonomic physio Stoke",
+  ],
+  heroSubhead:
+    "Stoke-on-Trent's private physio market is shaped by an industrial legacy distinct from any other UK city — the pottery industry's silicosis legacy and decades of repetitive-strain MSK among older working-age residents, the JCB World Headquarters at Rocester (just outside the city) producing engineering occupational MSK demand, Stoke City Championship football and Port Vale lower-tier football, and a sustained NHS Staffordshire and Stoke-on-Trent ICB MSK waiting list past 18 weeks. The market is structurally lower-private-pay than southern English cities — more PMI panel volume routes through chain operators, more NHS-tendered work absorbs the public side, and self-pay course completion is constrained by household income. Newcastle-under-Lyme, Trentham, Stafford and the affluent commuter belt drive the premium tier. Kerblabs builds Stoke-specific physio funnels that win JCB and engineering corporate occupational-health, capture the post-pottery industrial MSK niche, and grow PMI panel volume from a base most chains have built around NHS-tender work.",
+  marketContext: [
+    "Stoke-on-Trent's private physiotherapy market is shaped by an industrial legacy unlike any other UK city. Through the 19th and 20th centuries Stoke was the world capital of pottery and ceramics manufacture, with major employers including Wedgwood, Royal Doulton, Spode, Minton and dozens of smaller potteries employing tens of thousands across the Six Towns. The industrial decline from the 1970s onward, accelerated by overseas competition and the 2008 financial crisis, left a generational MSK and respiratory legacy: silicosis from clay-dust exposure (now historic but with surviving older patients), chronic shoulder, lumbar and cervical MSK from decades of pottery work, and second-generation occupational MSK from the warehousing, distribution and care-sector roles that replaced ceramics employment. Stoke-on-Trent city population is around 260,000 with a wider Staffordshire catchment of 1.1M. Self-pay rates run £30-£60 for 30-minute follow-up and £45-£75 for 45-minute initial assessment — among the lowest in any UK city, reflecting below-average household incomes — with premium specialism rates only clearing £65-£100 in Newcastle-under-Lyme, Trentham, Stafford and the affluent commuter belt out toward Stone, Eccleshall and Cheadle (Staffs).",
+    "The competitive landscape in Stoke is dominated by chain operators absorbing significant NHS-tender and PMI work, with a smaller but established independent tier. Ascenti operates substantial NHS subcontract and PMI tender volume across Staffordshire and Stoke-on-Trent ICB. Connect Health competes on the same axis. Nuffield Health Stoke-on-Trent Hospital runs a physio department alongside Royal Stoke University Hospital's NHS physio service. The independent tier is relatively thin compared to southern English cities of similar size, with single-clinician practices serving the city centre, Newcastle-under-Lyme, Trentham, Stafford, Stone, Hanley, Burslem and the broader North Staffordshire suburbs. The structural challenge for Stoke independents is that PMI penetration is moderate-to-low and self-pay courses average 3-4 sessions rather than the clinically-recommended 6-8 because of household income constraints — squeezing margins and limiting outcomes. Sports physio is anchored by Stoke City FC at the bet365 Stadium (Championship), Port Vale at Vale Park (League One), Crewe Alexandra (League Two, just over the border in Cheshire), and the rugby league / rugby union clubs in the broader Staffordshire and South Cheshire area.",
+    "Stoke's most distinctive demand drivers beyond the post-pottery legacy are the JCB World Headquarters at Rocester (10 miles east) and the broader North Staffordshire engineering and ceramics-evolved manufacturing base. JCB employs approximately 7,000 across UK sites, with significant Stoke and Staffordshire workforce concentrations. The JCB occupational-health programme is mature, procuring physio services through credentialed provider networks for engineering, assembly and structural-test MSK demand. Add Bet365 (the gambling giant headquartered in Stoke-on-Trent — significant local corporate workforce), the major NHS Royal Stoke University Hospital workforce, the Newcastle-under-Lyme and Stafford professional sectors, and the Keele University catchment, and the Stoke PMI book is structurally meaningful but currently dominated by chain operators. CPC dynamics: 'physiotherapist Stoke' £2-£5 CPC (among the lowest in any UK city), 'sports physio Stoke' £2-£6, 'JCB ergonomic physio Stoke' / 'pottery industry MSK Stoke' essentially uncompeted niches, 'pelvic floor physio Stoke' under £4 with strong intent particularly through Newcastle-under-Lyme / Trentham, 'physio Newcastle-under-Lyme' / 'physio Stafford' £3-£5 with regional-affluent intent. Kerblabs builds the JCB and engineering corporate occupational-health credentialing track, post-pottery industrial MSK niche page, PMI panel programme and POGP funnels Stoke's specific demand structure requires.",
+  ],
+  stats: [
+    { value: "260,000", label: "Stoke-on-Trent city population", source: "ONS Census 2021" },
+    { value: "~7,000", label: "JCB UK employees (World HQ at Rocester) producing engineering MSK demand", source: "JCB" },
+    { value: "£30-£100", label: "self-pay physio rates — among lowest UK (premium £65-£100 Newcastle-under-Lyme/Trentham)" },
+    { value: "£2-£6", label: "Google Ads CPC range — among lowest UK for physio queries" },
+    { value: "Stoke City + Port Vale", label: "Championship football + League One catchment" },
+    { value: "18+ weeks", label: "Staffordshire & Stoke-on-Trent ICB MSK waiting list", source: "NHS England 2024" },
+  ],
+  painPoints: [
+    {
+      title: "Self-pay course completion suffers because household income compresses session count",
+      body: "Stoke household incomes sit below the West Midlands and English benchmark. Self-pay courses average 3-4 sessions versus the clinically-recommended 6-8, hurting outcomes and onward referral. PMI panel approval is the single biggest fix — once a patient has BUPA or AXA cover, they complete the full course. Most Stoke independents have never systematically pursued the panels.",
+    },
+    {
+      title: "Ascenti and Connect Health absorb NHS-tender and PMI volume by default",
+      body: "Chain operators have built significant Staffordshire ICB NHS subcontract and PMI tender presence. Independents not on the panels effectively can't see PMI patients in volume. The PMI panel programme combined with named-clinician credentials is the single largest revenue lever for Stoke independents.",
+    },
+    {
+      title: "JCB and engineering corporate occupational-health contracts won by credentialing not Google",
+      body: "JCB World HQ at Rocester runs a sophisticated occupational-health programme procuring through credentialed provider networks. Bet365 in Stoke similarly procures occupational-health services. Independents without an engineering-aware credentialing pack are invisible to procurement. The credentialing programme typically secures 1-2 contracts inside 12 months at £15k-£50k each.",
+    },
+    {
+      title: "Post-pottery industrial MSK is a niche almost no Stoke practice markets to specifically",
+      body: "Stoke has tens of thousands of older working-age residents with chronic shoulder, lumbar and cervical MSK from decades of pottery work, plus second-generation MSK from warehousing, distribution and care-sector roles that replaced ceramics. A dedicated post-industrial / post-pottery occupational MSK landing page captures this segment at minimal CPC.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How do you win JCB or Bet365 corporate occupational-health contracts?",
+      a: "JCB World Headquarters at Rocester is the major engineering employer in the North Staffordshire region, employing approximately 7,000 across UK sites with significant Stoke and Staffordshire concentrations. JCB runs a sophisticated occupational-health programme procuring physio and ergonomic services through credentialed provider networks with multi-year framework contracts, focused on engineering, assembly, structural-test and operator-cab MSK. Bet365 (headquartered in Stoke-on-Trent — one of the world's largest gambling companies) similarly procures employee health services for its substantial Stoke workforce. We map the procurement and HR leads at each major employer, identify the occupational-health partners they currently use, and build the credentialing pack: named-clinician profiles with HCPC numbers, CSP membership, post-grad qualifications, ergonomic risk assessment training (REBA, RULA, NIOSH), indemnity, premises and information governance documentation, outcome-measurement evidence including return-to-work data, and a clinical governance framework. We then run sequenced outreach: introduction with credentials, free on-site ergonomic risk assessment offer, lunchtime CPD or wellbeing sessions, tender-readiness preparation. Stoke independents running this typically secure 1-2 corporate contracts inside 12 months at £15k-£50k each direct plus 30-50% upside in employee self-pay and PMI referral.",
+    },
+    {
+      q: "Is post-pottery industrial MSK actually a marketable specialism niche?",
+      a: "Yes — and it's one of Stoke's most distinctive under-marketed segments. Stoke has tens of thousands of older working-age and now-retired residents with chronic shoulder, lumbar, cervical, hand and wrist MSK conditions originating from decades of pottery and ceramics work — slip-casting, throwing, glazing, finishing, kiln-loading — plus second-generation occupational MSK from the warehousing, distribution, and care-sector roles that replaced ceramics employment. Most have lived with shoulder and back problems for years and are sceptical of generic 'back pain physio' marketing. A dedicated landing page acknowledging the post-pottery and post-industrial Stoke MSK story, with named-clinician credentials and clear plain-English explanations of the assessment process, converts this segment well because it speaks directly to lived experience that London-centric chain marketing entirely ignores. We also build referral relationships with the local occupational health providers, the Pottery Industry Health Survey-related research networks at Keele University, GP practices in the relevant Stoke catchment, and the Stoke carers' organisations whose members have current manual-handling MSK from the care sector. CPC for the relevant long-tail queries is below £4 with very little competition.",
+    },
+    {
+      q: "How does PMI panel approval work for Stoke practices given lower local PMI penetration?",
+      a: "Stoke PMI penetration is structurally lower than London, Manchester or Birmingham, but it isn't trivial. JCB carries comprehensive employer PMI cover for engineering grades; Bet365 runs employee health programmes; Royal Stoke University Hospital has a major NHS workforce with personal PMI cover; Keele University, the Newcastle-under-Lyme and Stafford professional sectors all support meaningful BUPA, AXA, Vitality and Aviva volume. The chain operators (Ascenti, Connect Health) and Nuffield Health Stoke absorb most of this PMI book by default because Stoke independents rarely apply systematically. We run the standard programme: BUPA Recognised Panel and AXA Health Provider first (largest absolute volume), Vitality Champion Provider second, then Aviva, WPA, Cigna, Healix. Stoke-specific factors: BUPA's West Midlands geography reopens with various windows — Stoke is less crowded than Birmingham, which can favour first-time application timing; AXA and Vitality remain accessible. Stoke independents running this systematically typically secure 2-3 panel approvals inside 9-12 months and grow PMI book to 25-40% of total within 18 months — a meaningful uplift given the self-pay price ceiling.",
+    },
+    {
+      q: "Can independent Stoke practices realistically pursue Stoke City, Port Vale or Crewe Alexandra contracts?",
+      a: "Senior medical at Stoke City (Championship), Port Vale (League One) and Crewe Alexandra (League Two, technically Cheshire) is locked with named clinicians embedded for years. The accessible tiers: Stoke City academy and women's team, Port Vale academy, Crewe Alexandra academy (Crewe specifically is renowned for its academy with strong onward Premier League player production), the Staffordshire and South Cheshire club football scene, the schools rugby and football network (Newcastle-under-Lyme School, Denstone College, Repton), and the broader rugby league / rugby union clubs. We build an ACPSEM-credentialled sports-contract outreach programme: named-clinician profile pages, targeted outreach to academy directors and schools heads of sport, sponsorship of fixtures and pro bono assessment days. A single academy or club contract is typically worth £4k-£12k a year direct plus 20-40% upside in player-and-family self-pay referral.",
+    },
+  ],
+  approach:
+    "For Stoke-on-Trent independent physios our 90-day playbook is: (1) launch the PMI panel programme — BUPA, AXA, Vitality first, then Aviva, WPA, Cigna, Healix — to displace the Ascenti / Connect Health panel volume default; (2) run the JCB and Bet365 corporate occupational-health credentialing track — 1-2 contracts inside 12 months at £15k-£50k each; (3) build a post-pottery / post-industrial occupational MSK landing page targeting Stoke's distinctive older working-age catchment with named-clinician credentials and Keele University-research alignment where applicable; (4) build named-clinician ACPSEM-credentialled sports physio pages targeting Stoke City / Port Vale / Crewe Alexandra academies and women's pathways, plus the Staffordshire schools sports network; (5) launch POGP and post-natal specialism pages targeting Newcastle-under-Lyme, Trentham, Stafford, Stone and the affluent commuter belt; (6) drive Google review velocity to 8-12 monthly reviews mentioning Newcastle-under-Lyme, Trentham, Stafford, Hanley, Burslem and named clinicians.",
+};

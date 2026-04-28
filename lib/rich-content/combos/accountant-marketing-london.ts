@@ -1,0 +1,74 @@
+import type { RichComboContent } from "../types";
+
+export const content: RichComboContent = {
+  primaryKeywords: [
+    "accountant marketing London",
+    "London accountant SEO",
+    "accountancy practice marketing London",
+    "London accountant lead generation",
+    "small business accountant London marketing",
+  ],
+  secondaryKeywords: [
+    "City of London accountant marketing",
+    "Canary Wharf contractor accountant SEO",
+    "Mayfair FD outsourcing marketing",
+    "Hounslow Wembley Southall SME accountant",
+    "Croydon Bromley small business accountant Google Ads",
+    "London IR35 contractor accountant lead generation",
+    "MTD ITSA campaign London accountants",
+    "Xero advisor London marketing",
+  ],
+  heroSubhead:
+    "London is the most fee-stratified and competitive accountancy market in the UK. The Square Mile and Canary Wharf push partner-led FD outsourcing fees of £1,500-£8,000/month, Mayfair PE/hedge fund work runs higher again, while Hounslow, Wembley, Southall, Ilford and Croydon carry the bulk of SME volume at £150-£500/month. TaxAssist runs 60+ London franchises, Crunch and Mazuma intercept every contractor and Self-Assessment search, and Google Ads CPCs of £15-£35 for 'accountant near me' London punish anyone running a generic city-wide campaign. Add MTD ITSA April 2026 hitting the city's vast landlord population (over a million private rented households across the 32 boroughs) and the next 18 months are a one-shot acquisition window. Kerblabs builds postcode-stratified accountancy funnels for London independents — capturing 9pm IR35 enquiries from Canary Wharf consultants, MTD ITSA leads from outer-borough landlords, and SME work in the boroughs the mid-tier ignores.",
+  marketContext: [
+    "London's accountancy market is shaped by three forces no other UK city replicates at this scale. First, fee stratification by postcode and client type: a Square Mile or Mayfair partner-led FD outsourcing engagement runs £1,500-£8,000+ monthly, a Canary Wharf consultant Ltd company with IR35 status review and quarterly management accounts runs £350-£900 monthly, a Hounslow grocery wholesaler runs £200-£500, and a Croydon sole trader Self-Assessment runs £150-£400 once a year. Each segment requires entirely different positioning, fee anchoring and lead-qualification flow. Second, density and competition: ICAEW reports approximately 22,000 chartered accountants in London alone, ACCA adds tens of thousands more, the Big 4 (Deloitte, EY, KPMG, PwC) anchor the City, mid-tier (RSM, BDO, Grant Thornton, Forvis Mazars, Crowe, Saffery, Haines Watts, MHA, Azets, Kreston Reeves) cover £2M+ owner-managed business, and TaxAssist Accountants runs 60+ London franchise offices. Third, client composition: London has the UK's highest concentration of PSC contractors, IR35-affected consultants, BTL landlords and non-dom-adjacent clients with international tax footprints — and the highest concentration of multilingual SMEs in Tower Hamlets, Newham, Brent, Ealing and Hounslow whose accountant-selection patterns differ markedly from West London assumptions.",
+    "Pricing and named local competitors: the City and West End are dominated by the Big 4 and mid-tier, but the independent SME space has a clear named cohort — Wellers, Goldwins, Carter Backer Winter, Sopher + Co, Lubbock Fine, Buzzacott, haysmacintyre, Blick Rothenberg and dozens of single-partner and two-to-five-partner firms across central postcodes. Outer-borough London is heavily contested by TaxAssist franchises in Bromley, Croydon, Ealing, Hounslow, Wembley, Romford, Walthamstow and Lewisham, online disruptors Crunch (large London marketing footprint) and Mazuma, plus QuickBooks Live and the Xero Advisor Directory. Fees in inner London for owner-managed Ltd companies typically run £150-£400/month for full bookkeeping + VAT + payroll + year-end + corporation tax + Self-Assessment for the director; outer London the same package runs £100-£280/month. Self-Assessment-only pricing runs £180-£500 for a standard return, £400-£1,200 for a property portfolio with multiple BTLs, and £600-£2,500 for a non-dom or international return. Year-end accounts and corporation tax for a small Ltd company run £600-£2,500 typical retail.",
+    "London Google Ads CPCs in accountancy keywords are the highest in the UK: 'accountant near me' London clicks at £15-£28, 'small business accountant London' at £18-£32, 'accountant for ltd company London' at £20-£35, 'self assessment accountant London' at £10-£20, 'IR35 accountant' specifically runs £18-£40 because Crunch, SJD Accountancy and InTouch Accounting bid heavily on it. The strategic implication is unambiguous: London-wide paid acquisition is structurally unprofitable for independents, while borough-stratified SEO + Google Business Profile + LinkedIn outbound for higher-value FD work + MTD ITSA assessment funnel reliably produces £80-£180 cost-per-acquired-client versus £350-£800 on aggregator platforms. Kerblabs' London accountancy clients running this stack typically reach 6-15 net new monthly client signups inside 6 months, with average client value 25-40% above the London market median because review velocity moves quotes from 'cheapest' into 'trusted partner-led' territory. The MTD ITSA April 2026 cliff is the single biggest opportunity: London has roughly 1.1M private rented households and a vast self-employed contractor population, and every landlord above £50,000 income will need a new compliance arrangement.",
+  ],
+  stats: [
+    { value: "22,000+", label: "ICAEW chartered accountants in London", source: "ICAEW membership data" },
+    { value: "60+", label: "TaxAssist Accountants franchise offices in Greater London" },
+    { value: "£15-£35", label: "Google Ads CPC range for London accountancy keywords 2024-2025", source: "Kerblabs client accounts" },
+    { value: "1.1M+", label: "private rented households in Greater London hit by MTD ITSA", source: "ONS / GLA housing data" },
+    { value: "£150-£8,000/mo", label: "fee range from outer-borough Self-Assessment to Mayfair FD outsourcing" },
+    { value: "32", label: "boroughs each with distinct accountant search behaviour" },
+  ],
+  painPoints: [
+    {
+      title: "TaxAssist's 60+ London franchises are stripping the high-street SME market",
+      body: "TaxAssist Accountants runs more than 60 franchise offices across Greater London — Bromley, Croydon, Ealing, Hounslow, Wembley, Romford, Ilford, Walthamstow, Lewisham, Sutton — bidding centrally on 'accountant near me' searches with national-level paid budgets independents can't match. Without proactive review velocity, GBP optimisation, borough-stratified Google Ads and direct-acquisition funnels, you lose 20-40 small Ltd and Self-Assessment clients a year to the local TaxAssist office. Kerblabs builds the response speed and hyperlocal long-tail SEO TaxAssist franchises are structurally bad at.",
+    },
+    {
+      title: "Crunch, Mazuma and InTouch own the contractor and IR35 search market",
+      body: "Crunch, Mazuma, SJD Accountancy and InTouch Accounting have spent millions building search dominance for 'contractor accountant', 'IR35 accountant' and 'limited company accountant' in London at fee points (£99-£149/month) most independents won't go near. Independents win not by undercutting but by repositioning: named-partner relationships, IR35 status reviews, MVL and PSC closure work at £750-£3,000 fees, and FD-light advisory the online disruptors structurally don't deliver. Kerblabs builds that repositioning into landing pages, ad copy and qualifying flows.",
+    },
+    {
+      title: "Outer-borough multilingual SME market under-served and under-marketed",
+      body: "Tower Hamlets, Newham, Brent, Ealing, Hounslow, Redbridge and Harrow have substantial Bengali, Punjabi, Gujarati, Urdu, Polish, Romanian and Tamil SME populations whose accountant selection patterns lean heavily on community language, WhatsApp referrals and named-partner trust. Most independent practices in these areas have no community-language landing pages, no Urdu/Punjabi/Gujarati ad creative, and no review collection in community languages. The gap is the single largest under-served acquisition opportunity in London accountancy.",
+    },
+    {
+      title: "Square Mile / Canary Wharf FD outsourcing routed to mid-tier by default",
+      body: "PE-backed scale-ups, hedge fund managers and Canary Wharf consultancies needing FD outsourcing, management accounts and EIS/SEIS work default to RSM, BDO, Grant Thornton or Forvis Mazars because there's no credible independent in their LinkedIn feed. Independent boutique practices with named partners and £400k+ revenue capability lose this work because they don't run LinkedIn outbound, don't show up in 'fractional CFO London' search, and don't have the case-study landing pages PE founders actually read. Kerblabs builds the B2B funnel mid-tier rivals.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How does Kerblabs handle the gap between £8,000/month Mayfair FD outsourcing and £180 Croydon Self-Assessment fees?",
+      a: "We don't run one London-wide funnel. We segment by postcode cluster and client type, with separate landing pages, paid campaigns and ad creative for each. The Square Mile/Canary Wharf/Mayfair funnel emphasises named partner credentials, FCA-relevant fund accounting experience, EIS/SEIS and R&D track record, scale-up case studies, and LinkedIn-led outbound to founders, GP partners and FDs — typically running zero generic search ads and instead targeting specific company size and seniority. The outer-borough funnel leads with transparent fixed-fee pricing, MTD ITSA readiness messaging for landlords, IR35 contractor support, multilingual landing pages where the community demands it, and borough-tagged Google reviews. The mid-market £400-£1,200/month Ltd company funnel sits between with named-partner trust signals plus Xero/QuickBooks integration messaging. This stratification typically lifts new-client conversion 40-60% versus a flat London campaign, and prevents the single biggest paid-spend leak we see in London accountancy accounts: bidding the same CPC across radically different conversion environments.",
+    },
+    {
+      q: "We're in a multicultural outer London borough — Tower Hamlets, Newham, Brent, Hounslow, Redbridge. How do we win there against TaxAssist?",
+      a: "Multicultural outer London is the most under-served accountancy opportunity in the UK. TaxAssist franchises bid for these postcodes but their marketing is generic, their reception is monolingual English, and their named-partner trust signal is non-existent. We build community-aware funnels: hyperlocal landing pages naming specific neighbourhoods (Whitechapel, Forest Gate, Wembley Central, Hounslow West, Ilford South), Google reviews encouraged from clients across multiple language communities, fee-structure pages anchored to cash-flow-friendly monthly billing, MTD ITSA assessment for landlords (huge BTL ownership in these areas), and where appropriate landing pages or ad creative in Bengali, Punjabi, Gujarati, Urdu or Polish. We also run dormant-list reactivation against your practice management system — outer-borough practices typically have 25-40% of historic clients lapsed, and SMS-led reactivation in community languages routinely re-engages 8-15% of that list inside 90 days. Compliance-wise everything sits within ICAEW/ACCA advertising rules and AML supervision data flows.",
+    },
+    {
+      q: "How do you compete with Crunch, Mazuma and SJD Accountancy on London contractor and IR35 search?",
+      a: "Not on price — never on price. Crunch sells a £99-£149/month service-desk product; you sell a named-partner relationship at £200-£400/month. The repositioning runs across three channels: (1) IR35-specific landing pages with case studies of inside/outside determinations, status review pricing transparent at £350-£750, deemed-employment payroll setup, and PSC closure/MVL work at £750-£2,500; (2) borough-stratified Google Ads targeting 'IR35 accountant Canary Wharf', 'contractor accountant Shoreditch', 'limited company accountant Clapham' rather than the brutal 'IR35 accountant London' headline term Crunch dominates; and (3) LinkedIn outbound to specific contractor categories — IT consultants, management consultants, change managers, interim FDs — with content positioning around HMRC enquiry support, FRS 105 micro-entity accounts, dividend planning and pension contributions Crunch's service desk simply doesn't deliver. London independent accountancy clients running this typically grow contractor client base 30-80% inside 12 months at fees 2-3x the Crunch price point.",
+    },
+    {
+      q: "How do we capture the MTD ITSA April 2026 wave from London's massive landlord population?",
+      a: "MTD for Income Tax Self Assessment goes live April 2026 for self-employed and landlords above £50,000 income, dropping to £30,000 from April 2027. London has roughly 1.1M private rented households and a vast professional/contractor self-employed population, meaning hundreds of thousands of affected individuals across the 32 boroughs. We build a four-stage MTD ITSA acquisition system: (1) an MTD ITSA assessment landing page with income-band qualifier, source-of-income tags (BTL portfolio / sole trader / both), property count and current software question; (2) borough-stratified Google Ads on 'MTD landlord accountant', 'making tax digital landlord [borough]', 'MTD ITSA help'; (3) automated email/SMS sequences educating each band on April 2026 vs April 2027 vs April 2028 timeline, with free 30-minute MTD readiness review as call-to-action; (4) automated lead routing into your CRM with all data needed for AML client due-diligence to start cleanly. Most London accountancy practices we work with land 30-100 net new MTD ITSA clients in the 12 months running into April 2026.",
+    },
+  ],
+  approach:
+    "For London independent accountancy practices, our 90-day playbook is: (1) stratify your market into 3-5 postcode clusters with separate landing pages, paid campaigns and fee-anchoring per cluster (Square Mile / West End premium, Zone 2-3 mid-market, outer-borough SME, multilingual community); (2) deploy AI receptionist plus missed-call text-back to capture tax-season overflow and intercept the 50%+ of accountancy enquiries arriving outside 9-5; (3) launch the MTD ITSA April 2026 acquisition funnel with income-band qualifier and borough-stratified ads to capture London's vast landlord and self-employed population; (4) drive Google review velocity to 8-15 monthly reviews mentioning named London neighbourhoods to break local pack dominance against TaxAssist franchises; and (5) build LinkedIn-led FD outsourcing outbound for £1,500-£8,000/month Square Mile and Canary Wharf work the mid-tier currently absorbs by default.",
+};
