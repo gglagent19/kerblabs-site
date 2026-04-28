@@ -1,0 +1,624 @@
+{
+  "ai-voice_mobile": {
+    "h1": {
+      "text": "AI Voice Receptionist: Never miss another lead.",
+      "fontSize": "37.5px",
+      "color": "rgb(225, 224, 204)",
+      "top": 197.265625,
+      "bottom": 350.265625,
+      "width": 327
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 73
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 22,
+      "h": 40,
+      "w": 131.359375,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 112
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Book a demo",
+        "w": 131,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Services",
+        "w": 48,
+        "h": 16
+      },
+      {
+        "text": "Book a free demo",
+        "w": 192,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 375,
+      "h": 812
+    },
+    "scrollHeight": 6897
+  },
+  "manchester_mobile": {
+    "h1": {
+      "text": "AI Growth Systems for Manchester businesses.",
+      "fontSize": "37.5px",
+      "color": "rgb(225, 224, 204)",
+      "top": 214.53125,
+      "bottom": 329.28125,
+      "width": 327
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 73
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 22,
+      "h": 40,
+      "w": 131.359375,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 112
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Book a demo",
+        "w": 131,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Locations",
+        "w": 54,
+        "h": 16
+      },
+      {
+        "text": "Book a free 30-min demo",
+        "w": 243,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 375,
+      "h": 812
+    },
+    "scrollHeight": 6868
+  },
+  "dental-london_mobile": {
+    "h1": {
+      "text": "AI Growth Systems for London Dental Practices.",
+      "fontSize": "37.5px",
+      "color": "rgb(225, 224, 204)",
+      "top": 197.265625,
+      "bottom": 312.015625,
+      "width": 327
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 73
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 22,
+      "h": 40,
+      "w": 131.359375,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 112
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Book a demo",
+        "w": 131,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Dental Practice Marketing",
+        "w": 145,
+        "h": 16
+      },
+      {
+        "text": "Book a free strategy call",
+        "w": 238,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 375,
+      "h": 812
+    },
+    "scrollHeight": 6419
+  },
+  "dental-practices_mobile": {
+    "h1": {
+      "text": "AI Growth Systems for UK Dental Practices.",
+      "fontSize": "37.5px",
+      "color": "rgb(225, 224, 204)",
+      "top": 197.265625,
+      "bottom": 312.015625,
+      "width": 327
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 73
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 22,
+      "h": 40,
+      "w": 131.359375,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 112
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Book a demo",
+        "w": 131,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Book a free strategy call",
+        "w": 238,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 375,
+      "h": 812
+    },
+    "scrollHeight": 8279
+  },
+  "ai-voice_desktop": {
+    "h1": {
+      "text": "AI Voice Receptionist: Never miss another lead.",
+      "fontSize": "96px",
+      "color": "rgb(225, 224, 204)",
+      "top": 261.265625,
+      "bottom": 554.984375,
+      "width": 1024
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 81
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 30,
+      "h": 40,
+      "w": 143.90625,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 144
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Services",
+        "w": 54,
+        "h": 20
+      },
+      {
+        "text": "Work",
+        "w": 32,
+        "h": 20
+      },
+      {
+        "text": "Pricing",
+        "w": 43,
+        "h": 20
+      },
+      {
+        "text": "Locations",
+        "w": 60,
+        "h": 20
+      },
+      {
+        "text": "Book a demo",
+        "w": 144,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Services",
+        "w": 48,
+        "h": 16
+      },
+      {
+        "text": "Book a free demo",
+        "w": 192,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 1920,
+      "h": 1080
+    },
+    "scrollHeight": 5939
+  },
+  "manchester_desktop": {
+    "h1": {
+      "text": "AI Growth Systems for Manchester businesses.",
+      "fontSize": "96px",
+      "color": "rgb(225, 224, 204)",
+      "top": 261.265625,
+      "bottom": 554.984375,
+      "width": 1024
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 81
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 30,
+      "h": 40,
+      "w": 143.90625,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 144
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Services",
+        "w": 54,
+        "h": 20
+      },
+      {
+        "text": "Work",
+        "w": 32,
+        "h": 20
+      },
+      {
+        "text": "Pricing",
+        "w": 43,
+        "h": 20
+      },
+      {
+        "text": "Locations",
+        "w": 60,
+        "h": 20
+      },
+      {
+        "text": "Book a demo",
+        "w": 144,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Locations",
+        "w": 54,
+        "h": 16
+      },
+      {
+        "text": "Book a free 30-min demo",
+        "w": 243,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 1920,
+      "h": 1080
+    },
+    "scrollHeight": 5726
+  },
+  "dental-london_desktop": {
+    "h1": {
+      "text": "AI Growth Systems for London Dental Practices.",
+      "fontSize": "96px",
+      "color": "rgb(225, 224, 204)",
+      "top": 261.265625,
+      "bottom": 554.984375,
+      "width": 1024
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 81
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 30,
+      "h": 40,
+      "w": 143.90625,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 144
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Services",
+        "w": 54,
+        "h": 20
+      },
+      {
+        "text": "Work",
+        "w": 32,
+        "h": 20
+      },
+      {
+        "text": "Pricing",
+        "w": 43,
+        "h": 20
+      },
+      {
+        "text": "Locations",
+        "w": 60,
+        "h": 20
+      },
+      {
+        "text": "Book a demo",
+        "w": 144,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Dental Practice Marketing",
+        "w": 145,
+        "h": 16
+      },
+      {
+        "text": "Book a free strategy call",
+        "w": 238,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 1920,
+      "h": 1080
+    },
+    "scrollHeight": 5759
+  },
+  "dental-practices_desktop": {
+    "h1": {
+      "text": "AI Growth Systems for UK Dental Practices.",
+      "fontSize": "96px",
+      "color": "rgb(225, 224, 204)",
+      "top": 261.265625,
+      "bottom": 457.078125,
+      "width": 1024
+    },
+    "body": {
+      "fontFamily": "Almarai, -apple-system, BlinkMacSystemFont, sans-serif",
+      "bodyFontSize": "16px",
+      "bgColor": "rgb(0, 0, 0)",
+      "textColor": "rgb(225, 224, 204)"
+    },
+    "stickyNav": {
+      "top": 0,
+      "height": 81
+    },
+    "cta": {
+      "text": "Book a demo",
+      "top": 30,
+      "h": 40,
+      "w": 143.90625,
+      "visibleAboveFold": true
+    },
+    "breadcrumb": {
+      "top": 0,
+      "height": 144
+    },
+    "imagesAboveFold": [],
+    "tapTargetsAboveFold": [
+      {
+        "text": "kerblabs.",
+        "w": 75,
+        "h": 28
+      },
+      {
+        "text": "Services",
+        "w": 54,
+        "h": 20
+      },
+      {
+        "text": "Work",
+        "w": 32,
+        "h": 20
+      },
+      {
+        "text": "Pricing",
+        "w": 43,
+        "h": 20
+      },
+      {
+        "text": "Locations",
+        "w": 60,
+        "h": 20
+      },
+      {
+        "text": "Book a demo",
+        "w": 144,
+        "h": 40
+      },
+      {
+        "text": "Home",
+        "w": 33,
+        "h": 16
+      },
+      {
+        "text": "Book a free strategy call",
+        "w": 238,
+        "h": 49
+      },
+      {
+        "text": "See pricing",
+        "w": 122,
+        "h": 51
+      }
+    ],
+    "viewport": {
+      "w": 1920,
+      "h": 1080
+    },
+    "scrollHeight": 6270
+  }
+}

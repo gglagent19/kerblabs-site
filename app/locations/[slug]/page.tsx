@@ -50,10 +50,16 @@ export async function generateMetadata({
       ? `AI Marketing for ${loc.name} Local Businesses | Kerblabs`
       : `Local Business Marketing in ${loc.name} | Kerblabs`;
   const description = `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo. Serving ${loc.county}, ${loc.region}.`;
+  // Only Tier 1 cities are indexed. Tier 2 + Tier 3 pages exist for navigation
+  // and conversion, but are noindexed until they have unique, keyword-researched content.
+  const indexable = loc.tier === "tier1";
   return {
     title,
     description,
     alternates: { canonical: url },
+    robots: indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
 }

@@ -1,0 +1,50 @@
+# Kerblabs
+
+> AI-powered growth systems for UK local businesses. Fully remote service serving the whole UK with no physical office. Helps independent dental practices, hair salons, contractors (plumbers, electricians, builders), and estate agents grow without hiring a marketing team.
+
+## What Kerblabs does
+
+Kerblabs is a bundled platform of 12 AI and automation systems designed for local businesses with under 10 staff and no dedicated marketing team. Pricing starts at £97/month with no lock-in, 10-day setup, and four tiers (Spark, Momentum, Autopilot, Full Engine).
+
+## Core services
+
+- [AI Voice Receptionist](https://kerblabs.com/services/ai-voice-receptionist): 24/7 AI answering service that qualifies leads and books appointments. From £347/mo.
+- [Missed Call Text Back](https://kerblabs.com/services/missed-call-text-back): Instant SMS to every missed caller. From £197/mo.
+- [Review Engine](https://kerblabs.com/services/review-management): Automated review collection with negative-review interception. From £197/mo.
+- [Google Business Profile Management](https://kerblabs.com/services/google-business-profile-management): Full GBP rewrite, weekly posts, Q&A seeding. From £97/mo.
+- [Local SEO](https://kerblabs.com/services/local-seo): On-page SEO, location pages, schema, citations. From £197/mo.
+- [CRM & Pipeline](https://kerblabs.com/services/crm-pipeline-management): Lead tracking across SMS, email, calls, web. From £197/mo.
+- [Booking & Reminders](https://kerblabs.com/services/booking-calendar-reminders): Online booking with no-show reduction via SMS. From £97/mo.
+- [Reputation Monitoring](https://kerblabs.com/services/reputation-monitoring): Real-time alerts on reviews and brand mentions. From £97/mo.
+
+## Industries served
+
+- [Dental Practices](https://kerblabs.com/industries/dental-practices): UK private and NHS dental practices facing high private-care demand and review-driven patient acquisition.
+- [Hair Salons](https://kerblabs.com/industries/hair-salons): Independent hair and beauty salons facing no-show challenges and Instagram-vs-Google booking dynamics.
+- [Contractors](https://kerblabs.com/industries/contractors): Plumbers, electricians, builders, gas engineers — tradespeople who can't answer phones on-site.
+- [Estate Agents](https://kerblabs.com/industries/estate-agents): UK sales and lettings agencies facing portal-fee inflation and vendor-instruction speed competition.
+
+## Geographic coverage
+
+Kerblabs serves businesses across the entire UK remotely. Browse by [location](https://kerblabs.com/locations) — covers all 25 major UK cities, 75 large towns, and 304 districts.
+
+## Pricing tiers
+
+- Spark: £97/mo + £297 setup
+- Momentum: £197/mo + £497 setup
+- Autopilot: £347/mo + £797 setup
+- Full Engine: £497/mo + £1,200 setup
+
+## Key entity facts
+
+- Company: Kerblabs Ltd
+- Country: United Kingdom
+- Service model: fully remote, virtual UK-wide service (no physical offices)
+- Languages: English (UK)
+- Booking: https://calendly.com/chandraalladi07/30min
+
+## What Kerblabs is NOT
+
+- Not a traditional marketing agency (no monthly retainers, no junior account managers)
+- Not a single-product SaaS (12 bundled systems, one team)
+- Not local to one city (UK-wide remote delivery)

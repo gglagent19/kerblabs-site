@@ -10,10 +10,12 @@ import ReviewRescue from "@/components/ReviewRescue";
 import WhyKerblabs from "@/components/WhyKerblabs";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
+import Schema from "@/components/seo/Schema";
 
 export default function Page() {
   return (
     <main className="relative">
+      <Schema includeWebsite />
       <Nav />
       <Hero />
       <StorySection />

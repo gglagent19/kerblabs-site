@@ -59,10 +59,17 @@ export async function generateComboMetadata(
   const title = `${COMBO_TITLES[comboSlug]} in ${loc.name} | Kerblabs`;
   const description = `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. From £${industry.recommendedPrice}/mo. No lock-in. 10-day setup.`;
   const url = `https://kerblabs.com/${comboSlug}/${slug}`;
+  // Only Tier 1 city combos are indexed. Tier 2/3 combos still build (for direct
+  // visits and conversion) but are noindexed to protect sitewide content quality
+  // signals until they have unique, keyword-researched content.
+  const indexable = loc.tier === "tier1";
   return {
     title,
     description,
     alternates: { canonical: url },
+    robots: indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
 }

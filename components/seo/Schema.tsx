@@ -1,5 +1,5 @@
 // JSON-LD schema injector for SEO pages.
-// Renders an Organization + BreadcrumbList by default, plus extra blocks if provided.
+// Renders a strong Organization + BreadcrumbList by default, plus extra blocks if provided.
 
 interface BreadcrumbItem {
   name: string;
@@ -7,21 +7,71 @@ interface BreadcrumbItem {
 }
 
 interface SchemaProps {
-  breadcrumbs: BreadcrumbItem[];
+  breadcrumbs?: BreadcrumbItem[];
   extra?: object[];
+  includeWebsite?: boolean; // homepage only
 }
 
-export default function Schema({ breadcrumbs, extra = [] }: SchemaProps) {
-  const blocks = [
-    {
+const ORGANIZATION_BLOCK = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kerblabs.com/#organization",
+  name: "Kerblabs",
+  legalName: "Kerblabs Ltd",
+  url: "https://kerblabs.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://kerblabs.com/kerblabs-logo.png",
+    width: 512,
+    height: 512,
+  },
+  description:
+    "AI-powered growth systems for UK local businesses — local SEO, AI voice receptionist, automated review management, missed-call text-back, and CRM. Fully remote, serving the whole UK.",
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  knowsAbout: [
+    "AI Voice Receptionist",
+    "Local SEO",
+    "Google Business Profile management",
+    "Review automation",
+    "Missed call text back",
+    "Dental practice marketing",
+    "Hair salon marketing",
+    "Contractor marketing",
+    "Estate agent marketing",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/company/kerblabs",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    availableLanguage: ["English"],
+    areaServed: "GB",
+    url: "https://calendly.com/chandraalladi07/30min",
+  },
+};
+
+export default function Schema({
+  breadcrumbs,
+  extra = [],
+  includeWebsite = false,
+}: SchemaProps) {
+  const blocks: object[] = [ORGANIZATION_BLOCK];
+
+  if (includeWebsite) {
+    blocks.push({
       "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Kerblabs",
+      "@type": "WebSite",
+      "@id": "https://kerblabs.com/#website",
       url: "https://kerblabs.com",
-      description: "AI-powered growth systems for UK local businesses",
-      areaServed: { "@type": "Country", name: "United Kingdom" },
-    },
-    {
+      name: "Kerblabs",
+      publisher: { "@id": "https://kerblabs.com/#organization" },
+      inLanguage: "en-GB",
+    });
+  }
+
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    blocks.push({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: breadcrumbs.map((b, i) => ({
@@ -30,9 +80,10 @@ export default function Schema({ breadcrumbs, extra = [] }: SchemaProps) {
         name: b.name,
         item: b.url,
       })),
-    },
-    ...extra,
-  ];
+    });
+  }
+
+  blocks.push(...extra);
 
   return (
     <script

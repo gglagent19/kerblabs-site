@@ -13,7 +13,7 @@ export default function SeoNav() {
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-10">
           <a
-            href="/#store"
+            href="/services"
             className="text-sm transition-colors duration-300 text-[color:var(--color-text-dim)] hover:text-[color:var(--color-text)]"
           >
             Services

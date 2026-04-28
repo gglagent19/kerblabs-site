@@ -8,60 +8,66 @@ import {
 
 const BASE = "https://kerblabs.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+// Date stamps. For now we have one ship date per content tier — updated when
+// content is rewritten. This avoids the synthetic "all URLs same timestamp"
+// issue that hurts crawl signal quality.
+const TIER1_LASTMOD = new Date("2026-04-28T00:00:00Z");
+const TIER2_LASTMOD = new Date("2026-04-28T00:00:00Z");
+const TIER3_LASTMOD = new Date("2026-04-28T00:00:00Z");
+const CORE_LASTMOD = new Date();
 
-  // Core pages
+export default function sitemap(): MetadataRoute.Sitemap {
+  // Core indexable pages (homepage, services, industries, about, locations hub)
   const core: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE}/`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE}/locations`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+    { url: `${BASE}/`, lastModified: CORE_LASTMOD, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE}/services`, lastModified: CORE_LASTMOD, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/about`, lastModified: CORE_LASTMOD, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/locations`, lastModified: CORE_LASTMOD, changeFrequency: "monthly", priority: 0.8 },
   ];
 
-  // Service pages
+  // Service pages (all indexable)
   const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${BASE}/services/${s.slug}`,
-    lastModified: now,
+    lastModified: CORE_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.9,
   }));
 
-  // Industry pages
+  // Industry pages (all indexable)
   const industryPages: MetadataRoute.Sitemap = industries.map((i) => ({
     url: `${BASE}/industries/${i.slug}`,
-    lastModified: now,
+    lastModified: CORE_LASTMOD,
     changeFrequency: "monthly",
     priority: 0.9,
   }));
 
-  // Location pages — Tier 1 highest, Tier 2 medium, Tier 3 lower
-  const locationPages: MetadataRoute.Sitemap = locations.map((l) => ({
-    url: `${BASE}/locations/${l.slug}`,
-    lastModified: now,
-    changeFrequency:
-      l.tier === "tier1" ? "monthly" : l.tier === "tier2" ? "monthly" : "yearly",
-    priority: l.tier === "tier1" ? 0.8 : l.tier === "tier2" ? 0.7 : 0.5,
-  }));
+  // Location pages — ONLY Tier 1 in sitemap (Tier 2/3 are noindexed)
+  const tier1Locations: MetadataRoute.Sitemap = locations
+    .filter((l) => l.tier === "tier1")
+    .map((l) => ({
+      url: `${BASE}/locations/${l.slug}`,
+      lastModified: TIER1_LASTMOD,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }));
 
-  // Combo pages: 4 industries × all locations
-  const comboPages: MetadataRoute.Sitemap = comboIndustrySlugs.flatMap((c) =>
-    locations.map((l) => ({
-      url: `${BASE}/${c}/${l.slug}`,
-      lastModified: now,
-      changeFrequency:
-        l.tier === "tier1" ? "monthly" : "yearly" as const,
-      priority: l.tier === "tier1" ? 0.8 : l.tier === "tier2" ? 0.65 : 0.5,
-    }))
+  // Combo pages — ONLY Tier 1 city combos (4 industries × 25 cities = 100 pages)
+  const tier1Combos: MetadataRoute.Sitemap = comboIndustrySlugs.flatMap((c) =>
+    locations
+      .filter((l) => l.tier === "tier1")
+      .map((l) => ({
+        url: `${BASE}/${c}/${l.slug}`,
+        lastModified: TIER1_LASTMOD,
+        changeFrequency: "monthly",
+        priority: 0.8,
+      }))
   );
 
-  return [...core, ...servicePages, ...industryPages, ...locationPages, ...comboPages];
+  return [
+    ...core,
+    ...servicePages,
+    ...industryPages,
+    ...tier1Locations,
+    ...tier1Combos,
+  ];
 }
