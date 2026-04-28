@@ -31,9 +31,14 @@ const industryToCombo: Record<string, (typeof comboIndustrySlugs)[number]> = {
   "estate-agents": "estate-agent-marketing",
 };
 
+// Only Tier 1 cities are built. Tier 2/3 had no real search volume and only
+// templated content — they return 404, which is the right signal for Google
+// to drop them from the index entirely (vs noindex which keeps the URL alive).
 export async function generateStaticParams() {
-  return locations.map((l) => ({ slug: l.slug }));
+  return locations.filter((l) => l.tier === "tier1").map((l) => ({ slug: l.slug }));
 }
+
+export const dynamicParams = false; // Reject any non-Tier-1 slug with 404
 
 export async function generateMetadata({
   params,
@@ -42,28 +47,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
-  if (!loc) return {};
+  if (!loc || loc.tier !== "tier1") return {};
   const rich = getRichCityContent(slug);
   const url = `https://kerblabs.com/locations/${loc.slug}`;
-  const title =
-    loc.tier === "tier1"
-      ? `AI Marketing Agency in ${loc.name} | Kerblabs`
-      : loc.tier === "tier2"
-      ? `AI Marketing for ${loc.name} Local Businesses | Kerblabs`
-      : `Local Business Marketing in ${loc.name} | Kerblabs`;
-  // Use rich-content keyword-targeted description if available
+  const title = `AI Marketing Agency in ${loc.name} | Kerblabs`;
   const description = rich
     ? rich.heroSubhead.slice(0, 156)
-    : `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo. Serving ${loc.county}, ${loc.region}.`;
-  // Only Tier 1 cities are indexed.
-  const indexable = loc.tier === "tier1";
+    : `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo.`;
   return {
     title,
     description,
     alternates: { canonical: url },
-    robots: indexable
-      ? { index: true, follow: true }
-      : { index: false, follow: true },
+    robots: { index: true, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
 }
@@ -75,11 +70,19 @@ export default async function LocationPage({
 }) {
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
-  if (!loc) notFound();
+  if (!loc || loc.tier !== "tier1") notFound();
 
   const url = `https://kerblabs.com/locations/${loc.slug}`;
   const rich = getRichCityContent(slug);
-  const nearby = getNearbyLocations(loc, 6);
+  // Only show other Tier 1 cities as "nearby" — Tier 2/3 pages don't exist.
+  const nearby = locations
+    .filter((l) => l.tier === "tier1" && l.slug !== loc.slug)
+    .filter((l) => l.region === loc.region || l.county === loc.county)
+    .slice(0, 6);
+  const nearbyFallback = locations
+    .filter((l) => l.tier === "tier1" && l.slug !== loc.slug)
+    .slice(0, 6);
+  const nearbyDisplay = nearby.length >= 4 ? nearby : nearbyFallback;
 
   return (
     <main className="relative">
@@ -292,7 +295,7 @@ export default async function LocationPage({
           highlight={`${loc.county}.`}
         />
         <PillLinks
-          links={nearby.map((n) => ({
+          links={nearbyDisplay.map((n) => ({
             label: n.name,
             href: `/locations/${n.slug}`,
           }))}

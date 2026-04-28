@@ -39,8 +39,10 @@ const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
   "estate-agent-marketing": "Estate Agent Marketing",
 };
 
+// Only Tier 1 city combos are built. Other combos had templated content with
+// no search volume — they return 404 (the right SEO signal vs noindex).
 export function generateComboStaticParams() {
-  return locations.map((l) => ({ slug: l.slug }));
+  return locations.filter((l) => l.tier === "tier1").map((l) => ({ slug: l.slug }));
 }
 
 export async function generateComboMetadata(
@@ -49,22 +51,18 @@ export async function generateComboMetadata(
 ): Promise<Metadata> {
   const loc = getLocationBySlug(slug);
   const industry = getIndustryByComboSlug(comboSlug);
-  if (!loc || !industry) return {};
+  if (!loc || loc.tier !== "tier1" || !industry) return {};
   const rich = getRichComboContent(comboSlug, slug);
   const title = `${COMBO_TITLES[comboSlug]} in ${loc.name} | Kerblabs`;
   const description = rich
     ? rich.heroSubhead.slice(0, 156)
     : `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. From £${industry.recommendedPrice}/mo. No lock-in. 10-day setup.`;
   const url = `https://kerblabs.com/${comboSlug}/${slug}`;
-  // Only Tier 1 city combos are indexed.
-  const indexable = loc.tier === "tier1";
   return {
     title,
     description,
     alternates: { canonical: url },
-    robots: indexable
-      ? { index: true, follow: true }
-      : { index: false, follow: true },
+    robots: { index: true, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
 }
@@ -77,19 +75,16 @@ interface ComboPageProps {
 export default async function ComboPage({ comboSlug, locationSlug }: ComboPageProps) {
   const loc = getLocationBySlug(locationSlug);
   const industry = getIndustryByComboSlug(comboSlug);
-  if (!loc || !industry) notFound();
+  if (!loc || loc.tier !== "tier1" || !industry) notFound();
 
   const url = `https://kerblabs.com/${comboSlug}/${locationSlug}`;
   const rich = getRichComboContent(comboSlug, locationSlug);
   const fallbackIntro = fillIntroTemplate(industry.comboIntroTemplate, loc);
   const otherCombos = comboIndustrySlugs.filter((c) => c !== comboSlug);
 
+  // Only Tier 1 combos exist — link to other Tier 1 cities in the same industry.
   const sameIndustryNearby = locations
-    .filter(
-      (l) =>
-        l.slug !== loc.slug &&
-        (l.tier === "tier1" || (l.region === loc.region && l.tier === "tier2"))
-    )
+    .filter((l) => l.slug !== loc.slug && l.tier === "tier1")
     .slice(0, 5);
 
   const sameCityOtherIndustries = otherCombos.map((c) => ({

@@ -5,6 +5,7 @@ import ComboPage, {
 import type { Metadata } from "next";
 
 export const generateStaticParams = generateComboStaticParams;
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
