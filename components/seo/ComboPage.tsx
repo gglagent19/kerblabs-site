@@ -11,7 +11,7 @@ import {
   Faq,
   CtaSection,
   Section,
-  FeatureGrid,
+  ProblemsGrid,
   PillLinks,
 } from "@/components/seo/SeoSections";
 import {
@@ -23,13 +23,7 @@ import {
   comboIndustrySlugs,
   type ComboIndustrySlug,
 } from "@/lib/seo-data";
-
-const industryToCombo: Record<string, ComboIndustrySlug> = {
-  "dental-practices": "dental-marketing",
-  "hair-salons": "salon-marketing",
-  contractors: "contractor-marketing",
-  "estate-agents": "estate-agent-marketing",
-};
+import { getRichComboContent } from "@/lib/rich-content";
 
 const comboToIndustry: Record<ComboIndustrySlug, string> = {
   "dental-marketing": "dental-practices",
@@ -56,12 +50,13 @@ export async function generateComboMetadata(
   const loc = getLocationBySlug(slug);
   const industry = getIndustryByComboSlug(comboSlug);
   if (!loc || !industry) return {};
+  const rich = getRichComboContent(comboSlug, slug);
   const title = `${COMBO_TITLES[comboSlug]} in ${loc.name} | Kerblabs`;
-  const description = `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. From £${industry.recommendedPrice}/mo. No lock-in. 10-day setup.`;
+  const description = rich
+    ? rich.heroSubhead.slice(0, 156)
+    : `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. From £${industry.recommendedPrice}/mo. No lock-in. 10-day setup.`;
   const url = `https://kerblabs.com/${comboSlug}/${slug}`;
-  // Only Tier 1 city combos are indexed. Tier 2/3 combos still build (for direct
-  // visits and conversion) but are noindexed to protect sitewide content quality
-  // signals until they have unique, keyword-researched content.
+  // Only Tier 1 city combos are indexed.
   const indexable = loc.tier === "tier1";
   return {
     title,
@@ -85,10 +80,10 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
   if (!loc || !industry) notFound();
 
   const url = `https://kerblabs.com/${comboSlug}/${locationSlug}`;
-  const intro = fillIntroTemplate(industry.comboIntroTemplate, loc);
+  const rich = getRichComboContent(comboSlug, locationSlug);
+  const fallbackIntro = fillIntroTemplate(industry.comboIntroTemplate, loc);
   const otherCombos = comboIndustrySlugs.filter((c) => c !== comboSlug);
 
-  // Same industry, nearby cities (5)
   const sameIndustryNearby = locations
     .filter(
       (l) =>
@@ -97,7 +92,6 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
     )
     .slice(0, 5);
 
-  // Same city, other industries
   const sameCityOtherIndustries = otherCombos.map((c) => ({
     label: `${COMBO_TITLES[c]} in ${loc.name}`,
     href: `/${c}/${loc.slug}`,
@@ -119,7 +113,7 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
             "@context": "https://schema.org",
             "@type": "Service",
             name: `${COMBO_TITLES[comboSlug]} in ${loc.name}`,
-            provider: { "@type": "Organization", name: "Kerblabs" },
+            provider: { "@id": "https://kerblabs.com/#organization" },
             areaServed: {
               "@type": loc.tier === "tier1" ? "City" : "AdministrativeArea",
               name: loc.name,
@@ -132,6 +126,20 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
               priceCurrency: "GBP",
             },
           },
+          // FAQPage schema (only with rich content)
+          ...(rich
+            ? [
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: rich.faqs.map((f) => ({
+                    "@type": "Question",
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
+                  })),
+                },
+              ]
+            : []),
         ]}
       />
 
@@ -152,12 +160,20 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
         eyebrow={`${industry.industryPlural.toUpperCase()} IN ${loc.name.toUpperCase()}`}
         h1={industry.h1.replace("UK", loc.name)}
         highlight={industry.h1Highlight.replace("UK", loc.name)}
-        subhead={`${industry.subhead} Built for ${loc.name} businesses across ${loc.county}.`}
+        subhead={
+          rich?.heroSubhead ??
+          `${industry.subhead} Built for ${loc.name} businesses across ${loc.county}.`
+        }
         primaryCta={{
           label: "Book a free strategy call",
           href: "https://calendly.com/chandraalladi07/30min",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
+        stats={
+          rich?.stats
+            ?.slice(0, 3)
+            .map((s) => ({ value: s.value, label: s.label }))
+        }
       />
 
       <Section>
@@ -166,29 +182,88 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
           title="What's actually happening"
           highlight="here."
         />
-        <p className="text-[color:var(--color-text-dim)] leading-relaxed max-w-4xl text-base md:text-lg">
-          {intro}
-        </p>
+        <div className="max-w-4xl space-y-5 text-[color:var(--color-text-dim)] leading-relaxed text-base md:text-lg">
+          {rich ? (
+            rich.marketContext.map((para, i) => <p key={i}>{para}</p>)
+          ) : (
+            <p>{fallbackIntro}</p>
+          )}
+        </div>
+
+        {rich && rich.stats.length > 3 && (
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl">
+            {rich.stats.map((s, i) => (
+              <div key={i}>
+                <div className="font-display font-bold text-2xl md:text-3xl grad-lime">
+                  {s.value}
+                </div>
+                <div className="text-xs md:text-sm text-[color:var(--color-text-dim)] mt-1.5 leading-snug">
+                  {s.label}
+                  {s.source && (
+                    <span className="block text-[color:var(--color-text-faint)] mt-0.5">
+                      Source: {s.source}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </Section>
 
-      <Section background="surface">
+      {/* Pain points (rich content only) */}
+      {rich && rich.painPoints.length > 0 && (
+        <Section background="surface">
+          <SectionHead
+            label={`${loc.name.toUpperCase()} ${industry.industryPlural.toUpperCase()} CHALLENGES`}
+            title="What's costing you"
+            highlight="customers right now."
+          />
+          <ProblemsGrid problems={rich.painPoints} />
+        </Section>
+      )}
+
+      <Section background={rich ? "default" : "surface"}>
         <SectionHead
           label="THE SYSTEMS"
           title="What we build"
           highlight={`for ${loc.name} ${industry.industryPlural.toLowerCase()}.`}
         />
-        <FeatureGrid
-          items={services.slice(0, 4).map((s) => ({
-            number: s.number,
-            category: s.category,
-            title: s.shortName,
-            body: s.subhead.slice(0, 130) + "…",
-            href: `/services/${s.slug}`,
-          }))}
-        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services.slice(0, 4).map((s) => (
+            <a
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              className="card p-6 group block"
+            >
+              <span className="label text-[color:var(--color-lime)] block mb-3">
+                {s.number} · {s.category}
+              </span>
+              <h3 className="font-display font-bold text-base mb-1.5">
+                {s.shortName}
+              </h3>
+              <p className="text-sm text-[color:var(--color-text-dim)] leading-relaxed">
+                {s.subhead.slice(0, 110)}…
+              </p>
+            </a>
+          ))}
+        </div>
       </Section>
 
-      <Section>
+      {rich?.approach && (
+        <Section>
+          <SectionHead
+            label="OUR APPROACH"
+            title={`How we'd work with`}
+            highlight={`a ${loc.name} ${industry.industrySingular}.`}
+          />
+          <p className="text-[color:var(--color-text-dim)] leading-relaxed max-w-3xl text-base md:text-lg">
+            {rich.approach}
+          </p>
+        </Section>
+      )}
+
+      <Section background="surface">
         <SectionHead label="PRICING" title="Recommended for" highlight={`${industry.industryPlural.toLowerCase()}.`} />
         <PricingCallout
           plan={industry.recommendedPlan}
@@ -197,7 +272,7 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
         />
       </Section>
 
-      <Section background="surface">
+      <Section>
         <SectionHead
           label="NEARBY"
           title={`${COMBO_TITLES[comboSlug]} in`}
@@ -211,7 +286,7 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
         />
       </Section>
 
-      <Section>
+      <Section background="surface">
         <SectionHead
           label={`MORE FOR ${loc.name.toUpperCase()}`}
           title="Other industries"
@@ -220,23 +295,25 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
         <PillLinks links={sameCityOtherIndustries} />
       </Section>
 
-      <Section background="surface">
+      <Section>
         <SectionHead label="FAQ" title="Common" highlight="questions." />
         <Faq
-          items={[
-            {
-              q: `Do you work with ${industry.industryPlural.toLowerCase()} across all of ${loc.name}?`,
-              a: `Yes — Kerblabs serves ${industry.industryPlural.toLowerCase()} across the entire ${loc.name} area and surrounding ${loc.county}. Our delivery is fully remote, so where in the area you're based doesn't matter; what matters is your Google visibility and lead capture systems, which we fix.`,
-            },
-            {
-              q: `How quickly can a ${loc.name} ${industry.industrySingular} expect results?`,
-              a: `Most ${loc.name} ${industry.industryPlural.toLowerCase()} see Google Business Profile improvements within 2-4 weeks, AI voice and review systems live within 10 days, and meaningful organic ranking improvements within 6-12 weeks.`,
-            },
-            {
-              q: `What's the minimum commitment?`,
-              a: `No long-term contracts. Month-to-month from £${industry.recommendedPrice}/mo on the ${industry.recommendedPlan} plan. Cancel any time.`,
-            },
-          ]}
+          items={
+            rich?.faqs ?? [
+              {
+                q: `Do you work with ${industry.industryPlural.toLowerCase()} across all of ${loc.name}?`,
+                a: `Yes — Kerblabs serves ${industry.industryPlural.toLowerCase()} across the entire ${loc.name} area and surrounding ${loc.county}. Our delivery is fully remote.`,
+              },
+              {
+                q: `How quickly can a ${loc.name} ${industry.industrySingular} expect results?`,
+                a: `Most ${loc.name} ${industry.industryPlural.toLowerCase()} see Google Business Profile improvements within 2-4 weeks, AI voice and review systems live within 10 days, and meaningful organic ranking improvements within 6-12 weeks.`,
+              },
+              {
+                q: `What's the minimum commitment?`,
+                a: `No long-term contracts. Month-to-month from £${industry.recommendedPrice}/mo on the ${industry.recommendedPlan} plan. Cancel any time.`,
+              },
+            ]
+          }
         />
       </Section>
 
