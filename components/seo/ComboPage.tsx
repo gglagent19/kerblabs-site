@@ -45,6 +45,17 @@ const comboToIndustry: Record<ComboIndustrySlug, string> = {
   "mechanic-marketing": "mobile-mechanics",
   "nursery-marketing": "private-nurseries",
   "wedding-photographer-marketing": "wedding-photographers",
+  "kitchen-fitter-marketing": "kitchen-fitters",
+  "property-manager-marketing": "property-managers",
+  "locksmith-marketing": "locksmiths",
+  "oven-cleaner-marketing": "oven-cleaners",
+  "car-detailer-marketing": "mobile-car-detailers",
+  "tree-surgeon-marketing": "tree-surgeons",
+  "cleaning-marketing": "cleaning-services",
+  "bathroom-fitter-marketing": "bathroom-fitters",
+  "lawn-care-marketing": "lawn-care",
+  "pressure-washing-marketing": "pressure-washing",
+  "fencing-marketing": "fencing-contractors",
 };
 
 const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
@@ -67,6 +78,17 @@ const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
   "mechanic-marketing": "Mobile Mechanics Marketing",
   "nursery-marketing": "Private Nurseries Marketing",
   "wedding-photographer-marketing": "Wedding Photographers Marketing",
+  "kitchen-fitter-marketing": "Kitchen Fitters Marketing",
+  "property-manager-marketing": "Property Managers Marketing",
+  "locksmith-marketing": "Locksmiths Marketing",
+  "oven-cleaner-marketing": "Oven Cleaners Marketing",
+  "car-detailer-marketing": "Mobile Car Detailers Marketing",
+  "tree-surgeon-marketing": "Tree Surgeons Marketing",
+  "cleaning-marketing": "Cleaning Services Marketing",
+  "bathroom-fitter-marketing": "Bathroom Fitters Marketing",
+  "lawn-care-marketing": "Lawn Care Marketing",
+  "pressure-washing-marketing": "Pressure Washing Marketing",
+  "fencing-marketing": "Fencing Contractors Marketing",
 };
 
 // Only Tier 1 city combos are built. Other combos had templated content with

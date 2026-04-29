@@ -46,6 +46,17 @@ const industryToCombo: Record<string, ComboIndustrySlug> = {
   "mobile-mechanics": "mechanic-marketing",
   "private-nurseries": "nursery-marketing",
   "wedding-photographers": "wedding-photographer-marketing",
+  "kitchen-fitters": "kitchen-fitter-marketing",
+  "property-managers": "property-manager-marketing",
+  "locksmiths": "locksmith-marketing",
+  "oven-cleaners": "oven-cleaner-marketing",
+  "mobile-car-detailers": "car-detailer-marketing",
+  "tree-surgeons": "tree-surgeon-marketing",
+  "cleaning-services": "cleaning-marketing",
+  "bathroom-fitters": "bathroom-fitter-marketing",
+  "lawn-care": "lawn-care-marketing",
+  "pressure-washing": "pressure-washing-marketing",
+  "fencing-contractors": "fencing-marketing",
 };
 
 export async function generateStaticParams() {

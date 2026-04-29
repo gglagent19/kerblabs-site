@@ -17,6 +17,17 @@ import { industry as gymsHub } from "./rich-content/industries/gyms";
 import { industry as mobile_mechanicsHub } from "./rich-content/industries/mobile-mechanics";
 import { industry as private_nurseriesHub } from "./rich-content/industries/private-nurseries";
 import { industry as wedding_photographersHub } from "./rich-content/industries/wedding-photographers";
+import { industry as kitchen_fittersHub } from "./rich-content/industries/kitchen-fitters";
+import { industry as property_managersHub } from "./rich-content/industries/property-managers";
+import { industry as locksmithsHub } from "./rich-content/industries/locksmiths";
+import { industry as oven_cleanersHub } from "./rich-content/industries/oven-cleaners";
+import { industry as mobile_car_detailersHub } from "./rich-content/industries/mobile-car-detailers";
+import { industry as tree_surgeonsHub } from "./rich-content/industries/tree-surgeons";
+import { industry as cleaning_servicesHub } from "./rich-content/industries/cleaning-services";
+import { industry as bathroom_fittersHub } from "./rich-content/industries/bathroom-fitters";
+import { industry as lawn_careHub } from "./rich-content/industries/lawn-care";
+import { industry as pressure_washingHub } from "./rich-content/industries/pressure-washing";
+import { industry as fencing_contractorsHub } from "./rich-content/industries/fencing-contractors";
 
 export type Tier = "tier1" | "tier2" | "tier3";
 
@@ -520,6 +531,17 @@ export const industries: Industry[] = [
   mobile_mechanicsHub,
   private_nurseriesHub,
   wedding_photographersHub,
+  kitchen_fittersHub,
+  property_managersHub,
+  locksmithsHub,
+  oven_cleanersHub,
+  mobile_car_detailersHub,
+  tree_surgeonsHub,
+  cleaning_servicesHub,
+  bathroom_fittersHub,
+  lawn_careHub,
+  pressure_washingHub,
+  fencing_contractorsHub,
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -1028,6 +1050,17 @@ export const comboIndustrySlugs = [
   "mechanic-marketing",
   "nursery-marketing",
   "wedding-photographer-marketing",
+  "kitchen-fitter-marketing",
+  "property-manager-marketing",
+  "locksmith-marketing",
+  "oven-cleaner-marketing",
+  "car-detailer-marketing",
+  "tree-surgeon-marketing",
+  "cleaning-marketing",
+  "bathroom-fitter-marketing",
+  "lawn-care-marketing",
+  "pressure-washing-marketing",
+  "fencing-marketing",
 ] as const;
 
 export type ComboIndustrySlug = (typeof comboIndustrySlugs)[number];
@@ -1053,6 +1086,17 @@ export function getIndustryByComboSlug(comboSlug: ComboIndustrySlug): Industry {
     "mechanic-marketing": "mobile-mechanics",
     "nursery-marketing": "private-nurseries",
     "wedding-photographer-marketing": "wedding-photographers",
+    "kitchen-fitter-marketing": "kitchen-fitters",
+    "property-manager-marketing": "property-managers",
+    "locksmith-marketing": "locksmiths",
+    "oven-cleaner-marketing": "oven-cleaners",
+    "car-detailer-marketing": "mobile-car-detailers",
+    "tree-surgeon-marketing": "tree-surgeons",
+    "cleaning-marketing": "cleaning-services",
+    "bathroom-fitter-marketing": "bathroom-fitters",
+    "lawn-care-marketing": "lawn-care",
+    "pressure-washing-marketing": "pressure-washing",
+    "fencing-marketing": "fencing-contractors",
   };
   const slug = map[comboSlug];
   const industry = getIndustryBySlug(slug);

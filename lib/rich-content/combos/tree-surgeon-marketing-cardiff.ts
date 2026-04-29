@@ -1,0 +1,74 @@
+import type { RichComboContent } from "../types";
+
+export const content: RichComboContent = {
+  primaryKeywords: [
+    "tree surgeon marketing Cardiff",
+    "Cardiff arborist lead generation",
+    "tree surgeon SEO Cardiff",
+    "South Wales tree surgery Google Ads",
+    "ARB Approved Contractor marketing Cardiff",
+  ],
+  secondaryKeywords: [
+    "Bute Park mature tree contractor Cardiff",
+    "Welsh-language tree surgeon Caerdydd",
+    "Natural Resources Wales Felling Licence Cardiff",
+    "Tirio Tree Services Cardiff Tree Surgery competitor",
+    "ash dieback removal South Wales Cardiff",
+    "Whitchurch Llanishen Penarth heritage tree work",
+    "Cardiff Council framework tree surgeon",
+    "storm callout tree surgeon Cardiff",
+  ],
+  heroSubhead:
+    "Cardiff is the most regulated arboricultural market in Wales — Natural Resources Wales (not the Forestry Commission or Scottish Forestry) issues Felling Licences under separate Welsh law, the Llandaff Conservation Area, the Cathays Conservation Area and the Cardiff Civic Centre Conservation Area cover substantial mature stock, Bute Park's 130 acres of mature parkland sit under Cardiff Council direct management adjacent to Cardiff Castle, and the Welsh-language client base west of the city (in Welsh-speaking Cardiff communities and the wider South Wales Valleys catchment) creates a real bilingual marketing opportunity. The premium suburban belt — Whitchurch, Llanishen, Penarth, Radyr — supports £700–£3,000 mature-tree removal pricing on Conservation Area properties. Cardiff Tree Surgery, Tirio Tree Services and Bartlett (UK national) compete at the heritage end. Council framework subcontracts run via Glendale, idverde and Tivoli at 25–35% margin compression. Kerblabs gives independent ARB Approved Contractors the AI storm-mode receptionist with bilingual capability, ash-dieback funnel, Bute-Park-aware Conservation Area positioning and direct council-tender pipeline tuned for Welsh regulatory specifics.",
+  marketContext: [
+    "Cardiff's regulatory context differs materially from England in ways generic UK tree-surgery marketing routinely fluffs. Natural Resources Wales (Cyfoeth Naturiol Cymru) — not the Forestry Commission — issues Felling Licences under the Forestry Act 1967 as amended by the Forestry (Wales) Order 2013, with a 5m³ per quarter exemption and Welsh-specific exemptions. Tree Preservation Orders in Wales are issued under the Town and Country Planning Act 1990 (the same primary legislation as England) but enforced separately by Welsh local planning authorities — Cardiff Council, Vale of Glamorgan, Caerphilly, Newport, Bridgend and Rhondda Cynon Taf each maintain their own TPO registers and Conservation Area boundaries with separate Section 211 notice workflows. Conservation Area enforcement is particularly active in Llandaff (the cathedral city Conservation Area), Cathays Park (the Civic Centre Conservation Area with mature plane and lime avenues), Pontcanna, Roath Park and Penarth Town Conservation Area.",
+    "Cardiff Council manages Bute Park (130 acres of mature parkland adjacent to Cardiff Castle, with veteran oak, beech, plane and lime stock — designated Grade I Registered Historic Park and Garden), Roath Park and Roath Park Lake, Victoria Park, Cathays Park (the Civic Centre estate), Heath Park, Cefn Onn and the city's substantial mature street tree network. Tendered tree work runs through framework subcontract via Glendale, idverde and Tivoli at 25–35% margin compression. The Cardiff Bay regeneration, the Central Square redevelopment, the Capital Quarter expansion and the BBC Cymru Wales relocation have driven phased TPO consent and replacement-planting work through tier-one contractors. Welsh-language client base matters commercially: roughly 11.6% of Cardiff residents speak Welsh, concentrated more strongly in Pontcanna, Canton, Whitchurch and the western Cardiff fringe, with the wider South Wales Valleys catchment north of the city carrying significantly higher Welsh-language density. Welsh-language Google Business Profile, schema, hreflang and ad creative are missed by almost every national chain operating in Wales.",
+    "Ash dieback is severe across South Wales — NRW dieback monitoring shows substantial mature ash failure across the Vale of Glamorgan, Caerphilly, Rhondda Cynon Taf, Bridgend and the wider Brecon Beacons fringe. Framework subcontracts pay £150–£600 per stem at 25–35% compression. NRW South East Region holds periodic dieback management forums. On the domestic premium side, CF14 (Whitchurch, Llanishen), CF11 (Pontcanna), CF64 (Penarth) and CF15 (Radyr) support £700–£3,000 mature-tree removal on Conservation Area properties. Google Ads CPCs run £3–£7 on 'tree surgeon Cardiff', £2–£4 on suburban-belt terms, £5–£10 on 'emergency tree Cardiff' (peaking £12+ during named-storm windows). Kerblabs Cardiff tree surgery clients running borough-stratified GBP, dedicated dieback and Bute-Park-aware landing pages plus structured B2B outreach to Cardiff Council, NRW South East and the South Wales chartered surveyors typically achieve £120–£240 cost-per-job.",
+  ],
+  stats: [
+    { value: "130 acres", label: "Bute Park Grade I Registered Historic Park and Garden under Cardiff Council direct management" },
+    { value: "11.6%", label: "Cardiff residents who speak Welsh — bilingual marketing materially under-targeted by national operators", source: "ONS Census 2021" },
+    { value: "5m³ / quarter", label: "Natural Resources Wales Felling Licence exemption threshold under Forestry (Wales) Order 2013", source: "Natural Resources Wales / Cyfoeth Naturiol Cymru" },
+    { value: "£3–£12", label: "Google Ads CPC range for Cardiff tree-surgeon and emergency-tree keywords 2024–2025", source: "Kerblabs client accounts" },
+    { value: "£700–£3,000", label: "typical Whitchurch/Llanishen/Penarth/Radyr mature-tree removal price range" },
+    { value: "Llandaff / Cathays / Civic Centre", label: "three substantial Cardiff Conservation Areas with mature plane, lime and oak inventory under active enforcement" },
+  ],
+  painPoints: [
+    {
+      title: "Bute Park, Roath Park and Cardiff Council parkland tendered work locked into Glendale framework",
+      body: "Cardiff Council's mature parkland inventory — Bute Park 130 acres, Roath Park, Victoria Park, Cathays Park, Heath Park, Cefn Onn — runs tendered tree work through framework subcontract at 25–35% margin compression. We build outreach to Cardiff Council Parks and Tree Officer team, NRW South East Region, the Royal Forestry Society Wales chapter and Cadw (the Welsh historic environment service) for Bute Park veteran-tree work to win direct framework places.",
+    },
+    {
+      title: "South Wales ash dieback workload going to NRW and council frameworks at compressed margin",
+      body: "Cardiff Council, Vale of Glamorgan, Caerphilly, Newport, Bridgend, RCT and the wider Brecon Beacons fringe together manage thousands of mature roadside ash. Framework subcontracts pay £150–£600 per stem at 25–35% compression. We build outreach to all six South Wales council tree officer teams, NRW South East, Welsh Government Forestry, and the National Trust Wales estate (Dyffryn Gardens, Tredegar House, Powis Castle adjacent) — with NRW dieback compliance, FISA 308 protocol case studies — to win direct framework places.",
+    },
+    {
+      title: "Welsh-language client base completely missed by national operators",
+      body: "Roughly 11.6% of Cardiff residents speak Welsh, with significantly higher density in Pontcanna, Canton, Whitchurch and the wider South Wales Valleys catchment. Welsh-language GBP, schema, hreflang, AI receptionist greeting capability and ad creative are missed by every national chain. We configure bilingual response (English / Cymraeg) where commercially relevant, translate key landing pages and build Welsh-language review prompts to capture community trust signals competitors can't replicate.",
+    },
+    {
+      title: "Whitchurch/Llanishen/Penarth premium work going to Cardiff Tree Surgery and Bartlett without independent counter-positioning",
+      body: "CF14, CF11, CF64 and CF15 support £700–£3,000 mature-tree removal on Conservation Area properties. We rebuild around named CF-postcode case studies, surface ApCo, BS3998:2010, LOLER/PUWER 1998 in landing pages and quote PDFs, and run B2B outreach to the Cardiff prime estate agents (Knight Frank Cardiff, Savills Cardiff, Watts & Morgan, Hern & Crabtree) where heritage tree work flows through repeat relationships.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How does the Welsh Felling Licence regime change tree-surgery marketing in Cardiff vs English cities?",
+      a: "Natural Resources Wales (Cyfoeth Naturiol Cymru) — not the Forestry Commission — issues Felling Licences under the Forestry Act 1967 as amended by the Forestry (Wales) Order 2013, with a 5m³ per quarter exemption and Welsh-specific exemptions for orchards, gardens, churchyards and public open spaces. Welsh local planning authorities maintain TPOs and Conservation Areas under the same TCPA 1990 primary legislation as England but enforce separately. We build all of this into the customer journey: AI receptionist references NRW (with the Welsh-language form Cyfoeth Naturiol Cymru where bilingual operation is enabled) rather than Forestry Commission; quote enquiry forms ask Welsh-specific qualifying questions; the website includes a Cardiff-specific Conservation Area content hub covering Llandaff, Cathays Park (Civic Centre), Roath Park and Penarth Town Conservation Areas. Council tree officers at Cardiff Council vet specialist credentials against correct Welsh terminology — generic UK templates get filtered out at first read.",
+    },
+    {
+      q: "Is Welsh-language marketing genuinely commercially worth it for Cardiff tree surgery?",
+      a: "It depends on which Cardiff catchment you're targeting and how authentic your Welsh-language operation is. In CF10 Cardiff Bay and CF24 Roath, Welsh-language content is a nice-to-have rather than a commercial driver — most customers are English-first. In CF11 Pontcanna and CF14 Whitchurch (the western and northern Cardiff fringe with stronger Welsh-language density), and especially in the wider South Wales Valleys catchment north of the city (CF15 Radyr fringing into Caerphilly, RCT and the Welsh-speaking Valleys belt), Welsh-language presence on your website, GBP and AI receptionist greeting can deliver a measurable trust and ranking benefit. We don't recommend bolting on token Welsh translation — but for businesses with a real Welsh-speaking customer base or those targeting council framework work where Welsh Language Standards apply, properly built bilingual content can be a meaningful differentiator. We configure bilingual AI receptionist greeting (Croeso i [Company]/Welcome to [Company]), translate the key landing pages (Bute Park veteran-tree, Cardiff Conservation Area, ash dieback survey), and build Welsh-language review prompts.",
+    },
+    {
+      q: "How do we win Bute Park, Roath Park and Cardiff Council parkland framework work direct rather than via Glendale?",
+      a: "Cardiff Council manages Bute Park (130 acres, Grade I Registered Historic Park and Garden adjacent to Cardiff Castle, with veteran oak, beech, plane and lime), Roath Park and Roath Park Lake, Victoria Park, Cathays Park (Civic Centre estate), Heath Park and Cefn Onn. Tendered tree work runs through framework subcontract via Glendale, idverde and Tivoli at 25–35% margin compression. We build a parallel direct-framework strategy. Phase one: structured B2B outreach to Cardiff Council Parks and Tree Officer team, NRW South East Region, the Royal Forestry Society Wales chapter, Cadw (the Welsh historic environment service — relevant for Bute Park's Grade I designation), and the National Trust Wales estate. Each receives a tailored panel-application pack covering ApCo currency, BS3998:2010 compliance, MEWP capability, veteran-tree management case studies (oak/beech/plane/lime), insurance levels (£10M PL minimum), CHAS / Constructionline / SafeContractor accreditation, plus Welsh Language Standards compliance where applicable for council work. Phase two: appearance at RFS Wales events and NRW South East forums.",
+    },
+    {
+      q: "How does the AI receptionist handle a 7am storm callout in Penarth when the climber is in Whitchurch?",
+      a: "South Wales takes the brunt of Atlantic storm systems — Eunice (February 2022) was particularly severe across the Bristol Channel coast and Storm Babet, Isha and Jocelyn have all hit Cardiff hard. Storm response is one of the highest-value Cardiff use-cases. When a named storm warning hits, we trigger storm-mode protocols: AI greeting acknowledges the storm (bilingual where enabled), what3words location capture, SMS-photograph-upload link sent within 60 seconds, automatic text alert to on-call climber and groundsman with full context. Power-line incidents are routed to 105 — never booked on Western Power Distribution conductors. Insurance-claim landing pages capture loss-adjuster references for NFU Mutual Wales (heavy across rural South Wales), AXA, Aviva, Direct Line. Cardiff Bay and Central Square regeneration-corridor enquiries route to a separate B2B funnel — these come from tier-one main contractors and need CHAS / Constructionline / SafeContractor / CCS accreditation surfaced before the conversation can progress.",
+    },
+  ],
+  approach:
+    "For Cardiff and South Wales tree surgeons and arborists, our 90-day playbook is: (1) build borough-stratified Google Business Profile and Local Service Ads across Cardiff Council, Vale of Glamorgan, Caerphilly, Newport with CF-postcode targeting and Whitchurch/Llanishen/Penarth premium positioning; (2) deploy AI 24/7 storm-mode receptionist with bilingual English/Cymraeg capability where commercially relevant, Welsh-regulatory-specific qualifying flow (NRW, Welsh TPO/Conservation Area, Section 211 notice), what3words location capture and instant climber-text alerts; (3) build dedicated specialism landing pages for South Wales ash dieback, Bute Park / Roath Park veteran-tree management, Conservation Area heritage tree work (Llandaff, Cathays Park, Pontcanna, Penarth Town), Whitchurch/Llanishen prime estate work, and Cardiff Bay / Central Square regeneration replacement-planting; (4) launch structured B2B outreach to Cardiff Council Parks and Tree Officer team, NRW South East, Cadw, RFS Wales, NT Wales, Welsh Government Forestry, and the Cardiff chartered surveyors (Knight Frank, Savills, Watts & Morgan, Hern & Crabtree); and (5) drive Google review velocity with named-CF-postcode and specialism keywords (including Welsh-language prompts where appropriate) for local-pack dominance against Cardiff Tree Surgery, Tirio Tree Services, Bartlett and the aggregators.",
+};

@@ -1,0 +1,74 @@
+import type { RichComboContent } from "../types";
+
+export const content: RichComboContent = {
+  primaryKeywords: [
+    "tree surgeon marketing Leeds",
+    "Leeds arborist lead generation",
+    "tree surgeon SEO Leeds",
+    "West Yorkshire tree surgery Google Ads",
+    "ARB Approved Contractor marketing Leeds",
+  ],
+  secondaryKeywords: [
+    "Roundhay Park tendered tree work Leeds",
+    "Yorkshire ash dieback removal contractor",
+    "TPO Conservation Area tree surgeon Headingley Roundhay Chapel Allerton",
+    "Yorkshire Tree Care competitor independent ARB",
+    "Leeds South Bank regeneration tree clearance",
+    "Harewood Bramham estate arborist",
+    "council framework tree surgeon Leeds Bradford Wakefield",
+    "storm callout tree surgeon Leeds",
+  ],
+  heroSubhead:
+    "Leeds and West Yorkshire carry a heavy ash dieback caseload across rural-fringe Wharfedale and Calderdale, the South Bank / Aire Park £7B regeneration corridor is clearing mature urban stock through phased TPO consents, and Roundhay Park's 700+ acres of mature parkland sit under Leeds City Council direct management with periodic tendered framework work. The premium suburban belt — Roundhay, Alwoodley, Adel, Bramhope, Horsforth — supports £900–£3,500 mature-tree removal pricing on Conservation Area and prime estate properties, while Yorkshire Tree Care, Leeds Tree Surgeons and Bartlett command the heritage end. Council framework subcontracts run via Glendale, idverde and FCC Environment at 25–35% margin compression. Kerblabs gives independent ARB Approved Contractors the AI storm-mode receptionist, ash-dieback funnel, Roundhay-Park-adjacent positioning and direct council-tender pipeline to capture the work the corporates and frameworks can't service.",
+  marketContext: [
+    "Leeds City Council is one of the largest urban tree managers in northern England — Roundhay Park's 700+ acres of mature oak, beech and lime, Temple Newsam's 1,500-acre estate, Golden Acre Park, Otley Chevin Forest Park, Middleton Park ancient woodland and the city's mature street tree network together represent a tendered tree-work caseload that runs through framework subcontract via Glendale, idverde and FCC Environment. Wakefield Council, Bradford Council, Calderdale Council, Kirklees Council and the West Yorkshire Combined Authority highways team operate adjacent caseloads. The £7B+ South Bank Leeds and Aire Park regeneration programme has cleared mature stock through phased TPO consent and replacement-planting schedules — work that has flowed downward from tier-one contractors (Caddick, Glenmore Construction, BAM Construction Yorkshire) to specialist arboricultural subcontract.",
+    "Yorkshire ash dieback is severe across the Wharfedale, Calderdale and Pennine-fringe corridor. North Yorkshire County Council, the West Yorkshire Combined Authority highways team and the five WY metropolitan boroughs (Leeds, Bradford, Wakefield, Calderdale, Kirklees) together manage thousands of mature roadside ash on minor and B-class highways. Framework subcontracts pay £150–£600 per stem at 25–35% margin compression. The Royal Forestry Society Yorkshire & North East and the Forestry Commission Yorkshire & North East regional team hold periodic dieback management forums. On the domestic premium side, the LS17 (Roundhay/Alwoodley), LS18 (Horsforth/Bramhope) and LS16 (Adel/Cookridge) belt — together one of the highest household-income catchments in northern England — supports £900–£3,500 mature-tree removal on Conservation Area and listed-building-adjacent properties. Bramhope, Adel and Cookridge in particular sit in conservation-belt corridors with mature beech and oak stock attracting regular target-prune and reduction work.",
+    "Bramham Park (the Lane Fox family estate, hosting Bramham Horse Trials and Leeds Festival), Harewood House (the Lascelles family estate) and the Bramham, Boston Spa and Wetherby private estate cluster represent a separate prime-estate workload sourced through chartered surveyors (Carter Jonas Yorkshire, Strutt & Parker Harrogate, Savills York) and historic estate management offices. Google Ads CPCs run £4–£9 on 'tree surgeon Leeds', £2–£4 on borough-level terms, and £6–£12 on 'emergency tree Leeds' (peaking £14+ during named-storm windows). Kerblabs Leeds tree surgery clients running borough-stratified GBP, dedicated dieback and Roundhay-Park-adjacent landing pages plus structured B2B outreach to the five WY borough tree officers, North Yorkshire County Council, Bramham, Harewood and the Yorkshire chartered surveyors typically achieve £130–£260 cost-per-job versus £400–£800 on aggregators.",
+  ],
+  stats: [
+    { value: "700+ acres", label: "Roundhay Park mature parkland under Leeds City Council direct management" },
+    { value: "5", label: "West Yorkshire metropolitan boroughs (Leeds, Bradford, Wakefield, Calderdale, Kirklees) each with separate TPO register" },
+    { value: "£4–£14", label: "Google Ads CPC range for Leeds tree-surgeon and emergency-tree keywords 2024–2025", source: "Kerblabs client accounts" },
+    { value: "£900–£3,500", label: "typical Roundhay/Alwoodley/Adel/Bramhope/Horsforth mature-tree removal price range" },
+    { value: "£7B+", label: "South Bank Leeds + Aire Park regeneration driving phased TPO consent and replacement-planting", source: "Leeds City Council" },
+    { value: "1,500 acres", label: "Temple Newsam estate under Leeds City Council management with mature parkland and ancient-woodland stock" },
+  ],
+  painPoints: [
+    {
+      title: "Roundhay Park, Temple Newsam and Otley Chevin tendered work locked into Glendale and idverde framework",
+      body: "Leeds City Council's mature parkland inventory — Roundhay (700+ acres), Temple Newsam (1,500 acres), Otley Chevin, Middleton Park ancient woodland, Golden Acre — runs tendered tree work through framework subcontract at 25–35% margin compression. We build outreach to Leeds City Council Parks and Tree Officer team, the Royal Forestry Society Yorkshire & North East, and the Forestry Commission Yorkshire & North East regional team to win direct framework places.",
+    },
+    {
+      title: "Yorkshire ash dieback workload going to Glendale and FCC Environment at framework margin",
+      body: "Five WY metropolitan boroughs plus North Yorkshire County Council and the WYCA highways team manage thousands of mature roadside ash. Framework subcontracts pay £150–£600 per stem at compressed margin. We build outreach to all five WY borough tree officers, North Yorkshire CC highways, WYCA, Forestry Commission Yorkshire & NE — with FCBI047 dieback compliance, FISA 308 protocol case studies, ApCo currency — to win direct framework places.",
+    },
+    {
+      title: "Bramham, Harewood and Yorkshire prime estate work going to specialists without independent counter-positioning",
+      body: "Bramham Park, Harewood House and the Wetherby/Boston Spa/Bramham private estate cluster source heritage tree work through Carter Jonas Yorkshire, Strutt & Parker Harrogate, Savills York and historic estate management offices. Most independents have generic websites. We rebuild around named LS-postcode and adjacent-North-Yorkshire case studies, surface ApCo, BS3998:2010, LOLER/PUWER 1998 in landing pages and quote PDFs, and run B2B outreach to the Yorkshire chartered surveyors and estate offices.",
+    },
+    {
+      title: "South Bank / Aire Park regeneration replacement-planting tenders missed for lack of accreditation surfacing",
+      body: "Leeds South Bank and Aire Park £7B+ regeneration carries phased TPO consent and replacement-planting obligations through 2030s — work flowing through Caddick, Glenmore, BAM Yorkshire tier-one supply chains downward. Independents miss this work for lack of CHAS, Constructionline, SafeContractor and CCS accreditation surfaced across the customer journey. We rebuild GBP, schema and a dedicated regeneration-corridor landing page around the credentials tier-one contractors actually vet.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How does Kerblabs help us win direct council-tender places on Roundhay Park, Temple Newsam and Otley Chevin work rather than subcontracting through Glendale?",
+      a: "Leeds City Council's mature parkland inventory is one of the most significant urban tree management portfolios in northern England — Roundhay Park (700+ acres), Temple Newsam (1,500 acres), Otley Chevin Forest Park, Middleton Park ancient woodland, Golden Acre Park and the city's mature street tree network. Tendered tree work runs through framework subcontract via Glendale, idverde, FCC Environment and Tivoli at 25–35% margin compression. We build a parallel direct-framework strategy. Phase one: structured B2B outreach to the Leeds City Council Parks team, the Otley Chevin ranger team, the West Yorkshire Combined Authority highways and parks contacts, and the Royal Forestry Society Yorkshire & North East chapter. Each receives a tailored panel-application pack covering ApCo currency, BS3998:2010 compliance, MEWP capability (named Hinowa or Palazzani spider-lift kit), veteran-tree management case studies (named oak/beech/lime species), insurance levels (£10M public liability minimum for Leeds CC framework work), and CHAS / Constructionline / SafeContractor accreditation. Phase two: appearance at the Royal Forestry Society Yorkshire events, the AA Yorkshire branch sessions and the Forestry Commission Yorkshire & NE forums where direct framework relationships actually form. Phase three: dedicated landing pages targeting 'veteran tree management Leeds', 'Roundhay Park tree contractor', 'ancient woodland Yorkshire' etc. Leeds arb crews running this typically win 1–3 direct framework places per year that displace 20–40% of subcontract income.",
+    },
+    {
+      q: "How do you turn the Yorkshire ash dieback caseload into a real lead pipeline?",
+      a: "Yorkshire is one of the worst-affected English regions for ash dieback. We build a four-channel funnel. (1) A dedicated ash dieback survey and removal landing page with named photographic evidence of completed dieback fells across LS, BD, WF, HX and HD postcodes, MEWP capability, sectional dismantling case studies, FCBI047 'Managing Ash Dieback in England' compliance, FISA 308 protocol references. (2) GBP photo-post automation publishing one ash dieback before/after per week with proper geotagging across all five WY boroughs. (3) Structured B2B outreach to all five WY borough tree officers (Leeds, Bradford, Wakefield, Calderdale, Kirklees), North Yorkshire County Council highways, the West Yorkshire Combined Authority, Forestry Commission Yorkshire & NE, the National Trust Yorkshire estate (Nostell, East Riddlesden Hall, Hardcastle Crags), the Yorkshire Wildlife Trust mature woodland portfolio, and the major academy trust school estates across LS, BD and WF. (4) An insurance-adjuster funnel with NFU Mutual (heavy across rural Yorkshire), AXA, Aviva, Direct Line. Yorkshire crews running this routinely book 8–20 dieback survey jobs per quarter at £600–£12,000 each.",
+    },
+    {
+      q: "Can you help us compete with Yorkshire Tree Care, Leeds Tree Surgeons and Bartlett on Roundhay/Alwoodley/Bramhope premium domestic work?",
+      a: "LS17, LS18 and LS16 — Roundhay, Alwoodley, Adel, Bramhope, Horsforth, Cookridge — are one of the highest household-income catchments in northern England outside Cheshire-edge Manchester, supporting £900–£3,500 mature-tree removal on Conservation Area and listed-building-adjacent properties. Yorkshire Tree Care, Leeds Tree Surgeons and Bartlett command the heritage end. We rebuild around three things: (1) a Conservation Area case study library with named LS17, LS18 and LS16 properties, named Leeds Council Tree Officer sign-offs (with permission), and properly photographed before/during/after dismantles; (2) ARB Approved Contractor schema, BS3998:2010 and LOLER/PUWER 1998 currency surfaced across landing pages and quote PDFs; (3) B2B outreach to the Roundhay-area chartered surveyors and the major Leeds independent estate agents (Manning Stainton Roundhay, Dacre Son & Hartley, William Brown), where mature-tree work flows through repeat relationships and pre-sale clearance instructions.",
+    },
+    {
+      q: "How does the AI receptionist handle a 7am storm callout in Roundhay when the climber is already on a Bramhope job?",
+      a: "Storm response is one of the highest-value Leeds use-cases. When a named storm hits Yorkshire (Eunice, Babet, Isha, Jocelyn, Henk, Kathleen — Yorkshire takes the brunt of most North Sea winter systems), we trigger storm-mode protocols: AI greeting acknowledges the storm, what3words location capture, SMS-photograph-upload link sent within 60 seconds, automatic text alert to the on-call climber and groundsman with full context. Power-line incidents are routed to 105 — never booked on Northern Powergrid conductors. Insurance-claim landing pages capture loss-adjuster references for NFU Mutual (heavy across rural Yorkshire), AXA, Aviva, Direct Line. South Bank / Aire Park regeneration-corridor enquiries route to a separate B2B funnel because they come from tier-one main contractors and need CHAS / Constructionline / SafeContractor / CCS accreditation surfaced before the conversation can progress. Leeds crews running this typically capture 60–150+ extra storm-week callouts during major events at £80–£180 callout plus £60–£100 hourly plus £400–£3,500 follow-on works — typically £20,000–£60,000 of recovered revenue per crew per named-storm event.",
+    },
+  ],
+  approach:
+    "For Leeds and West Yorkshire tree surgeons and arborists, our 90-day playbook is: (1) build borough-stratified Google Business Profile and Local Service Ads across the five WY boroughs you actually service plus the LS17/LS18 premium positioning; (2) deploy AI 24/7 storm-mode receptionist with TPO/Conservation Area qualifying for all five WY councils, what3words location capture, South-Bank-regeneration B2B routing and instant climber-text alerts; (3) build dedicated specialism landing pages for Yorkshire ash dieback, Roundhay-Park-adjacent veteran-tree management, Conservation Area heritage tree work (Adel, Bramhope, Headingley Conservation Area, Chapel Allerton), Bramham/Harewood prime estate work and South Bank / Aire Park regeneration replacement-planting; (4) launch structured B2B outreach to all five WY borough tree officers, North Yorkshire CC highways, WYCA, Forestry Commission Yorkshire & NE, National Trust Yorkshire estates, Yorkshire Wildlife Trust, Bramham Park estate office, Harewood Estate office and the Yorkshire chartered surveyors; and (5) drive Google review velocity to 12–25 new reviews per month with named-borough and specialism keywords for local-pack dominance against Yorkshire Tree Care, Leeds Tree Surgeons, Bartlett and the aggregators.",
+};
