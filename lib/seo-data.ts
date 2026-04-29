@@ -12,6 +12,11 @@ import { industry as physiotherapistsHub } from "./rich-content/industries/physi
 import { industry as funeral_directorsHub } from "./rich-content/industries/funeral-directors";
 import { industry as solicitorsHub } from "./rich-content/industries/solicitors";
 import { industry as accountantsHub } from "./rich-content/industries/accountants";
+import { industry as driving_instructorsHub } from "./rich-content/industries/driving-instructors";
+import { industry as gymsHub } from "./rich-content/industries/gyms";
+import { industry as mobile_mechanicsHub } from "./rich-content/industries/mobile-mechanics";
+import { industry as private_nurseriesHub } from "./rich-content/industries/private-nurseries";
+import { industry as wedding_photographersHub } from "./rich-content/industries/wedding-photographers";
 
 export type Tier = "tier1" | "tier2" | "tier3";
 
@@ -510,6 +515,11 @@ export const industries: Industry[] = [
   funeral_directorsHub,
   solicitorsHub,
   accountantsHub,
+  driving_instructorsHub,
+  gymsHub,
+  mobile_mechanicsHub,
+  private_nurseriesHub,
+  wedding_photographersHub,
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -1013,6 +1023,11 @@ export const comboIndustrySlugs = [
   "funeral-marketing",
   "solicitor-marketing",
   "accountant-marketing",
+  "driving-instructor-marketing",
+  "gym-marketing",
+  "mechanic-marketing",
+  "nursery-marketing",
+  "wedding-photographer-marketing",
 ] as const;
 
 export type ComboIndustrySlug = (typeof comboIndustrySlugs)[number];
@@ -1033,6 +1048,11 @@ export function getIndustryByComboSlug(comboSlug: ComboIndustrySlug): Industry {
     "funeral-marketing": "funeral-directors",
     "solicitor-marketing": "solicitors",
     "accountant-marketing": "accountants",
+    "driving-instructor-marketing": "driving-instructors",
+    "gym-marketing": "gyms",
+    "mechanic-marketing": "mobile-mechanics",
+    "nursery-marketing": "private-nurseries",
+    "wedding-photographer-marketing": "wedding-photographers",
   };
   const slug = map[comboSlug];
   const industry = getIndustryBySlug(slug);

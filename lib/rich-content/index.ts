@@ -413,6 +413,131 @@ import { content as accountant_marketing_stoke_on_trent } from "./combos/account
 import { content as accountant_marketing_sunderland } from "./combos/accountant-marketing-sunderland";
 import { content as accountant_marketing_swansea } from "./combos/accountant-marketing-swansea";
 import { content as accountant_marketing_wolverhampton } from "./combos/accountant-marketing-wolverhampton";
+import { content as driving_instructor_marketing_aberdeen } from "./combos/driving-instructor-marketing-aberdeen";
+import { content as driving_instructor_marketing_belfast } from "./combos/driving-instructor-marketing-belfast";
+import { content as driving_instructor_marketing_birmingham } from "./combos/driving-instructor-marketing-birmingham";
+import { content as driving_instructor_marketing_bradford } from "./combos/driving-instructor-marketing-bradford";
+import { content as driving_instructor_marketing_bristol } from "./combos/driving-instructor-marketing-bristol";
+import { content as driving_instructor_marketing_cardiff } from "./combos/driving-instructor-marketing-cardiff";
+import { content as driving_instructor_marketing_coventry } from "./combos/driving-instructor-marketing-coventry";
+import { content as driving_instructor_marketing_derby } from "./combos/driving-instructor-marketing-derby";
+import { content as driving_instructor_marketing_edinburgh } from "./combos/driving-instructor-marketing-edinburgh";
+import { content as driving_instructor_marketing_glasgow } from "./combos/driving-instructor-marketing-glasgow";
+import { content as driving_instructor_marketing_leeds } from "./combos/driving-instructor-marketing-leeds";
+import { content as driving_instructor_marketing_leicester } from "./combos/driving-instructor-marketing-leicester";
+import { content as driving_instructor_marketing_liverpool } from "./combos/driving-instructor-marketing-liverpool";
+import { content as driving_instructor_marketing_london } from "./combos/driving-instructor-marketing-london";
+import { content as driving_instructor_marketing_manchester } from "./combos/driving-instructor-marketing-manchester";
+import { content as driving_instructor_marketing_newcastle } from "./combos/driving-instructor-marketing-newcastle";
+import { content as driving_instructor_marketing_nottingham } from "./combos/driving-instructor-marketing-nottingham";
+import { content as driving_instructor_marketing_plymouth } from "./combos/driving-instructor-marketing-plymouth";
+import { content as driving_instructor_marketing_reading } from "./combos/driving-instructor-marketing-reading";
+import { content as driving_instructor_marketing_sheffield } from "./combos/driving-instructor-marketing-sheffield";
+import { content as driving_instructor_marketing_southampton } from "./combos/driving-instructor-marketing-southampton";
+import { content as driving_instructor_marketing_stoke_on_trent } from "./combos/driving-instructor-marketing-stoke-on-trent";
+import { content as driving_instructor_marketing_sunderland } from "./combos/driving-instructor-marketing-sunderland";
+import { content as driving_instructor_marketing_swansea } from "./combos/driving-instructor-marketing-swansea";
+import { content as driving_instructor_marketing_wolverhampton } from "./combos/driving-instructor-marketing-wolverhampton";
+import { content as gym_marketing_aberdeen } from "./combos/gym-marketing-aberdeen";
+import { content as gym_marketing_belfast } from "./combos/gym-marketing-belfast";
+import { content as gym_marketing_birmingham } from "./combos/gym-marketing-birmingham";
+import { content as gym_marketing_bradford } from "./combos/gym-marketing-bradford";
+import { content as gym_marketing_bristol } from "./combos/gym-marketing-bristol";
+import { content as gym_marketing_cardiff } from "./combos/gym-marketing-cardiff";
+import { content as gym_marketing_coventry } from "./combos/gym-marketing-coventry";
+import { content as gym_marketing_derby } from "./combos/gym-marketing-derby";
+import { content as gym_marketing_edinburgh } from "./combos/gym-marketing-edinburgh";
+import { content as gym_marketing_glasgow } from "./combos/gym-marketing-glasgow";
+import { content as gym_marketing_leeds } from "./combos/gym-marketing-leeds";
+import { content as gym_marketing_leicester } from "./combos/gym-marketing-leicester";
+import { content as gym_marketing_liverpool } from "./combos/gym-marketing-liverpool";
+import { content as gym_marketing_london } from "./combos/gym-marketing-london";
+import { content as gym_marketing_manchester } from "./combos/gym-marketing-manchester";
+import { content as gym_marketing_newcastle } from "./combos/gym-marketing-newcastle";
+import { content as gym_marketing_nottingham } from "./combos/gym-marketing-nottingham";
+import { content as gym_marketing_plymouth } from "./combos/gym-marketing-plymouth";
+import { content as gym_marketing_reading } from "./combos/gym-marketing-reading";
+import { content as gym_marketing_sheffield } from "./combos/gym-marketing-sheffield";
+import { content as gym_marketing_southampton } from "./combos/gym-marketing-southampton";
+import { content as gym_marketing_stoke_on_trent } from "./combos/gym-marketing-stoke-on-trent";
+import { content as gym_marketing_sunderland } from "./combos/gym-marketing-sunderland";
+import { content as gym_marketing_swansea } from "./combos/gym-marketing-swansea";
+import { content as gym_marketing_wolverhampton } from "./combos/gym-marketing-wolverhampton";
+import { content as mechanic_marketing_aberdeen } from "./combos/mechanic-marketing-aberdeen";
+import { content as mechanic_marketing_belfast } from "./combos/mechanic-marketing-belfast";
+import { content as mechanic_marketing_birmingham } from "./combos/mechanic-marketing-birmingham";
+import { content as mechanic_marketing_bradford } from "./combos/mechanic-marketing-bradford";
+import { content as mechanic_marketing_bristol } from "./combos/mechanic-marketing-bristol";
+import { content as mechanic_marketing_cardiff } from "./combos/mechanic-marketing-cardiff";
+import { content as mechanic_marketing_coventry } from "./combos/mechanic-marketing-coventry";
+import { content as mechanic_marketing_derby } from "./combos/mechanic-marketing-derby";
+import { content as mechanic_marketing_edinburgh } from "./combos/mechanic-marketing-edinburgh";
+import { content as mechanic_marketing_glasgow } from "./combos/mechanic-marketing-glasgow";
+import { content as mechanic_marketing_leeds } from "./combos/mechanic-marketing-leeds";
+import { content as mechanic_marketing_leicester } from "./combos/mechanic-marketing-leicester";
+import { content as mechanic_marketing_liverpool } from "./combos/mechanic-marketing-liverpool";
+import { content as mechanic_marketing_london } from "./combos/mechanic-marketing-london";
+import { content as mechanic_marketing_manchester } from "./combos/mechanic-marketing-manchester";
+import { content as mechanic_marketing_newcastle } from "./combos/mechanic-marketing-newcastle";
+import { content as mechanic_marketing_nottingham } from "./combos/mechanic-marketing-nottingham";
+import { content as mechanic_marketing_plymouth } from "./combos/mechanic-marketing-plymouth";
+import { content as mechanic_marketing_reading } from "./combos/mechanic-marketing-reading";
+import { content as mechanic_marketing_sheffield } from "./combos/mechanic-marketing-sheffield";
+import { content as mechanic_marketing_southampton } from "./combos/mechanic-marketing-southampton";
+import { content as mechanic_marketing_stoke_on_trent } from "./combos/mechanic-marketing-stoke-on-trent";
+import { content as mechanic_marketing_sunderland } from "./combos/mechanic-marketing-sunderland";
+import { content as mechanic_marketing_swansea } from "./combos/mechanic-marketing-swansea";
+import { content as mechanic_marketing_wolverhampton } from "./combos/mechanic-marketing-wolverhampton";
+import { content as nursery_marketing_aberdeen } from "./combos/nursery-marketing-aberdeen";
+import { content as nursery_marketing_belfast } from "./combos/nursery-marketing-belfast";
+import { content as nursery_marketing_birmingham } from "./combos/nursery-marketing-birmingham";
+import { content as nursery_marketing_bradford } from "./combos/nursery-marketing-bradford";
+import { content as nursery_marketing_bristol } from "./combos/nursery-marketing-bristol";
+import { content as nursery_marketing_cardiff } from "./combos/nursery-marketing-cardiff";
+import { content as nursery_marketing_coventry } from "./combos/nursery-marketing-coventry";
+import { content as nursery_marketing_derby } from "./combos/nursery-marketing-derby";
+import { content as nursery_marketing_edinburgh } from "./combos/nursery-marketing-edinburgh";
+import { content as nursery_marketing_glasgow } from "./combos/nursery-marketing-glasgow";
+import { content as nursery_marketing_leeds } from "./combos/nursery-marketing-leeds";
+import { content as nursery_marketing_leicester } from "./combos/nursery-marketing-leicester";
+import { content as nursery_marketing_liverpool } from "./combos/nursery-marketing-liverpool";
+import { content as nursery_marketing_london } from "./combos/nursery-marketing-london";
+import { content as nursery_marketing_manchester } from "./combos/nursery-marketing-manchester";
+import { content as nursery_marketing_newcastle } from "./combos/nursery-marketing-newcastle";
+import { content as nursery_marketing_nottingham } from "./combos/nursery-marketing-nottingham";
+import { content as nursery_marketing_plymouth } from "./combos/nursery-marketing-plymouth";
+import { content as nursery_marketing_reading } from "./combos/nursery-marketing-reading";
+import { content as nursery_marketing_sheffield } from "./combos/nursery-marketing-sheffield";
+import { content as nursery_marketing_southampton } from "./combos/nursery-marketing-southampton";
+import { content as nursery_marketing_stoke_on_trent } from "./combos/nursery-marketing-stoke-on-trent";
+import { content as nursery_marketing_sunderland } from "./combos/nursery-marketing-sunderland";
+import { content as nursery_marketing_swansea } from "./combos/nursery-marketing-swansea";
+import { content as nursery_marketing_wolverhampton } from "./combos/nursery-marketing-wolverhampton";
+import { content as wedding_photographer_marketing_aberdeen } from "./combos/wedding-photographer-marketing-aberdeen";
+import { content as wedding_photographer_marketing_belfast } from "./combos/wedding-photographer-marketing-belfast";
+import { content as wedding_photographer_marketing_birmingham } from "./combos/wedding-photographer-marketing-birmingham";
+import { content as wedding_photographer_marketing_bradford } from "./combos/wedding-photographer-marketing-bradford";
+import { content as wedding_photographer_marketing_bristol } from "./combos/wedding-photographer-marketing-bristol";
+import { content as wedding_photographer_marketing_cardiff } from "./combos/wedding-photographer-marketing-cardiff";
+import { content as wedding_photographer_marketing_coventry } from "./combos/wedding-photographer-marketing-coventry";
+import { content as wedding_photographer_marketing_derby } from "./combos/wedding-photographer-marketing-derby";
+import { content as wedding_photographer_marketing_edinburgh } from "./combos/wedding-photographer-marketing-edinburgh";
+import { content as wedding_photographer_marketing_glasgow } from "./combos/wedding-photographer-marketing-glasgow";
+import { content as wedding_photographer_marketing_leeds } from "./combos/wedding-photographer-marketing-leeds";
+import { content as wedding_photographer_marketing_leicester } from "./combos/wedding-photographer-marketing-leicester";
+import { content as wedding_photographer_marketing_liverpool } from "./combos/wedding-photographer-marketing-liverpool";
+import { content as wedding_photographer_marketing_london } from "./combos/wedding-photographer-marketing-london";
+import { content as wedding_photographer_marketing_manchester } from "./combos/wedding-photographer-marketing-manchester";
+import { content as wedding_photographer_marketing_newcastle } from "./combos/wedding-photographer-marketing-newcastle";
+import { content as wedding_photographer_marketing_nottingham } from "./combos/wedding-photographer-marketing-nottingham";
+import { content as wedding_photographer_marketing_plymouth } from "./combos/wedding-photographer-marketing-plymouth";
+import { content as wedding_photographer_marketing_reading } from "./combos/wedding-photographer-marketing-reading";
+import { content as wedding_photographer_marketing_sheffield } from "./combos/wedding-photographer-marketing-sheffield";
+import { content as wedding_photographer_marketing_southampton } from "./combos/wedding-photographer-marketing-southampton";
+import { content as wedding_photographer_marketing_stoke_on_trent } from "./combos/wedding-photographer-marketing-stoke-on-trent";
+import { content as wedding_photographer_marketing_sunderland } from "./combos/wedding-photographer-marketing-sunderland";
+import { content as wedding_photographer_marketing_swansea } from "./combos/wedding-photographer-marketing-swansea";
+import { content as wedding_photographer_marketing_wolverhampton } from "./combos/wedding-photographer-marketing-wolverhampton";
 const COMBO_CONTENT: Record<string, RichComboContent> = {
   "contractor-marketing:aberdeen": contractor_marketing_aberdeen,
   "contractor-marketing:belfast": contractor_marketing_belfast,
@@ -764,6 +889,131 @@ const COMBO_CONTENT: Record<string, RichComboContent> = {
   "accountant-marketing:sunderland": accountant_marketing_sunderland,
   "accountant-marketing:swansea": accountant_marketing_swansea,
   "accountant-marketing:wolverhampton": accountant_marketing_wolverhampton,
+  "driving-instructor-marketing:aberdeen": driving_instructor_marketing_aberdeen,
+  "driving-instructor-marketing:belfast": driving_instructor_marketing_belfast,
+  "driving-instructor-marketing:birmingham": driving_instructor_marketing_birmingham,
+  "driving-instructor-marketing:bradford": driving_instructor_marketing_bradford,
+  "driving-instructor-marketing:bristol": driving_instructor_marketing_bristol,
+  "driving-instructor-marketing:cardiff": driving_instructor_marketing_cardiff,
+  "driving-instructor-marketing:coventry": driving_instructor_marketing_coventry,
+  "driving-instructor-marketing:derby": driving_instructor_marketing_derby,
+  "driving-instructor-marketing:edinburgh": driving_instructor_marketing_edinburgh,
+  "driving-instructor-marketing:glasgow": driving_instructor_marketing_glasgow,
+  "driving-instructor-marketing:leeds": driving_instructor_marketing_leeds,
+  "driving-instructor-marketing:leicester": driving_instructor_marketing_leicester,
+  "driving-instructor-marketing:liverpool": driving_instructor_marketing_liverpool,
+  "driving-instructor-marketing:london": driving_instructor_marketing_london,
+  "driving-instructor-marketing:manchester": driving_instructor_marketing_manchester,
+  "driving-instructor-marketing:newcastle": driving_instructor_marketing_newcastle,
+  "driving-instructor-marketing:nottingham": driving_instructor_marketing_nottingham,
+  "driving-instructor-marketing:plymouth": driving_instructor_marketing_plymouth,
+  "driving-instructor-marketing:reading": driving_instructor_marketing_reading,
+  "driving-instructor-marketing:sheffield": driving_instructor_marketing_sheffield,
+  "driving-instructor-marketing:southampton": driving_instructor_marketing_southampton,
+  "driving-instructor-marketing:stoke-on-trent": driving_instructor_marketing_stoke_on_trent,
+  "driving-instructor-marketing:sunderland": driving_instructor_marketing_sunderland,
+  "driving-instructor-marketing:swansea": driving_instructor_marketing_swansea,
+  "driving-instructor-marketing:wolverhampton": driving_instructor_marketing_wolverhampton,
+  "gym-marketing:aberdeen": gym_marketing_aberdeen,
+  "gym-marketing:belfast": gym_marketing_belfast,
+  "gym-marketing:birmingham": gym_marketing_birmingham,
+  "gym-marketing:bradford": gym_marketing_bradford,
+  "gym-marketing:bristol": gym_marketing_bristol,
+  "gym-marketing:cardiff": gym_marketing_cardiff,
+  "gym-marketing:coventry": gym_marketing_coventry,
+  "gym-marketing:derby": gym_marketing_derby,
+  "gym-marketing:edinburgh": gym_marketing_edinburgh,
+  "gym-marketing:glasgow": gym_marketing_glasgow,
+  "gym-marketing:leeds": gym_marketing_leeds,
+  "gym-marketing:leicester": gym_marketing_leicester,
+  "gym-marketing:liverpool": gym_marketing_liverpool,
+  "gym-marketing:london": gym_marketing_london,
+  "gym-marketing:manchester": gym_marketing_manchester,
+  "gym-marketing:newcastle": gym_marketing_newcastle,
+  "gym-marketing:nottingham": gym_marketing_nottingham,
+  "gym-marketing:plymouth": gym_marketing_plymouth,
+  "gym-marketing:reading": gym_marketing_reading,
+  "gym-marketing:sheffield": gym_marketing_sheffield,
+  "gym-marketing:southampton": gym_marketing_southampton,
+  "gym-marketing:stoke-on-trent": gym_marketing_stoke_on_trent,
+  "gym-marketing:sunderland": gym_marketing_sunderland,
+  "gym-marketing:swansea": gym_marketing_swansea,
+  "gym-marketing:wolverhampton": gym_marketing_wolverhampton,
+  "mechanic-marketing:aberdeen": mechanic_marketing_aberdeen,
+  "mechanic-marketing:belfast": mechanic_marketing_belfast,
+  "mechanic-marketing:birmingham": mechanic_marketing_birmingham,
+  "mechanic-marketing:bradford": mechanic_marketing_bradford,
+  "mechanic-marketing:bristol": mechanic_marketing_bristol,
+  "mechanic-marketing:cardiff": mechanic_marketing_cardiff,
+  "mechanic-marketing:coventry": mechanic_marketing_coventry,
+  "mechanic-marketing:derby": mechanic_marketing_derby,
+  "mechanic-marketing:edinburgh": mechanic_marketing_edinburgh,
+  "mechanic-marketing:glasgow": mechanic_marketing_glasgow,
+  "mechanic-marketing:leeds": mechanic_marketing_leeds,
+  "mechanic-marketing:leicester": mechanic_marketing_leicester,
+  "mechanic-marketing:liverpool": mechanic_marketing_liverpool,
+  "mechanic-marketing:london": mechanic_marketing_london,
+  "mechanic-marketing:manchester": mechanic_marketing_manchester,
+  "mechanic-marketing:newcastle": mechanic_marketing_newcastle,
+  "mechanic-marketing:nottingham": mechanic_marketing_nottingham,
+  "mechanic-marketing:plymouth": mechanic_marketing_plymouth,
+  "mechanic-marketing:reading": mechanic_marketing_reading,
+  "mechanic-marketing:sheffield": mechanic_marketing_sheffield,
+  "mechanic-marketing:southampton": mechanic_marketing_southampton,
+  "mechanic-marketing:stoke-on-trent": mechanic_marketing_stoke_on_trent,
+  "mechanic-marketing:sunderland": mechanic_marketing_sunderland,
+  "mechanic-marketing:swansea": mechanic_marketing_swansea,
+  "mechanic-marketing:wolverhampton": mechanic_marketing_wolverhampton,
+  "nursery-marketing:aberdeen": nursery_marketing_aberdeen,
+  "nursery-marketing:belfast": nursery_marketing_belfast,
+  "nursery-marketing:birmingham": nursery_marketing_birmingham,
+  "nursery-marketing:bradford": nursery_marketing_bradford,
+  "nursery-marketing:bristol": nursery_marketing_bristol,
+  "nursery-marketing:cardiff": nursery_marketing_cardiff,
+  "nursery-marketing:coventry": nursery_marketing_coventry,
+  "nursery-marketing:derby": nursery_marketing_derby,
+  "nursery-marketing:edinburgh": nursery_marketing_edinburgh,
+  "nursery-marketing:glasgow": nursery_marketing_glasgow,
+  "nursery-marketing:leeds": nursery_marketing_leeds,
+  "nursery-marketing:leicester": nursery_marketing_leicester,
+  "nursery-marketing:liverpool": nursery_marketing_liverpool,
+  "nursery-marketing:london": nursery_marketing_london,
+  "nursery-marketing:manchester": nursery_marketing_manchester,
+  "nursery-marketing:newcastle": nursery_marketing_newcastle,
+  "nursery-marketing:nottingham": nursery_marketing_nottingham,
+  "nursery-marketing:plymouth": nursery_marketing_plymouth,
+  "nursery-marketing:reading": nursery_marketing_reading,
+  "nursery-marketing:sheffield": nursery_marketing_sheffield,
+  "nursery-marketing:southampton": nursery_marketing_southampton,
+  "nursery-marketing:stoke-on-trent": nursery_marketing_stoke_on_trent,
+  "nursery-marketing:sunderland": nursery_marketing_sunderland,
+  "nursery-marketing:swansea": nursery_marketing_swansea,
+  "nursery-marketing:wolverhampton": nursery_marketing_wolverhampton,
+  "wedding-photographer-marketing:aberdeen": wedding_photographer_marketing_aberdeen,
+  "wedding-photographer-marketing:belfast": wedding_photographer_marketing_belfast,
+  "wedding-photographer-marketing:birmingham": wedding_photographer_marketing_birmingham,
+  "wedding-photographer-marketing:bradford": wedding_photographer_marketing_bradford,
+  "wedding-photographer-marketing:bristol": wedding_photographer_marketing_bristol,
+  "wedding-photographer-marketing:cardiff": wedding_photographer_marketing_cardiff,
+  "wedding-photographer-marketing:coventry": wedding_photographer_marketing_coventry,
+  "wedding-photographer-marketing:derby": wedding_photographer_marketing_derby,
+  "wedding-photographer-marketing:edinburgh": wedding_photographer_marketing_edinburgh,
+  "wedding-photographer-marketing:glasgow": wedding_photographer_marketing_glasgow,
+  "wedding-photographer-marketing:leeds": wedding_photographer_marketing_leeds,
+  "wedding-photographer-marketing:leicester": wedding_photographer_marketing_leicester,
+  "wedding-photographer-marketing:liverpool": wedding_photographer_marketing_liverpool,
+  "wedding-photographer-marketing:london": wedding_photographer_marketing_london,
+  "wedding-photographer-marketing:manchester": wedding_photographer_marketing_manchester,
+  "wedding-photographer-marketing:newcastle": wedding_photographer_marketing_newcastle,
+  "wedding-photographer-marketing:nottingham": wedding_photographer_marketing_nottingham,
+  "wedding-photographer-marketing:plymouth": wedding_photographer_marketing_plymouth,
+  "wedding-photographer-marketing:reading": wedding_photographer_marketing_reading,
+  "wedding-photographer-marketing:sheffield": wedding_photographer_marketing_sheffield,
+  "wedding-photographer-marketing:southampton": wedding_photographer_marketing_southampton,
+  "wedding-photographer-marketing:stoke-on-trent": wedding_photographer_marketing_stoke_on_trent,
+  "wedding-photographer-marketing:sunderland": wedding_photographer_marketing_sunderland,
+  "wedding-photographer-marketing:swansea": wedding_photographer_marketing_swansea,
+  "wedding-photographer-marketing:wolverhampton": wedding_photographer_marketing_wolverhampton,
 };
 
 export function getRichComboContent(

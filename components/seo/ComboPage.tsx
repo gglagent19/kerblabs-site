@@ -40,6 +40,11 @@ const comboToIndustry: Record<ComboIndustrySlug, string> = {
   "funeral-marketing": "funeral-directors",
   "solicitor-marketing": "solicitors",
   "accountant-marketing": "accountants",
+  "driving-instructor-marketing": "driving-instructors",
+  "gym-marketing": "gyms",
+  "mechanic-marketing": "mobile-mechanics",
+  "nursery-marketing": "private-nurseries",
+  "wedding-photographer-marketing": "wedding-photographers",
 };
 
 const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
@@ -57,6 +62,11 @@ const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
   "funeral-marketing": "Funeral Directors Marketing",
   "solicitor-marketing": "Solicitors Marketing",
   "accountant-marketing": "Accountants Marketing",
+  "driving-instructor-marketing": "Driving Instructors Marketing",
+  "gym-marketing": "Gyms Marketing",
+  "mechanic-marketing": "Mobile Mechanics Marketing",
+  "nursery-marketing": "Private Nurseries Marketing",
+  "wedding-photographer-marketing": "Wedding Photographers Marketing",
 };
 
 // Only Tier 1 city combos are built. Other combos had templated content with
