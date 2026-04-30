@@ -1,6 +1,9 @@
 "use client";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const GlobeBackground = dynamic(() => import("./GlobeBackground"), { ssr: false });
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -125,6 +128,9 @@ export default function Hero() {
         <motion.div className="hero-blob hero-blob-1" style={{ scale: blobScale, opacity: blobOpacity }} aria-hidden />
         <motion.div className="hero-blob hero-blob-2" style={{ scale: blobScale }} aria-hidden />
         <motion.div className="hero-blob hero-blob-3" aria-hidden />
+
+        {/* Rotating wireframe globe */}
+        <GlobeBackground />
 
         {/* Grid lines */}
         <div
