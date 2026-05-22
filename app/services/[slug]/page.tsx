@@ -62,7 +62,7 @@ export default async function ServicePage({
       <Schema
         breadcrumbs={[
           { name: "Home", url: "https://kerblabs.com" },
-          { name: "Services", url: "https://kerblabs.com/#store" },
+          { name: "Services", url: "https://kerblabs.com/services" },
           { name: service.name, url },
         ]}
         extra={[
@@ -70,7 +70,7 @@ export default async function ServicePage({
             "@context": "https://schema.org",
             "@type": "Service",
             name: service.name,
-            provider: { "@type": "Organization", name: "Kerblabs" },
+            provider: { "@id": "https://kerblabs.com/#organization" },
             description: service.metaDescription,
             areaServed: { "@type": "Country", name: "United Kingdom" },
             offers: {
@@ -96,7 +96,7 @@ export default async function ServicePage({
       <Breadcrumb
         items={[
           { name: "Home", href: "/" },
-          { name: "Services", href: "/#store" },
+          { name: "Services", href: "/services" },
           { name: service.name },
         ]}
       />

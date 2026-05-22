@@ -19,8 +19,9 @@ import {
   getLocationBySlug,
   services,
   industries,
-  getNearbyLocations,
   comboIndustrySlugs,
+  locationCountry,
+  clampDescription,
 } from "@/lib/seo-data";
 import { getRichCityContent } from "@/lib/rich-content";
 
@@ -31,14 +32,18 @@ const industryToCombo: Record<string, (typeof comboIndustrySlugs)[number]> = {
   "estate-agents": "estate-agent-marketing",
 };
 
-// Only Tier 1 cities are built. Tier 2/3 had no real search volume and only
-// templated content — they return 404, which is the right signal for Google
-// to drop them from the index entirely (vs noindex which keeps the URL alive).
+// Only UK Tier 1 cities are built here. Tier 2/3 had no real search volume and
+// only templated content — they return 404, which is the right signal for
+// Google to drop them from the index entirely (vs noindex which keeps the URL
+// alive). US cities have their own copy and are handled separately by the
+// US-only verticals (e.g. /med-spa-marketing/[slug]).
 export async function generateStaticParams() {
-  return locations.filter((l) => l.tier === "tier1").map((l) => ({ slug: l.slug }));
+  return locations
+    .filter((l) => l.tier === "tier1" && locationCountry(l) === "GB")
+    .map((l) => ({ slug: l.slug }));
 }
 
-export const dynamicParams = false; // Reject any non-Tier-1 slug with 404
+export const dynamicParams = false; // Reject any non-Tier-1 / non-UK slug with 404
 
 export async function generateMetadata({
   params,
@@ -47,17 +52,26 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
-  if (!loc || loc.tier !== "tier1") return {};
+  if (!loc || loc.tier !== "tier1" || locationCountry(loc) !== "GB") return {};
   const rich = getRichCityContent(slug);
   const url = `https://kerblabs.com/locations/${loc.slug}`;
   const title = `AI Marketing Agency in ${loc.name} | Kerblabs`;
-  const description = rich
-    ? rich.heroSubhead.slice(0, 156)
-    : `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo.`;
+  const description = clampDescription(
+    rich
+      ? rich.heroSubhead
+      : `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo.`,
+    155
+  );
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        "en-GB": url,
+        "x-default": url,
+      },
+    },
     robots: { index: true, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
@@ -70,7 +84,7 @@ export default async function LocationPage({
 }) {
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
-  if (!loc || loc.tier !== "tier1") notFound();
+  if (!loc || loc.tier !== "tier1" || locationCountry(loc) !== "GB") notFound();
 
   const url = `https://kerblabs.com/locations/${loc.slug}`;
   const rich = getRichCityContent(slug);
@@ -225,7 +239,10 @@ export default async function LocationPage({
         />
         {rich ? (
           <div className="grid sm:grid-cols-2 gap-5">
-            {industries.map((ind) => {
+            {industries
+              // UK location pages only surface UK industries — exclude US-only verticals like med-spa.
+              .filter((ind) => ind.slug !== "med-spa")
+              .map((ind) => {
               const para =
                 ind.slug === "dental-practices"
                   ? rich.industries.dental
@@ -256,11 +273,13 @@ export default async function LocationPage({
           </div>
         ) : (
           <FeatureGrid
-            items={industries.map((ind) => ({
-              title: `${ind.emoji} ${ind.name} in ${loc.name}`,
-              body: `${loc.name} ${ind.industryPlural.toLowerCase()} use Kerblabs to win more customers, manage reviews, and never miss a call.`,
-              href: `/${industryToCombo[ind.slug]}/${loc.slug}`,
-            }))}
+            items={industries
+              .filter((ind) => ind.slug !== "med-spa")
+              .map((ind) => ({
+                title: `${ind.emoji} ${ind.name} in ${loc.name}`,
+                body: `${loc.name} ${ind.industryPlural.toLowerCase()} use Kerblabs to win more customers, manage reviews, and never miss a call.`,
+                href: `/${industryToCombo[ind.slug]}/${loc.slug}`,
+              }))}
             columns={4}
           />
         )}

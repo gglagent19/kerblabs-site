@@ -26,8 +26,23 @@ const ORGANIZATION_BLOCK = {
     height: 512,
   },
   description:
-    "AI-powered growth systems for UK local businesses — local SEO, AI voice receptionist, automated review management, missed-call text-back, and CRM. Fully remote, serving the whole UK.",
-  areaServed: { "@type": "Country", name: "United Kingdom" },
+    "AI-powered growth systems for local businesses — local SEO, AI voice receptionist, automated review management, missed-call text-back, and CRM. Fully remote, serving the UK and the US.",
+  foundingDate: "2026",
+  founder: {
+    "@type": "Person",
+    name: "Chandra Alladi",
+    url: "https://kerblabs.com/about",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "GB",
+    addressRegion: "England",
+  },
+  areaServed: [
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "United States" },
+  ],
+  priceRange: "££",
   knowsAbout: [
     "AI Voice Receptionist",
     "Local SEO",
@@ -38,6 +53,7 @@ const ORGANIZATION_BLOCK = {
     "Hair salon marketing",
     "Contractor marketing",
     "Estate agent marketing",
+    "Med spa marketing",
   ],
   sameAs: [
     "https://www.linkedin.com/company/kerblabs",
@@ -46,7 +62,7 @@ const ORGANIZATION_BLOCK = {
     "@type": "ContactPoint",
     contactType: "sales",
     availableLanguage: ["English"],
-    areaServed: "GB",
+    areaServed: ["GB", "US"],
     url: "https://calendly.com/chandraalladi07/30min",
   },
 };
@@ -66,7 +82,7 @@ export default function Schema({
       url: "https://kerblabs.com",
       name: "Kerblabs",
       publisher: { "@id": "https://kerblabs.com/#organization" },
-      inLanguage: "en-GB",
+      inLanguage: ["en-GB", "en-US"],
     });
   }
 
