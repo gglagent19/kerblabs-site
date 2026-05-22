@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CalendlyButton from "../CalendlyButton";
 
 const services = [
   { slug: "ai-voice-receptionist", name: "AI Voice Receptionist" },
@@ -40,17 +41,15 @@ export default function SeoFooter() {
             <p className="text-[color:var(--color-text-dim)] text-sm mt-3 max-w-xs leading-relaxed">
               AI-powered growth systems for UK local businesses. Fully remote, serving the whole UK.
             </p>
-            <a
-              href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyButton
+              url="https://calendly.com/chandraalladi07/30min"
               className="btn-primary mt-5 text-xs"
             >
               Book a demo
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </CalendlyButton>
           </div>
 
           <div>
@@ -115,14 +114,12 @@ export default function SeoFooter() {
             &copy; {new Date().getFullYear()} Kerblabs Ltd. &middot; Serving the whole UK remotely
           </div>
           <div className="flex items-center gap-5 text-xs text-[color:var(--color-text-dim)]">
-            <a
-              href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyButton
+              url="https://calendly.com/chandraalladi07/30min"
               className="hover:text-[color:var(--color-lime)] transition"
             >
               Book a Demo
-            </a>
+            </CalendlyButton>
             <a href="/" className="text-[color:var(--color-lime)]">↑ Top</a>
           </div>
         </div>
