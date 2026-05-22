@@ -53,7 +53,7 @@ export default function AboutPage() {
         subhead="Kerblabs Ltd is a UK-wide AI marketing platform built for independent local businesses — dental practices, salons, contractors, estate agents — that need every growth system but don't have a marketing department to run them. We're fully remote: no junior account managers, no London retainer prices, no lock-in."
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See services", href: "/services" }}
       />

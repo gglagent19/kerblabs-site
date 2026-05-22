@@ -62,7 +62,7 @@ export default function LocationsHub() {
         subhead={`Kerblabs serves businesses across 25 major UK cities. Whether you're a dental practice in Manchester, a salon in Bristol, a contractor in Birmingham, or an estate agent in Edinburgh — our AI growth systems work the same wherever you are. We're fully remote, so even if your city isn't on this list, we still serve you. Book a free demo and we'll show you what we can do for your business.`}
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         stats={[
           { value: `${tier1.length}`, label: "UK cities with dedicated pages" },

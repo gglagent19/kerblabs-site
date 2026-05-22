@@ -160,7 +160,7 @@ export default async function LocationPage({
         }
         primaryCta={{
           label: "Book a free 30-min demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={

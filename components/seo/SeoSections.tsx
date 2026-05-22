@@ -253,7 +253,7 @@ export function PricingCallout({
         {description}
       </p>
       <a
-        href="https://calendly.com/chandraalladi07/30min"
+        href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
         target="_blank"
         rel="noopener noreferrer"
         className="btn-primary"
@@ -338,7 +338,7 @@ export function CtaSection({
           </p>
         )}
         <a
-          href="https://calendly.com/chandraalladi07/30min"
+          href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"

@@ -169,7 +169,7 @@ export default async function IndustryPage({
         subhead={ind.subhead}
         primaryCta={{
           label: "Book a free strategy call",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={ind.stats}

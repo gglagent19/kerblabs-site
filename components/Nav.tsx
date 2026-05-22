@@ -5,7 +5,7 @@ const links = [
   { href: "#store", label: "Services" },
   { href: "#work", label: "Work" },
   { href: "#pricing", label: "Pricing" },
-  { href: "https://calendly.com/chandraalladi07/30min", label: "Book a Demo" },
+  { href: "https://calendly.com/hello-kerblabs/15-min-discovery-call", label: "Book a Demo" },
 ];
 
 export default function Nav() {
@@ -40,7 +40,7 @@ export default function Nav() {
 
         {/* CTA */}
         <a
-          href="https://calendly.com/chandraalladi07/30min"
+          href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-1.5 bg-[color:var(--color-lime)] text-black font-bold pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm transition-all hover:gap-2.5"

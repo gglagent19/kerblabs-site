@@ -285,7 +285,7 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
         primaryCta={{
           label:
             country === "US" ? "Claim your $99 refundable hold" : "Book a free strategy call",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={

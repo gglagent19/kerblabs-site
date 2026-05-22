@@ -63,7 +63,7 @@ const ORGANIZATION_BLOCK = {
     contactType: "sales",
     availableLanguage: ["English"],
     areaServed: ["GB", "US"],
-    url: "https://calendly.com/chandraalladi07/30min",
+    url: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
   },
 };
 
