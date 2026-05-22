@@ -1,6 +1,13 @@
 // Central index for all rich, genuinely unique per-page content.
 import type { RichCityContent, RichComboContent } from "./types";
 
+// US med-spa combo imports (5 launch cities)
+import { content as med_spa_marketing_miami } from "./combos/med-spa-marketing-miami";
+import { content as med_spa_marketing_new_york } from "./combos/med-spa-marketing-new-york";
+import { content as med_spa_marketing_los_angeles } from "./combos/med-spa-marketing-los-angeles";
+import { content as med_spa_marketing_chicago } from "./combos/med-spa-marketing-chicago";
+import { content as med_spa_marketing_houston } from "./combos/med-spa-marketing-houston";
+
 // City content imports — 25 Tier 1 cities
 import { content as aberdeen } from "./cities/aberdeen";
 import { content as belfast } from "./cities/belfast";
@@ -1564,6 +1571,12 @@ const COMBO_CONTENT: Record<string, RichComboContent> = {
   "fencing-marketing:sunderland": fencing_marketing_sunderland,
   "fencing-marketing:swansea": fencing_marketing_swansea,
   "fencing-marketing:wolverhampton": fencing_marketing_wolverhampton,
+  // US med-spa launch cities (slugs in seo-data use `us-` prefix; filenames don't)
+  "med-spa-marketing:us-miami": med_spa_marketing_miami,
+  "med-spa-marketing:us-new-york-city": med_spa_marketing_new_york,
+  "med-spa-marketing:us-los-angeles": med_spa_marketing_los_angeles,
+  "med-spa-marketing:us-chicago": med_spa_marketing_chicago,
+  "med-spa-marketing:us-houston": med_spa_marketing_houston,
 };
 
 export function getRichComboContent(

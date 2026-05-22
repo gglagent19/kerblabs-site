@@ -343,7 +343,7 @@ export default async function DemoPage({ params }: { params: Promise<{ slug: str
           </a>
           <p className="text-[color:var(--color-text-faint)] text-xs mt-2 mb-6">Full-stack AI marketing for local shops</p>
           <a
-            href="https://calendly.com/chandraalladi07/30min"
+            href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
             className="btn-primary text-sm"
           >
             Want a site like this? Book a free demo

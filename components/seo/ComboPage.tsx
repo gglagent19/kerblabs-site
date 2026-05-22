@@ -21,7 +21,10 @@ import {
   getIndustryByComboSlug,
   fillIntroTemplate,
   comboIndustrySlugs,
+  locationCountry,
+  clampDescription,
   type ComboIndustrySlug,
+  type Location,
 } from "@/lib/seo-data";
 import { getRichComboContent } from "@/lib/rich-content";
 
@@ -56,6 +59,7 @@ const comboToIndustry: Record<ComboIndustrySlug, string> = {
   "lawn-care-marketing": "lawn-care",
   "pressure-washing-marketing": "pressure-washing",
   "fencing-marketing": "fencing-contractors",
+  "med-spa-marketing": "med-spa",
 };
 
 const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
@@ -89,12 +93,55 @@ const COMBO_TITLES: Record<ComboIndustrySlug, string> = {
   "lawn-care-marketing": "Lawn Care Marketing",
   "pressure-washing-marketing": "Pressure Washing Marketing",
   "fencing-marketing": "Fencing Contractors Marketing",
+  "med-spa-marketing": "Med Spa Marketing",
 };
 
-// Only Tier 1 city combos are built. Other combos had templated content with
-// no search volume — they return 404 (the right SEO signal vs noindex).
+// US-only verticals (don't render UK city combos).
+const US_ONLY_COMBOS: ReadonlySet<ComboIndustrySlug> = new Set([
+  "med-spa-marketing",
+]);
+
+// Currency rendering helpers — US pages use $ / USD, UK stays £ / GBP.
+function priceString(industryPrice: number, country: "GB" | "US"): string {
+  return country === "US" ? `$${industryPrice}` : `£${industryPrice}`;
+}
+function currencyCode(country: "GB" | "US"): string {
+  return country === "US" ? "USD" : "GBP";
+}
+function hreflang(country: "GB" | "US"): "en-GB" | "en-US" {
+  return country === "US" ? "en-US" : "en-GB";
+}
+
+// Only Tier 1 city combos are built. UK combos serve UK cities; US-only
+// combos serve US cities. Other combos had templated content with no search
+// volume — they return 404 (the right SEO signal vs noindex).
+//
+// Default export is the UK static-params generator used by the 30 existing
+// UK vertical pages. US-only verticals (e.g. /med-spa-marketing/[slug]) use
+// `generateComboStaticParamsFor("med-spa-marketing")`.
 export function generateComboStaticParams() {
-  return locations.filter((l) => l.tier === "tier1").map((l) => ({ slug: l.slug }));
+  return locations
+    .filter((l) => l.tier === "tier1" && locationCountry(l) === "GB")
+    .map((l) => ({ slug: l.slug }));
+}
+
+export function generateComboStaticParamsFor(comboSlug: ComboIndustrySlug) {
+  return () => {
+    const isUsOnly = US_ONLY_COMBOS.has(comboSlug);
+    return locations
+      .filter((l) => l.tier === "tier1")
+      .filter((l) =>
+        isUsOnly ? locationCountry(l) === "US" : locationCountry(l) === "GB"
+      )
+      .map((l) => ({ slug: l.slug }));
+  };
+}
+
+function comboLocationAllowed(loc: Location, comboSlug: ComboIndustrySlug): boolean {
+  if (loc.tier !== "tier1") return false;
+  const country = locationCountry(loc);
+  if (US_ONLY_COMBOS.has(comboSlug)) return country === "US";
+  return country === "GB";
 }
 
 export async function generateComboMetadata(
@@ -103,17 +150,29 @@ export async function generateComboMetadata(
 ): Promise<Metadata> {
   const loc = getLocationBySlug(slug);
   const industry = getIndustryByComboSlug(comboSlug);
-  if (!loc || loc.tier !== "tier1" || !industry) return {};
+  if (!loc || !comboLocationAllowed(loc, comboSlug) || !industry) return {};
+  const country = locationCountry(loc);
   const rich = getRichComboContent(comboSlug, slug);
   const title = `${COMBO_TITLES[comboSlug]} in ${loc.name} | Kerblabs`;
-  const description = rich
-    ? rich.heroSubhead.slice(0, 156)
-    : `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. From £${industry.recommendedPrice}/mo. No lock-in. 10-day setup.`;
+  const fallbackDescription =
+    country === "US"
+      ? `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. $0 upfront. $99 refundable hold. Pay $1,200 only if we hit 2 of 3 KPIs in 60 days.`
+      : `AI marketing systems built for ${loc.name} ${industry.industryPlural.toLowerCase()}. From £${industry.recommendedPrice}/mo. No lock-in. 10-day setup.`;
+  const description = clampDescription(
+    rich ? rich.heroSubhead : fallbackDescription,
+    155
+  );
   const url = `https://kerblabs.com/${comboSlug}/${slug}`;
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        [hreflang(country)]: url,
+        "x-default": url,
+      },
+    },
     robots: { index: true, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
@@ -127,22 +186,32 @@ interface ComboPageProps {
 export default async function ComboPage({ comboSlug, locationSlug }: ComboPageProps) {
   const loc = getLocationBySlug(locationSlug);
   const industry = getIndustryByComboSlug(comboSlug);
-  if (!loc || loc.tier !== "tier1" || !industry) notFound();
+  if (!loc || !comboLocationAllowed(loc, comboSlug) || !industry) notFound();
 
+  const country = locationCountry(loc);
   const url = `https://kerblabs.com/${comboSlug}/${locationSlug}`;
   const rich = getRichComboContent(comboSlug, locationSlug);
   const fallbackIntro = fillIntroTemplate(industry.comboIntroTemplate, loc);
   const otherCombos = comboIndustrySlugs.filter((c) => c !== comboSlug);
 
-  // Only Tier 1 combos exist — link to other Tier 1 cities in the same industry.
+  // Same-country tier-1 cities for "nearby" links.
   const sameIndustryNearby = locations
     .filter((l) => l.slug !== loc.slug && l.tier === "tier1")
+    .filter((l) => locationCountry(l) === country)
     .slice(0, 5);
 
-  const sameCityOtherIndustries = otherCombos.map((c) => ({
-    label: `${COMBO_TITLES[c]} in ${loc.name}`,
-    href: `/${c}/${loc.slug}`,
-  }));
+  // Cross-city pills for "other industries in this city" — match country.
+  const sameCityOtherIndustries = otherCombos
+    .filter((c) =>
+      country === "US" ? US_ONLY_COMBOS.has(c) : !US_ONLY_COMBOS.has(c)
+    )
+    .map((c) => ({
+      label: `${COMBO_TITLES[c]} in ${loc.name}`,
+      href: `/${c}/${loc.slug}`,
+    }));
+
+  const priceCallout = priceString(industry.recommendedPrice, country);
+  const offerCurrency = currencyCode(country);
 
   return (
     <main className="relative">
@@ -170,7 +239,7 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
             offers: {
               "@type": "Offer",
               price: industry.recommendedPrice.toString(),
-              priceCurrency: "GBP",
+              priceCurrency: offerCurrency,
             },
           },
           // FAQPage schema (only with rich content)
@@ -205,15 +274,18 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
 
       <SeoHero
         eyebrow={`${industry.industryPlural.toUpperCase()} IN ${loc.name.toUpperCase()}`}
-        h1={industry.h1.replace("UK", loc.name)}
-        highlight={industry.h1Highlight.replace("UK", loc.name)}
+        h1={industry.h1.replace("UK", loc.name).replace("US", loc.name)}
+        highlight={industry.h1Highlight
+          .replace("UK", loc.name)
+          .replace("US", loc.name)}
         subhead={
           rich?.heroSubhead ??
           `${industry.subhead} Built for ${loc.name} businesses across ${loc.county}.`
         }
         primaryCta={{
-          label: "Book a free strategy call",
-          href: "https://calendly.com/chandraalladi07/30min",
+          label:
+            country === "US" ? "Claim your $99 refundable hold" : "Book a free strategy call",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={
@@ -311,12 +383,25 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
       )}
 
       <Section background="surface">
-        <SectionHead label="PRICING" title="Recommended for" highlight={`${industry.industryPlural.toLowerCase()}.`} />
+        <SectionHead
+          label={country === "US" ? "PERFORMANCE-BASED PRICING" : "PRICING"}
+          title="Recommended for"
+          highlight={`${industry.industryPlural.toLowerCase()}.`}
+        />
         <PricingCallout
           plan={industry.recommendedPlan}
           price={industry.recommendedPrice}
+          currency={country === "US" ? "$" : "£"}
+          priceSuffix={country === "US" ? " on KPI hit" : "/mo"}
+          showSetupFee={country !== "US"}
           description={industry.roiNote}
         />
+        {country === "US" && (
+          <p className="mt-6 max-w-2xl text-sm text-[color:var(--color-text-dim)] leading-relaxed">
+            <strong className="text-[color:var(--color-text)]">$0 upfront. $99 refundable hold.</strong>{" "}
+            Pay {priceCallout} only if we hit 2 of 3 KPIs over 60 days — profile views +40%, calls/directions +30%, map-pack top 3.
+          </p>
+        )}
       </Section>
 
       <Section>
@@ -357,7 +442,10 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
               },
               {
                 q: `What's the minimum commitment?`,
-                a: `No long-term contracts. Month-to-month from £${industry.recommendedPrice}/mo on the ${industry.recommendedPlan} plan. Cancel any time.`,
+                a:
+                  country === "US"
+                    ? `No long-term contracts. $0 upfront, $99 refundable hold, $1,200 only on hitting 2 of 3 KPIs over 60 days.`
+                    : `No long-term contracts. Month-to-month from £${industry.recommendedPrice}/mo on the ${industry.recommendedPlan} plan. Cancel any time.`,
               },
             ]
           }

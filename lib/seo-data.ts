@@ -28,8 +28,12 @@ import { industry as bathroom_fittersHub } from "./rich-content/industries/bathr
 import { industry as lawn_careHub } from "./rich-content/industries/lawn-care";
 import { industry as pressure_washingHub } from "./rich-content/industries/pressure-washing";
 import { industry as fencing_contractorsHub } from "./rich-content/industries/fencing-contractors";
+import { industry as medSpaHub } from "./rich-content/industries/med-spa";
 
 export type Tier = "tier1" | "tier2" | "tier3";
+
+// ISO 3166-1 alpha-2. Defaults to "GB" when omitted.
+export type Country = "GB" | "US";
 
 export interface Location {
   name: string;
@@ -40,6 +44,34 @@ export interface Location {
   areas: string[]; // 3-5 named neighbourhoods/towns
   character: string; // 1-sentence description used in combo page intros
   nearestCity?: string; // slug of nearest Tier 1 city for internal linking
+  country?: Country; // "GB" (default) or "US"
+}
+
+// Convenience: country for a location (handles undefined as GB).
+export function locationCountry(loc: Location): Country {
+  return loc.country ?? "GB";
+}
+
+// Smart description truncation: clips to <= max chars, ending on a word
+// boundary, and appends a period if the result doesn't already end in
+// terminal punctuation. Used everywhere we derive an SEO meta description
+// from longer body copy.
+export function clampDescription(input: string, max = 155): string {
+  const s = input.replace(/\s+/g, " ").trim();
+  if (s.length <= max) return s;
+  // Reserve 1 char for the trailing period if we need to add one.
+  const window = s.slice(0, max);
+  const lastBreak = Math.max(
+    window.lastIndexOf(" "),
+    window.lastIndexOf("—"),
+    window.lastIndexOf("–"),
+    window.lastIndexOf(",")
+  );
+  let trimmed = lastBreak > 80 ? window.slice(0, lastBreak) : window;
+  // Strip trailing punctuation/whitespace before we decide to append a period.
+  trimmed = trimmed.replace(/[\s,;:—–-]+$/g, "");
+  if (!/[.!?]$/.test(trimmed)) trimmed += ".";
+  return trimmed;
 }
 
 export interface Service {
@@ -542,6 +574,7 @@ export const industries: Industry[] = [
   lawn_careHub,
   pressure_washingHub,
   fencing_contractorsHub,
+  medSpaHub,
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -574,6 +607,15 @@ export const locations: Location[] = [
   { name: "Swansea", slug: "swansea", county: "Glamorgan", region: "Wales", tier: "tier1", areas: ["Uplands", "Mumbles", "Sketty", "Gorseinon", "Port Talbot"], character: "the Welsh second city with a university and Swansea Bay City Deal investment" },
   { name: "Sunderland", slug: "sunderland", county: "Tyne and Wear", region: "North East", tier: "tier1", areas: ["Pallion", "Houghton-le-Spring", "Washington", "Seaham", "Hetton-le-Hole"], character: "a post-industrial northeast city with Nissan automotive base and Riverside regeneration" },
   { name: "Aberdeen", slug: "aberdeen", county: "Aberdeenshire", region: "Scotland", tier: "tier1", areas: ["Westhill", "Portlethen", "Stonehaven", "Inverurie", "Dyce"], character: "the oil capital of Europe with high-income energy sector workforce undergoing energy transition" },
+
+  // ═══ TIER 1 — US LAUNCH CITIES (5) ═══
+  // These cities are served by the US offer (med-spa vertical and beyond).
+  // Slugs are prefixed with "us-" to avoid colliding with future UK slugs (e.g. "miami" if added).
+  { name: "Miami", slug: "us-miami", county: "Miami-Dade County", region: "Florida", tier: "tier1", areas: ["Brickell", "Wynwood", "Coral Gables", "Coconut Grove", "South Beach"], character: "a Latin-American gateway city with a wealthy Brickell financial corridor, a creative Wynwood arts district and a bilingual aesthetics-led consumer market", country: "US" },
+  { name: "New York City", slug: "us-new-york-city", county: "New York County", region: "New York", tier: "tier1", areas: ["Manhattan", "Brooklyn", "Queens", "Upper East Side", "Williamsburg"], character: "the United States' densest small-business market, where Manhattan and Brooklyn med spas compete in a fiercely review-driven, search-first consumer environment regulated by the NY Department of State", country: "US" },
+  { name: "Los Angeles", slug: "us-los-angeles", county: "Los Angeles County", region: "California", tier: "tier1", areas: ["Beverly Hills", "West Hollywood", "Santa Monica", "Downtown LA", "Pasadena"], character: "the global capital of aesthetic medicine with a Beverly Hills / West Hollywood / Santa Monica corridor of physician-supervised med spas competing on celebrity-grade reviews and Instagram-led discovery", country: "US" },
+  { name: "Chicago", slug: "us-chicago", county: "Cook County", region: "Illinois", tier: "tier1", areas: ["Lincoln Park", "River North", "West Loop", "Gold Coast", "Lakeview"], character: "the Midwestern flagship metro with a Lincoln Park / River North / West Loop med-spa belt regulated by the Illinois Department of Financial and Professional Regulation", country: "US" },
+  { name: "Houston", slug: "us-houston", county: "Harris County", region: "Texas", tier: "tier1", areas: ["River Oaks", "The Heights", "Memorial", "Montrose", "Uptown"], character: "the fourth-largest US city with a River Oaks / The Heights / Memorial premium aesthetics market overseen by the Texas Medical Board and a Latina-led consumer demographic driving rapid med-spa growth", country: "US" },
 
   // ═══ TIER 2 — 75 LARGE TOWNS ═══
   { name: "Preston", slug: "preston", county: "Lancashire", region: "North West", tier: "tier2", areas: ["Fishergate", "Deepdale", "Fulwood", "Penwortham"], character: "a university town with industrial heritage and large student population", nearestCity: "manchester" },
@@ -1061,6 +1103,7 @@ export const comboIndustrySlugs = [
   "lawn-care-marketing",
   "pressure-washing-marketing",
   "fencing-marketing",
+  "med-spa-marketing",
 ] as const;
 
 export type ComboIndustrySlug = (typeof comboIndustrySlugs)[number];
@@ -1097,6 +1140,7 @@ export function getIndustryByComboSlug(comboSlug: ComboIndustrySlug): Industry {
     "lawn-care-marketing": "lawn-care",
     "pressure-washing-marketing": "pressure-washing",
     "fencing-marketing": "fencing-contractors",
+    "med-spa-marketing": "med-spa",
   };
   const slug = map[comboSlug];
   const industry = getIndustryBySlug(slug);

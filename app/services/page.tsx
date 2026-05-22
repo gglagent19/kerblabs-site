@@ -48,7 +48,7 @@ export default function ServicesIndex() {
         subhead="Pick any single service stand-alone, or bundle the full engine. Every Kerblabs service is built for independent UK businesses with under 10 staff and no marketing team. From £97/month, no lock-in, live in 10 days."
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
       />

@@ -1,5 +1,8 @@
 // Server-component nav for SEO pages — links go to homepage anchors.
-// No "use client" so the SEO pages stay statically rendered.
+// No "use client" so the SEO pages stay statically rendered (the
+// CalendlyButton CTA hydrates as a small client island).
+import CalendlyButton from "../CalendlyButton";
+
 export default function SeoNav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 md:pt-5 px-3">
@@ -38,10 +41,8 @@ export default function SeoNav() {
           </a>
         </nav>
 
-        <a
-          href="https://calendly.com/chandraalladi07/30min"
-          target="_blank"
-          rel="noopener noreferrer"
+        <CalendlyButton
+          url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
           className="group inline-flex items-center gap-1.5 bg-[color:var(--color-lime)] text-black font-bold pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm transition-all hover:gap-2.5"
         >
           Book a demo
@@ -57,7 +58,7 @@ export default function SeoNav() {
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </span>
-        </a>
+        </CalendlyButton>
       </div>
     </header>
   );

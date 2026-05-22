@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/", "/admin/"],
       },
     ],
-    sitemap: "https://kerblabs.com/sitemap.xml",
+    sitemap: "https://kerblabs.com/sitemap-index",
     host: "https://kerblabs.com",
   };
 }

@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import CalendlyButton from "./CalendlyButton";
 
 const tiers = [
   {
@@ -128,10 +129,8 @@ function PricingCard3D({
             ))}
           </ul>
 
-          <a
-            href="https://calendly.com/chandraalladi07/30min"
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalendlyButton
+            url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
             className={t.highlight ? "btn-primary w-full justify-center" : "btn-ghost w-full justify-center"}
           >
             Get started
@@ -145,7 +144,7 @@ function PricingCard3D({
             >
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-          </a>
+          </CalendlyButton>
         </div>
       </motion.div>
     </div>

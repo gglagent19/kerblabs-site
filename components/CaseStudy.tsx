@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import CalendlyButton from "./CalendlyButton";
 
 function Counter({
   to,
@@ -212,7 +213,7 @@ export default function CaseStudy() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <a href="https://calendly.com/chandraalladi07/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <CalendlyButton url="https://calendly.com/hello-kerblabs/15-min-discovery-call" className="btn-primary">
             Model my numbers
             <svg
               width="14"
@@ -224,7 +225,7 @@ export default function CaseStudy() {
             >
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-          </a>
+          </CalendlyButton>
         </motion.div>
       </div>
     </section>

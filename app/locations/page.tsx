@@ -10,7 +10,7 @@ import {
   CtaSection,
   Section,
 } from "@/components/seo/SeoSections";
-import { locations } from "@/lib/seo-data";
+import { locations, locationCountry } from "@/lib/seo-data";
 
 export const metadata: Metadata = {
   title: "AI Marketing for Local Businesses Across the UK | Kerblabs",
@@ -28,8 +28,12 @@ export const metadata: Metadata = {
 };
 
 export default function LocationsHub() {
-  // Only show Tier 1 cities — these are the only pages that exist.
-  const tier1 = locations.filter((l) => l.tier === "tier1");
+  // Only show UK Tier 1 cities — these are the only pages that exist
+  // under /locations/. US cities live under US-only verticals (e.g.
+  // /med-spa-marketing/us-miami) and are listed separately on /industries/med-spa.
+  const tier1 = locations.filter(
+    (l) => l.tier === "tier1" && locationCountry(l) === "GB"
+  );
 
   // Group by region for scannability
   const byRegion = tier1.reduce((acc, loc) => {
@@ -58,7 +62,7 @@ export default function LocationsHub() {
         subhead={`Kerblabs serves businesses across 25 major UK cities. Whether you're a dental practice in Manchester, a salon in Bristol, a contractor in Birmingham, or an estate agent in Edinburgh — our AI growth systems work the same wherever you are. We're fully remote, so even if your city isn't on this list, we still serve you. Book a free demo and we'll show you what we can do for your business.`}
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         stats={[
           { value: `${tier1.length}`, label: "UK cities with dedicated pages" },

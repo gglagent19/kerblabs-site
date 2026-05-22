@@ -20,9 +20,9 @@ import {
   industries,
   getIndustryBySlug,
   services,
-  tier1Slugs,
-  getLocationBySlug,
+  locations,
   comboIndustrySlugs,
+  locationCountry,
   type ComboIndustrySlug,
 } from "@/lib/seo-data";
 
@@ -57,7 +57,11 @@ const industryToCombo: Record<string, ComboIndustrySlug> = {
   "lawn-care": "lawn-care-marketing",
   "pressure-washing": "pressure-washing-marketing",
   "fencing-contractors": "fencing-marketing",
+  "med-spa": "med-spa-marketing",
 };
+
+// US-only industries: render with US cities + USD currency + en-US hreflang.
+const US_ONLY_INDUSTRIES: ReadonlySet<string> = new Set(["med-spa"]);
 
 export async function generateStaticParams() {
   return industries.map((i) => ({ slug: i.slug }));
@@ -71,11 +75,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const ind = getIndustryBySlug(slug);
   if (!ind) return {};
+  const isUs = US_ONLY_INDUSTRIES.has(ind.slug);
   const url = `https://kerblabs.com/industries/${ind.slug}`;
   return {
     title: ind.pageTitle,
     description: ind.metaDescription,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        [isUs ? "en-US" : "en-GB"]: url,
+        "x-default": url,
+      },
+    },
     openGraph: {
       title: ind.pageTitle,
       description: ind.metaDescription,
@@ -97,12 +108,13 @@ export default async function IndustryPage({
 
   const url = `https://kerblabs.com/industries/${ind.slug}`;
   const comboSlug = industryToCombo[ind.slug];
+  const isUs = US_ONLY_INDUSTRIES.has(ind.slug);
   const otherIndustries = industries.filter((i) => i.slug !== ind.slug);
 
-  // Top cities for combo links
-  const topCities = tier1Slugs
-    .map((s) => getLocationBySlug(s))
-    .filter((l): l is NonNullable<typeof l> => l !== undefined)
+  // Top cities for combo links — match the industry's country.
+  const topCities = locations
+    .filter((l) => l.tier === "tier1")
+    .filter((l) => (isUs ? locationCountry(l) === "US" : locationCountry(l) === "GB"))
     .slice(0, 12);
 
   return (
@@ -117,15 +129,15 @@ export default async function IndustryPage({
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            name: `Marketing for ${ind.name} UK`,
-            provider: { "@type": "Organization", name: "Kerblabs" },
+            name: `Marketing for ${ind.name} ${isUs ? "US" : "UK"}`,
+            provider: { "@id": "https://kerblabs.com/#organization" },
             description: ind.metaDescription,
-            areaServed: { "@type": "Country", name: "United Kingdom" },
+            areaServed: { "@type": "Country", name: isUs ? "United States" : "United Kingdom" },
             audience: { "@type": "BusinessAudience", audienceType: ind.industryPlural },
             offers: {
               "@type": "Offer",
               price: ind.recommendedPrice.toString(),
-              priceCurrency: "GBP",
+              priceCurrency: isUs ? "USD" : "GBP",
             },
           },
           {
@@ -157,7 +169,7 @@ export default async function IndustryPage({
         subhead={ind.subhead}
         primaryCta={{
           label: "Book a free strategy call",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={ind.stats}

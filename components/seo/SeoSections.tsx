@@ -224,19 +224,25 @@ export function PricingCallout({
   plan,
   price,
   description,
+  currency = "£",
+  priceSuffix = "/mo",
+  showSetupFee = true,
 }: {
   plan: string;
   price: number;
   description: string;
+  currency?: "£" | "$";
+  priceSuffix?: string;
+  showSetupFee?: boolean;
 }) {
-  const setupFee = SETUP_FEES[plan];
+  const setupFee = showSetupFee ? SETUP_FEES[plan] : undefined;
   return (
     <div className="card p-8 md:p-12 max-w-2xl mx-auto text-center">
       <div className="label mb-3">{plan} plan recommended</div>
       <div className="font-display font-bold mb-2">
-        <span className="text-2xl md:text-3xl align-top">£</span>
+        <span className="text-2xl md:text-3xl align-top">{currency}</span>
         <span className="text-6xl md:text-7xl">{price}</span>
-        <span className="text-xl text-[color:var(--color-text-dim)]">/mo</span>
+        <span className="text-xl text-[color:var(--color-text-dim)]">{priceSuffix}</span>
       </div>
       {setupFee && (
         <div className="text-sm text-[color:var(--color-text-dim)] mb-5">
@@ -247,7 +253,7 @@ export function PricingCallout({
         {description}
       </p>
       <a
-        href="https://calendly.com/chandraalladi07/30min"
+        href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
         target="_blank"
         rel="noopener noreferrer"
         className="btn-primary"
@@ -332,7 +338,7 @@ export function CtaSection({
           </p>
         )}
         <a
-          href="https://calendly.com/chandraalladi07/30min"
+          href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"

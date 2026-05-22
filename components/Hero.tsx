@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import CalendlyButton from "./CalendlyButton";
 
 const GlobeBackground = dynamic(() => import("./GlobeBackground"), { ssr: false });
 
@@ -201,7 +202,7 @@ export default function Hero() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E1E0CC" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </a>
-            <a href="https://calendly.com/chandraalladi07/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost text-sm">Request an audit</a>
+            <CalendlyButton url="https://calendly.com/hello-kerblabs/15-min-discovery-call" className="btn-ghost text-sm">Request an audit</CalendlyButton>
           </motion.div>
         </motion.div>
 
