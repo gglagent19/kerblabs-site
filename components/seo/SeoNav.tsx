@@ -42,7 +42,7 @@ export default function SeoNav() {
         </nav>
 
         <CalendlyButton
-          url="https://calendly.com/chandraalladi07/30min"
+          url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
           className="group inline-flex items-center gap-1.5 bg-[color:var(--color-lime)] text-black font-bold pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm transition-all hover:gap-2.5"
         >
           Book a demo

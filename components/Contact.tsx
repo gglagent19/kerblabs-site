@@ -28,7 +28,7 @@ export default function Contact() {
               Pick a 30-minute slot. We&apos;ll walk through your setup, show you the gaps, and hand you a plan — whether you hire us or not.
             </p>
           </div>
-          <CalendlyButton url="https://calendly.com/chandraalladi07/30min" className="btn-primary text-lg px-8 py-3">
+          <CalendlyButton url="https://calendly.com/hello-kerblabs/15-min-discovery-call" className="btn-primary text-lg px-8 py-3">
             Book your 30-min demo
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </CalendlyButton>

@@ -83,7 +83,7 @@ export default function CaseStudiesIndex() {
         subhead="Every case study below is from a paying client. Where the client asked us to anonymise their name, we say so explicitly — and the numbers stay honest. Where the case study is illustrative of an active outreach offer, we say that too."
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={[

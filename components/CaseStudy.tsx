@@ -213,7 +213,7 @@ export default function CaseStudy() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <CalendlyButton url="https://calendly.com/chandraalladi07/30min" className="btn-primary">
+          <CalendlyButton url="https://calendly.com/hello-kerblabs/15-min-discovery-call" className="btn-primary">
             Model my numbers
             <svg
               width="14"

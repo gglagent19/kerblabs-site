@@ -14,7 +14,7 @@ Kerblabs is a bundled platform of eight AI and automation systems designed for i
 - [Locations hub](https://kerblabs.com/locations): All 25 major UK cities Kerblabs has dedicated pages for.
 - [About](https://kerblabs.com/about): Company and founder background.
 - [Pricing](https://kerblabs.com/#pricing): Four tiers — Spark £97/mo, Momentum £197/mo, Autopilot £347/mo, Full Engine £497/mo.
-- [Book a demo](https://calendly.com/chandraalladi07/30min): 30-minute strategy call.
+- [Book a demo](https://calendly.com/hello-kerblabs/15-min-discovery-call): 30-minute strategy call.
 
 ## Services (8 bundled AI systems)
 
@@ -109,7 +109,7 @@ Med-spa (US) pricing is denominated in USD with equivalent tiers.
 - Markets served: United Kingdom (all 4 nations), United States (med-spa vertical only, 2026 launch)
 - Service model: fully remote / virtual; no physical offices
 - Languages: English (en-GB primary, en-US for US pages)
-- Booking link: https://calendly.com/chandraalladi07/30min
+- Booking link: https://calendly.com/hello-kerblabs/15-min-discovery-call
 
 ## What Kerblabs is NOT
 

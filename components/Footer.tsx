@@ -8,7 +8,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Kerblabs Ltd. &middot; Serving the whole UK remotely
         </div>
         <div className="flex items-center gap-5 text-xs text-[color:var(--color-text-dim)]">
-          <CalendlyButton url="https://calendly.com/chandraalladi07/30min" className="hover:text-[color:var(--color-lime)] transition">Book a Demo</CalendlyButton>
+          <CalendlyButton url="https://calendly.com/hello-kerblabs/15-min-discovery-call" className="hover:text-[color:var(--color-lime)] transition">Book a Demo</CalendlyButton>
           <a href="#" className="hover:text-[color:var(--color-lime)] transition">LinkedIn</a>
           <a href="#top" className="text-[color:var(--color-lime)]">↑ Top</a>
         </div>

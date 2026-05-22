@@ -42,7 +42,7 @@ export default function SeoFooter() {
               AI-powered growth systems for UK local businesses. Fully remote, serving the whole UK.
             </p>
             <CalendlyButton
-              url="https://calendly.com/chandraalladi07/30min"
+              url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
               className="btn-primary mt-5 text-xs"
             >
               Book a demo
@@ -115,7 +115,7 @@ export default function SeoFooter() {
           </div>
           <div className="flex items-center gap-5 text-xs text-[color:var(--color-text-dim)]">
             <CalendlyButton
-              url="https://calendly.com/chandraalladi07/30min"
+              url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
               className="hover:text-[color:var(--color-lime)] transition"
             >
               Book a Demo

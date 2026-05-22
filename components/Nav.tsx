@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import CalendlyButton from "./CalendlyButton";
 
-const CALENDLY_URL = "https://calendly.com/chandraalladi07/30min";
+const CALENDLY_URL = "https://calendly.com/hello-kerblabs/15-min-discovery-call";
 
 const links = [
   { href: "#store", label: "Services" },

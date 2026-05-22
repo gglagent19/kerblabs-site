@@ -45,11 +45,43 @@ function renderUrlset(entries: Entry[]): string {
 }
 
 export function GET(): NextResponse {
+  // Case studies — read slug list from registry to keep this in sync
+  let caseStudySlugs: string[] = [];
+  try {
+    // Static import would create a circular dep risk in the route; use require for build-time read.
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { caseStudies } = require("@/lib/case-studies") as { caseStudies: Array<{ slug: string }> };
+    caseStudySlugs = caseStudies.map((c) => c.slug);
+  } catch {
+    // Registry not available — skip gracefully
+  }
+
+  // /vs comparison slugs
+  let comparisonSlugs: string[] = [];
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { comparisons } = require("@/lib/comparisons") as { comparisons: Array<{ slug: string }> };
+    comparisonSlugs = comparisons.map((c) => c.slug);
+  } catch {
+    // Registry not available
+  }
+
   const entries: Entry[] = [
     { loc: `${BASE}/`, lastmod: lastmodISO(["app/page.tsx", "lib/seo-data.ts"]) },
     { loc: `${BASE}/about`, lastmod: lastmodISO(["app/about/page.tsx"]) },
     { loc: `${BASE}/services`, lastmod: lastmodISO(["app/services/page.tsx", "lib/seo-data.ts"]) },
+    { loc: `${BASE}/industries`, lastmod: lastmodISO(["app/industries/page.tsx", "lib/seo-data.ts"]) },
     { loc: `${BASE}/locations`, lastmod: lastmodISO(["app/locations/page.tsx", "lib/seo-data.ts"]) },
+    { loc: `${BASE}/case-studies`, lastmod: lastmodISO(["app/case-studies/page.tsx"]) },
+    { loc: `${BASE}/vs`, lastmod: lastmodISO(["app/vs/page.tsx"]) },
+    ...caseStudySlugs.map((slug) => ({
+      loc: `${BASE}/case-studies/${slug}`,
+      lastmod: lastmodISO([`lib/case-studies/${slug}.ts`]),
+    })),
+    ...comparisonSlugs.map((slug) => ({
+      loc: `${BASE}/vs/${slug}`,
+      lastmod: lastmodISO([`lib/comparisons/${slug}.ts`]),
+    })),
   ];
 
   return new NextResponse(renderUrlset(entries), {

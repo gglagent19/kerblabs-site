@@ -78,7 +78,7 @@ export default function IndustriesHub() {
         subhead="Kerblabs is the bundled AI growth platform for independent local businesses. Every page below is a dedicated playbook for that vertical — the exact problems we solve, the recommended plan, the city-by-city specialist pages, and the FAQs that matter to operators in that industry. Pick yours."
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See pricing", href: "/#pricing" }}
         stats={[

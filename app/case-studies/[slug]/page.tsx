@@ -146,7 +146,7 @@ export default async function CaseStudyPage({
         subhead={cs.summary}
         primaryCta={{
           label: "Book a free demo",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "All case studies", href: "/case-studies" }}
         stats={cs.headlineMetrics.map((m) => ({

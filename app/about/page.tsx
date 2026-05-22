@@ -95,7 +95,7 @@ export default function AboutPage() {
         subhead="Kerblabs is an AI marketing platform for independent local businesses — built by Chandra Alladi after years watching dentists, salons, contractors, and estate agents lose revenue to missed calls and weak Google presence. We are fully remote, transparent on pricing, and we never lock you into a contract."
         primaryCta={{
           label: "Book a call with Chandra",
-          href: "https://calendly.com/chandraalladi07/30min",
+          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
         secondaryCta={{ label: "See services", href: "/services" }}
       />

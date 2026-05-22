@@ -130,7 +130,7 @@ function PricingCard3D({
           </ul>
 
           <CalendlyButton
-            url="https://calendly.com/chandraalladi07/30min"
+            url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
             className={t.highlight ? "btn-primary w-full justify-center" : "btn-ghost w-full justify-center"}
           >
             Get started
