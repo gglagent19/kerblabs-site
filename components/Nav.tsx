@@ -1,11 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
+import CalendlyButton from "./CalendlyButton";
+
+const CALENDLY_URL = "https://calendly.com/chandraalladi07/30min";
 
 const links = [
   { href: "#store", label: "Services" },
   { href: "#work", label: "Work" },
   { href: "#pricing", label: "Pricing" },
-  { href: "https://calendly.com/hello-kerblabs/15-min-discovery-call", label: "Book a Demo" },
 ];
 
 export default function Nav() {
@@ -36,13 +38,17 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
+          <CalendlyButton
+            url={CALENDLY_URL}
+            className="text-sm transition-colors duration-300 text-[color:rgba(225,224,204,0.6)] hover:text-[color:#E1E0CC] bg-transparent border-0 cursor-pointer p-0"
+          >
+            Book a Demo
+          </CalendlyButton>
         </nav>
 
         {/* CTA */}
-        <a
-          href="https://calendly.com/hello-kerblabs/15-min-discovery-call"
-          target="_blank"
-          rel="noopener noreferrer"
+        <CalendlyButton
+          url={CALENDLY_URL}
           className="group inline-flex items-center gap-1.5 bg-[color:var(--color-lime)] text-black font-bold pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm transition-all hover:gap-2.5"
         >
           Book a demo
@@ -51,7 +57,7 @@ export default function Nav() {
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </span>
-        </a>
+        </CalendlyButton>
       </div>
     </motion.header>
   );
