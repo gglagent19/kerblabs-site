@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" width="560" height="560" role="img" aria-label="Chandra Alladi placeholder avatar">
+  <title>Chandra Alladi placeholder avatar</title>
+  <desc>Tasteful monogram placeholder shown until the Kerblabs founder headshot is uploaded.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8FF5E" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C8FF5E" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="560" fill="url(#bg)"/>
+  <circle cx="280" cy="280" r="200" fill="none" stroke="url(#ring)" stroke-width="2"/>
+  <circle cx="280" cy="280" r="160" fill="#0f0f0f"/>
+  <text x="280" y="320" text-anchor="middle"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="130" letter-spacing="-4"
+        fill="#C8FF5E">CA</text>
+  <text x="280" y="490" text-anchor="middle"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="500" font-size="14" letter-spacing="6"
+        fill="#C8FF5E" fill-opacity="0.55">CHANDRA ALLADI</text>
+</svg>

@@ -1,4 +1,7 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
@@ -28,6 +31,16 @@ export const metadata: Metadata = {
 
 // TODO: Replace LinkedIn URL with the actual Chandra Alladi profile slug once confirmed.
 const FOUNDER_LINKEDIN = "https://www.linkedin.com/in/chandra-alladi";
+
+// Founder photo source resolution.
+// Primary: `/founder-chandra.jpg` (real headshot — drop into /public when ready).
+// Fallback: `/founder-chandra.placeholder.svg` (monogram avatar shipped with this repo).
+// The check runs once at module load on the server. If the jpg is later added,
+// just rebuild — no code change required.
+const FOUNDER_JPG_PATH = join(process.cwd(), "public", "founder-chandra.jpg");
+const FOUNDER_IMAGE_SRC: string = existsSync(FOUNDER_JPG_PATH)
+  ? "/founder-chandra.jpg"
+  : "/founder-chandra.placeholder.svg";
 
 export default function AboutPage() {
   return (
@@ -112,14 +125,16 @@ export default function AboutPage() {
           {/* Founder photo */}
           <div className="card overflow-hidden">
             {/* TODO: Upload actual founder headshot to /public/founder-chandra.jpg
-                Recommended: 800x800px, square crop, professional headshot, neutral background.
-                Until then this renders the alt text + a placeholder background. */}
-            <div className="aspect-square bg-[color:var(--color-surface)] flex items-center justify-center">
-              <img
-                src="/founder-chandra.jpg"
-                alt="Chandra Alladi, founder and CEO of Kerblabs"
+                Recommended: 800x800px square crop, professional headshot, neutral background.
+                Until that file lands the SVG placeholder ships instead — same dimensions,
+                so no CLS when the real photo replaces it. */}
+            <div className="aspect-square bg-[color:var(--color-surface)] flex items-center justify-center relative">
+              <Image
+                src={FOUNDER_IMAGE_SRC}
+                alt="Chandra Alladi, founder and CEO of Kerblabs Ltd, AI marketing platform for UK and US local businesses"
                 width={560}
                 height={560}
+                sizes="(min-width: 768px) 280px, 100vw"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

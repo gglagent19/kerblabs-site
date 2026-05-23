@@ -2,9 +2,30 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import CalendlyButton from "./CalendlyButton";
 
 const GlobeBackground = dynamic(() => import("./GlobeBackground"), { ssr: false });
+
+/**
+ * Hero LCP image.
+ *
+ * Currently the hero is a fully procedural composition (CSS gradient blobs +
+ * the 3D wireframe globe in GlobeBackground + an inline-SVG noise overlay).
+ * There is no raster image acting as the LCP element — the heading text is
+ * the LCP, and no priority-hint image is needed today.
+ *
+ * TODO: If we ever ship a raster hero illustration (a candidate exists at
+ * /agency/kerblabs-hero.png in the parent workspace), drop the file into
+ * /public/hero/kerblabs-hero.png and flip HERO_IMAGE_ENABLED to true. The
+ * next/image element below is wired up for that case — `priority` is set so
+ * it preloads as the LCP, `sizes="100vw"` covers the full viewport, and the
+ * explicit dimensions avoid CLS.
+ */
+const HERO_IMAGE_ENABLED = false;
+const HERO_IMAGE_SRC = "/hero/kerblabs-hero.png";
+const HERO_IMAGE_ALT =
+  "Kerblabs — AI marketing platform for independent local businesses in the UK and US";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -125,6 +146,21 @@ export default function Hero() {
   return (
     <section id="top" className="relative h-[100svh] p-3 md:p-5">
       <div className="hero-inset h-full flex items-center justify-center bg-[color:var(--color-void)]">
+        {/* Optional raster hero illustration — see HERO_IMAGE_ENABLED note above.
+            When enabled this becomes the LCP element (priority preload, AVIF/WebP
+            via next/image, explicit dimensions for zero CLS). */}
+        {HERO_IMAGE_ENABLED && (
+          <Image
+            src={HERO_IMAGE_SRC}
+            alt={HERO_IMAGE_ALT}
+            width={2400}
+            height={1600}
+            priority
+            sizes="100vw"
+            className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+          />
+        )}
+
         {/* Gradient blobs */}
         <motion.div className="hero-blob hero-blob-1" style={{ scale: blobScale, opacity: blobOpacity }} aria-hidden />
         <motion.div className="hero-blob hero-blob-2" style={{ scale: blobScale }} aria-hidden />
