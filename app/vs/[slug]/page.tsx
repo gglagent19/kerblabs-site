@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   Faq,
@@ -123,9 +123,9 @@ export default async function ComparisonPage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Comparisons", href: "/vs" },
-          { name: `vs ${cmp.competitorLabel}` },
+          { label: "Home", href: "/" },
+          { label: "Comparisons", href: "/vs" },
+          { label: `vs ${cmp.competitorLabel}` },
         ]}
       />
 

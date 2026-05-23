@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   ProblemsGrid,
@@ -95,9 +95,9 @@ export default async function ServicePage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Services", href: "/services" },
-          { name: service.name },
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: service.name },
         ]}
       />
 

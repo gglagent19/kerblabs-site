@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   ProblemsGrid,
@@ -156,9 +156,9 @@ export default async function IndustryPage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Industries" },
-          { name: ind.name },
+          { label: "Home", href: "/" },
+          { label: "Industries", href: "/industries" },
+          { label: ind.name },
         ]}
       />
 

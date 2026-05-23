@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   StepsList,
@@ -133,9 +133,9 @@ export default async function CaseStudyPage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Case Studies", href: "/case-studies" },
-          { name: displayName },
+          { label: "Home", href: "/" },
+          { label: "Case Studies", href: "/case-studies" },
+          { label: displayName },
         ]}
       />
 
