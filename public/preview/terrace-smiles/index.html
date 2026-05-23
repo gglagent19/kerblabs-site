@@ -22,7 +22,7 @@ img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:0;color:inherit}
 ::selection{background:var(--ink);color:var(--bg)}
-.container{max-width:1320px;margin:0 auto;padding:0 28px}
+.container{max-width:1320px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
 
 /* ───────── NAV ───────── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;mix-blend-mode:difference;color:#fff}
@@ -54,18 +54,33 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 .btn-primary:hover::before{transform:translateY(0)}
 .btn-primary svg{width:14px;height:14px;position:relative;z-index:2}
 
-/* 3D floating tooth element */
-.hero-3d{position:absolute;right:4vw;top:50%;transform:translateY(-50%);width:min(560px,46vw);aspect-ratio:1;perspective:1400px;z-index:1;pointer-events:none}
-.tooth-stage{width:100%;height:100%;transform-style:preserve-3d;position:relative;display:flex;align-items:center;justify-content:center}
-.tooth-img{width:90%;height:90%;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(11,11,11,.25)) drop-shadow(0 0 80px rgba(212,115,78,.18))}
-.tooth-orbit{position:absolute;inset:-2%;border:1px solid var(--ink);border-radius:50%;opacity:.12;pointer-events:none}
-.tooth-orbit.o2{inset:-18%;transform:rotateX(70deg);opacity:.08}
-.tooth-orbit.o3{inset:-32%;transform:rotateX(70deg) rotateZ(60deg);opacity:.05}
-.tooth-label{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);z-index:3}
-.tl-tl{top:-8px;left:0}.tl-br{bottom:-8px;right:0}
-.tooth-label::before{content:'';position:absolute;width:8px;height:8px;border:1px solid currentColor;border-radius:50%}
-.tl-tl::before{left:-16px;top:1px}.tl-br::before{right:-16px;top:1px}
-@media(max-width:960px){.hero-3d{right:-8vw;width:64vw;opacity:.72}}
+/* page curtain — loads up over content then peels back */
+.page-curtain{position:fixed;inset:0;background:var(--ink);z-index:999;pointer-events:none;transform-origin:bottom}
+
+/* custom cursor */
+@media (hover:hover) and (pointer:fine){
+  *{cursor:none !important}
+  .cursor-dot{position:fixed;top:0;left:0;width:6px;height:6px;background:var(--warm);border-radius:50%;z-index:998;pointer-events:none;will-change:transform;mix-blend-mode:normal;transition:transform .12s linear,width .25s cubic-bezier(.2,.8,.2,1),height .25s cubic-bezier(.2,.8,.2,1),background .25s}
+  .cursor-ring{position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid var(--ink);border-radius:50%;z-index:997;pointer-events:none;will-change:transform;transition:width .35s cubic-bezier(.2,.8,.2,1),height .35s cubic-bezier(.2,.8,.2,1),border-color .25s,opacity .25s,background .25s}
+  .cursor-dot.hover{width:0;height:0;background:transparent}
+  .cursor-ring.hover{width:72px;height:72px;border-color:var(--warm);background:rgba(212,115,78,.06);mix-blend-mode:normal}
+  .cursor-ring.drag{width:96px;height:96px;border-color:var(--warm);background:rgba(212,115,78,.06)}
+  nav.dark-bg ~ .cursor-ring,.pinned-inner .cursor-ring,.pull-quote .cursor-ring,.big-cta .cursor-ring,footer .cursor-ring{border-color:var(--cream)}
+}
+@media (hover:none),(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
+
+/* persistent fixed 3D tooth — choreographed across sections */
+.tooth-fixed{position:fixed;top:50%;left:50%;width:520px;height:520px;margin:-260px 0 0 -260px;z-index:1;pointer-events:none;will-change:transform,opacity;transform:translate3d(22vw,-4vh,0) scale(1) rotate(-6deg);perspective:1200px}
+.tooth-fixed img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 40px 80px rgba(11,11,11,.32)) drop-shadow(0 0 100px rgba(212,115,78,.22));will-change:transform}
+.tooth-glow{position:absolute;inset:8%;background:radial-gradient(circle at 50% 60%,rgba(212,115,78,.35) 0%,rgba(212,115,78,0) 60%);filter:blur(40px);z-index:-1;will-change:transform,opacity}
+@media(max-width:960px){.tooth-fixed{width:340px;height:340px;margin:-170px 0 0 -170px;transform:translate3d(15vw,-4vh,0) scale(1) rotate(-6deg);opacity:.85}}
+@media(max-width:520px){.tooth-fixed{width:240px;height:240px;margin:-120px 0 0 -120px;transform:translate3d(18vw,-12vh,0) scale(1) rotate(-6deg);opacity:.6}}
+
+/* hero labels (former tooth labels, now standalone) */
+.hero-labels{position:absolute;right:8vw;bottom:80px;display:flex;flex-direction:column;align-items:flex-end;gap:8px;z-index:3;pointer-events:none}
+.tooth-label{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+.tooth-label::before{content:'';width:8px;height:8px;border:1px solid currentColor;border-radius:50%}
+@media(max-width:720px){.hero-labels{display:none}}
 
 /* ───────── MARQUEE ───────── */
 .marquee{padding:32px 0;background:var(--ink);color:var(--bg);overflow:hidden}
@@ -209,6 +224,14 @@ footer{padding:60px 0 36px;background:var(--ink);color:var(--bg);border-top:1px 
 </head>
 <body>
 
+<div class="page-curtain"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="tooth-fixed" id="toothFixed">
+  <div class="tooth-glow"></div>
+  <img src="/preview/terrace-smiles/tooth.png" alt="" />
+</div>
+
 <nav>
   <div class="container">
     <a href="#" class="logo">Terrace<em>.</em>Smiles</a>
@@ -239,15 +262,9 @@ footer{padding:60px 0 36px;background:var(--ink);color:var(--bg);border-top:1px 
       </div>
     </div>
   </div>
-  <div class="hero-3d" id="hero3d">
-    <div class="tooth-stage" id="toothStage">
-      <div class="tooth-orbit"></div>
-      <div class="tooth-orbit o2"></div>
-      <div class="tooth-orbit o3"></div>
-      <img class="tooth-img" src="/preview/terrace-smiles/hf_20260523_132202_5f6fd57e-80cb-4c2e-b743-9c2fb16b40c0.png" alt="" />
-      <div class="tooth-label tl-tl">No. 01 / Tampa</div>
-      <div class="tooth-label tl-br">est. 2014</div>
-    </div>
+  <div class="hero-labels">
+    <div class="tooth-label tl-tl">No. 01 / Tampa</div>
+    <div class="tooth-label tl-br">est. 2014</div>
   </div>
 </section>
 
@@ -262,17 +279,17 @@ footer{padding:60px 0 36px;background:var(--ink);color:var(--bg);border-top:1px 
   <div class="container">
     <div class="stats-inner">
       <div class="stat reveal-y">
-        <div class="stat-num"><em>$99</em></div>
+        <div class="stat-num" data-target="99" data-prefix="$" data-suffix=""><em>$99</em></div>
         <div class="stat-label">First visit · all inclusive</div>
         <p class="stat-copy">Exam, panoramic X-rays, and cleaning. One flat price. We bill insurance separately if you have it.</p>
       </div>
       <div class="stat reveal-y">
-        <div class="stat-num">4.8<em>★</em></div>
+        <div class="stat-num" data-target="4.8" data-suffix="★">4.8<em>★</em></div>
         <div class="stat-label">From 66 Google reviews</div>
         <p class="stat-copy">Patients mention the same thing across reviews: they knew the price before they sat in the chair.</p>
       </div>
       <div class="stat reveal-y">
-        <div class="stat-num">48<em>h</em></div>
+        <div class="stat-num" data-target="48" data-suffix="h">48<em>h</em></div>
         <div class="stat-label">Average appointment wait</div>
         <p class="stat-copy">Same-week visits are the rule. Emergencies seen same-day.</p>
       </div>
@@ -504,28 +521,123 @@ function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
 lenis.on('scroll', ScrollTrigger.update);
 
-// — hero 3D tooth: scroll + mouse —
-const tooth = document.getElementById('toothStage');
-let mx=0, my=0, tx=0, ty=0;
-window.addEventListener('mousemove', e=>{
-  mx = (e.clientX / window.innerWidth - 0.5) * 30;
-  my = (e.clientY / window.innerHeight - 0.5) * 30;
+// ─── page-load curtain reveal ───
+window.addEventListener('load', () => {
+  gsap.to('.page-curtain', { yPercent: -100, duration: 1.4, ease: 'expo.inOut', delay: 0.15, onComplete: () => document.querySelector('.page-curtain').style.display='none' });
+  gsap.from('nav', { y: -40, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.9 });
 });
-function animateTooth(){
-  tx += (mx - tx) * 0.08;
-  ty += (my - ty) * 0.08;
-  const sy = window.scrollY * 0.4;
-  if (tooth) tooth.style.transform = `rotateX(${-ty + sy*0.1}deg) rotateY(${tx}deg) translateY(${sy*-0.2}px) translateZ(0)`;
-  requestAnimationFrame(animateTooth);
-}
-animateTooth();
 
-// — hero title lines: scroll up + parallax —
-gsap.from('.hero-title .l1', { y: 80, opacity: 0, duration: 1.1, ease: 'power3.out', delay: 0.1 });
-gsap.from('.hero-title .l2', { y: 80, opacity: 0, duration: 1.1, ease: 'power3.out', delay: 0.25 });
-gsap.from('.hero-title .l3', { y: 80, opacity: 0, duration: 1.1, ease: 'power3.out', delay: 0.4 });
-gsap.from('.hero-eyebrow', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' });
-gsap.from('.hero-meta', { y: 30, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.7 });
+// ─── custom cursor ───
+const cDot = document.querySelector('.cursor-dot');
+const cRing = document.querySelector('.cursor-ring');
+let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+let rx = cx, ry = cy;
+window.addEventListener('mousemove', e => {
+  cx = e.clientX; cy = e.clientY;
+  if (cDot) cDot.style.transform = `translate3d(${cx-3}px, ${cy-3}px, 0)`;
+});
+(function loop(){
+  rx += (cx - rx) * 0.18;
+  ry += (cy - ry) * 0.18;
+  if (cRing) cRing.style.transform = `translate3d(${rx-18}px, ${ry-18}px, 0)`;
+  requestAnimationFrame(loop);
+})();
+document.querySelectorAll('a, button, .service-row, .faq-q, .principle, .meet-media, .feature-media').forEach(el => {
+  el.addEventListener('mouseenter', () => { cDot?.classList.add('hover'); cRing?.classList.add('hover'); });
+  el.addEventListener('mouseleave', () => { cDot?.classList.remove('hover'); cRing?.classList.remove('hover'); });
+});
+
+// ─── persistent 3D tooth: choreographed across sections + mouse parallax ───
+const toothEl = document.getElementById('toothFixed');
+let mx = 0, my = 0, tmx = 0, tmy = 0;
+window.addEventListener('mousemove', e => {
+  mx = (e.clientX / window.innerWidth - 0.5) * 16;
+  my = (e.clientY / window.innerHeight - 0.5) * 16;
+});
+// scroll-driven master state — written into CSS vars, mouse parallax adds on top
+const toothState = { x: 22, y: -4, scale: 1, rot: -6, opacity: 1 };
+(function toothRaf(){
+  tmx += (mx - tmx) * 0.06;
+  tmy += (my - tmy) * 0.06;
+  if (toothEl) {
+    toothEl.style.transform = `translate3d(${toothState.x}vw, ${toothState.y}vh, 0) scale(${toothState.scale}) rotate(${toothState.rot}deg) rotateX(${-tmy * 0.6}deg) rotateY(${tmx * 0.6}deg)`;
+    toothEl.style.opacity = toothState.opacity;
+  }
+  requestAnimationFrame(toothRaf);
+})();
+// Phase 1 — hero → stats: drift down-left, gentle rotate, slight shrink
+gsap.to(toothState, {
+  x: 8, y: 8, scale: 0.85, rot: 24,
+  ease: 'none',
+  scrollTrigger: { trigger: '.stats', start: 'top bottom', end: 'top top', scrub: 1 }
+});
+// Phase 2 — stats → pinned principles: shrink to corner, drift up-right, rotate big
+gsap.to(toothState, {
+  x: 30, y: -32, scale: 0.32, rot: 180, opacity: 0.85,
+  ease: 'none',
+  scrollTrigger: { trigger: '.pinned-section', start: 'top bottom', end: 'top top', scrub: 1 }
+});
+// Phase 3 — through pinned: continuous slow spin
+gsap.to(toothState, {
+  rot: 540,
+  ease: 'none',
+  scrollTrigger: { trigger: '.pinned-section', start: 'top top', end: 'bottom top', scrub: 1 }
+});
+// Phase 4 — pinned → services: zoom back, drift left, face right
+gsap.to(toothState, {
+  x: -28, y: 4, scale: 0.9, rot: 720, opacity: 1,
+  ease: 'none',
+  scrollTrigger: { trigger: '.services', start: 'top bottom', end: 'top top', scrub: 1 }
+});
+// Phase 5 — services → feature: fade out (let feature own the visual)
+gsap.to(toothState, {
+  scale: 0.5, opacity: 0, y: 24,
+  ease: 'none',
+  scrollTrigger: { trigger: '.feature', start: 'top bottom', end: 'top 60%', scrub: 1 }
+});
+// Phase 6 — feature → CTA: hidden
+// Phase 7 — CTA: zoom back in, behind text, big
+gsap.fromTo(toothState,
+  { scale: 0.5, opacity: 0 },
+  { scale: 1.4, opacity: 0.18, x: 0, y: 0, rot: 900, ease: 'none',
+    scrollTrigger: { trigger: '.big-cta', start: 'top bottom', end: 'top top', scrub: 1 } }
+);
+
+// ─── stat numbers count up ───
+gsap.utils.toArray('.stat-num').forEach(el => {
+  const target = el.dataset.target;
+  if (!target) return;
+  const isDecimal = target.indexOf('.') >= 0;
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const num = parseFloat(target);
+  gsap.fromTo({ v: 0 }, { v: num }, {
+    duration: 1.8, ease: 'power3.out',
+    onUpdate: function() {
+      const v = this.targets()[0].v;
+      const shown = isDecimal ? v.toFixed(1) : Math.round(v);
+      el.innerHTML = prefix + shown + (suffix ? `<em>${suffix}</em>` : '');
+    },
+    scrollTrigger: { trigger: el, start: 'top 80%' }
+  });
+});
+
+// ─── hero title: split chars + stagger reveal on load ───
+document.querySelectorAll('.hero-title .l1, .hero-title .l2, .hero-title .l3').forEach(line => {
+  const text = line.innerHTML;
+  line.innerHTML = `<span class="line-mask"><span class="line-inner">${text}</span></span>`;
+});
+gsap.set('.line-mask', { overflow: 'hidden', display: 'inline-block' });
+gsap.set('.line-inner', { display: 'inline-block' });
+gsap.from('.hero-title .line-inner', {
+  yPercent: 110, duration: 1.2, ease: 'expo.out', stagger: 0.12, delay: 1.4
+});
+gsap.from('.hero-eyebrow, .hero-meta', {
+  y: 24, opacity: 0, duration: 1.1, ease: 'power3.out', stagger: 0.15, delay: 2.0
+});
+gsap.from('.hero-labels', { y: 24, opacity: 0, duration: 1, ease: 'power3.out', delay: 2.3 });
+
+// (hero title + meta reveal handled by curtain block above — char-split version)
 
 // — stats reveal —
 gsap.utils.toArray('.stat').forEach((el, i)=>{
