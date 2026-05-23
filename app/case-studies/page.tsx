@@ -11,6 +11,7 @@ import {
   Section,
 } from "@/components/seo/SeoSections";
 import { caseStudies } from "@/lib/case-studies";
+import { getAlternates } from "@/lib/hreflang";
 
 const PAGE_URL = "https://kerblabs.com/case-studies";
 
@@ -18,14 +19,10 @@ export const metadata: Metadata = {
   title: "Case Studies — Real Results from Real Local Businesses | Kerblabs",
   description:
     "How independent UK and US local businesses use Kerblabs to recover missed-call revenue, fix Google Business Profile, and grow bookings. Dental, salon, med spa.",
-  alternates: {
-    canonical: PAGE_URL,
-    languages: {
-      "en-GB": PAGE_URL,
-      "en-US": PAGE_URL,
-      "x-default": PAGE_URL,
-    },
-  },
+  // /case-studies is a single UK-primary index that surfaces both UK and US
+  // case-study cards; per-case-study pages emit their own en-GB or en-US
+  // hreflang. The index itself stays UK-self + x-default.
+  alternates: getAlternates("/case-studies", "GB"),
   openGraph: {
     title: "Case Studies | Kerblabs",
     description:

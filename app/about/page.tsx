@@ -13,12 +13,13 @@ import {
   CtaSection,
   Section,
 } from "@/components/seo/SeoSections";
+import { getAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "About Kerblabs — Founded by Chandra Alladi | AI Marketing for Local Businesses",
   description:
     "Kerblabs Ltd is an AI marketing platform for independent local businesses in the UK and US, founded by Chandra Alladi. Meet the founder, learn our story, and see why we exist.",
-  alternates: { canonical: "https://kerblabs.com/about" },
+  alternates: getAlternates("/about", "GB"),
   openGraph: {
     title: "About Kerblabs — Founded by Chandra Alladi",
     description:

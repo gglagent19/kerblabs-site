@@ -24,6 +24,7 @@ import {
   clampDescription,
 } from "@/lib/seo-data";
 import { getRichCityContent } from "@/lib/rich-content";
+import { getAlternates } from "@/lib/hreflang";
 
 const industryToCombo: Record<string, (typeof comboIndustrySlugs)[number]> = {
   "dental-practices": "dental-marketing",
@@ -65,13 +66,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        "en-GB": url,
-        "x-default": url,
-      },
-    },
+    alternates: getAlternates(`/locations/${loc.slug}`, "GB"),
     robots: { index: true, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
