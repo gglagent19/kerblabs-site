@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   PricingCallout,
@@ -263,12 +263,13 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
           {
-            name: COMBO_TITLES[comboSlug],
+            label: COMBO_TITLES[comboSlug],
             href: `/industries/${comboToIndustry[comboSlug]}`,
           },
-          { name: loc.name },
+          { label: loc.name },
         ]}
       />
 
