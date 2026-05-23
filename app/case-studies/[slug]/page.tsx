@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   StepsList,
@@ -14,6 +14,7 @@ import {
   PillLinks,
 } from "@/components/seo/SeoSections";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/case-studies";
+import { getAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }));
@@ -34,18 +35,11 @@ export async function generateMetadata({
     : cs.clientName;
   const title = `${displayName} — Case Study | Kerblabs`;
 
-  // Country-aware hreflang so US case studies are flagged en-US and UK ones en-GB.
-  const languages: Record<string, string> = cs.country === "US"
-    ? { "en-US": url, "x-default": url }
-    : { "en-GB": url, "x-default": url };
-
   return {
     title,
     description: cs.metaDescription,
-    alternates: {
-      canonical: url,
-      languages,
-    },
+    // Country-aware hreflang so US case studies are flagged en-US and UK ones en-GB.
+    alternates: getAlternates(`/case-studies/${cs.slug}`, cs.country === "US" ? "US" : "GB"),
     openGraph: {
       title,
       description: cs.metaDescription,
@@ -133,9 +127,9 @@ export default async function CaseStudyPage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Case Studies", href: "/case-studies" },
-          { name: displayName },
+          { label: "Home", href: "/" },
+          { label: "Case Studies", href: "/case-studies" },
+          { label: displayName },
         ]}
       />
 

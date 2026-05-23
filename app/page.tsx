@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import StorySection from "@/components/StorySection";
@@ -11,6 +12,14 @@ import WhyKerblabs from "@/components/WhyKerblabs";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 import Schema from "@/components/seo/Schema";
+import { getAlternates } from "@/lib/hreflang";
+
+// Homepage is UK-primary today. A US-localised homepage does not yet exist,
+// so we emit self-referential en-GB + x-default only. When a US homepage
+// lands, swap to `getAlternatesWithRegions` and add the en-US URL.
+export const metadata: Metadata = {
+  alternates: getAlternates("/", "GB"),
+};
 
 export default function Page() {
   return (

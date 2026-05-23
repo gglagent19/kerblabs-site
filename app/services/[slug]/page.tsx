@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   ProblemsGrid,
@@ -17,6 +17,7 @@ import {
   PillLinks,
 } from "@/components/seo/SeoSections";
 import { services, getServiceBySlug, industries } from "@/lib/seo-data";
+import { getAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -34,7 +35,7 @@ export async function generateMetadata({
   return {
     title: service.pageTitle,
     description: service.metaDescription,
-    alternates: { canonical: url },
+    alternates: getAlternates(`/services/${service.slug}`, "GB"),
     openGraph: {
       title: service.pageTitle,
       description: service.metaDescription,
@@ -95,9 +96,9 @@ export default async function ServicePage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Services", href: "/services" },
-          { name: service.name },
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: service.name },
         ]}
       />
 

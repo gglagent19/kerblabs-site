@@ -18,14 +18,9 @@ export const metadata: Metadata = {
   verification: {
     google: "V1iKVUDuS2TymSaIND99inJcGHXHAJPtbfsah_RX0lQ",
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-GB": "https://kerblabs.com",
-      "en-US": "https://kerblabs.com",
-      "x-default": "https://kerblabs.com",
-    },
-  },
+  // NOTE: no sitewide `alternates` — per-page hreflang is set in each
+  // page's metadata via `lib/hreflang.ts`. Setting alternates here would
+  // cause every page to inherit the same (wrong) self-referential set.
 };
 
 export default function RootLayout({
@@ -36,6 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://assets.calendly.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://calendly.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
           strategy="afterInteractive"

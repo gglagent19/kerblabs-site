@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   ProblemsGrid,
@@ -25,6 +25,7 @@ import {
   locationCountry,
   type ComboIndustrySlug,
 } from "@/lib/seo-data";
+import { getAlternates } from "@/lib/hreflang";
 
 const industryToCombo: Record<string, ComboIndustrySlug> = {
   "dental-practices": "dental-marketing",
@@ -80,13 +81,7 @@ export async function generateMetadata({
   return {
     title: ind.pageTitle,
     description: ind.metaDescription,
-    alternates: {
-      canonical: url,
-      languages: {
-        [isUs ? "en-US" : "en-GB"]: url,
-        "x-default": url,
-      },
-    },
+    alternates: getAlternates(`/industries/${ind.slug}`, isUs ? "US" : "GB"),
     openGraph: {
       title: ind.pageTitle,
       description: ind.metaDescription,
@@ -156,9 +151,9 @@ export default async function IndustryPage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Industries" },
-          { name: ind.name },
+          { label: "Home", href: "/" },
+          { label: "Industries", href: "/industries" },
+          { label: ind.name },
         ]}
       />
 

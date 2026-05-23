@@ -4,8 +4,8 @@ import Link from "next/link";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
 import Schema from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   Faq,
@@ -16,6 +16,7 @@ import {
   comparisons,
   getComparisonBySlug,
 } from "@/lib/comparisons";
+import { getAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   return comparisons.map((c) => ({ slug: c.slug }));
@@ -33,7 +34,7 @@ export async function generateMetadata({
   return {
     title: cmp.seoTitle,
     description: cmp.metaDescription,
-    alternates: { canonical: url },
+    alternates: getAlternates(`/vs/${cmp.slug}`, "GB"),
     openGraph: {
       title: cmp.seoTitle,
       description: cmp.metaDescription,
@@ -123,9 +124,9 @@ export default async function ComparisonPage({
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
-          { name: "Comparisons", href: "/vs" },
-          { name: `vs ${cmp.competitorLabel}` },
+          { label: "Home", href: "/" },
+          { label: "Comparisons", href: "/vs" },
+          { label: `vs ${cmp.competitorLabel}` },
         ]}
       />
 

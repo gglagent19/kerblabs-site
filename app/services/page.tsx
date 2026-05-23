@@ -11,12 +11,13 @@ import {
   FeatureGrid,
 } from "@/components/seo/SeoSections";
 import { services } from "@/lib/seo-data";
+import { getAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Our Services — AI Marketing Systems for UK Businesses | Kerblabs",
   description:
     "Eight AI-powered services for UK local businesses: AI Voice Receptionist, Missed Call Text Back, Review Engine, Local SEO, GBP Management, CRM, Booking, Reputation Monitoring. From £97/mo.",
-  alternates: { canonical: "https://kerblabs.com/services" },
+  alternates: getAlternates("/services", "GB"),
   openGraph: {
     title: "AI Marketing Services for UK Local Businesses | Kerblabs",
     description:

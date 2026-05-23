@@ -69,3 +69,84 @@ the one to submit in Google Search Console.
 `/sitemap.xml` remains live (Next.js metadata route) as a combined
 fallback. It contains the same URLs the sub-sitemaps cover, so any crawler
 that probes the conventional path still gets a complete index.
+
+## IndexNow protocol
+
+This branch wires up [IndexNow](https://www.indexnow.org) so we can notify
+Bing/Yandex/Naver/Seznam/Yep (and via shared submission, everyone who
+subscribes to the IndexNow feed) the instant a URL is created, updated, or
+deleted, instead of waiting for the next crawl.
+
+### Pieces
+
+| File | Purpose |
+| --- | --- |
+| `public/e6cf3962fe127d9968f3310d2341baff.txt` | The IndexNow key file. Next.js serves `public/` at the site root, so this lives at `https://kerblabs.com/e6cf3962fe127d9968f3310d2341baff.txt`. The file body is the same 32-char hex string — that's how IndexNow verifies we own the host. |
+| `lib/indexnow.ts` | Exports `pingIndexNow(urls)` — a small `fetch`-based helper for in-process use (route handlers, webhooks, ISR revalidation hooks, anywhere we already know a URL just changed). |
+| `scripts/indexnow-ping.mjs` | Stand-alone Node 18+ script for CLI / CI / cron use. Auto-discovers the key from `public/*.txt`. |
+
+> Note: an earlier branch added a second key file
+> (`public/40aa3c12977540d3bfc142d678f8c504.txt`) for a separate verification.
+> Both files can coexist — IndexNow only cares that the key in the POST
+> body matches the file at `keyLocation`. The script in this branch
+> resolves the key by hex-filename pattern and prefers the file whose
+> content matches its own name.
+
+### Common invocations
+
+```bash
+# ping a few specific URLs (e.g. right after publishing a case study)
+node scripts/indexnow-ping.mjs \
+  https://kerblabs.com/case-studies/youmesushi \
+  https://kerblabs.com/case-studies
+
+# resubmit everything in the sitemap — useful after a big content push
+node scripts/indexnow-ping.mjs --all-sitemap
+
+# dry run — show what would happen
+node scripts/indexnow-ping.mjs --all-sitemap --dry-run
+
+# point at staging
+BASE_URL=https://staging.kerblabs.com node scripts/indexnow-ping.mjs --all-sitemap
+```
+
+`--all-sitemap` fetches `/sitemap-index`, walks every sub-sitemap, dedupes,
+and POSTs in batches of 10,000 (the IndexNow protocol cap).
+
+### Programmatic use
+
+```ts
+import { pingIndexNow } from "@/lib/indexnow";
+
+// after a CMS update / ISR revalidation
+const result = await pingIndexNow([
+  "https://kerblabs.com/services/web-design",
+]);
+if (!result.ok) {
+  console.warn("IndexNow ping failed:", result.status, result.error);
+}
+```
+
+### Env overrides
+
+| Env | Default | Notes |
+| --- | --- | --- |
+| `INDEXNOW_KEY` | `e6cf3962fe127d9968f3310d2341baff` | Override the key. Must match `public/<KEY>.txt`. |
+| `INDEXNOW_HOST` | `kerblabs.com` | Bare host (no scheme). |
+| `INDEXNOW_KEY_LOCATION` | `https://<host>/<key>.txt` | Public URL of the key file. |
+| `BASE_URL` (script only) | `https://kerblabs.com` | Origin to read sitemaps from. |
+
+### Post-deploy verification
+
+Once the branch ships, confirm the key file is reachable:
+
+```bash
+curl -i https://kerblabs.com/e6cf3962fe127d9968f3310d2341baff.txt
+# expect HTTP 200 with body: e6cf3962fe127d9968f3310d2341baff
+```
+
+Then run a real ping and watch for `200`/`202`:
+
+```bash
+node scripts/indexnow-ping.mjs https://kerblabs.com/
+```

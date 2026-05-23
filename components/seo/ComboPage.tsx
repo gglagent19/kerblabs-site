@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import SeoNav from "@/components/seo/SeoNav";
 import SeoFooter from "@/components/seo/SeoFooter";
-import Schema from "@/components/seo/Schema";
+import Schema, { locationAreaServed, locationGeo } from "@/components/seo/Schema";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
-  Breadcrumb,
   SeoHero,
   SectionHead,
   PricingCallout,
@@ -230,10 +230,8 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
             "@type": "Service",
             name: `${COMBO_TITLES[comboSlug]} in ${loc.name}`,
             provider: { "@id": "https://kerblabs.com/#organization" },
-            areaServed: {
-              "@type": loc.tier === "tier1" ? "City" : "AdministrativeArea",
-              name: loc.name,
-            },
+            areaServed: locationAreaServed(loc),
+            ...(locationGeo(loc) ? { geo: locationGeo(loc) } : {}),
             audience: { "@type": "BusinessAudience", audienceType: industry.industryPlural },
             description: `AI marketing systems for ${loc.name} ${industry.industryPlural.toLowerCase()}.`,
             offers: {
@@ -263,12 +261,13 @@ export default async function ComboPage({ comboSlug, locationSlug }: ComboPagePr
 
       <Breadcrumb
         items={[
-          { name: "Home", href: "/" },
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
           {
-            name: COMBO_TITLES[comboSlug],
+            label: COMBO_TITLES[comboSlug],
             href: `/industries/${comboToIndustry[comboSlug]}`,
           },
-          { name: loc.name },
+          { label: loc.name },
         ]}
       />
 
