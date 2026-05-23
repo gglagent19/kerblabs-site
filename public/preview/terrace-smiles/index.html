@@ -70,8 +70,9 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 @media (hover:none),(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
 
 /* persistent fixed 3D tooth — choreographed across sections */
-.tooth-fixed{position:fixed;top:50%;left:50%;width:520px;height:520px;margin:-260px 0 0 -260px;z-index:1;pointer-events:none;will-change:transform,opacity;transform:translate3d(22vw,-4vh,0) scale(1) rotate(-6deg);perspective:1200px}
-.tooth-fixed img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 40px 80px rgba(11,11,11,.32)) drop-shadow(0 0 100px rgba(212,115,78,.22));will-change:transform}
+.tooth-fixed{position:fixed;top:50%;left:50%;width:560px;height:560px;margin:-280px 0 0 -280px;z-index:1;pointer-events:none;will-change:transform,opacity;perspective:1600px;perspective-origin:50% 50%}
+.tooth-3d-inner{width:100%;height:100%;transform-style:preserve-3d;will-change:transform;transform:translate3d(20vw,-2vh,0) rotateX(-8deg) rotateY(-22deg) scale(1)}
+.tooth-fixed img{width:100%;height:100%;object-fit:contain;will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden;filter:drop-shadow(0 50px 90px rgba(11,11,11,.42)) drop-shadow(0 0 120px rgba(212,115,78,.28))}
 .tooth-glow{position:absolute;inset:8%;background:radial-gradient(circle at 50% 60%,rgba(212,115,78,.35) 0%,rgba(212,115,78,0) 60%);filter:blur(40px);z-index:-1;will-change:transform,opacity}
 @media(max-width:960px){.tooth-fixed{width:340px;height:340px;margin:-170px 0 0 -170px;transform:translate3d(15vw,-4vh,0) scale(1) rotate(-6deg);opacity:.85}}
 @media(max-width:520px){.tooth-fixed{width:240px;height:240px;margin:-120px 0 0 -120px;transform:translate3d(18vw,-12vh,0) scale(1) rotate(-6deg);opacity:.6}}
@@ -229,7 +230,9 @@ footer{padding:60px 0 36px;background:var(--ink);color:var(--bg);border-top:1px 
 <div class="cursor-ring"></div>
 <div class="tooth-fixed" id="toothFixed">
   <div class="tooth-glow"></div>
-  <img src="/preview/terrace-smiles/tooth.png" alt="" />
+  <div class="tooth-3d-inner" id="tooth3dInner">
+    <img src="/preview/terrace-smiles/tooth.png" alt="" />
+  </div>
 </div>
 
 <nav>
@@ -547,59 +550,70 @@ document.querySelectorAll('a, button, .service-row, .faq-q, .principle, .meet-me
   el.addEventListener('mouseleave', () => { cDot?.classList.remove('hover'); cRing?.classList.remove('hover'); });
 });
 
-// ─── persistent 3D tooth: choreographed across sections + mouse parallax ───
-const toothEl = document.getElementById('toothFixed');
+// ─── persistent 3D tooth: real rotateX/rotateY choreography + mouse parallax ───
+// Strategy: scroll drives rotateY (yaw) primarily. Translation kept small so it
+// doesn't "fly". Mouse adds rotateX (pitch) + small rotateY offset for parallax.
+const toothInner = document.getElementById('tooth3dInner');
+const toothWrap = document.getElementById('toothFixed');
 let mx = 0, my = 0, tmx = 0, tmy = 0;
 window.addEventListener('mousemove', e => {
-  mx = (e.clientX / window.innerWidth - 0.5) * 16;
-  my = (e.clientY / window.innerHeight - 0.5) * 16;
+  mx = (e.clientX / window.innerWidth - 0.5);  // -0.5 .. 0.5
+  my = (e.clientY / window.innerHeight - 0.5);
 });
-// scroll-driven master state — written into CSS vars, mouse parallax adds on top
-const toothState = { x: 22, y: -4, scale: 1, rot: -6, opacity: 1 };
+// scroll-driven master state (the "camera-around-tooth" angles)
+// rotY is the primary 3D rotation. Kept within ±55° so the flat-image foreshortening
+// stays visually believable (no flat-pancake edge-on moments).
+const toothState = { x: 20, y: -2, scale: 1, rotY: -22, rotX: -8, rotZ: 0, opacity: 1 };
 (function toothRaf(){
-  tmx += (mx - tmx) * 0.06;
-  tmy += (my - tmy) * 0.06;
-  if (toothEl) {
-    toothEl.style.transform = `translate3d(${toothState.x}vw, ${toothState.y}vh, 0) scale(${toothState.scale}) rotate(${toothState.rot}deg) rotateX(${-tmy * 0.6}deg) rotateY(${tmx * 0.6}deg)`;
-    toothEl.style.opacity = toothState.opacity;
+  tmx += (mx - tmx) * 0.07;
+  tmy += (my - tmy) * 0.07;
+  if (toothInner) {
+    // base 3D rotation from scroll state + mouse parallax overlay
+    const finalRotY = toothState.rotY + tmx * 18;   // strong yaw response
+    const finalRotX = toothState.rotX - tmy * 14;   // strong pitch response
+    toothInner.style.transform =
+      `translate3d(${toothState.x}vw, ${toothState.y}vh, 0) ` +
+      `rotateX(${finalRotX}deg) rotateY(${finalRotY}deg) rotateZ(${toothState.rotZ}deg) ` +
+      `scale(${toothState.scale})`;
+    toothWrap.style.opacity = toothState.opacity;
   }
   requestAnimationFrame(toothRaf);
 })();
-// Phase 1 — hero → stats: drift down-left, gentle rotate, slight shrink
+
+// Phase 1 — hero → stats: rotate AROUND vertical axis, no translation drama
 gsap.to(toothState, {
-  x: 8, y: 8, scale: 0.85, rot: 24,
+  rotY: 18, rotX: -4, scale: 0.95, x: 16, y: 2,
   ease: 'none',
   scrollTrigger: { trigger: '.stats', start: 'top bottom', end: 'top top', scrub: 1 }
 });
-// Phase 2 — stats → pinned principles: shrink to corner, drift up-right, rotate big
+// Phase 2 — stats → pinned: tooth slides to upper-right while continuing to rotate
 gsap.to(toothState, {
-  x: 30, y: -32, scale: 0.32, rot: 180, opacity: 0.85,
+  rotY: 55, rotX: 12, scale: 0.45, x: 28, y: -28, opacity: 0.9,
   ease: 'none',
   scrollTrigger: { trigger: '.pinned-section', start: 'top bottom', end: 'top top', scrub: 1 }
 });
-// Phase 3 — through pinned: continuous slow spin
+// Phase 3 — through pinned section: rotate THROUGH and back (yaw -55 → -55 + 110 over the pin)
 gsap.to(toothState, {
-  rot: 540,
+  rotY: -55, rotX: -6,
   ease: 'none',
   scrollTrigger: { trigger: '.pinned-section', start: 'top top', end: 'bottom top', scrub: 1 }
 });
-// Phase 4 — pinned → services: zoom back, drift left, face right
+// Phase 4 — pinned → services: tooth returns to scene from the LEFT, facing right
 gsap.to(toothState, {
-  x: -28, y: 4, scale: 0.9, rot: 720, opacity: 1,
+  rotY: 28, rotX: -10, scale: 0.85, x: -22, y: 2, opacity: 1,
   ease: 'none',
   scrollTrigger: { trigger: '.services', start: 'top bottom', end: 'top top', scrub: 1 }
 });
-// Phase 5 — services → feature: fade out (let feature own the visual)
+// Phase 5 — services → feature: fade out (let feature image own the visual)
 gsap.to(toothState, {
-  scale: 0.5, opacity: 0, y: 24,
+  scale: 0.6, opacity: 0,
   ease: 'none',
   scrollTrigger: { trigger: '.feature', start: 'top bottom', end: 'top 60%', scrub: 1 }
 });
-// Phase 6 — feature → CTA: hidden
-// Phase 7 — CTA: zoom back in, behind text, big
+// Phase 7 — big CTA: ghost back in large, mostly head-on, behind text
 gsap.fromTo(toothState,
-  { scale: 0.5, opacity: 0 },
-  { scale: 1.4, opacity: 0.18, x: 0, y: 0, rot: 900, ease: 'none',
+  { scale: 0.6, opacity: 0 },
+  { scale: 1.5, opacity: 0.16, x: 0, y: 0, rotY: 8, rotX: -2, ease: 'none',
     scrollTrigger: { trigger: '.big-cta', start: 'top bottom', end: 'top top', scrub: 1 } }
 );
 
