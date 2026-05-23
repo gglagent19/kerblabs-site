@@ -3,6 +3,7 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /preview/
 
 Host: https://kerblabs.com
 Sitemap: https://kerblabs.com/sitemap-index
