@@ -11,6 +11,7 @@ import {
   Section,
 } from "@/components/seo/SeoSections";
 import { industries } from "@/lib/seo-data";
+import { getAlternates } from "@/lib/hreflang";
 
 // US-only industries get a separate group (currently just med-spa).
 const US_ONLY_INDUSTRY_SLUGS: ReadonlySet<string> = new Set(["med-spa"]);
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: "Industries We Serve — AI Marketing for Local Businesses | Kerblabs",
   description:
     "Kerblabs builds AI marketing systems for 30+ UK industries — dental practices, hair salons, contractors, estate agents, aesthetic clinics, vets, opticians, solicitors, accountants and more — plus US med spas. From £97/mo.",
-  alternates: { canonical: "https://kerblabs.com/industries" },
+  alternates: getAlternates("/industries", "GB"),
   openGraph: {
     title: "Industries We Serve | Kerblabs",
     description:

@@ -18,14 +18,9 @@ export const metadata: Metadata = {
   verification: {
     google: "V1iKVUDuS2TymSaIND99inJcGHXHAJPtbfsah_RX0lQ",
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-GB": "https://kerblabs.com",
-      "en-US": "https://kerblabs.com",
-      "x-default": "https://kerblabs.com",
-    },
-  },
+  // NOTE: no sitewide `alternates` — per-page hreflang is set in each
+  // page's metadata via `lib/hreflang.ts`. Setting alternates here would
+  // cause every page to inherit the same (wrong) self-referential set.
 };
 
 export default function RootLayout({

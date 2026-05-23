@@ -11,12 +11,13 @@ import {
   Section,
 } from "@/components/seo/SeoSections";
 import { locations, locationCountry } from "@/lib/seo-data";
+import { getAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "AI Marketing for Local Businesses Across the UK | Kerblabs",
   description:
     "Kerblabs serves local businesses in 25 major UK cities — from London to Aberdeen, Belfast to Brighton. Find your city and see how AI marketing automation can grow your business.",
-  alternates: { canonical: "https://kerblabs.com/locations" },
+  alternates: getAlternates("/locations", "GB"),
   openGraph: {
     title: "AI Marketing for Local Businesses Across the UK | Kerblabs",
     description:

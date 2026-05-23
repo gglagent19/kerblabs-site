@@ -11,12 +11,13 @@ import {
   Section,
 } from "@/components/seo/SeoSections";
 import { comparisons } from "@/lib/comparisons";
+import { getAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kerblabs vs … — Honest Comparisons for Local Marketing in 2026",
   description:
     "Honest, factual comparisons of Kerblabs vs Treatwell, Checkatrade, and DIY Google Business Profile management for UK local businesses in 2026.",
-  alternates: { canonical: "https://kerblabs.com/vs" },
+  alternates: getAlternates("/vs", "GB"),
   openGraph: {
     title: "Kerblabs Comparisons — vs Treatwell, Checkatrade and DIY GBP",
     description:

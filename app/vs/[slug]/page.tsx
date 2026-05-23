@@ -16,6 +16,7 @@ import {
   comparisons,
   getComparisonBySlug,
 } from "@/lib/comparisons";
+import { getAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   return comparisons.map((c) => ({ slug: c.slug }));
@@ -33,7 +34,7 @@ export async function generateMetadata({
   return {
     title: cmp.seoTitle,
     description: cmp.metaDescription,
-    alternates: { canonical: url },
+    alternates: getAlternates(`/vs/${cmp.slug}`, "GB"),
     openGraph: {
       title: cmp.seoTitle,
       description: cmp.metaDescription,
