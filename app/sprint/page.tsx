@@ -13,10 +13,9 @@ import {
 } from "@/components/seo/SeoSections";
 import { getAlternates } from "@/lib/hreflang";
 
-// TODO: Replace TALLY_FORM_ID with the real Tally form ID once Chandu has set up
-// the application form (see agent O2 output / GTM doc Section 7.1).
-// Until then, the form section renders a clearly-labelled placeholder.
-const TALLY_FORM_ID = "TODO_TALLY_FORM_ID";
+// Tally form: The 5 Spa Sprint application (9 screening questions, see GTM 07 §6.1).
+// Created 2026-05-23 under hello@kerblabs.com Tally workspace.
+const TALLY_FORM_ID = "eqYL9O";
 
 const COHORT_START_DATE = "2026-06-16";
 const APPLICATIONS_CLOSE_DATE = "2026-06-12";
@@ -443,60 +442,16 @@ export default function SprintPage() {
           subtitle="Nine questions. Four minutes to fill in. Auto-redirect to Chandu's calendar for a 15-minute screening call. Decisions announced by EOD Jun 13."
         />
 
-        {/* Tally embed.
-            When TALLY_FORM_ID is still the placeholder, render an inline
-            notice. Once Chandu drops in the real ID, the iframe will mount
-            and the placeholder branch is unreachable. */}
+        {/* Tally embed — Form ID set 2026-05-23 (Chandu's hello@kerblabs.com Tally workspace). */}
         <div className="card p-6 md:p-8">
-          {TALLY_FORM_ID === "TODO_TALLY_FORM_ID" ? (
-            <div className="text-center py-10">
-              <div className="label mb-4 text-[color:var(--color-lime)]">APPLICATION FORM</div>
-              <div className="font-display font-bold text-xl md:text-2xl mb-3">
-                Application form goes live on Launch Day — Jun 2, 2026.
-              </div>
-              <p className="text-sm text-[color:var(--color-text-dim)] max-w-xl mx-auto mb-6">
-                {/* TODO: Chandu — paste the real Tally form ID into the
-                    TALLY_FORM_ID constant at the top of this file (see agent
-                    O2 output) and the embedded form will render in this
-                    slot automatically. */}
-                The Tally application form will embed here once it is set up. In the meantime,
-                drop us a line at{" "}
-                <a
-                  href="mailto:hello@kerblabs.com?subject=The%205%20Spa%20Sprint%20%E2%80%94%20interested"
-                  className="text-[color:var(--color-lime)] underline"
-                >
-                  hello@kerblabs.com
-                </a>{" "}
-                with the subject line &ldquo;5 Spa Sprint — interested&rdquo; and we will email
-                you the application link the moment it goes live.
-              </p>
-              <a
-                href="mailto:hello@kerblabs.com?subject=The%205%20Spa%20Sprint%20%E2%80%94%20interested"
-                className="btn-primary"
-              >
-                Email me when applications open
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                >
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </a>
-            </div>
-          ) : (
-            <iframe
-              src={`https://tally.so/embed/${TALLY_FORM_ID}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
-              width="100%"
-              height="780"
-              frameBorder={0}
-              title="The 5 Spa Sprint — Application Form"
-              loading="lazy"
-            />
-          )}
+          <iframe
+            src={`https://tally.so/embed/${TALLY_FORM_ID}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
+            width="100%"
+            height="780"
+            frameBorder={0}
+            title="The 5 Spa Sprint — Application Form"
+            loading="lazy"
+          />
         </div>
 
         <p className="text-xs text-[color:var(--color-text-faint)] mt-6 max-w-2xl">
