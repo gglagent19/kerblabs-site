@@ -18,6 +18,14 @@ export const metadata: Metadata = {
   verification: {
     google: "V1iKVUDuS2TymSaIND99inJcGHXHAJPtbfsah_RX0lQ",
   },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-GB": "https://kerblabs.com",
+      "en-US": "https://kerblabs.com",
+      "x-default": "https://kerblabs.com",
+    },
+  },
 };
 
 export default function RootLayout({

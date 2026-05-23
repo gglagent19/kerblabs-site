@@ -93,12 +93,13 @@ await check('/llms.txt', async () => {
 });
 
 // 4. Sitemap index + sub-sitemaps
-await check('/sitemap.xml index', async () => {
-  const { res, body } = await fetchText('/sitemap.xml');
+await check('sitemap-index', async () => {
+  // P1's design: /sitemap-index is the <sitemapindex>, /sitemap.xml is the combined <urlset> fallback
+  const { res, body } = await fetchText('/sitemap-index');
   if (res.status !== 200) return { status: 'fail', detail: `status ${res.status}` };
   if (!body.includes('<?xml')) return { status: 'fail', detail: 'not XML' };
   const isIndex = body.includes('<sitemapindex');
-  const subs = [...body.matchAll(/<loc>([^<]+sitemap[^<]+\.xml)<\/loc>/g)].map((m) => m[1]);
+  const subs = [...body.matchAll(/<loc>([^<]+sitemap[^<]+)<\/loc>/g)].map((m) => m[1]);
   if (!isIndex || subs.length === 0) {
     return { status: 'fail', detail: 'no <sitemapindex> with sub-sitemap <loc>s' };
   }
@@ -159,10 +160,11 @@ await check('/about page', async () => {
 await check('Hreflang en-GB', async () => {
   const { res, body } = await fetchText('/');
   if (res.status !== 200) return { status: 'fail', detail: `/ returned ${res.status}` };
-  if (!body.includes('hreflang="en-GB"') && !body.includes("hreflang='en-GB'")) {
+  // HTML attribute names are case-insensitive; Next 14 sometimes outputs hrefLang
+  if (!/href\s*lang\s*=\s*["']en-GB["']/i.test(body)) {
     return { status: 'fail', detail: 'no hreflang="en-GB" in HTML' };
   }
-  const hasUS = body.includes('hreflang="en-US"') || body.includes("hreflang='en-US'");
+  const hasUS = /href\s*lang\s*=\s*["']en-US["']/i.test(body);
   return { status: 'pass', detail: `en-GB present${hasUS ? ', en-US also present' : ' (no en-US — OK if no US-specific homepage)'}` };
 });
 
@@ -180,8 +182,8 @@ await check('Calendly lazy-loaded', async () => {
 });
 
 // 10. US med-spa city page
-await check('/med-spa-marketing/miami', async () => {
-  const { res, body } = await fetchText('/med-spa-marketing/miami');
+await check('/med-spa-marketing/us-miami', async () => {
+  const { res, body } = await fetchText('/med-spa-marketing/us-miami');
   if (res.status !== 200) return { status: 'fail', detail: `status ${res.status}` };
   const hasBrickell = body.includes('Brickell');
   const hasWynwood = body.includes('Wynwood');
@@ -197,11 +199,12 @@ await check('robots.txt sitemap pointer', async () => {
   if (res.status !== 200) return { status: 'fail', detail: `status ${res.status}` };
   const lines = body.split(/\r?\n/).filter((l) => /^sitemap:/i.test(l.trim()));
   if (lines.length === 0) return { status: 'fail', detail: 'no Sitemap: line in robots.txt' };
-  const pointsToIndex = lines.some((l) => /sitemap\.xml\s*$/i.test(l.trim()));
-  if (!pointsToIndex) {
-    return { status: 'fail', detail: `robots.txt has Sitemap line(s) but none point to /sitemap.xml: ${lines.join(' | ')}` };
+  // Accept either /sitemap.xml (legacy combined) or /sitemap-index (P1's new index)
+  const pointsToValid = lines.some((l) => /sitemap(?:\.xml|-index)?\s*$/i.test(l.trim()));
+  if (!pointsToValid) {
+    return { status: 'fail', detail: `robots.txt has Sitemap line(s) but none point at a recognized sitemap path: ${lines.join(' | ')}` };
   }
-  return { status: 'pass', detail: `points to sitemap index (${lines.length} Sitemap line(s))` };
+  return { status: 'pass', detail: `points to sitemap (${lines.length} Sitemap line(s)): ${lines.join(' | ')}` };
 });
 
 // 12. Organization schema anchored
