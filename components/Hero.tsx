@@ -238,6 +238,7 @@ export default function Hero() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E1E0CC" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </a>
+            <a href="/sprint" className="btn-ghost text-sm">See The 5 Spa Sprint →</a>
             <CalendlyButton url="https://calendly.com/hello-kerblabs/15-min-discovery-call" className="btn-ghost text-sm">Request an audit</CalendlyButton>
           </motion.div>
         </motion.div>

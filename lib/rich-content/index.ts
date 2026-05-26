@@ -1,8 +1,12 @@
 // Central index for all rich, genuinely unique per-page content.
 import type { RichCityContent, RichComboContent } from "./types";
 
-// US med-spa combo imports (5 launch cities)
+// US med-spa combo imports (9 launch cities — 5 original + 4 FL Sprint Cohort 1 cities)
 import { content as med_spa_marketing_miami } from "./combos/med-spa-marketing-miami";
+import { content as med_spa_marketing_tampa } from "./combos/med-spa-marketing-us-tampa";
+import { content as med_spa_marketing_orlando } from "./combos/med-spa-marketing-us-orlando";
+import { content as med_spa_marketing_jacksonville } from "./combos/med-spa-marketing-us-jacksonville";
+import { content as med_spa_marketing_fort_lauderdale } from "./combos/med-spa-marketing-us-fort-lauderdale";
 import { content as med_spa_marketing_new_york } from "./combos/med-spa-marketing-new-york";
 import { content as med_spa_marketing_los_angeles } from "./combos/med-spa-marketing-los-angeles";
 import { content as med_spa_marketing_chicago } from "./combos/med-spa-marketing-chicago";
@@ -1571,8 +1575,12 @@ const COMBO_CONTENT: Record<string, RichComboContent> = {
   "fencing-marketing:sunderland": fencing_marketing_sunderland,
   "fencing-marketing:swansea": fencing_marketing_swansea,
   "fencing-marketing:wolverhampton": fencing_marketing_wolverhampton,
-  // US med-spa launch cities (slugs in seo-data use `us-` prefix; filenames don't)
+  // US med-spa launch cities (slugs in seo-data use `us-` prefix; filenames vary)
   "med-spa-marketing:us-miami": med_spa_marketing_miami,
+  "med-spa-marketing:us-tampa": med_spa_marketing_tampa,
+  "med-spa-marketing:us-orlando": med_spa_marketing_orlando,
+  "med-spa-marketing:us-jacksonville": med_spa_marketing_jacksonville,
+  "med-spa-marketing:us-fort-lauderdale": med_spa_marketing_fort_lauderdale,
   "med-spa-marketing:us-new-york-city": med_spa_marketing_new_york,
   "med-spa-marketing:us-los-angeles": med_spa_marketing_los_angeles,
   "med-spa-marketing:us-chicago": med_spa_marketing_chicago,

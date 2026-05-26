@@ -14,14 +14,14 @@ import { locations, locationCountry } from "@/lib/seo-data";
 import { getAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
-  title: "AI Marketing for Local Businesses Across the UK | Kerblabs",
+  title: "AI Marketing Locations — Florida Med Spas + UK Local Businesses | Kerblabs",
   description:
-    "Kerblabs serves local businesses in 25 major UK cities — from London to Aberdeen, Belfast to Brighton. Find your city and see how AI marketing automation can grow your business.",
+    "Kerblabs serves Florida med spas (Miami, Tampa, Orlando, Jacksonville, Fort Lauderdale) and local businesses across 25 major UK cities. Find your city.",
   alternates: getAlternates("/locations", "GB"),
   openGraph: {
-    title: "AI Marketing for Local Businesses Across the UK | Kerblabs",
+    title: "AI Marketing Locations — FL Med Spas + UK Local Businesses | Kerblabs",
     description:
-      "Kerblabs serves local businesses across 25 major UK cities.",
+      "Florida med spas and UK local businesses. 9 US Tier-1 cities and 25 UK Tier-1 cities served, fully remote.",
     type: "website",
     url: "https://kerblabs.com/locations",
     siteName: "Kerblabs",
@@ -29,19 +29,24 @@ export const metadata: Metadata = {
 };
 
 export default function LocationsHub() {
-  // Only show UK Tier 1 cities — these are the only pages that exist
-  // under /locations/. US cities live under US-only verticals (e.g.
-  // /med-spa-marketing/us-miami) and are listed separately on /industries/med-spa.
-  const tier1 = locations.filter(
+  // UK Tier 1 cities (existing footprint).
+  const ukTier1 = locations.filter(
     (l) => l.tier === "tier1" && locationCountry(l) === "GB"
   );
+  // US Tier 1 cities (the med-spa launch footprint — 5 original + 4 FL Sprint Cohort 1 cities).
+  const usTier1 = locations.filter(
+    (l) => l.tier === "tier1" && locationCountry(l) === "US"
+  );
+  // FL cities surface first within the US section (Cohort 1 priority).
+  const usFlorida = usTier1.filter((l) => l.region === "Florida");
+  const usOther = usTier1.filter((l) => l.region !== "Florida");
 
-  // Group by region for scannability
-  const byRegion = tier1.reduce((acc, loc) => {
+  // Group UK by region for scannability
+  const byRegion = ukTier1.reduce((acc, loc) => {
     if (!acc[loc.region]) acc[loc.region] = [];
     acc[loc.region].push(loc);
     return acc;
-  }, {} as Record<string, typeof tier1>);
+  }, {} as Record<string, typeof ukTier1>);
 
   return (
     <main className="relative">
@@ -57,22 +62,81 @@ export default function LocationsHub() {
       <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Locations" }]} />
 
       <SeoHero
-        eyebrow="UK-WIDE COVERAGE"
+        eyebrow="US + UK COVERAGE"
         h1="AI marketing for local businesses"
-        highlight="across the UK."
-        subhead={`Kerblabs serves businesses across 25 major UK cities. Whether you're a dental practice in Manchester, a salon in Bristol, a contractor in Birmingham, or an estate agent in Edinburgh — our AI growth systems work the same wherever you are. We're fully remote, so even if your city isn't on this list, we still serve you. Book a free demo and we'll show you what we can do for your business.`}
+        highlight="in Florida and across the UK."
+        subhead={`Kerblabs serves Florida med spas — Miami, Tampa, Orlando, Jacksonville, Fort Lauderdale — plus local businesses across 25 major UK cities. The Florida footprint runs on the Spa Sprint mechanic ($0 upfront, $99 refundable, $1,200 only on KPI hit). The UK footprint runs on the £97-£497/mo Spark-to-Full-Engine tiers. Fully remote, no lock-in either side.`}
         primaryCta={{
           label: "Book a free demo",
           href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
+        secondaryCta={{
+          label: "See The 5 Spa Sprint",
+          href: "/sprint",
+        }}
         stats={[
-          { value: `${tier1.length}`, label: "UK cities with dedicated pages" },
-          { value: "100", label: "Industry × city specialist pages" },
-          { value: "UK-wide", label: "Remote service" },
+          { value: `${usTier1.length}`, label: "US cities served (med-spa launch)" },
+          { value: `${ukTier1.length}`, label: "UK cities with dedicated pages" },
+          { value: "Remote", label: "FL + UK delivery" },
         ]}
       />
 
       <Section>
+        <SectionHead
+          label="UNITED STATES — FLORIDA + MAJOR METROS"
+          title="The US"
+          highlight="footprint."
+          subtitle="The US launch covers the med-spa vertical. Florida (Cohort 1 of The 5 Spa Sprint) sits at the front of the queue; the four other Tier-1 metros — New York, Los Angeles, Chicago, Houston — round out the national coverage."
+        />
+        {usFlorida.length > 0 && (
+          <div className="mb-10">
+            <h3 className="font-display font-bold text-sm uppercase tracking-[0.15em] text-[color:var(--color-lime)] mb-5">
+              Florida — The 5 Spa Sprint footprint
+            </h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {usFlorida.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/med-spa-marketing/${c.slug}`}
+                  className="card p-5 group block"
+                >
+                  <h4 className="font-display font-bold text-base mb-1 group-hover:text-[color:var(--color-lime)] transition">
+                    {c.name}
+                  </h4>
+                  <p className="text-xs text-[color:var(--color-text-dim)]">
+                    {c.county}, FL
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        {usOther.length > 0 && (
+          <div>
+            <h3 className="font-display font-bold text-sm uppercase tracking-[0.15em] text-[color:var(--color-text-faint)] mb-5">
+              Other US Tier-1 metros (med-spa)
+            </h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {usOther.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/med-spa-marketing/${c.slug}`}
+                  className="card p-5 group block"
+                >
+                  <h4 className="font-display font-bold text-base mb-1 group-hover:text-[color:var(--color-lime)] transition">
+                    {c.name}
+                  </h4>
+                  <p className="text-xs text-[color:var(--color-text-dim)]">
+                    {c.county}, {c.region}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </Section>
+
+      <Section background="surface">
         <SectionHead
           label="MAJOR UK CITIES"
           title="Pick your"
@@ -106,19 +170,19 @@ export default function LocationsHub() {
         </div>
       </Section>
 
-      <Section background="surface">
+      <Section>
         <SectionHead
           label="NOT ON THE LIST?"
           title="We still serve"
           highlight="your city."
-          subtitle={`Kerblabs is fully remote — we serve businesses across the entire UK. The pages above cover the 25 cities with the most search volume, but the platform works the same wherever you're based. Book a demo and tell us where your business is — we'll show you what we can do.`}
+          subtitle={`Kerblabs is fully remote — Florida med spas anywhere in the state plus UK businesses anywhere in the four nations. The pages above cover the cities with the most search volume; the platform works the same wherever you're based. Book a demo and tell us where you're located — we'll show you what we can do.`}
         />
       </Section>
 
       <CtaSection
         title="Ready to grow your"
         highlight="local business?"
-        subtitle="Book a free 30-minute strategy call. We'll show you exactly what Kerblabs can do, regardless of where you're based in the UK."
+        subtitle="Book a free 30-minute strategy call. We'll show you exactly what Kerblabs can do, whether you're a Florida med spa or a UK local business."
       />
 
       <SeoFooter />

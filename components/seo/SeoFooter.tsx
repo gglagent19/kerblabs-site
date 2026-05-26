@@ -39,8 +39,14 @@ export default function SeoFooter() {
               kerblabs<span className="text-[color:var(--color-lime)]">.</span>
             </a>
             <p className="text-[color:var(--color-text-dim)] text-sm mt-3 max-w-xs leading-relaxed">
-              AI-powered growth systems for UK local businesses. Fully remote, serving the whole UK.
+              AI-powered growth systems for Florida med spas and UK local businesses. Fully remote.
             </p>
+            <Link
+              href="/sprint"
+              className="inline-block mt-4 text-xs text-[color:var(--color-lime)] hover:underline"
+            >
+              The 5 Spa Sprint — Cohort 1 (FL) →
+            </Link>
             <CalendlyButton
               url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
               className="btn-primary mt-5 text-xs"
@@ -111,9 +117,12 @@ export default function SeoFooter() {
 
         <div className="pt-8 border-t border-[color:var(--color-border)] flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="text-xs text-[color:var(--color-text-faint)] tracking-wide">
-            &copy; {new Date().getFullYear()} Kerblabs Ltd. &middot; Serving the whole UK remotely
+            &copy; {new Date().getFullYear()} Kerblabs Ltd. &middot; Serving Florida med spas and UK local businesses, fully remote
           </div>
           <div className="flex items-center gap-5 text-xs text-[color:var(--color-text-dim)]">
+            <Link href="/sprint" className="hover:text-[color:var(--color-lime)] transition">
+              The 5 Spa Sprint
+            </Link>
             <CalendlyButton
               url="https://calendly.com/hello-kerblabs/15-min-discovery-call"
               className="hover:text-[color:var(--color-lime)] transition"

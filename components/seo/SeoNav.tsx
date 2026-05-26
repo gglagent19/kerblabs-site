@@ -34,6 +34,18 @@ export default function SeoNav() {
             Pricing
           </a>
           <a
+            href="/case-studies"
+            className="text-sm transition-colors duration-300 text-[color:var(--color-text-dim)] hover:text-[color:var(--color-text)]"
+          >
+            Case Studies
+          </a>
+          <a
+            href="/sprint"
+            className="text-sm transition-colors duration-300 text-[color:var(--color-lime)] hover:opacity-80"
+          >
+            5 Spa Sprint
+          </a>
+          <a
             href="/locations"
             className="text-sm transition-colors duration-300 text-[color:var(--color-text-dim)] hover:text-[color:var(--color-text)]"
           >

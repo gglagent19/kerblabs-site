@@ -3,11 +3,15 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import CalendlyButton from "./CalendlyButton";
 
+// Approximate GBP→USD rates locked for display only (mid-2026 reference). The actual
+// invoice currency is GBP for UK clients; the USD note is a courtesy for the US-readable
+// audience. The 5 Spa Sprint USD pricing ($99 / $1,200) is invoiced in USD via PayU.
 const tiers = [
   {
     name: "Spark",
     tag: "Get found on Google. The foundation every local shop needs before anything else.",
     monthly: "£97/mo",
+    monthlyUsd: "≈ $122/mo",
     setup: "£297 setup",
     badge: null,
     features: [
@@ -23,6 +27,7 @@ const tiers = [
     name: "Momentum",
     tag: "Get found, get trusted. GBP growth plus a review engine that builds your reputation on autopilot.",
     monthly: "£197/mo",
+    monthlyUsd: "≈ $248/mo",
     setup: "£497 setup",
     badge: "Popular",
     features: [
@@ -39,6 +44,7 @@ const tiers = [
     name: "Autopilot",
     tag: "Your front desk runs itself. AI answers calls, books appointments, and follows up — 24/7.",
     monthly: "£347/mo",
+    monthlyUsd: "≈ $437/mo",
     setup: "£797 setup",
     badge: null,
     features: [
@@ -55,6 +61,7 @@ const tiers = [
     name: "Full Engine",
     tag: "Every system, one team, one fee. SEO, voice, web, CRM, reputation — the complete growth machine.",
     monthly: "£497/mo",
+    monthlyUsd: "≈ $626/mo",
     setup: "£1,200 setup",
     badge: "Best value",
     features: [
@@ -118,6 +125,9 @@ function PricingCard3D({
             <span className="text-sm text-[color:var(--color-text-dim)] ml-2">
               + {t.setup}
             </span>
+            <div className="text-xs text-[color:var(--color-text-faint)] mt-1">
+              {t.monthlyUsd} (USD, indicative)
+            </div>
           </div>
 
           <ul className="space-y-2.5 mb-8 text-sm flex-1">

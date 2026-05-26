@@ -33,18 +33,19 @@ const industryToCombo: Record<string, (typeof comboIndustrySlugs)[number]> = {
   "estate-agents": "estate-agent-marketing",
 };
 
-// Only UK Tier 1 cities are built here. Tier 2/3 had no real search volume and
+// All Tier 1 cities (UK + US) are built here. Tier 2/3 had no real search volume and
 // only templated content — they return 404, which is the right signal for
 // Google to drop them from the index entirely (vs noindex which keeps the URL
-// alive). US cities have their own copy and are handled separately by the
-// US-only verticals (e.g. /med-spa-marketing/[slug]).
+// alive). US city pages render the same shell with country-aware copy; the
+// vertical combo pages (e.g. /med-spa-marketing/us-miami) carry the deeper
+// US-vertical-specific content.
 export async function generateStaticParams() {
   return locations
-    .filter((l) => l.tier === "tier1" && locationCountry(l) === "GB")
+    .filter((l) => l.tier === "tier1")
     .map((l) => ({ slug: l.slug }));
 }
 
-export const dynamicParams = false; // Reject any non-Tier-1 / non-UK slug with 404
+export const dynamicParams = false; // Reject any non-Tier-1 slug with 404
 
 export async function generateMetadata({
   params,
@@ -53,20 +54,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
-  if (!loc || loc.tier !== "tier1" || locationCountry(loc) !== "GB") return {};
+  if (!loc || loc.tier !== "tier1") return {};
+  const country = locationCountry(loc);
   const rich = getRichCityContent(slug);
   const url = `https://kerblabs.com/locations/${loc.slug}`;
   const title = `AI Marketing Agency in ${loc.name} | Kerblabs`;
+  const fallbackDescription =
+    country === "US"
+      ? `Kerblabs helps ${loc.name} med spas and local businesses grow with AI voice, automated reviews, and local SEO. $0 upfront, $99 refundable, $1,200 only on KPI hit.`
+      : `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo.`;
   const description = clampDescription(
-    rich
-      ? rich.heroSubhead
-      : `Kerblabs helps ${loc.name} businesses grow with AI voice, automated reviews, and local SEO. Dental, salons, contractors, estate agents. From £97/mo.`,
+    rich ? rich.heroSubhead : fallbackDescription,
     155
   );
   return {
     title,
     description,
-    alternates: getAlternates(`/locations/${loc.slug}`, "GB"),
+    alternates: getAlternates(`/locations/${loc.slug}`, country),
     robots: { index: true, follow: true },
     openGraph: { title, description, type: "website", url, siteName: "Kerblabs" },
   };
@@ -79,19 +83,29 @@ export default async function LocationPage({
 }) {
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
-  if (!loc || loc.tier !== "tier1" || locationCountry(loc) !== "GB") notFound();
+  if (!loc || loc.tier !== "tier1") notFound();
+  const country = locationCountry(loc);
 
   const url = `https://kerblabs.com/locations/${loc.slug}`;
   const rich = getRichCityContent(slug);
-  // Only show other Tier 1 cities as "nearby" — Tier 2/3 pages don't exist.
+  // Only show same-country Tier 1 cities as "nearby" — Tier 2/3 pages don't exist
+  // and UK ↔ US nearby links would mislead users.
   const nearby = locations
     .filter((l) => l.tier === "tier1" && l.slug !== loc.slug)
+    .filter((l) => locationCountry(l) === country)
     .filter((l) => l.region === loc.region || l.county === loc.county)
     .slice(0, 6);
   const nearbyFallback = locations
     .filter((l) => l.tier === "tier1" && l.slug !== loc.slug)
+    .filter((l) => locationCountry(l) === country)
     .slice(0, 6);
   const nearbyDisplay = nearby.length >= 4 ? nearby : nearbyFallback;
+  // US locations focus on the med-spa vertical; UK locations exclude med-spa.
+  const visibleIndustries =
+    country === "US"
+      ? industries.filter((ind) => ind.slug === "med-spa")
+      : industries.filter((ind) => ind.slug !== "med-spa");
+  const usFallbackSubhead = `${loc.name} is ${loc.character}. Independent med spas and local businesses across ${loc.name} face the same challenge: missed calls, uncollected reviews, and weak local Google rankings. Kerblabs is the AI growth engine that fixes all three. $0 upfront. $99 refundable hold. $1,200 only if we hit 2 of 3 KPIs over 60 days.`;
 
   return (
     <main className="relative">
@@ -112,8 +126,14 @@ export default async function LocationPage({
               name: loc.name,
               containedInPlace: { "@type": "AdministrativeArea", name: loc.county },
             },
-            description: `AI-powered marketing systems for ${loc.name} local businesses including dental practices, hair salons, contractors and estate agents.`,
-            offers: { "@type": "Offer", price: "97", priceCurrency: "GBP" },
+            description:
+              country === "US"
+                ? `AI-powered marketing systems for ${loc.name} med spas and local businesses — Florida medical-director-rule compliant, bilingual EN/ES where relevant, performance-based pricing.`
+                : `AI-powered marketing systems for ${loc.name} local businesses including dental practices, hair salons, contractors and estate agents.`,
+            offers:
+              country === "US"
+                ? { "@type": "Offer", price: "1200", priceCurrency: "USD", priceValidUntil: "2026-12-31" }
+                : { "@type": "Offer", price: "97", priceCurrency: "GBP" },
           },
           // FAQPage schema (only if rich content with city-specific FAQs)
           ...(rich
@@ -151,19 +171,32 @@ export default async function LocationPage({
         highlight={rich?.heroHighlight ?? `${loc.name} businesses.`}
         subhead={
           rich?.heroSubhead ??
-          `${loc.name} is ${loc.character}. Independent businesses across ${loc.name} — dental practices, hair salons, contractors, and estate agents — face the same challenge: missed calls, uncollected reviews, and weak local Google rankings. Kerblabs is the AI growth engine that fixes all three. From £97/mo. No lock-in. 10-day setup.`
+          (country === "US"
+            ? usFallbackSubhead
+            : `${loc.name} is ${loc.character}. Independent businesses across ${loc.name} — dental practices, hair salons, contractors, and estate agents — face the same challenge: missed calls, uncollected reviews, and weak local Google rankings. Kerblabs is the AI growth engine that fixes all three. From £97/mo. No lock-in. 10-day setup.`)
         }
         primaryCta={{
-          label: "Book a free 30-min demo",
-          href: "https://calendly.com/hello-kerblabs/15-min-discovery-call",
+          label:
+            country === "US" ? "Claim your $99 refundable hold" : "Book a free 30-min demo",
+          href:
+            country === "US"
+              ? "/sprint"
+              : "https://calendly.com/hello-kerblabs/15-min-discovery-call",
         }}
-        secondaryCta={{ label: "See pricing", href: "/#pricing" }}
+        secondaryCta={{ label: country === "US" ? "See The 5 Spa Sprint" : "See pricing", href: country === "US" ? "/sprint" : "/#pricing" }}
         stats={
-          rich?.stats?.slice(0, 3).map((s) => ({ value: s.value, label: s.label })) ?? [
-            { value: "10 days", label: "From signup to live" },
-            { value: "24/7", label: "AI voice answering" },
-            { value: "£97", label: "Starting price/month" },
-          ]
+          rich?.stats?.slice(0, 3).map((s) => ({ value: s.value, label: s.label })) ??
+          (country === "US"
+            ? [
+                { value: "60 days", label: "KPI measurement window" },
+                { value: "$99", label: "Refundable hold" },
+                { value: "2-of-3", label: "KPIs trigger the success fee" },
+              ]
+            : [
+                { value: "10 days", label: "From signup to live" },
+                { value: "24/7", label: "AI voice answering" },
+                { value: "£97", label: "Starting price/month" },
+              ])
         }
       />
 
@@ -232,12 +265,9 @@ export default async function LocationPage({
           title="Your industry."
           highlight="Your area."
         />
-        {rich ? (
+        {rich && country !== "US" ? (
           <div className="grid sm:grid-cols-2 gap-5">
-            {industries
-              // UK location pages only surface UK industries — exclude US-only verticals like med-spa.
-              .filter((ind) => ind.slug !== "med-spa")
-              .map((ind) => {
+            {visibleIndustries.map((ind) => {
               const para =
                 ind.slug === "dental-practices"
                   ? rich.industries.dental
@@ -268,14 +298,18 @@ export default async function LocationPage({
           </div>
         ) : (
           <FeatureGrid
-            items={industries
-              .filter((ind) => ind.slug !== "med-spa")
-              .map((ind) => ({
-                title: `${ind.emoji} ${ind.name} in ${loc.name}`,
-                body: `${loc.name} ${ind.industryPlural.toLowerCase()} use Kerblabs to win more customers, manage reviews, and never miss a call.`,
-                href: `/${industryToCombo[ind.slug]}/${loc.slug}`,
-              }))}
-            columns={4}
+            items={visibleIndustries.map((ind) => ({
+              title: `${ind.emoji} ${ind.name} in ${loc.name}`,
+              body:
+                country === "US"
+                  ? `${loc.name} ${ind.industryPlural.toLowerCase()} use Kerblabs to dominate local map-pack ranking, capture after-hours Instagram DMs, and surface FL medical-director compliance — built for the Cohort 1 Sprint mechanic.`
+                  : `${loc.name} ${ind.industryPlural.toLowerCase()} use Kerblabs to win more customers, manage reviews, and never miss a call.`,
+              href:
+                country === "US" && ind.slug === "med-spa"
+                  ? `/med-spa-marketing/${loc.slug}`
+                  : `/${industryToCombo[ind.slug]}/${loc.slug}`,
+            }))}
+            columns={country === "US" ? 2 : 4}
           />
         )}
       </Section>
@@ -294,12 +328,31 @@ export default async function LocationPage({
       </Section>
 
       <Section>
-        <SectionHead label="PRICING" title="Start small." highlight="Scale when ready." />
-        <PricingCallout
-          plan="Spark"
-          price={97}
-          description={`The Spark plan is the perfect entry point for ${loc.name} businesses. Includes local SEO, GBP optimisation, and automated review collection. Add AI voice, CRM, and more as you grow.`}
+        <SectionHead
+          label={country === "US" ? "PERFORMANCE-BASED PRICING" : "PRICING"}
+          title={country === "US" ? "Pay only" : "Start small."}
+          highlight={country === "US" ? "on KPI hit." : "Scale when ready."}
         />
+        {country === "US" ? (
+          <div className="card p-7 max-w-2xl">
+            <h3 className="font-display font-bold text-2xl mb-3">
+              $0 upfront · $99 refundable · $1,200 on KPI hit
+            </h3>
+            <p className="text-sm text-[color:var(--color-text-dim)] leading-relaxed">
+              The Kerblabs Spa Sprint mechanic for {loc.name} med spas: $0 upfront, $99 refundable
+              hold paid to PayU, $1,200 success fee invoiced only if we hit 2 of 3 KPIs at Day 60
+              — GBP profile views +40%, calls/directions +30%, map-pack top 3 or +3 rank
+              improvement. If we miss, your $99 is refunded. Patterns observed from 27 FL med spa
+              audits — we do not promise specific revenue outcomes, only the KPI floor.
+            </p>
+          </div>
+        ) : (
+          <PricingCallout
+            plan="Spark"
+            price={97}
+            description={`The Spark plan is the perfect entry point for ${loc.name} businesses. Includes local SEO, GBP optimisation, and automated review collection. Add AI voice, CRM, and more as you grow.`}
+          />
+        )}
       </Section>
 
       <Section background="surface">
@@ -320,24 +373,40 @@ export default async function LocationPage({
         <SectionHead label="FAQ" title="Common questions" highlight={`from ${loc.name}.`} />
         <Faq
           items={
-            rich?.faqs ?? [
-              {
-                q: `Do you serve businesses across all of ${loc.name}, including ${loc.areas[0]}?`,
-                a: `Yes — Kerblabs serves businesses across the entire ${loc.name} area and surrounding ${loc.county}. Our delivery is fully remote, so location within the area doesn't matter; what matters is your Google visibility, which we fix.`,
-              },
-              {
-                q: `How quickly can a ${loc.name} business start ranking on Google?`,
-                a: `Most ${loc.name} businesses see Google Business Profile improvements within 2-4 weeks and meaningful organic ranking improvements within 6-12 weeks of starting with Kerblabs.`,
-              },
-              {
-                q: `How is Kerblabs different from a traditional marketing agency in ${loc.name}?`,
-                a: `Traditional agencies charge £2,000-10,000/month retainers and deliver reports. We charge from £97/mo and deliver actual systems.`,
-              },
-              {
-                q: `What's the minimum commitment?`,
-                a: `No long-term contracts. Month-to-month from £97/mo. Cancel any time.`,
-              },
-            ]
+            rich?.faqs ??
+            (country === "US"
+              ? [
+                  {
+                    q: `Do you serve med spas across all of ${loc.name}, including ${loc.areas[0]}?`,
+                    a: `Yes — Kerblabs serves med spas and local businesses across the entire ${loc.name} area and surrounding ${loc.county}. Delivery is fully remote and the Sprint mechanic measures the same three KPIs regardless of neighborhood served.`,
+                  },
+                  {
+                    q: `How quickly can a ${loc.name} med spa expect KPI movement?`,
+                    a: `Most ${loc.name} med spas see Google Business Profile view lift within 2-4 weeks and meaningful map-pack movement within 6-10 weeks. The Sprint measures all three KPIs at Day 60.`,
+                  },
+                  {
+                    q: `What's the minimum commitment?`,
+                    a: `$0 upfront. $99 refundable hold to PayU. $1,200 only if we hit 2 of 3 KPIs at Day 60. If we miss, the $99 is refunded.`,
+                  },
+                ]
+              : [
+                  {
+                    q: `Do you serve businesses across all of ${loc.name}, including ${loc.areas[0]}?`,
+                    a: `Yes — Kerblabs serves businesses across the entire ${loc.name} area and surrounding ${loc.county}. Our delivery is fully remote, so location within the area doesn't matter; what matters is your Google visibility, which we fix.`,
+                  },
+                  {
+                    q: `How quickly can a ${loc.name} business start ranking on Google?`,
+                    a: `Most ${loc.name} businesses see Google Business Profile improvements within 2-4 weeks and meaningful organic ranking improvements within 6-12 weeks of starting with Kerblabs.`,
+                  },
+                  {
+                    q: `How is Kerblabs different from a traditional marketing agency in ${loc.name}?`,
+                    a: `Traditional agencies charge £2,000-10,000/month retainers and deliver reports. We charge from £97/mo and deliver actual systems.`,
+                  },
+                  {
+                    q: `What's the minimum commitment?`,
+                    a: `No long-term contracts. Month-to-month from £97/mo. Cancel any time.`,
+                  },
+                ])
           }
         />
       </Section>

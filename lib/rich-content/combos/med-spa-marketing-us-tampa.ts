@@ -1,0 +1,80 @@
+import type { RichComboContent } from "../types";
+
+export const content: RichComboContent = {
+  primaryKeywords: [
+    "med spa marketing Tampa",
+    "Tampa medical spa SEO",
+    "Botox marketing Tampa",
+    "Hyde Park med spa SEO",
+    "med spa Google Maps Tampa",
+  ],
+  secondaryKeywords: [
+    "South Tampa Botox marketing",
+    "Westshore med spa SEO",
+    "Wesley Chapel filler clinic",
+    "Channelside aesthetics marketing",
+    "FL medical director rule Tampa med spa",
+    "USF Health professional Botox demand",
+    "Tampa General medical aesthetics audience",
+    "Spanish-language med spa Tampa",
+    "Sono Bello Tampa competitor",
+    "Westchase Bay Med Spa competition",
+  ],
+  heroSubhead:
+    "Tampa's med-spa market is the second-largest in Florida by household income density, with South Tampa, Hyde Park and Westshore concentrating the buyers — Tampa General and USF Health staff drive a steady professional injectables base, and Wesley Chapel / New Tampa carry the suburban-family aesthetic spend. Sono Bello, Ideal Image and the Riverchase Dermatology Tampa office press from the chain tier, while Hyde Park independents anchor the boutique end. Florida's medical-director rule (FL Board of Medicine — every cosmetic medical procedure requires an MD/DO owner or directly-supervising medical director) is enforced the same as Miami, and the FL DOH 2023-2025 wave hit Hillsborough County hard. Kerblabs builds Tampa med-spa funnels around hyperlocal map-pack dominance in South Tampa / Hyde Park / Westshore / Wesley Chapel / Channelside, FL-compliant ad creative, and after-hours Instagram DM capture — $0 upfront, $99 refundable hold, $1,200 only if we hit 2 of 3 KPIs over 60 days.",
+  marketContext: [
+    "Tampa-St. Petersburg-Clearwater is the 18th-largest US metro and the second-largest Florida med-spa market behind Miami-Fort Lauderdale. Hillsborough County alone hosts roughly 1.5M residents, and the South Tampa / Hyde Park / Davis Islands waterfront corridor concentrates the highest-income households in the metro — old-money Florida families plus the newer wave of remote-work transplants who arrived in 2020-2023 and stayed. Westshore is the corporate office district (Raymond James, Citi, USAA regional ops) with a lunchtime injectable cohort that mirrors Brickell's pattern at a lower cost-per-click. Wesley Chapel and New Tampa carry the suburban-family aesthetics demand (preventive Botox in the 30-40 age band, body-contouring through the seasons). Channelside / Water Street is the youngest cohort — under-30 creatives and Lightning hockey-economy hospitality workers buying lip filler and 'baby Botox'. Tampa General Hospital and USF Health employ thousands of medical professionals whose own injectable cadence is decisive for the market: when nurses and ARNPs become regulars at a specific med spa, the GBP review velocity and trust signal compounds far faster than any paid acquisition.",
+    "The FL Board of Medicine medical-director rule applies in Hillsborough County the same as Miami-Dade. The 2023-2025 enforcement wave that hit non-compliant Miami spas also reached Tampa — multiple FL DOH actions against Tampa and St. Pete med spas where the medical director was a paper signatory rather than an actively-supervising MD/DO. Tampa consumers, especially the USF Health and Tampa General staff cohort, increasingly check 'who is the medical director' before booking, and spas that surface their FL ME-license number on the About page and the GBP listing convert at a meaningfully higher rate than spas that hide it. Marketing copy needs to honor scope-of-practice clearly (which procedures are MD-performed, ARNP/PA-performed under supervision, RN/aesthetician), and avoid POM brand-name claims in paid ad creative under Google Ads healthcare policy — 'wrinkle relaxer' and 'hyaluronic acid filler' on the ad, brand specificity reserved for the landing-page interior.",
+    "Competitor density: Tampa CPCs run lower than Miami but the search volume is robust — 'botox near me' Tampa runs $12-$24 CPC, 'lip filler near me Hyde Park' $14-$28, 'CoolSculpting Tampa' $18-$36. Sono Bello operates from the Westshore corridor with national-budget paid acquisition, Ideal Image has multiple Tampa Bay locations, and Westchase Bay Med Spa / Riverchase Dermatology MedSpa Tampa anchor the established-review-count independent tier. The structural win for new and growing Tampa med spas is hyperlocal map-pack dominance for named-neighborhood queries (South Tampa, Hyde Park, Westshore, Wesley Chapel, Channelside), Tampa General / USF Health professional-referral GBP posts surfacing named-clinician credentials, and after-hours Instagram DM capture during the 8pm-1am window when Tampa Bay consumers shop aesthetics on phone. Tampa's bilingual surface is smaller than Miami's (Hillsborough is roughly 30% Hispanic vs Miami-Dade's 68%) but the Spanish-language search around the Town 'N Country and East Tampa corridors is materially under-served by English-only GBPs and is meaningful net-new lift for independents who publish dual-language profiles.",
+  ],
+  stats: [
+    { value: "1.5M", label: "Hillsborough County population", source: "US Census 2023" },
+    { value: "~30%", label: "Hillsborough Hispanic/Latino population", source: "US Census ACS 2023" },
+    { value: "$12-$36", label: "Google Ads CPC range for Tampa Botox / filler / CoolSculpting queries", source: "Kerblabs client accounts" },
+    { value: "FL Board of Medicine", label: "medical-director rule enforced (FL DOH 2023-2025 wave reached Tampa)", source: "FL DOH enforcement actions" },
+    { value: "$500-$1,200", label: "typical Tampa Botox + filler session ticket" },
+    { value: "Tampa General + USF Health", label: "medical-professional cohort anchoring trust signal" },
+  ],
+  painPoints: [
+    {
+      title: "Sono Bello, Ideal Image and the Riverchase MedSpa Tampa office outbidding on every Westshore / South Tampa PPC term",
+      body: "National and chain operators run unlimited paid budgets on 'CoolSculpting Tampa', 'laser hair removal Westshore' and 'Botox near me Hyde Park'. Independent spas can't compete on raw spend. The structural win is hyperlocal map-pack dominance for named-neighborhood queries (South Tampa, Hyde Park, Westshore, Wesley Chapel, Channelside) with weekly neighborhood-tagged GBP posts, named-clinician photos with FL ME-license surfaced, and 8-15 fresh monthly reviews mentioning the specific neighborhood and procedure.",
+    },
+    {
+      title: "Tampa General / USF Health professional referral channel untapped — your highest-trust cohort is invisible",
+      body: "Tampa General Hospital and USF Health collectively employ thousands of nurses, ARNPs, PAs and physicians whose own aesthetics cadence drives the local market. When these medical professionals book and become repeat clients, the trust signal compounds — they refer colleagues, write detailed credential-aware reviews, and bring waiting-room conversations into the buying funnel. Most Tampa med spas have no GBP post calendar, review-prompt sequence or landing-page variant targeting this audience. We build it.",
+    },
+    {
+      title: "FL medical-director rule trust gap — Tampa consumers now check before booking",
+      body: "After FL DOH enforcement reached Tampa and the Tampa Bay Times covered non-compliant spas, Hillsborough County aesthetics consumers increasingly verify 'who is the medical director' before booking. Spas without a named, license-numbered MD/DO on their About page leak high-intent traffic to compliant competitors. We surface your medical director (FL ME-number visible, headshot, credentials, supervision protocol summary) on every landing page and GBP description.",
+    },
+    {
+      title: "After-hours Instagram DMs going cold — Tampa's evening aesthetics shopping window left on read",
+      body: "Tampa consumers shop aesthetics on Instagram between 8pm and 1am — South Tampa professionals, Channelside / Water Street hospitality workers, Wesley Chapel parents all swipe at night. Independent spas using front-desk-only response lose 40-60% of evening DMs to faster competitors. AI receptionist with English/Spanish auto-response, deposit-link booking inside the DM, and missed-call text-back closes the gap inside week one.",
+    },
+  ],
+  faqs: [
+    {
+      q: "How do you handle Florida's medical-director rule in Tampa marketing copy?",
+      a: "The same FL Board of Medicine framework we apply across all Florida med-spa accounts. We don't give legal advice, but every Tampa landing page, GBP description and ad creative is structured around: (1) the medical director's full name and FL ME-license number visible on the About page and ideally surfaced in the GBP profile description; (2) clear delineation of which procedures are MD-performed, which are ARNP/PA-performed under direct supervision, and which RN/aesthetician work falls outside the medical-procedure definition; (3) honest scope language — no 'minimally invasive surgery' claims for procedures that aren't, no 'FDA-approved Botox alternative' claims for unapproved products; (4) HIPAA-compliant before/after photo handling with patient written consent and disclaimer on typical-results representations. We also avoid naming POM (prescription-only medication) brand names like Botox, Dysport, Juvederm or Restylane in paid ad creative where Google Ads healthcare policy flags them, using compliant generic descriptors ('wrinkle relaxer', 'hyaluronic acid filler') with brand specificity reserved for the landing-page interior.",
+    },
+    {
+      q: "Is the Tampa General / USF Health medical-professional cohort really worth targeting?",
+      a: "It's the single highest-leverage cohort in the metro. Tampa General Hospital and USF Health together employ thousands of nurses, ARNPs, PAs, residents and attending physicians. Medical professionals book aesthetics at roughly 2-3x the rate of comparable income brackets in non-medical roles, and they bring three structural advantages to a med spa's growth: (1) high-quality credential-aware Google reviews that mention named clinicians and specific procedures, which carry disproportionate weight in map-pack ranking signals; (2) word-of-mouth referrals inside hospital break rooms and unit Slacks that no paid acquisition channel can replicate; (3) repeat cadence — medical professionals understand the science of Botox, filler and laser treatments and tend to maintain a steady 3-4 month return schedule rather than one-and-done. We build GBP post variants targeting Tampa General / USF Health staff specifically, surface MD/ARNP credentials clearly on the About page, and structure review-prompt sequences to capture credentialed-reviewer language. Tampa spas running this typically see 15-30% of total new-patient volume coming through the medical-professional channel within 90 days.",
+    },
+    {
+      q: "Which Tampa neighborhoods generate the highest-ticket med-spa demand?",
+      a: "South Tampa (Hyde Park, Davis Islands, Bayshore) generates the highest average ticket — old-money Florida families and remote-work transplants who arrived 2020-2023, with average session-cluster spend of $900-$1,800. Westshore is the highest volume of mid-to-premium professional lunchtime injectables ($500-$1,000 per session) — short windows, deposit-paid bookings, high lifetime-value because the corporate cohort returns every 3-4 months. Wesley Chapel and New Tampa drive suburban family aesthetics — preventive Botox and seasonal body contouring at $400-$800 per session, with strong repeat economics. Channelside / Water Street drives the youngest cohort under-30 with lip filler and entry-level treatments at $350-$650 per session. We build separately-tagged GBP posts and landing-page variants for each neighborhood so map-pack position holds across all five rather than spreading thin.",
+    },
+    {
+      q: "How do you compete with Sono Bello, Ideal Image and Riverchase Dermatology MedSpa Tampa?",
+      a: "Not by matching their paid spend — that's structurally unwinnable. Sono Bello runs national-scale acquisition, Ideal Image has multiple Tampa Bay locations and national budget, and Riverchase Dermatology MedSpa carries dermatology-anchored authority. Independent spas win on three structural advantages: (1) named-clinician E-E-A-T — your MD or ARNP with credentials, board memberships, supervised-procedure scope visible on landing pages and GBP photos, which the multi-location and chain models structurally dilute; (2) hyperlocal map-pack depth — weekly GBP posts naming South Tampa / Hyde Park / Westshore / Wesley Chapel / Channelside by week, 8-15 fresh monthly reviews mentioning the specific neighborhood and procedure, named-clinician photos cycled monthly; (3) bookable-from-Instagram DM response within minutes during 8pm-1am evening shopping hours, where front-desk-only competitors lose 40-60% of leads overnight. Tampa spas running this typically hit map-pack top 3 on at least one major procedure-and-neighborhood query inside 60 days.",
+    },
+    {
+      q: "What does the $0 upfront, $99 hold, $1,200 success-fee pricing actually mean for a Tampa med spa?",
+      a: "It means we carry the performance risk, not you — based on observed patterns from 27 FL med spa audits and the Kerblabs Spa Sprint Cohort 1 mechanic. You pay a $99 refundable hold to PayU to lock the engagement and signal commitment — that's the only money that leaves your account up front. We then spend 60 days running GBP optimization, review-velocity build, Instagram and after-hours DM response setup, FL-compliance audit of your existing creative, and (where relevant) bilingual landing-page production. At Day 60 we measure against three KPIs: (1) GBP profile views +40% versus your trailing 60-day baseline; (2) calls or driving-direction taps from GBP +30%; (3) map-pack top-3 ranking on at least one of your target 'Botox near me [neighborhood]' or 'medspa near me [neighborhood]' queries — or a +3 position rank improvement if you weren't already in the top three. If we hit at least 2 of 3, you pay the $1,200 performance fee. If we miss, your $99 is refunded and you owe nothing. For context: a single recovered Botox-and-filler patient at the typical Tampa session ticket of $500-$1,200 covers the fee on the first visit, and 3-4 month return cadence means even one new long-term patient is worth multiples of the fee in year-one revenue. $99 refundable, pay only if KPIs hit.",
+    },
+  ],
+  approach:
+    "For Tampa independent med spas our 60-day playbook is: (1) audit and rebuild your GBP for hyperlocal map-pack — neighborhood-tagged post calendar for South Tampa / Hyde Park / Westshore / Wesley Chapel / Channelside, named-clinician photos with FL medical-director surfaced and ME-license number visible; (2) deploy AI receptionist with auto-response (English primary, Spanish supplemental for East Tampa / Town 'N Country search), Instagram DM capture, deposit-link booking inside DM, and missed-call text-back for the 8pm-1am evening shopping window; (3) build the Tampa General / USF Health medical-professional channel — GBP post variants targeting the cohort, About page credential surface, review-prompt sequence structured for credentialed reviewers; (4) run an FL-compliance audit of existing ad creative and rewrite to honor FL Board of Medicine medical-director rule and Google Ads healthcare policy on POM brand names; (5) launch review-velocity engine targeting 8-15 fresh 5-star reviews per month with named-neighborhood and named-procedure prompts; (6) build separately-tagged landing-page variants per neighborhood for top procedures (Botox, lip filler, laser hair removal, CoolSculpting); (7) measure against the three KPIs (GBP views +40%, calls/directions +30%, map-pack top-3) at Day 60. Pricing: $0 upfront, $99 refundable hold, $1,200 only if we hit 2 of 3 KPIs. Patterns are observed across 27 FL med-spa audits — we do not promise specific revenue outcomes, only the KPI floor.",
+};

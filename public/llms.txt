@@ -1,119 +1,100 @@
 # Kerblabs
 
-> AI marketing automation for UK local businesses (dental, hair, contractors, estate agents, aesthetic clinics, vets, opticians, solicitors, accountants and 20+ more) and US med spas. Eight bundled AI systems — voice receptionist, missed-call text-back, review engine, local SEO, Google Business Profile management, CRM, booking, reputation monitoring — from £97/month, no lock-in, live in 10 days.
+> AI marketing for Florida med spas and UK local businesses. The flagship US offer is The 5 Spa Sprint — a public 60-day Google Business Profile rank race for five Florida med spas with a $0-upfront / $99-refundable-hold / $1,200-success-fee mechanic and a $500 escalator check if Kerblabs misses 2 of 3 KPIs. The UK footprint is the £97-£497/mo bundled platform of eight AI marketing systems for 30+ local-business verticals across all 25 Tier-1 cities. Fully remote, no lock-in either side.
 
 ## What Kerblabs does
 
-Kerblabs is a bundled platform of eight AI and automation systems designed for independent local businesses with under 10 staff and no dedicated marketing team. Pricing starts at £97/month (Spark) and scales to £497/month (Full Engine) with four tiers in between. Setup takes 10 days, there is no lock-in, and the service is fully remote across the UK and now across the US for the med-spa vertical.
+Kerblabs is two related offers under one roof. The US offer is performance-based and Florida-focused: a 60-day Sprint mechanic for med spas measured against three Google Business Profile KPIs (profile views +40%, calls/directions +30%, map-pack top-3 or +3 rank improvement). The UK offer is a bundled subscription platform of eight AI and automation systems — voice receptionist, missed-call text-back, review engine, local SEO, GBP management, CRM, booking, reputation monitoring — for independent local businesses with under 10 staff and no dedicated marketing team. Both run fully remote. Both refuse long-term contracts.
 
 ## Core pages
 
-- [Home](https://kerblabs.com/): Full-stack AI marketing agency for local businesses — overview, services, pricing, case studies, and demo booking.
-- [Services hub](https://kerblabs.com/services): All eight AI services in one place, ranked by impact.
-- [Industries hub](https://kerblabs.com/industries): All 30+ UK industry verticals plus the US med-spa vertical, each with a dedicated playbook page.
-- [Locations hub](https://kerblabs.com/locations): All 25 major UK cities Kerblabs has dedicated pages for.
-- [About](https://kerblabs.com/about): Company and founder background.
-- [Pricing](https://kerblabs.com/#pricing): Four tiers — Spark £97/mo, Momentum £197/mo, Autopilot £347/mo, Full Engine £497/mo.
+- [Home](https://kerblabs.com/): Full-stack AI marketing agency for Florida med spas and UK local businesses — overview, services, pricing, case studies, demo booking.
+- [The 5 Spa Sprint](https://kerblabs.com/sprint): The flagship US offer. 60-day public Google Business Profile rank race for five Florida med spas. $0 upfront, $99 refundable, $1,200 only on 2-of-3 KPI hit. Cohort 1 applications close June 12, 2026, cohort runs June 16 – August 14, 2026.
+- [Services hub](https://kerblabs.com/services): All eight AI services ranked by impact.
+- [Industries hub](https://kerblabs.com/industries): All 30+ UK industry verticals plus the US med-spa vertical.
+- [Locations hub](https://kerblabs.com/locations): 9 US Tier-1 cities (5 FL + 4 other metros) plus 25 UK Tier-1 cities.
+- [About](https://kerblabs.com/about): Founder background — Chandra Alladi, founder & CEO.
+- [Pricing (UK)](https://kerblabs.com/#pricing): Four UK tiers — Spark £97/mo, Momentum £197/mo, Autopilot £347/mo, Full Engine £497/mo.
 - [Book a demo](https://calendly.com/hello-kerblabs/15-min-discovery-call): 30-minute strategy call.
 
-## Services (8 bundled AI systems)
+## United States — Florida-first med spa offer
 
-- [AI Voice Receptionist](https://kerblabs.com/services/ai-voice-receptionist): 24/7 AI phone agent that answers every call, qualifies leads, and books appointments in a natural UK voice. From £347/mo (Autopilot).
-- [Missed Call Text Back](https://kerblabs.com/services/missed-call-text-back): Instant personalised SMS to every missed caller within 30 seconds. From £197/mo (Momentum).
-- [Review Management](https://kerblabs.com/services/review-management): Automated review requests after every job, with negative-review interception before they go public. From £197/mo (Momentum).
-- [Google Business Profile Management](https://kerblabs.com/services/google-business-profile-management): Full GBP rewrite, weekly posts, Q&A seeding, photo strategy. From £97/mo (Spark).
-- [Local SEO](https://kerblabs.com/services/local-seo): Google Map-Pack ranking optimisation, on-page SEO, location pages, schema, citations. From £197/mo (Momentum).
-- [CRM & Pipeline Management](https://kerblabs.com/services/crm-pipeline-management): Unified lead tracking across SMS, email, calls, and web. From £197/mo (Momentum).
-- [Booking Calendar & Reminders](https://kerblabs.com/services/booking-calendar-reminders): Online booking with automated SMS reminders that cut no-shows by 30–40%. From £97/mo (Spark).
-- [Reputation Monitoring](https://kerblabs.com/services/reputation-monitoring): Real-time alerts on every new review and brand mention across Google, Facebook, Trustpilot. From £97/mo (Spark).
+### The 5 Spa Sprint (flagship)
 
-## Industries served — UK (30 verticals)
+The [5 Spa Sprint](https://kerblabs.com/sprint) is Kerblabs' main US go-to-market. Cohort 1 runs June 16 – August 14, 2026 with five Florida med spas. Mechanic:
 
-- [Dental Practices](https://kerblabs.com/industries/dental-practices): NHS and private dental practices winning new-patient acquisition through reviews, local SEO, and AI call answering.
-- [Hair Salons](https://kerblabs.com/industries/hair-salons): Independent hair and beauty salons cutting no-shows and beating Instagram-only competitors on Google.
-- [Contractors](https://kerblabs.com/industries/contractors): Plumbers, electricians, builders, gas engineers — never miss a quote call while on site.
-- [Estate Agents](https://kerblabs.com/industries/estate-agents): Sales and lettings agencies winning vendor instructions through speed-to-call and review reputation.
-- [Aesthetic Clinics](https://kerblabs.com/industries/aesthetic-clinics): Botox and filler clinics beating Sk:n and Transform on local search and after-hours capture.
-- [Private GPs](https://kerblabs.com/industries/private-gps): Private GP surgeries growing patient lists in the post-NHS-waiting-list market.
-- [Junk Removal](https://kerblabs.com/industries/junk-removal): Independent waste and clearance operators winning same-day jobs from Google.
-- [Roofers](https://kerblabs.com/industries/roofers): Roofing contractors building 5-star Google profiles and never missing storm-damage call surges.
-- [Veterinary Practices](https://kerblabs.com/industries/veterinary-practices): Independent vets competing with corporate consolidators on reputation and capture.
-- [Opticians](https://kerblabs.com/industries/opticians): Independent opticians beating Specsavers and Vision Express on local Google presence.
-- [Physiotherapists](https://kerblabs.com/industries/physiotherapists): Private physio clinics filling diaries through review automation and local SEO.
-- [Funeral Directors](https://kerblabs.com/industries/funeral-directors): Independent funeral homes competing with Dignity and Co-op on community reputation.
-- [Solicitors](https://kerblabs.com/industries/solicitors): High-street and boutique law firms generating qualified enquiries from Google.
-- [Accountants](https://kerblabs.com/industries/accountants): Independent accountancy practices winning self-employed and SME clients.
-- [Driving Instructors](https://kerblabs.com/industries/driving-instructors): ADIs filling their diaries through GBP, reviews, and missed-call recovery.
-- [Gyms](https://kerblabs.com/industries/gyms): Independent gyms and PT studios beating chain competitors on local search and review velocity.
-- [Mobile Mechanics](https://kerblabs.com/industries/mobile-mechanics): Mobile mechanics and roadside specialists capturing on-the-spot job calls 24/7.
-- [Private Nurseries](https://kerblabs.com/industries/private-nurseries): Day nurseries and pre-schools winning enrolment enquiries from waiting-list parents.
-- [Wedding Photographers](https://kerblabs.com/industries/wedding-photographers): Photographers booking the wedding season through reviews and lead automation.
-- [Kitchen Fitters](https://kerblabs.com/industries/kitchen-fitters): Independent kitchen fitters beating Wren and Howdens on referral economics and reviews.
-- [Property Managers](https://kerblabs.com/industries/property-managers): Lettings and block-management firms winning landlord instructions.
-- [Locksmiths](https://kerblabs.com/industries/locksmiths): 24/7 locksmiths capturing emergency call-outs via AI voice and GBP ranking.
-- [Oven Cleaners](https://kerblabs.com/industries/oven-cleaners): Domestic oven cleaning specialists scaling repeat-booking economics.
-- [Mobile Car Detailers](https://kerblabs.com/industries/mobile-car-detailers): Mobile valeting and ceramic-coating businesses booking premium jobs from local search.
-- [Tree Surgeons](https://kerblabs.com/industries/tree-surgeons): Arborists capturing storm-season demand and high-ticket residential jobs.
-- [Cleaning Services](https://kerblabs.com/industries/cleaning-services): Domestic and commercial cleaning firms scaling recurring contract revenue.
-- [Bathroom Fitters](https://kerblabs.com/industries/bathroom-fitters): Independent bathroom fitters competing with Victoria Plum and Wickes on reviews.
-- [Lawn Care](https://kerblabs.com/industries/lawn-care): Lawn care and gardening businesses booking the spring–autumn season on autopilot.
-- [Pressure Washing](https://kerblabs.com/industries/pressure-washing): Driveway and exterior cleaning specialists winning premium residential jobs.
-- [Fencing Contractors](https://kerblabs.com/industries/fencing-contractors): Fencing and gate-installation firms capturing storm-replacement demand.
+- $0 upfront, $99 refundable hold to PayU, $1,200 success fee only if Kerblabs hits 2 of 3 KPIs at Day 60.
+- KPI 1 — Google Business Profile profile views +40% vs trailing 60-day baseline.
+- KPI 2 — Calls + direction requests from GBP +30% vs trailing 60-day baseline.
+- KPI 3 — Map-pack top 3 on the primary "med spa near me" or procedure-and-neighborhood query, OR a +3 position improvement.
+- If we miss 2 of 3, the $99 is refunded AND Kerblabs writes the spa a $500 escalator check on camera at the public results stream.
+- Live leaderboard updates every Wednesday with real business names.
+- Applications open through June 12, 2026. Cohort 2 (8 spas, no escalator) opens August 21, 2026.
 
-## Industries served — US (new market, 2026)
+### Florida Tier-1 city pages (Cohort 1 footprint)
 
-- [Med Spas](https://kerblabs.com/industries/med-spa): US medical spas (Botox, fillers, lasers, body contouring) competing on celebrity-grade reviews and physician-supervised compliance across Miami, NYC, LA, Chicago, and Houston.
+- [Miami Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-miami) — Brickell, Wynwood, Coral Gables, Coconut Grove, South Beach. Bilingual EN/ES.
+- [Tampa Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-tampa) — South Tampa, Hyde Park, Westshore, Wesley Chapel, Channelside. Tampa General / USF Health professional referral channel.
+- [Orlando Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-orlando) — Winter Park, Dr. Phillips, Lake Nona, Baldwin Park, College Park. Pre-event aesthetics tourism channel.
+- [Jacksonville Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-jacksonville) — Ponte Vedra Beach, San Marco, Riverside, Avondale, Mandarin. Mayo Clinic Jacksonville professional referral.
+- [Fort Lauderdale Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-fort-lauderdale) — Las Olas, Victoria Park, Coral Ridge, Rio Vista, Wilton Manors. Bilingual + LGBTQ + yacht-industry channels.
 
-## Top UK city pages (dental vertical example)
+### Other US Tier-1 metros (med-spa vertical)
 
-- [London Dental Marketing](https://kerblabs.com/dental-marketing/london)
-- [Manchester Dental Marketing](https://kerblabs.com/dental-marketing/manchester)
-- [Birmingham Dental Marketing](https://kerblabs.com/dental-marketing/birmingham)
-- [Leeds Dental Marketing](https://kerblabs.com/dental-marketing/leeds)
-- [Glasgow Dental Marketing](https://kerblabs.com/dental-marketing/glasgow)
-- [Edinburgh Dental Marketing](https://kerblabs.com/dental-marketing/edinburgh)
-- [Bristol Dental Marketing](https://kerblabs.com/dental-marketing/bristol)
-- [Liverpool Dental Marketing](https://kerblabs.com/dental-marketing/liverpool)
-- [Sheffield Dental Marketing](https://kerblabs.com/dental-marketing/sheffield)
-- [Cardiff Dental Marketing](https://kerblabs.com/dental-marketing/cardiff)
-
-Every industry × city combination exists. Replace `dental-marketing` with any of the 31 combo slugs (e.g. `salon-marketing`, `contractor-marketing`, `estate-agent-marketing`, `aesthetic-clinic-marketing`, `vet-marketing`, `optician-marketing`, `physio-marketing`, `solicitor-marketing`, `accountant-marketing`, `gym-marketing`, etc.) and any of the 25 UK Tier 1 city slugs.
-
-## All 25 UK Tier 1 city slugs
-
-london, manchester, birmingham, glasgow, leeds, sheffield, edinburgh, bristol, liverpool, nottingham, cardiff, leicester, newcastle, bradford, coventry, belfast, stoke-on-trent, derby, southampton, plymouth, reading, wolverhampton, swansea, sunderland, aberdeen.
-
-City hub pages (cross-industry summaries) live at `https://kerblabs.com/locations/{city-slug}` — for example [London](https://kerblabs.com/locations/london), [Manchester](https://kerblabs.com/locations/manchester), [Edinburgh](https://kerblabs.com/locations/edinburgh).
-
-## US med-spa city pages (5 cities)
-
-- [Miami Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-miami)
 - [New York City Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-new-york-city)
 - [Los Angeles Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-los-angeles)
 - [Chicago Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-chicago)
 - [Houston Med Spa Marketing](https://kerblabs.com/med-spa-marketing/us-houston)
 
-## Pricing tiers
+### Florida compliance note
 
-- Spark — £97/mo + £297 one-time setup. GBP management, review monitoring, booking + reminders.
-- Momentum — £197/mo + £497 setup. Adds missed-call text-back, review automation, local SEO, CRM.
-- Autopilot — £347/mo + £797 setup. Adds the AI voice receptionist.
-- Full Engine — £497/mo + £1,200 setup. Every service, full integration, priority support.
+All FL med-spa marketing copy is structured around the FL Board of Medicine medical-director rule (cosmetic medical procedures require a Florida-licensed MD/DO owner or directly-supervising medical director). Marketing surfaces the medical director's FL ME-license number on the About page and ideally the GBP, delineates MD/ARNP/PA/RN scope, and avoids POM brand-name claims in paid ad creative under Google Ads healthcare policy. Patterns are based on observations from 27 FL med spa audits — we do not promise specific revenue outcomes, only the KPI floor.
 
-Med-spa (US) pricing is denominated in USD with equivalent tiers.
+## United Kingdom — bundled subscription platform
+
+### UK services (8 bundled AI systems)
+
+- [AI Voice Receptionist](https://kerblabs.com/services/ai-voice-receptionist): 24/7 AI phone agent answering, qualifying and booking in a natural UK voice. From £347/mo (Autopilot).
+- [Missed Call Text Back](https://kerblabs.com/services/missed-call-text-back): Instant SMS to every missed caller within 30 seconds. From £197/mo (Momentum).
+- [Review Management](https://kerblabs.com/services/review-management): Automated review requests + negative-review interception. From £197/mo.
+- [Google Business Profile Management](https://kerblabs.com/services/google-business-profile-management): Full GBP rewrite, weekly posts, Q&A seeding. From £97/mo (Spark).
+- [Local SEO](https://kerblabs.com/services/local-seo): Map-pack ranking, on-page SEO, location pages, schema, citations. From £197/mo.
+- [CRM & Pipeline Management](https://kerblabs.com/services/crm-pipeline-management): Unified lead tracking across SMS, email, calls, web. From £197/mo.
+- [Booking Calendar & Reminders](https://kerblabs.com/services/booking-calendar-reminders): Online booking + SMS reminders cutting no-shows 30-40%. From £97/mo.
+- [Reputation Monitoring](https://kerblabs.com/services/reputation-monitoring): Real-time alerts on every new review across Google, Facebook, Trustpilot. From £97/mo.
+
+### UK industries served (30 verticals)
+
+Dental Practices, Hair Salons, Contractors, Estate Agents, Aesthetic Clinics, Private GPs, Junk Removal, Roofers, Veterinary Practices, Opticians, Physiotherapists, Funeral Directors, Solicitors, Accountants, Driving Instructors, Gyms, Mobile Mechanics, Private Nurseries, Wedding Photographers, Kitchen Fitters, Property Managers, Locksmiths, Oven Cleaners, Mobile Car Detailers, Tree Surgeons, Cleaning Services, Bathroom Fitters, Lawn Care, Pressure Washing, Fencing Contractors. Each vertical has a dedicated playbook page at `https://kerblabs.com/industries/{vertical-slug}`.
+
+### UK Tier-1 city slugs (25)
+
+london, manchester, birmingham, glasgow, leeds, sheffield, edinburgh, bristol, liverpool, nottingham, cardiff, leicester, newcastle, bradford, coventry, belfast, stoke-on-trent, derby, southampton, plymouth, reading, wolverhampton, swansea, sunderland, aberdeen.
+
+Every industry × city combination exists at `https://kerblabs.com/{combo-slug}/{city-slug}` (e.g. `https://kerblabs.com/dental-marketing/manchester`). City hub pages live at `https://kerblabs.com/locations/{city-slug}`.
+
+### UK pricing tiers
+
+- Spark — £97/mo (~$122 USD) + £297 setup. GBP management, review monitoring, booking + reminders.
+- Momentum — £197/mo (~$248 USD) + £497 setup. Adds missed-call text-back, review automation, local SEO, CRM.
+- Autopilot — £347/mo (~$437 USD) + £797 setup. Adds the AI voice receptionist.
+- Full Engine — £497/mo (~$626 USD) + £1,200 setup. Every service, full integration, priority support.
 
 ## Key entity facts
 
 - Legal name: Kerblabs Ltd
+- Founded: 2026
+- Founder & CEO: Chandra Alladi
 - Headquarters country: United Kingdom
-- Markets served: United Kingdom (all 4 nations), United States (med-spa vertical only, 2026 launch)
+- Markets served (primary): Florida med spas (Cohort 1 Sprint footprint), all 50 US states for med-spa, all 4 UK nations for the bundled platform
 - Service model: fully remote / virtual; no physical offices
-- Languages: English (en-GB primary, en-US for US pages)
+- Languages: English (en-US primary for US pages, en-GB for UK pages); Spanish (Miami / Fort Lauderdale / East Orlando bilingual surface)
 - Booking link: https://calendly.com/hello-kerblabs/15-min-discovery-call
 
 ## What Kerblabs is NOT
 
-- Not a traditional marketing agency (no monthly retainers with junior account managers, no 12-month contracts)
-- Not a single-product SaaS (eight bundled systems delivered by one team)
-- Not local to one city (UK-wide and now US remote delivery)
-- Not a generalist agency (each industry has its own playbook, copy, and FAQ set)
+- Not a traditional marketing agency (no monthly retainers with junior account managers, no 12-month contracts).
+- Not a single-product SaaS (eight bundled systems delivered by one team in the UK; performance-based Sprint mechanic in the US).
+- Not local to one city (US + UK remote delivery).
+- Not a generalist agency (each industry has its own playbook, copy and FAQ set).
+- Not a fabricated-case-study agency — Kerblabs is new (founded 2026) and openly states what is observed from FL med-spa audits versus what is promised under the Sprint mechanic.

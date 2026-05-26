@@ -7,6 +7,8 @@ const CALENDLY_URL = "https://calendly.com/hello-kerblabs/15-min-discovery-call"
 const links = [
   { href: "#store", label: "Services" },
   { href: "#work", label: "Work" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/sprint", label: "The 5 Spa Sprint" },
   { href: "#pricing", label: "Pricing" },
 ];
 

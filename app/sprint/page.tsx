@@ -57,6 +57,12 @@ export default function SprintPage() {
               "The 5 Spa Sprint — Five Florida Med Spas. Sixty Days. One Public Leaderboard.",
             description:
               "Kerblabs publicly commits to ranking five Florida med spas on Google Maps in 60 days. If we miss 2 of 3 KPIs, we refund the $99 hold and pay the spa $500.",
+            image: {
+              "@type": "ImageObject",
+              url: "https://kerblabs.com/kerblabs-logo.png",
+              width: 1200,
+              height: 630,
+            },
             author: {
               "@type": "Person",
               name: "Chandra Alladi",
@@ -66,7 +72,10 @@ export default function SprintPage() {
             datePublished: "2026-05-23",
             dateModified: "2026-05-23",
             inLanguage: "en-US",
-            mainEntityOfPage: "https://kerblabs.com/sprint",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://kerblabs.com/sprint",
+            },
             url: "https://kerblabs.com/sprint",
           },
           {
@@ -93,12 +102,17 @@ export default function SprintPage() {
             offers: {
               "@type": "Offer",
               name: "Cohort 1 Application — $99 refundable hold",
+              description:
+                "$99 refundable hold to lock the engagement. $1,200 success fee invoiced only if Kerblabs hits 2-of-3 KPIs at Day 60. If we miss, the $99 is refunded and Kerblabs writes a $500 escalator check.",
               price: "99.00",
               priceCurrency: "USD",
               availability: "https://schema.org/LimitedAvailability",
               url: "https://kerblabs.com/sprint#apply",
               validFrom: "2026-05-23",
               validThrough: APPLICATIONS_CLOSE_DATE,
+              priceValidUntil: COHORT_START_DATE,
+              category: "Med spa marketing",
+              seller: { "@id": "https://kerblabs.com/#organization" },
             },
             isAccessibleForFree: false,
           },

@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const cspReportOnly = [
+const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://calendly.com",
   "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com",
@@ -30,7 +30,10 @@ const securityHeaders = [
   },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Cross-Origin-Resource-Policy", value: "same-site" },
-  { key: "Content-Security-Policy-Report-Only", value: cspReportOnly },
+  // Enforced CSP (was Report-Only). The Calendly + GA / GTM + IndexNow + self
+  // surface is exercised by every page; if a new third-party drops in, add it
+  // to the directive above rather than reverting to Report-Only.
+  { key: "Content-Security-Policy", value: csp },
 ];
 
 const nextConfig = {
