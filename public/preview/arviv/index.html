@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arviv Medical Aesthetics — Face & Body Rejuvenation, Miami</title>
+<meta name="description" content="Luxury medical aesthetics in Miami led by Dr. Tali Arviv, MD — board-certified, 10+ years in laser & injectables. Botox, fillers, laser resurfacing, body & wellness. Book a consultation." />
+<meta name="robots" content="noindex" />
+<!-- SPEC PREVIEW built by Kerblabs for Arviv Medical Aesthetics. Not affiliated; concept only. -->
+<meta property="og:title" content="Arviv Medical Aesthetics — Miami" />
+<meta property="og:description" content="Face & body rejuvenation, perfected. Dr. Tali Arviv, MD." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0B0A09; --bg2:#13110F; --ink:#F4F1EA; --muted:#A39B8E;
+    --gold:#C9A86A; --gold-soft:#E4D2AE; --line:rgba(201,168,106,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+  .serif{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:var(--gold);color:#1a140a;font-weight:600;padding:15px 30px;border-radius:100px;font-size:15px;transition:transform .25s,box-shadow .25s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,168,106,.35)}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--gold);box-shadow:none}
+
+  /* nav */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);background:rgba(11,10,9,.55);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+  header.scrolled{border-color:var(--line);background:rgba(11,10,9,.85)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:"Fraunces",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+  .logo span{color:var(--gold)}
+  .navlinks{display:flex;gap:34px;font-size:14px;color:var(--muted)}
+  .navlinks a:hover{color:var(--ink)}
+  @media(max-width:820px){.navlinks{display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:74px;overflow:hidden}
+  .hero-glow{position:absolute;inset:0;background:radial-gradient(60% 55% at 75% 30%,rgba(201,168,106,.16),transparent 70%),radial-gradient(50% 50% at 15% 85%,rgba(201,168,106,.07),transparent 70%);z-index:0}
+  .grain{position:absolute;inset:0;opacity:.04;z-index:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(44px,7vw,92px);line-height:1.02;font-weight:500;max-width:14ch;margin:22px 0 26px}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p.sub{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:52ch;margin-bottom:38px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .reveal{opacity:0;transform:translateY(26px)}
+
+  /* trust bar */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 28px}
+  .trust .n{font-family:"Fraunces",serif;font-size:30px;color:var(--gold-soft)}
+  .trust .l{font-size:12.5px;color:var(--muted);letter-spacing:.04em;margin-top:4px}
+  @media(max-width:720px){.trust .wrap{grid-template-columns:repeat(2,1fr);gap:30px 16px}}
+
+  /* sections */
+  section.pad{padding:120px 0}
+  .sec-head{max-width:62ch;margin-bottom:54px}
+  .sec-head h2{font-size:clamp(30px,4vw,50px);font-weight:500;line-height:1.08;margin:14px 0 16px}
+  .sec-head p{color:var(--muted);font-size:17px}
+
+  /* treatments grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,var(--bg2),#100E0C);border:1px solid var(--line);border-radius:18px;padding:34px 30px;transition:transform .35s,border-color .35s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(201,168,106,.5)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:rgba(201,168,106,.12);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;margin-bottom:20px}
+  .card h3{font-family:"Fraunces",serif;font-size:23px;font-weight:600;margin-bottom:12px}
+  .card ul{list-style:none;color:var(--muted);font-size:14.5px}
+  .card li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+  .card li:last-child{border:0}
+
+  /* doctor / eeat */
+  .doc{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+  @media(max-width:900px){.doc{grid-template-columns:1fr;gap:36px}}
+  .doc-photo{aspect-ratio:4/5;border-radius:20px;border:1px solid var(--line);background:linear-gradient(150deg,#1c1812,#0e0c0a);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:28px}
+  .doc-photo .tag{font-size:12px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase}
+  .doc-photo::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 70% 20%,rgba(201,168,106,.18),transparent)}
+  .doc h2{font-size:clamp(28px,3.6vw,44px);font-weight:500;line-height:1.1;margin:14px 0 20px}
+  .doc p{color:var(--muted);margin-bottom:16px;font-size:16px}
+  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .chip{font-size:13px;color:var(--gold-soft);border:1px solid var(--line);border-radius:100px;padding:8px 16px}
+
+  /* reviews */
+  .reviews{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stars{color:var(--gold);letter-spacing:3px;font-size:20px}
+  .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  @media(max-width:900px){.qgrid{grid-template-columns:1fr}}
+  .quote{background:#100E0C;border:1px solid var(--line);border-radius:16px;padding:28px}
+  .quote p{font-size:15.5px;margin:14px 0 18px;color:#e9e3d6}
+  .quote .who{font-size:13px;color:var(--muted)}
+
+  /* cta */
+  .cta{text-align:center;padding:130px 0}
+  .cta h2{font-size:clamp(32px,5vw,60px);font-weight:500;line-height:1.05;max-width:18ch;margin:18px auto 22px}
+  .cta p{color:var(--muted);max-width:48ch;margin:0 auto 36px;font-size:17px}
+
+  footer{border-top:1px solid var(--line);padding:50px 0 60px;color:var(--muted);font-size:14px}
+  .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .foot a:hover{color:var(--gold-soft)}
+  .specnote{margin-top:30px;font-size:11.5px;color:#5c564c;letter-spacing:.03em}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap"><nav>
+    <div class="logo">Arviv<span>.</span></div>
+    <div class="navlinks">
+      <a href="#treatments">Treatments</a>
+      <a href="#doctor">Dr. Arviv</a>
+      <a href="#reviews">Results</a>
+      <a href="#book">Contact</a>
+    </div>
+    <a href="#book" class="btn" style="padding:11px 22px;font-size:14px">Book a Consultation</a>
+  </nav></div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div><div class="grain"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal">Miami · Tampa · Ocala</div>
+    <h1 class="serif reveal">Face &amp; body rejuvenation, <em>perfected</em>.</h1>
+    <p class="sub reveal">Physician-led medical aesthetics in Miami. Board-certified Dr. Tali Arviv and her team deliver natural, lasting results with over a decade of laser and injectable expertise.</p>
+    <div class="hero-cta reveal">
+      <a href="#book" class="btn">Book a Consultation</a>
+      <a href="#treatments" class="btn btn-ghost">Explore Treatments</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="reveal"><div class="n serif">4.8★</div><div class="l">400+ five-star reviews</div></div>
+    <div class="reveal"><div class="n serif">10+ yrs</div><div class="l">Laser & injectable expertise</div></div>
+    <div class="reveal"><div class="n serif">MD</div><div class="l">Board-certified physician-led</div></div>
+    <div class="reveal"><div class="n serif">3</div><div class="l">South Florida locations</div></div>
+  </div>
+</div>
+
+<!-- TREATMENTS -->
+<section class="pad" id="treatments">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow reveal">Treatments</div>
+      <h2 class="serif reveal">A full suite of aesthetic medicine — under one physician's care.</h2>
+      <p class="reveal">From subtle injectables to advanced laser resurfacing and medical wellness, every plan is tailored by Dr. Arviv to your goals and anatomy.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic">✦</div>
+        <h3 class="serif">Injectables</h3>
+        <ul>
+          <li>Neuromodulators (Botox / tox)</li>
+          <li>Dermal fillers</li>
+          <li>Sculptra collagen stimulation</li>
+          <li>Kybella — chin contouring</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ic">◈</div>
+        <h3 class="serif">Laser &amp; Skin</h3>
+        <ul>
+          <li>CO₂ &amp; Erbium skin resurfacing</li>
+          <li>Trinity fotofacial · IPL / RF</li>
+          <li>Ultherapy skin tightening</li>
+          <li>Laser hair, vein &amp; tattoo removal</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ic">❋</div>
+        <h3 class="serif">Body &amp; Wellness</h3>
+        <ul>
+          <li>Medical weight-loss plans</li>
+          <li>Hormone balancing</li>
+          <li>IV infusions &amp; vitamin shots</li>
+          <li>Intimate wellness &amp; rejuvenation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR / E-E-A-T -->
+<section class="pad" id="doctor" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap doc">
+    <div class="doc-photo reveal"><span class="tag">Dr. Tali Arviv, MD — Founder</span></div>
+    <div>
+      <div class="eyebrow reveal">Physician-led</div>
+      <h2 class="serif reveal">Aesthetics is medicine. It deserves a doctor.</h2>
+      <p class="reveal">Dr. Tali Arviv is board-certified in internal medicine and has devoted more than a decade to aesthetic and laser medicine. She graduated with honors in Biology from the University of South Florida, earned her MD from Ross University, and completed her residency at Orlando Regional Medical Center.</p>
+      <p class="reveal">Her philosophy is simple: results that look like the best version of you — never overdone. Every treatment plan is designed and overseen by a physician, not delegated.</p>
+      <div class="creds">
+        <span class="chip reveal">Board-Certified, Internal Medicine</span>
+        <span class="chip reveal">Expert Injector</span>
+        <span class="chip reveal">10+ Years Laser Technology</span>
+        <span class="chip reveal">Women-Owned</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="pad reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <div class="eyebrow reveal">Results &amp; reputation</div>
+      <h2 class="serif reveal">Trusted by South Florida.</h2>
+      <div class="stars reveal">★★★★★ <span style="font-family:Inter;font-size:15px;color:var(--muted);letter-spacing:0">&nbsp;4.8 average · 400+ reviews</span></div>
+    </div>
+    <div class="qgrid">
+      <div class="quote reveal"><div class="stars" style="font-size:15px">★★★★★</div><p>“Natural, beautiful results and a team that actually listens. Dr. Arviv is meticulous.”</p><div class="who">Verified patient · Google</div></div>
+      <div class="quote reveal"><div class="stars" style="font-size:15px">★★★★★</div><p>“The most professional med spa I've been to in Miami. You can tell it's physician-run.”</p><div class="who">Verified patient · Google</div></div>
+      <div class="quote reveal"><div class="stars" style="font-size:15px">★★★★★</div><p>“I drive in from out of town for my treatments. Worth every mile.”</p><div class="who">Verified patient · Google</div></div>
+    </div>
+    <p class="reveal" style="color:var(--muted);font-size:13px;margin-top:20px">Review themes reflect the practice's public Google rating. Individual quotes shown are representative placeholders for this concept preview.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="book">
+  <div class="wrap">
+    <div class="eyebrow reveal">Begin</div>
+    <h2 class="serif reveal">Your consultation with a physician starts here.</h2>
+    <p class="reveal">Tell us your goals — we'll build a plan that's right for your face, body and timeline.</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+13053409002" class="btn">Call (305) 340-9002</a>
+      <a href="#" class="btn btn-ghost">Request a Callback</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="logo" style="font-size:20px;margin-bottom:8px">Arviv<span>.</span> Medical Aesthetics</div>
+      <div>3250 NE 1st Ave, Suite 504 · Miami, FL 33137</div>
+    </div>
+    <div style="text-align:right">
+      <div><a href="#treatments">Treatments</a> · <a href="#doctor">Dr. Arviv</a> · <a href="#book">Contact</a></div>
+      <div style="margin-top:8px">Miami · Tampa · Ocala</div>
+    </div>
+  </div>
+  <div class="wrap"><div class="specnote">Concept preview designed by Kerblabs for Arviv Medical Aesthetics — not affiliated; for demonstration only.</div></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  // sticky-nav border on scroll
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none'});}
+  else if(window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+    // hero load sequence
+    gsap.to('.hero .reveal',{opacity:1,y:0,duration:.9,ease:'power3.out',stagger:.12,delay:.15});
+    // scroll reveals everywhere else
+    gsap.utils.toArray('section:not(.hero) .reveal, .trust .reveal').forEach(el=>{
+      gsap.to(el,{opacity:1,y:0,duration:.8,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 88%'}});
+    });
+  }
+</script>
+</body>
+</html>
