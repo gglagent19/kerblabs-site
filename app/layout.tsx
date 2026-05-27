@@ -5,15 +5,16 @@ import "./globals.css";
 const GA4_ID = "G-4GTQ5LE0TH";
 
 export const metadata: Metadata = {
-  title: "Kerblabs — Full-stack AI marketing atelier",
+  title: "Kerblabs — AI Marketing for Med Spas & Local Business",
   description:
-    "SEO, GBP, AI voice agents, web design, automation & CRM. A full-end AI marketing agency built for independent UK businesses.",
+    "SEO, Google Business Profile, AI voice agents, web design, automation & CRM. A full-stack AI marketing agency for U.S. med spas and independent local businesses.",
   metadataBase: new URL("https://kerblabs.com"),
   openGraph: {
-    title: "Kerblabs — Full-stack AI marketing atelier",
+    title: "Kerblabs — AI Marketing for Med Spas & Local Business",
     description:
-      "SEO, GBP, AI voice, web, automation. One shop for every growth system.",
+      "SEO, GBP, AI voice, web, automation & CRM — one shop for every growth system. Built for U.S. med spas and local businesses.",
     type: "website",
+    locale: "en_US",
   },
   verification: {
     google: "V1iKVUDuS2TymSaIND99inJcGHXHAJPtbfsah_RX0lQ",
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <head>
         <link rel="preconnect" href="https://assets.calendly.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://calendly.com" crossOrigin="anonymous" />
