@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kate Monroe — Interior Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ovo&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:        #6c5e53;
+    --bone:      #efeae4;
+    --sand:      #c8bfb0;
+    --ink:       #432f30;
+    --pad-x:     56px;
+    --pad-y:     56px;
+    --gap:       clamp(40px, 5vw, 80px);
+    --thumb-w:   clamp(180px, 17vw, 240px);
+    --left-max:  960px;
+  }
+  *{ box-sizing: border-box; }
+  html, body{ margin:0; padding:0; }
+  body{ min-height: 200vh; }
+  body{
+    background: var(--bg);
+    color: var(--bone);
+    font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .stage{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: var(--pad-y) 0 var(--pad-y) var(--pad-x);
+    display: grid;
+    /* col1 = thumb width, col2 = quote/text, col3 = portrait */
+    grid-template-columns: var(--thumb-w) minmax(0, calc(var(--left-max) - var(--thumb-w) - var(--gap))) minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    column-gap: var(--gap);
+    row-gap: 0;
+  }
+
+  /* Wordmark spans col1 (image left) → col2 (quote right) */
+  .wordmark{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: clamp(40px, 6.4vw, 96px);
+    line-height: 1;
+    letter-spacing: 0.18em;
+    color: var(--sand);
+    white-space: nowrap;
+  }
+
+  /* Bottom row: image left, quote/sig stack right */
+  .thumb{
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
+    width: 100%;
+    overflow: hidden;
+    background: var(--sand);
+    line-height: 0;
+    margin: 0;
+  }
+  .thumb img{ width: 100%; height: auto; display: block; max-height: 32vh; object-fit: cover; }
+
+  .copy{
+    grid-column: 2;
+    grid-row: 3;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(20px, 2.4vw, 36px);
+    padding-bottom: 4px;       /* nudge sig to baseline of thumb */
+  }
+  .quote{
+    margin: 0;
+    font-family: "Ovo", serif;
+    font-weight: 400;
+    font-size: clamp(20px, 1.85vw, 30px);
+    line-height: 1.5;
+    color: var(--bone);
+    max-width: 38ch;
+  }
+  .sig{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    color: var(--sand);
+    text-transform: uppercase;
+  }
+
+  /* Portrait — flush right, full viewport height */
+  .portrait{
+    grid-column: 3;
+    grid-row: 1 / span 3;
+    align-self: stretch;
+    width: 100%;
+    height: 100vh;
+    margin: calc(var(--pad-y) * -1) 0;
+    background: #5a4d44;
+    overflow: hidden;
+    min-height: 0;
+  }
+  .portrait img,
+  .portrait video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: calc(50% - 200px) center;
+    display: block;
+  }
+
+  @media (max-width: 880px){
+    :root{ --pad-x: 20px; --pad-y: 20px; --gap: 16px; --thumb-w: 96px; --left-max: 60vw; }
+    .stage{
+      grid-template-columns: var(--thumb-w) minmax(0,1fr) var(--portrait-w);
+      padding: var(--pad-y) 0 var(--pad-y) var(--pad-x);
+    }
+    .wordmark{ font-size: clamp(20px, 5.6vw, 44px); }
+    .quote   { font-size: clamp(13px, 2vw, 18px); max-width: none; }
+  }
+
+  .subhead{
+    position: fixed;
+    margin: 0;
+    font-family: "Ovo", serif;
+    font-weight: 400;
+    font-size: clamp(16px, 1.4vw, 22px);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+    transform: translate(-50%, 0);
+  }
+  .loader{
+    position: fixed;
+    inset: 0;
+    background: #EFEAE4;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 1;
+  }
+  ::selection{ background: var(--sand); color: var(--ink); }
+</style>
+</head>
+<body>
+
+<main class="stage">
+  <div class="loader" aria-hidden="true"></div>
+  <h1 class="wordmark">KATE&nbsp;&nbsp;MONROE</h1>
+  <p class="subhead">Art Direction &amp; Interior Design</p>
+
+  <figure class="thumb">
+    <img src="assets/interior-3.png" alt="Kitchen interior — warm oak cabinets, woven runner, pendant light." />
+  </figure>
+
+  <div class="copy">
+    <p class="quote">&ldquo;I create spaces that tell a story, spaces that make you feel something. A home that feels personal and unique.&rdquo;</p>
+    <div class="sig">KATE&nbsp;&nbsp;MONROE</div>
+  </div>
+
+  <aside class="portrait" aria-label="Portrait of Kate Monroe">
+    <video class="portrait-media" src="assets/hf_20260505_134110_f12e22e0-1168-4623-9b81-1b24efdeb6e4.mp4" muted playsinline preload="auto" disablepictureinpicture></video>
+  </aside>
+</main>
+
+<script>
+(() => {
+  const portrait = document.querySelector('.portrait');
+  const wordmark = document.querySelector('.wordmark');
+  const copy     = document.querySelector('.copy');
+  const thumb    = document.querySelector('.thumb');
+  const subhead  = document.querySelector('.subhead');
+  const video    = portrait.querySelector('video');
+  let videoDuration = 0;
+  if (video) {
+    video.addEventListener('loadedmetadata', () => {
+      videoDuration = video.duration || 0;
+      apply();
+    });
+    video.pause();
+  }
+  let pRect, wRect, ready = false;
+
+  function reset(){
+    for (const el of [portrait, wordmark]) {
+      el.style.cssText = '';
+    }
+    copy.style.opacity = '';
+    thumb.style.opacity = '';
+  }
+  function measure(){
+    reset();
+    pRect = portrait.getBoundingClientRect();
+    wRect = wordmark.getBoundingClientRect();
+    ready = true;
+  }
+  const lerp = (a,b,t) => a + (b-a)*t;
+  const ease = t => t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;
+
+  // Loader fade: bone background fades out, brown wordmark transitions to white
+  const loaderEl = document.querySelector('.loader');
+  const LOAD_HOLD = 1200, LOAD_DUR = 900;
+  let loadT0 = null, loading = true;
+  function loaderProgress(){
+    if (loadT0 == null) return 0;
+    return Math.max(0, Math.min(1, (performance.now() - loadT0 - LOAD_HOLD) / LOAD_DUR));
+  }
+  function tickLoader(){
+    apply();
+    const p = loaderProgress();
+    if (loaderEl) loaderEl.style.opacity = String(1 - p);
+    if (p < 1) {
+      requestAnimationFrame(tickLoader);
+    } else {
+      loading = false;
+      if (loaderEl) loaderEl.style.display = 'none';
+      introT0 = performance.now();
+      requestAnimationFrame(tickIntro);
+    }
+  }
+
+  // Intro fade-in for the subhead (after loader completes, before scroll)
+  const INTRO_DELAY = 200, INTRO_DUR = 900;
+  let introT0 = null;
+  function getIntro(){
+    if (introT0 == null) return 0;
+    const elapsed = performance.now() - introT0 - INTRO_DELAY;
+    return Math.max(0, Math.min(1, elapsed / INTRO_DUR));
+  }
+  function tickIntro(){
+    apply();
+    if (getIntro() < 1) requestAnimationFrame(tickIntro);
+  }
+
+  function apply(){
+    if (!ready) return;
+    const raw  = Math.max(0, Math.min(1, window.scrollY / window.innerHeight));
+    const card = ease(raw); // 0 = full-screen video, 1 = card layout
+    const vw = document.documentElement.clientWidth;
+    const vh = document.documentElement.clientHeight;
+
+    // Portrait: shrink from full viewport to grid cell as the user scrolls
+    const left  = lerp(0,  pRect.left,  card);
+    const width = lerp(vw, pRect.width, card);
+    portrait.style.position = 'fixed';
+    portrait.style.top = '0';
+    portrait.style.left = left + 'px';
+    portrait.style.width = width + 'px';
+    portrait.style.height = '100vh';
+    portrait.style.margin = '0';
+    portrait.style.zIndex = '2';
+    const offsetX = lerp(0, -200, card);
+    const media = portrait.querySelector('img, video');
+    if (media) media.style.objectPosition = `calc(50% + ${offsetX}px) center`;
+    if (video && videoDuration > 0) {
+      const t = raw * videoDuration;
+      if (Math.abs(video.currentTime - t) > 0.03) video.currentTime = t;
+    }
+
+    // Wordmark: starts centered + white, ends at original spot + sand
+    const wcx = wRect.left + wRect.width/2;
+    const wcy = wRect.top  + wRect.height/2;
+    const dx  = (vw/2 - wcx) * (1 - card);
+    const dy  = (vh/2 - wcy) * (1 - card);
+    wordmark.style.position = 'fixed';
+    wordmark.style.top  = wRect.top  + 'px';
+    wordmark.style.left = wRect.left + 'px';
+    wordmark.style.width = wRect.width + 'px';
+    wordmark.style.margin = '0';
+    wordmark.style.transform = `translate(${dx}px, ${dy}px)`;
+    wordmark.style.zIndex = loading ? '11' : '3';
+    wordmark.style.willChange = 'transform, color';
+    let r, g, b;
+    if (loading) {
+      const lp = loaderProgress();
+      r = Math.round(lerp(0x6C, 0xff, lp));
+      g = Math.round(lerp(0x5E, 0xff, lp));
+      b = Math.round(lerp(0x53, 0xff, lp));
+    } else {
+      r = Math.round(lerp(0xff, 0xc8, card));
+      g = Math.round(lerp(0xff, 0xbf, card));
+      b = Math.round(lerp(0xff, 0xb0, card));
+    }
+    wordmark.style.color = `rgb(${r},${g},${b})`;
+
+    // Quote + thumbnail: hidden initially, fade in as the card layout settles
+    const reveal = Math.max(0, Math.min(1, (card - 0.4) / 0.6));
+    copy.style.opacity  = reveal;
+    thumb.style.opacity = reveal;
+
+    // Subhead: intro fade-in below the centered heading; fades out as soon as the user scrolls
+    const intro = getIntro();
+    const scrollFadeOut = 1 - Math.max(0, Math.min(1, raw / 0.15));
+    subhead.style.opacity = intro * scrollFadeOut;
+    subhead.style.left = (vw / 2) + 'px';
+    subhead.style.top  = (vh / 2 + wRect.height / 2 + Math.max(16, wRect.height * 0.35)) + 'px';
+  }
+
+  function init(){ measure(); apply(); if (loadT0 == null) { loadT0 = performance.now(); requestAnimationFrame(tickLoader); } }
+  window.addEventListener('scroll', apply, {passive:true});
+  window.addEventListener('resize', () => { ready = false; requestAnimationFrame(init); });
+  // Run immediately so the wordmark is positioned (and visible above the loader) before first paint
+  init();
+  // Re-measure once fonts load (Montserrat width changes once loaded)
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => { ready = false; requestAnimationFrame(() => { measure(); apply(); }); });
+  }
+})();
+</script>
+
+</body>
+</html>
